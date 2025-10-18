@@ -1,0 +1,108 @@
+<design_size title="Design Size Report">
+    <item name="Total Instructions per Compilation Phase">
+        <table>
+            <keys size="4">Phase, Step, Instructions, Description</keys>
+            <column name="Compile/Link">, 5771, After all functions are compiled and linked into a single design</column>
+            <column name="">, , </column>
+            <column name="Unroll/Inline">, , After user unroll and inline pragmas are applied</column>
+            <column name="">(1) unroll, 4609, user unroll pragmas are applied</column>
+            <column name="">(2) simplification, 3547, simplification of applied user unroll pragmas</column>
+            <column name="">(3) inline, 3056, user inline pragmas are applied</column>
+            <column name="">(4) simplification, 2930, simplification of applied user inline pragmas</column>
+            <column name="">, , </column>
+            <column name="Array/Struct">, , After user array partition and struct aggregate/disaggregate pragmas are applied</column>
+            <column name="">(1) array partition, 2909, user array partition pragmas are applied</column>
+            <column name="">(2) simplification, 2055, simplification of applied user array partition &amp; struct aggregate/disaggregate pragmas</column>
+            <column name="">(3) aggregate/disaggregate , 2067, user struct aggregate/disaggregate pragmas are applied</column>
+            <column name="">(4) array reshape, 2801, apply array reshape pragmas</column>
+            <column name="">(5) access patterns, 2899, array access pattern optmizations</column>
+            <column name="">, , </column>
+            <column name="Performance">, , After transformations are applied to meet performance pragma targets</column>
+            <column name="">(1) loop simplification, 2897, loop and instruction simplification</column>
+            <column name="">(2) parallelization, 2804, loops are unrolled or pipelined to meet performance targets</column>
+            <column name="">(3) array partition, 2797, arrays are partitioned to meet performance targets</column>
+            <column name="">(4) simplification, 2797, simplification of design after performance transformations</column>
+            <column name="">, , </column>
+            <column name="HW Transforms">, , After hardware transfomations</column>
+            <column name="">(1) lowering, 2849, initial conversion to HW specific instructions</column>
+            <column name="">(2) optimizations, 3438, high level synthesis optimizations</column>
+        </table>
+    </item>
+    <item name="Instructions per Function for each Compilation Phase">
+        <hiertable>
+            <header size="7" col0="Function" col1="Location" col2="Compile/Link" col3="Unroll/Inline" col4="Array/Struct" col5="Performance" col6="HW Transforms"/>
+            <rows>
+                <row id="0" col0="test_hmac_sha256" col1="test.cpp:65" col2="5771" col3="2930" col4="2899" col5="2797" col6="3438">
+                    <row id="12" col0="hmac&lt;32, 64, 256, 32, 64, sha256_wrapper&gt;" col1="hmac.hpp:340" col2="5763" col3="" col4="" col5="" col6="">
+                        <row id="14" col0="hmacDataflow&lt;32, 64, 256, 32, 64, sha256_wrapper&gt;" col1="hmac.hpp:260" col2="5761" col3="" col4="" col5="" col6="">
+                            <row id="2" col0="kpad&lt;32, 64, 256, 32, 64, sha256_wrapper&gt;" col1="hmac.hpp:110" col2="828" col3="" col4="" col5="" col6=""/>
+                            <row id="11" col0="msgHash&lt;32, 64, 256, 32, 64, sha256_wrapper&gt;" col1="hmac.hpp:180" col2="2584" col3="" col4="" col5="" col6="">
+                                <row id="15" col0="mergeKipad&lt;32, 64, 256, 64&gt;" col1="hmac.hpp:143" col2="902" col3="" col4="" col5="" col6=""/>
+                                <row id="8" col0="hash" col1="test.cpp:56" col2="1652" col3="" col4="" col5="" col6="">
+                                    <row id="13" col0="sha256&lt;32&gt;" col1="sha224_256.hpp:827" col2="1650" col3="" col4="" col5="" col6="">
+                                        <row id="6" col0="sha256_top&lt;32, 256&gt;" col1="sha224_256.hpp:747" col2="1648" col3="" col4="" col5="" col6="">
+                                            <row id="5" col0="preProcessing" col1="sha224_256.hpp:82" col2="700" col3="" col4="" col5="" col6=""/>
+                                            <row id="4" col0="dup_strm" col1="sha224_256.hpp:498" col2="106" col3="" col4="" col5="" col6=""/>
+                                            <row id="7" col0="generateMsgSchedule" col1="sha224_256.hpp:523" col2="193" col3="" col4="" col5="" col6=""/>
+                                            <row id="3" col0="sha256Digest&lt;256&gt;" col1="sha224_256.hpp:610" col2="572" col3="" col4="" col5="" col6="">
+                                                <row id="1" col0="sha256_iter" col1="sha224_256.hpp:565" col2="102" col3="" col4="" col5="" col6=""/>
+                                            </row>
+                                        </row>
+                                    </row>
+                                </row>
+                            </row>
+                            <row id="10" col0="resHash&lt;32, 64, 256, 32, 64, sha256_wrapper&gt;" col1="hmac.hpp:236" col2="2291" col3="" col4="" col5="" col6="">
+                                <row id="9" col0="mergeKopad&lt;32, 64, 256, 32, 64&gt;" col1="hmac.hpp:207" col2="609" col3="" col4="" col5="" col6=""/>
+                                <row id="8" col0="hash" col1="test.cpp:56" col2="1652" col3="" col4="" col5="" col6="">
+                                    <row id="13" col0="sha256&lt;32&gt;" col1="sha224_256.hpp:827" col2="1650" col3="" col4="" col5="" col6="">
+                                        <row id="6" col0="sha256_top&lt;32, 256&gt;" col1="sha224_256.hpp:747" col2="1648" col3="" col4="" col5="" col6="">
+                                            <row id="5" col0="preProcessing" col1="sha224_256.hpp:82" col2="700" col3="" col4="" col5="" col6=""/>
+                                            <row id="4" col0="dup_strm" col1="sha224_256.hpp:498" col2="106" col3="" col4="" col5="" col6=""/>
+                                            <row id="7" col0="generateMsgSchedule" col1="sha224_256.hpp:523" col2="193" col3="" col4="" col5="" col6=""/>
+                                            <row id="3" col0="sha256Digest&lt;256&gt;" col1="sha224_256.hpp:610" col2="572" col3="" col4="" col5="" col6="">
+                                                <row id="1" col0="sha256_iter" col1="sha224_256.hpp:565" col2="102" col3="" col4="" col5="" col6=""/>
+                                            </row>
+                                        </row>
+                                    </row>
+                                </row>
+                            </row>
+                        </row>
+                    </row>
+                    <row id="14" col0="hmacDataflow&lt;32, 64, 256, 32, 64, sha256_wrapper&gt;" col1="hmac.hpp:260" col2="" col3="2928" col4="2897" col5="2795" col6="3417">
+                        <row id="2" col0="kpad&lt;32, 64, 256, 32, 64, sha256_wrapper&gt;" col1="hmac.hpp:110" col2="" col3="213" col4="214" col5="213" col6="230"/>
+                        <row id="11" col0="msgHash&lt;32, 64, 256, 32, 64, sha256_wrapper&gt;" col1="hmac.hpp:180" col2="" col3="1350" col4="1334" col5="1283" col6="1586">
+                            <row id="15" col0="mergeKipad&lt;32, 64, 256, 64&gt;" col1="hmac.hpp:143" col2="" col3="42" col4="42" col5="41" col6="69"/>
+                            <row id="8" col0="hash" col1="test.cpp:56" col2="" col3="1293" col4="1277" col5="1227" col6="1500">
+                                <row id="6" col0="sha256_top&lt;32, 256&gt;" col1="sha224_256.hpp:747" col2="" col3="1291" col4="1275" col5="1225" col6="1498">
+                                    <row id="5" col0="preProcessing" col1="sha224_256.hpp:82" col2="" col3="804" col4="767" col5="751" col6="939"/>
+                                    <row id="4" col0="dup_strm" col1="sha224_256.hpp:498" col2="" col3="15" col4="15" col5="15" col6="36"/>
+                                    <row id="7" col0="generateMsgSchedule" col1="sha224_256.hpp:523" col2="" col3="164" col4="201" col5="184" col6="233"/>
+                                    <row id="3" col0="sha256Digest&lt;256&gt;" col1="sha224_256.hpp:610" col2="" col3="271" col4="255" col5="238" col6="252"/>
+                                </row>
+                            </row>
+                        </row>
+                        <row id="10" col0="resHash&lt;32, 64, 256, 32, 64, sha256_wrapper&gt;" col1="hmac.hpp:236" col2="" col3="1337" col4="1321" col5="1271" col6="1571">
+                            <row id="9" col0="mergeKopad&lt;32, 64, 256, 32, 64&gt;" col1="hmac.hpp:207" col2="" col3="29" col4="29" col5="29" col6="54"/>
+                            <row id="8" col0="hash" col1="test.cpp:56" col2="" col3="1293" col4="1277" col5="1227" col6="1500">
+                                <row id="6" col0="sha256_top&lt;32, 256&gt;" col1="sha224_256.hpp:747" col2="" col3="1291" col4="1275" col5="1225" col6="1498">
+                                    <row id="5" col0="preProcessing" col1="sha224_256.hpp:82" col2="" col3="804" col4="767" col5="751" col6="939"/>
+                                    <row id="4" col0="dup_strm" col1="sha224_256.hpp:498" col2="" col3="15" col4="15" col5="15" col6="36"/>
+                                    <row id="7" col0="generateMsgSchedule" col1="sha224_256.hpp:523" col2="" col3="164" col4="201" col5="184" col6="233"/>
+                                    <row id="3" col0="sha256Digest&lt;256&gt;" col1="sha224_256.hpp:610" col2="" col3="271" col4="255" col5="238" col6="252"/>
+                                </row>
+                            </row>
+                        </row>
+                    </row>
+                </row>
+            </rows>
+            <notes/>
+        </hiertable>
+    </item>
+    <item name="Design Size Message Settings">
+        <table>
+            <keys size="3">Message Setting, Value, Description</keys>
+            <column name="config_compile -design_size_maximum_warning">100000, Show a warning when total design instructions exceeds this value</column>
+        </table>
+    </item>
+</design_size>
+

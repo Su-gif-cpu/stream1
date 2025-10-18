@@ -1,0 +1,75 @@
+In file included from test.cpp:42:
+D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:91:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+#pragma HLS resource variable = eKeyStrm core = FIFO_LUTRAM
+        ^
+D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:94:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+#pragma HLS resource variable = keyLenStrm core = FIFO_LUTRAM
+        ^
+D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:97:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+#pragma HLS resource variable = keyHashStrm core = FIFO_LUTRAM
+        ^
+D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:100:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+#pragma HLS resource variable = ekeyHashStrm core = FIFO_LUTRAM
+        ^
+D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:192:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+#pragma HLS resource variable = mergeKipadStrm core = FIFO_BRAM
+        ^
+D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:195:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+#pragma HLS resource variable = mergeKipadLenStrm core = FIFO_LUTRAM
+        ^
+D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:198:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+#pragma HLS resource variable = eMergeKipadLenStrm core = FIFO_LUTRAM
+        ^
+D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:245:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+#pragma HLS resource variable = mergeKopadStrm core = FIFO_LUTRAM
+        ^
+D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:248:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+#pragma HLS resource variable = mergeKopadLenStrm core = FIFO_LUTRAM
+        ^
+D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:251:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+#pragma HLS resource variable = eMergeKopadLenStrm core = FIFO_LUTRAM
+        ^
+D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:269:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+#pragma HLS resource variable = eKipadStrm core = FIFO_LUTRAM
+        ^
+D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:273:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+#pragma HLS resource variable = kipadStrm core = FIFO_LUTRAM
+        ^
+D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:276:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+#pragma HLS resource variable = kopadStrm core = FIFO_LUTRAM
+        ^
+D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:279:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+#pragma HLS resource variable = kopad2Strm core = FIFO_LUTRAM
+        ^
+D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:283:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+#pragma HLS resource variable = msgHashStrm core = FIFO_LUTRAM
+        ^
+D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:286:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+#pragma HLS resource variable = eMsgHashStrm core = FIFO_LUTRAM
+        ^
+In file included from test.cpp:43:
+D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:756:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+#pragma HLS RESOURCE variable = blk_strm core = FIFO_LUTRAM
+        ^
+D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:761:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+#pragma HLS RESOURCE variable = nblk_strm core = FIFO_LUTRAM
+        ^
+D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:764:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+#pragma HLS RESOURCE variable = nblk_strm1 core = FIFO_LUTRAM
+        ^
+D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:767:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+#pragma HLS RESOURCE variable = nblk_strm2 core = FIFO_LUTRAM
+        ^
+D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:772:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+#pragma HLS RESOURCE variable = end_nblk_strm core = FIFO_LUTRAM
+        ^
+D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:775:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+#pragma HLS RESOURCE variable = end_nblk_strm1 core = FIFO_LUTRAM
+        ^
+D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:778:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+#pragma HLS RESOURCE variable = end_nblk_strm2 core = FIFO_LUTRAM
+        ^
+D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:783:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+#pragma HLS RESOURCE variable = w_strm core = FIFO_LUTRAM
+        ^
+24 warnings generated.

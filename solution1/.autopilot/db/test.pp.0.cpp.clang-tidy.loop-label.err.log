@@ -1,0 +1,5 @@
+24 warnings and 24 errors generated.
+Error while processing D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp.
+clang-tidy applied 73 of 73 suggested fixes.
+Suppressed 168 warnings (144 in non-user code, 24 with check filters).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

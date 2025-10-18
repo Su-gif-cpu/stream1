@@ -1,0 +1,210 @@
+
+
+================================================================
+== Vitis HLS Report for 'mergeKipad_32_64_256_64_s'
+================================================================
+* Date:           Sat Oct 18 18:24:28 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        hmac_sha256_test.prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  4.956 ns|     1.05 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +--------------------------------------------------------------+---------------------------------------------------+---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
+        |                                                              |                                                   |  Latency (cycles) |   Latency (absolute)  |  Interval |                    Pipeline                    |
+        |                           Instance                           |                       Module                      |   min   |   max   |    min    |    max    | min | max |                      Type                      |
+        +--------------------------------------------------------------+---------------------------------------------------+---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
+        |grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_162_2_fu_126  |mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_162_2  |       18|       18|  89.208 ns|  89.208 ns|   17|   17|  loop auto-rewind stp (delay=0 clock cycles(s))|
+        |grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133  |mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3  |        ?|        ?|          ?|          ?|    0|    0|  loop auto-rewind stp (delay=0 clock cycles(s))|
+        +--------------------------------------------------------------+---------------------------------------------------+---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_152_1  |        ?|        ?|         ?|          -|          -|     ?|        no|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|      8|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|    1959|    437|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       0|    183|    -|
+|Register         |        -|    -|     718|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|    2677|    628|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|       2|      1|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +--------------------------------------------------------------+---------------------------------------------------+---------+----+-----+-----+-----+
+    |                           Instance                           |                       Module                      | BRAM_18K| DSP|  FF | LUT | URAM|
+    +--------------------------------------------------------------+---------------------------------------------------+---------+----+-----+-----+-----+
+    |add_64ns_64ns_64_3_1_U17                                      |add_64ns_64ns_64_3_1                               |        0|   0|  389|   66|    0|
+    |add_68ns_68ns_68_3_1_U18                                      |add_68ns_68ns_68_3_1                               |        0|   0|  407|   69|    0|
+    |grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_162_2_fu_126  |mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_162_2  |        0|   0|  520|   85|    0|
+    |grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133  |mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3  |        0|   0|  643|  217|    0|
+    +--------------------------------------------------------------+---------------------------------------------------+---------+----+-----+-----+-----+
+    |Total                                                         |                                                   |        0|   0| 1959|  437|    0|
+    +--------------------------------------------------------------+---------------------------------------------------+---------+----+-----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------+----------+----+---+----+------------+------------+
+    |  Variable Name  | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |ap_block_state1  |        or|   0|  0|   2|           1|           1|
+    |ap_block_state2  |        or|   0|  0|   2|           1|           1|
+    |ap_block_state6  |        or|   0|  0|   2|           1|           1|
+    |ap_block_state9  |        or|   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |Total            |          |   0|  0|   8|           4|           4|
+    +-----------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------------+----+-----------+-----+-----------+
+    |           Name           | LUT| Input Size| Bits| Total Bits|
+    +--------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                 |  65|         12|    1|         12|
+    |ap_done                   |   9|          2|    1|          2|
+    |eKipadStrm_blk_n          |   9|          2|    1|          2|
+    |eMergeKipadLenStrm_blk_n  |   9|          2|    1|          2|
+    |eMergeKipadLenStrm_din    |  14|          3|    1|          3|
+    |kipadStrm_blk_n           |   9|          2|    1|          2|
+    |kopad2Strm_blk_n          |   9|          2|    1|          2|
+    |kopadStrm_blk_n           |   9|          2|    1|          2|
+    |lenStrm_blk_n             |   9|          2|    1|          2|
+    |mergeKipadLenStrm_blk_n   |   9|          2|    1|          2|
+    |mergeKipadStrm_din        |   9|          2|   32|         64|
+    |mergeKipadStrm_write      |  14|          3|    1|          3|
+    |real_start                |   9|          2|    1|          2|
+    +--------------------------+----+-----------+-----+-----------+
+    |Total                     | 183|         38|   44|        100|
+    +--------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------------------------------------------------+-----+----+-----+-----------+
+    |                                    Name                                   |  FF | LUT| Bits| Const Bits|
+    +---------------------------------------------------------------------------+-----+----+-----+-----------+
+    |ap_CS_fsm                                                                  |   11|   0|   11|          0|
+    |ap_done_reg                                                                |    1|   0|    1|          0|
+    |grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_162_2_fu_126_ap_start_reg  |    1|   0|    1|          0|
+    |grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133_ap_start_reg  |    1|   0|    1|          0|
+    |kipad_reg_243                                                              |  512|   0|  512|          0|
+    |mergeKipadLen_reg_253                                                      |   64|   0|   64|          0|
+    |ml_reg_237                                                                 |   64|   0|   64|          0|
+    |start_once_reg                                                             |    1|   0|    1|          0|
+    |tmp_1_reg_258                                                              |   63|   0|   63|          0|
+    +---------------------------------------------------------------------------+-----+----+-----+-----------+
+    |Total                                                                      |  718|   0|  718|          0|
+    +---------------------------------------------------------------------------+-----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------------------+-----+-----+------------+-----------------------------+--------------+
+|             RTL Ports             | Dir | Bits|  Protocol  |        Source Object        |    C Type    |
++-----------------------------------+-----+-----+------------+-----------------------------+--------------+
+|ap_clk                             |   in|    1|  ap_ctrl_hs|  mergeKipad<32, 64, 256, 64>|  return value|
+|ap_rst                             |   in|    1|  ap_ctrl_hs|  mergeKipad<32, 64, 256, 64>|  return value|
+|ap_start                           |   in|    1|  ap_ctrl_hs|  mergeKipad<32, 64, 256, 64>|  return value|
+|start_full_n                       |   in|    1|  ap_ctrl_hs|  mergeKipad<32, 64, 256, 64>|  return value|
+|ap_done                            |  out|    1|  ap_ctrl_hs|  mergeKipad<32, 64, 256, 64>|  return value|
+|ap_continue                        |   in|    1|  ap_ctrl_hs|  mergeKipad<32, 64, 256, 64>|  return value|
+|ap_idle                            |  out|    1|  ap_ctrl_hs|  mergeKipad<32, 64, 256, 64>|  return value|
+|ap_ready                           |  out|    1|  ap_ctrl_hs|  mergeKipad<32, 64, 256, 64>|  return value|
+|start_out                          |  out|    1|  ap_ctrl_hs|  mergeKipad<32, 64, 256, 64>|  return value|
+|start_write                        |  out|    1|  ap_ctrl_hs|  mergeKipad<32, 64, 256, 64>|  return value|
+|kipadStrm_dout                     |   in|  512|     ap_fifo|                    kipadStrm|       pointer|
+|kipadStrm_empty_n                  |   in|    1|     ap_fifo|                    kipadStrm|       pointer|
+|kipadStrm_read                     |  out|    1|     ap_fifo|                    kipadStrm|       pointer|
+|kipadStrm_num_data_valid           |   in|    3|     ap_fifo|                    kipadStrm|       pointer|
+|kipadStrm_fifo_cap                 |   in|    3|     ap_fifo|                    kipadStrm|       pointer|
+|kopadStrm_dout                     |   in|  512|     ap_fifo|                    kopadStrm|       pointer|
+|kopadStrm_empty_n                  |   in|    1|     ap_fifo|                    kopadStrm|       pointer|
+|kopadStrm_read                     |  out|    1|     ap_fifo|                    kopadStrm|       pointer|
+|kopadStrm_num_data_valid           |   in|    3|     ap_fifo|                    kopadStrm|       pointer|
+|kopadStrm_fifo_cap                 |   in|    3|     ap_fifo|                    kopadStrm|       pointer|
+|msgStrm_dout                       |   in|   32|     ap_fifo|                      msgStrm|       pointer|
+|msgStrm_empty_n                    |   in|    1|     ap_fifo|                      msgStrm|       pointer|
+|msgStrm_read                       |  out|    1|     ap_fifo|                      msgStrm|       pointer|
+|lenStrm_dout                       |   in|   64|     ap_fifo|                      lenStrm|       pointer|
+|lenStrm_empty_n                    |   in|    1|     ap_fifo|                      lenStrm|       pointer|
+|lenStrm_read                       |  out|    1|     ap_fifo|                      lenStrm|       pointer|
+|eKipadStrm_dout                    |   in|    1|     ap_fifo|                   eKipadStrm|       pointer|
+|eKipadStrm_empty_n                 |   in|    1|     ap_fifo|                   eKipadStrm|       pointer|
+|eKipadStrm_read                    |  out|    1|     ap_fifo|                   eKipadStrm|       pointer|
+|eKipadStrm_num_data_valid          |   in|    3|     ap_fifo|                   eKipadStrm|       pointer|
+|eKipadStrm_fifo_cap                |   in|    3|     ap_fifo|                   eKipadStrm|       pointer|
+|mergeKipadStrm_din                 |  out|   32|     ap_fifo|               mergeKipadStrm|       pointer|
+|mergeKipadStrm_full_n              |   in|    1|     ap_fifo|               mergeKipadStrm|       pointer|
+|mergeKipadStrm_write               |  out|    1|     ap_fifo|               mergeKipadStrm|       pointer|
+|mergeKipadStrm_num_data_valid      |   in|   32|     ap_fifo|               mergeKipadStrm|       pointer|
+|mergeKipadStrm_fifo_cap            |   in|   32|     ap_fifo|               mergeKipadStrm|       pointer|
+|mergeKipadLenStrm_din              |  out|   64|     ap_fifo|            mergeKipadLenStrm|       pointer|
+|mergeKipadLenStrm_full_n           |   in|    1|     ap_fifo|            mergeKipadLenStrm|       pointer|
+|mergeKipadLenStrm_write            |  out|    1|     ap_fifo|            mergeKipadLenStrm|       pointer|
+|mergeKipadLenStrm_num_data_valid   |   in|    3|     ap_fifo|            mergeKipadLenStrm|       pointer|
+|mergeKipadLenStrm_fifo_cap         |   in|    3|     ap_fifo|            mergeKipadLenStrm|       pointer|
+|eMergeKipadLenStrm_din             |  out|    1|     ap_fifo|           eMergeKipadLenStrm|       pointer|
+|eMergeKipadLenStrm_full_n          |   in|    1|     ap_fifo|           eMergeKipadLenStrm|       pointer|
+|eMergeKipadLenStrm_write           |  out|    1|     ap_fifo|           eMergeKipadLenStrm|       pointer|
+|eMergeKipadLenStrm_num_data_valid  |   in|    3|     ap_fifo|           eMergeKipadLenStrm|       pointer|
+|eMergeKipadLenStrm_fifo_cap        |   in|    3|     ap_fifo|           eMergeKipadLenStrm|       pointer|
+|kopad2Strm_din                     |  out|  512|     ap_fifo|                   kopad2Strm|       pointer|
+|kopad2Strm_full_n                  |   in|    1|     ap_fifo|                   kopad2Strm|       pointer|
+|kopad2Strm_write                   |  out|    1|     ap_fifo|                   kopad2Strm|       pointer|
+|kopad2Strm_num_data_valid          |   in|    3|     ap_fifo|                   kopad2Strm|       pointer|
+|kopad2Strm_fifo_cap                |   in|    3|     ap_fifo|                   kopad2Strm|       pointer|
++-----------------------------------+-----+-----+------------+-----------------------------+--------------+
+

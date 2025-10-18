@@ -1,0 +1,6 @@
+   Build using "T:/Xilinx/Vitis/2024.2/vcxx/libexec/clang++"
+   Compiling test.cpp_pre.cpp.tb.cpp
+   Compiling apatb_test_hmac_sha256.cpp
+   Compiling apatb_test_hmac_sha256_util.cpp
+   Compiling apatb_test_hmac_sha256_ir.ll
+   Generating cosim.tv.exe

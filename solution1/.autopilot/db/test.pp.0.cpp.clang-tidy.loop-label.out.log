@@ -1,0 +1,437 @@
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:42147:5: warning: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^~~
+    VITIS_LOOP_676_1: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:42147:5: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:42161:5: warning: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^~~
+    VITIS_LOOP_690_1: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:42161:5: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:42175:5: warning: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^~~
+    VITIS_LOOP_704_1: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:42175:5: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:43809:7: warning: Added loop label VITIS_LOOP_1248_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1248_1: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:43809:7: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:45737:5: warning: Added loop label VITIS_LOOP_44_1:   [xilinx-label-all-loops]
+    while (!eInStrm.read()) {
+    ^~~~~
+    VITIS_LOOP_44_1: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:45737:5: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:45750:5: warning: Added loop label VITIS_LOOP_57_1:   [xilinx-label-all-loops]
+    while (!ekeyHashStrm.read()) {
+    ^~~~~
+    VITIS_LOOP_57_1: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:45750:5: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:45757:9: warning: Added loop label VITIS_LOOP_64_2:   [xilinx-label-all-loops]
+        for (int i = 0; i < hshW / dataW; i++) {
+        ^~~
+        VITIS_LOOP_64_2: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:45757:9: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:45762:9: warning: Added loop label VITIS_LOOP_69_3:   [xilinx-label-all-loops]
+        for (int i = 0; i < blockSize; i++) {
+        ^~~
+        VITIS_LOOP_69_3: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:45762:9: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:45784:9: error: Resource with core_name: FIFO_LUTRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
+#pragma HLS resource variable = eKeyStrm core = FIFO_LUTRAM
+        ^
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:45787:9: error: Resource with core_name: FIFO_LUTRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
+#pragma HLS resource variable = keyLenStrm core = FIFO_LUTRAM
+        ^
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:45790:9: error: Resource with core_name: FIFO_LUTRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
+#pragma HLS resource variable = keyHashStrm core = FIFO_LUTRAM
+        ^
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:45793:9: error: Resource with core_name: FIFO_LUTRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
+#pragma HLS resource variable = ekeyHashStrm core = FIFO_LUTRAM
+        ^
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:45811:9: warning: Added loop label VITIS_LOOP_118_1:   [xilinx-label-all-loops]
+        while (!eStrm.read()) {
+        ^~~~~
+        VITIS_LOOP_118_1: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:45811:9: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:45813:13: warning: Added loop label VITIS_LOOP_120_2:   [xilinx-label-all-loops]
+            for (int i = 0; i < ((keyLen * 8 + dataW - 1) / dataW); i++) {
+            ^~~
+            VITIS_LOOP_120_2: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:45813:13: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:45822:13: warning: Added loop label VITIS_LOOP_129_3:   [xilinx-label-all-loops]
+            for (int i = 0; i < blockSize; i++) {
+            ^~~
+            VITIS_LOOP_129_3: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:45822:13: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:45845:5: warning: Added loop label VITIS_LOOP_152_1:   [xilinx-label-all-loops]
+    while (!eLenStrm2.read()) {
+    ^~~~~
+    VITIS_LOOP_152_1: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:45845:5: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:45855:9: warning: Added loop label VITIS_LOOP_162_2:   [xilinx-label-all-loops]
+        for (int i = 0; i < ((blockSize * 8 + dataW - 1) / dataW); i++) {
+        ^~~
+        VITIS_LOOP_162_2: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:45855:9: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:45864:9: warning: Added loop label VITIS_LOOP_171_3:   [xilinx-label-all-loops]
+        for (int i = 0; i < ((ml * 8 + dataW - 1) / dataW); i++) {
+        ^~~
+        VITIS_LOOP_171_3: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:45864:9: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:45885:9: error: Resource with core_name: FIFO_BRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
+#pragma HLS resource variable = mergeKipadStrm core = FIFO_BRAM
+        ^
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:45888:9: error: Resource with core_name: FIFO_LUTRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
+#pragma HLS resource variable = mergeKipadLenStrm core = FIFO_LUTRAM
+        ^
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:45891:9: error: Resource with core_name: FIFO_LUTRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
+#pragma HLS resource variable = eMergeKipadLenStrm core = FIFO_LUTRAM
+        ^
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:45906:5: warning: Added loop label VITIS_LOOP_213_1:   [xilinx-label-all-loops]
+    while (!eMsgHashStrm.read()) {
+    ^~~~~
+    VITIS_LOOP_213_1: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:45906:5: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:45913:9: warning: Added loop label VITIS_LOOP_220_2:   [xilinx-label-all-loops]
+        for (int i = 0; i < ((blockSize * 8 + dataW - 1) / dataW); i++) {
+        ^~~
+        VITIS_LOOP_220_2: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:45913:9: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:45919:9: warning: Added loop label VITIS_LOOP_226_3:   [xilinx-label-all-loops]
+        for (int i = 0; i < ((hshW + dataW - 1) / dataW); i++) {
+        ^~~
+        VITIS_LOOP_226_3: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:45919:9: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:45938:9: error: Resource with core_name: FIFO_LUTRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
+#pragma HLS resource variable = mergeKopadStrm core = FIFO_LUTRAM
+        ^
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:45941:9: error: Resource with core_name: FIFO_LUTRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
+#pragma HLS resource variable = mergeKopadLenStrm core = FIFO_LUTRAM
+        ^
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:45944:9: error: Resource with core_name: FIFO_LUTRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
+#pragma HLS resource variable = eMergeKopadLenStrm core = FIFO_LUTRAM
+        ^
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:45962:9: error: Resource with core_name: FIFO_LUTRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
+#pragma HLS resource variable = eKipadStrm core = FIFO_LUTRAM
+        ^
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:45966:9: error: Resource with core_name: FIFO_LUTRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
+#pragma HLS resource variable = kipadStrm core = FIFO_LUTRAM
+        ^
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:45969:9: error: Resource with core_name: FIFO_LUTRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
+#pragma HLS resource variable = kopadStrm core = FIFO_LUTRAM
+        ^
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:45972:9: error: Resource with core_name: FIFO_LUTRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
+#pragma HLS resource variable = kopad2Strm core = FIFO_LUTRAM
+        ^
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:45976:9: error: Resource with core_name: FIFO_LUTRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
+#pragma HLS resource variable = msgHashStrm core = FIFO_LUTRAM
+        ^
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:45979:9: error: Resource with core_name: FIFO_LUTRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
+#pragma HLS resource variable = eMsgHashStrm core = FIFO_LUTRAM
+        ^
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46071:17: warning: Added loop label VITIS_LOOP_116_1:   [xilinx-label-all-loops]
+                do { if ((0)) printf("DEBUG: M[%d] =\t%08x (32bx16)\n", i, b0.M[i]); } while (0);
+                ^~
+                VITIS_LOOP_116_1: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46071:17: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46075:13: warning: Added loop label VITIS_LOOP_120_2:   [xilinx-label-all-loops]
+            do { if ((0)) printf("DEBUG: block sent\n"); } while (0);
+            ^~
+            VITIS_LOOP_120_2: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46075:13: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46082:9: warning: Added loop label VITIS_LOOP_127_3:   [xilinx-label-all-loops]
+        do { if ((0)) printf("DEBUG: sent = %d, left = %d\n", int(len & (-1ULL ^ 0x3fULL)), (int)left); } while (0);
+        ^~
+        VITIS_LOOP_127_3: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46082:9: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46092:13: warning: Added loop label VITIS_LOOP_137_4:   [xilinx-label-all-loops]
+            do { if ((0)) printf("DEBUG: M[0] =\t%08x (pad 1)\n", b.M[0]); } while (0);
+            ^~
+            VITIS_LOOP_137_4: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46092:13: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46098:17: warning: Added loop label VITIS_LOOP_143_5:   [xilinx-label-all-loops]
+                do { if ((0)) printf("DEBUG: M[%d] =\t%08x (zero)\n", i, b.M[i]); } while (0);
+                ^~
+                VITIS_LOOP_143_5: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46098:17: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46103:13: warning: Added loop label VITIS_LOOP_148_6:   [xilinx-label-all-loops]
+            do { if ((0)) printf("DEBUG: M[%d] =\t%08x (append L)\n", 14, b.M[14]); } while (0);
+            ^~
+            VITIS_LOOP_148_6: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46103:13: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46104:13: warning: Added loop label VITIS_LOOP_149_7:   [xilinx-label-all-loops]
+            do { if ((0)) printf("DEBUG: M[%d] =\t%08x (append L)\n", 15, b.M[15]); } while (0);
+            ^~
+            VITIS_LOOP_149_7: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46104:13: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46124:21: warning: Added loop label VITIS_LOOP_169_8:   [xilinx-label-all-loops]
+                    do { if ((0)) printf("DEBUG: M[%d] =\t%08x (32b)\n", i, b.M[i]); } while (0);
+                    ^~
+                    VITIS_LOOP_169_8: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46124:21: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46149:21: warning: Added loop label VITIS_LOOP_194_9:   [xilinx-label-all-loops]
+                    do { if ((0)) printf("DEBUG: M[%d] =\t%08x (pad 1)\n", i, b.M[i]); } while (0);
+                    ^~
+                    VITIS_LOOP_194_9: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46149:21: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46155:13: warning: Added loop label VITIS_LOOP_200_10:   [xilinx-label-all-loops]
+            do { if ((0)) printf("DEBUG: M[%d] =\t%08x (append L)\n", 14, b.M[14]); } while (0);
+            ^~
+            VITIS_LOOP_200_10: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46155:13: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46156:13: warning: Added loop label VITIS_LOOP_201_11:   [xilinx-label-all-loops]
+            do { if ((0)) printf("DEBUG: M[%d] =\t%08x (append L)\n", 15, b.M[15]); } while (0);
+            ^~
+            VITIS_LOOP_201_11: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46156:13: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46159:13: warning: Added loop label VITIS_LOOP_204_12:   [xilinx-label-all-loops]
+            do { if ((0)) printf("DEBUG: block sent\n"); } while (0);
+            ^~
+            VITIS_LOOP_204_12: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46159:13: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46177:21: warning: Added loop label VITIS_LOOP_222_13:   [xilinx-label-all-loops]
+                    do { if ((0)) printf("DEBUG: M[%d] =\t%08x (32b)\n", i, b.M[i]); } while (0);
+                    ^~
+                    VITIS_LOOP_222_13: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46177:21: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46202:21: warning: Added loop label VITIS_LOOP_247_14:   [xilinx-label-all-loops]
+                    do { if ((0)) printf("DEBUG: M[%d] =\t%08x (pad 1)\n", i, b.M[i]); } while (0);
+                    ^~
+                    VITIS_LOOP_247_14: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46202:21: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46206:13: warning: Added loop label VITIS_LOOP_251_15:   [xilinx-label-all-loops]
+            do { if ((0)) printf("DEBUG: block sent\n"); } while (0);
+            ^~
+            VITIS_LOOP_251_15: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46206:13: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46215:17: warning: Added loop label VITIS_LOOP_260_16:   [xilinx-label-all-loops]
+                do { if ((0)) printf("DEBUG: M[%d] =\t%08x (zero)\n", i, b1.M[i]); } while (0);
+                ^~
+                VITIS_LOOP_260_16: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46215:17: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46220:13: warning: Added loop label VITIS_LOOP_265_17:   [xilinx-label-all-loops]
+            do { if ((0)) printf("DEBUG: M[%d] =\t%08x (append L)\n", 14, b1.M[14]); } while (0);
+            ^~
+            VITIS_LOOP_265_17: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46220:13: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46221:13: warning: Added loop label VITIS_LOOP_266_18:   [xilinx-label-all-loops]
+            do { if ((0)) printf("DEBUG: M[%d] =\t%08x (append L)\n", 15, b1.M[15]); } while (0);
+            ^~
+            VITIS_LOOP_266_18: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46221:13: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46224:13: warning: Added loop label VITIS_LOOP_269_19:   [xilinx-label-all-loops]
+            do { if ((0)) printf("DEBUG: block sent\n"); } while (0);
+            ^~
+            VITIS_LOOP_269_19: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46224:13: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46241:9: warning: Added loop label VITIS_LOOP_295_1:   [xilinx-label-all-loops]
+        do { if ((0)) printf("DEBUG: working on a new message of %ld bytes\n", len); } while (0);
+        ^~
+        VITIS_LOOP_295_1: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46241:9: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46269:17: warning: Added loop label VITIS_LOOP_323_2:   [xilinx-label-all-loops]
+                do { if ((0)) printf("DEBUG: M[%d] =\t%08x (64bx8 low)\n", i, b0.M[i]); } while (0);
+                ^~
+                VITIS_LOOP_323_2: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46269:17: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46276:17: warning: Added loop label VITIS_LOOP_330_3:   [xilinx-label-all-loops]
+                do { if ((0)) printf("DEBUG: M[%d] =\t%08x (64bx8 high)\n", i, b0.M[i]); } while (0);
+                ^~
+                VITIS_LOOP_330_3: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46276:17: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46280:13: warning: Added loop label VITIS_LOOP_334_4:   [xilinx-label-all-loops]
+            do { if ((0)) printf("DEBUG: block sent\n"); } while (0);
+            ^~
+            VITIS_LOOP_334_4: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46280:13: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46287:9: warning: Added loop label VITIS_LOOP_341_5:   [xilinx-label-all-loops]
+        do { if ((0)) printf("DEBUG: sent = %d, left = %d\n", int(len & (-1ULL ^ 0x3fULL)), (int)left); } while (0);
+        ^~
+        VITIS_LOOP_341_5: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46287:9: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46297:13: warning: Added loop label VITIS_LOOP_351_6:   [xilinx-label-all-loops]
+            do { if ((0)) printf("DEBUG: M[0] =\t%08x (pad 1)\n", b.M[0]); } while (0);
+            ^~
+            VITIS_LOOP_351_6: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46297:13: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46303:17: warning: Added loop label VITIS_LOOP_357_7:   [xilinx-label-all-loops]
+                do { if ((0)) printf("DEBUG: M[%d] =\t%08x (zero)\n", i, b.M[i]); } while (0);
+                ^~
+                VITIS_LOOP_357_7: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46303:17: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46308:13: warning: Added loop label VITIS_LOOP_362_8:   [xilinx-label-all-loops]
+            do { if ((0)) printf("DEBUG: M[%d] =\t%08x (append L)\n", 14, b.M[14]); } while (0);
+            ^~
+            VITIS_LOOP_362_8: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46308:13: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46309:13: warning: Added loop label VITIS_LOOP_363_9:   [xilinx-label-all-loops]
+            do { if ((0)) printf("DEBUG: M[%d] =\t%08x (append L)\n", 15, b.M[15]); } while (0);
+            ^~
+            VITIS_LOOP_363_9: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46309:13: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46312:13: warning: Added loop label VITIS_LOOP_366_10:   [xilinx-label-all-loops]
+            do { if ((0)) printf("DEBUG: block sent\n"); } while (0);
+            ^~
+            VITIS_LOOP_366_10: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46312:13: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46332:21: warning: Added loop label VITIS_LOOP_386_11:   [xilinx-label-all-loops]
+                    do { if ((0)) printf("DEBUG: M[%d] =\t%08x (64b low)\n", i * 2, b.M[i * 2]); } while (0);
+                    ^~
+                    VITIS_LOOP_386_11: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46332:21: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46339:21: warning: Added loop label VITIS_LOOP_393_12:   [xilinx-label-all-loops]
+                    do { if ((0)) printf("DEBUG: M[%d] =\t%08x (64b high)\n", i * 2 + 1, b.M[i * 2 + 1]); } while (0);
+                    ^~
+                    VITIS_LOOP_393_12: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46339:21: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46343:21: warning: Added loop label VITIS_LOOP_397_13:   [xilinx-label-all-loops]
+                    do { if ((0)) printf("DEBUG: M[%d] =\t%08x (zero)\n", i * 2, b.M[i * 2]); } while (0);
+                    ^~
+                    VITIS_LOOP_397_13: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46343:21: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46345:21: warning: Added loop label VITIS_LOOP_399_14:   [xilinx-label-all-loops]
+                    do { if ((0)) printf("DEBUG: M[%d] =\t%08x (zero)\n", i * 2 + 1, b.M[i * 2 + 1]); } while (0);
+                    ^~
+                    VITIS_LOOP_399_14: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46345:21: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46369:25: warning: Added loop label VITIS_LOOP_423_15:   [xilinx-label-all-loops]
+                        do { if ((0)) printf("DEBUG: M[%d] =\t%08x (pad 1)\n", i * 2, b.M[i * 2]); } while (0);
+                        ^~
+                        VITIS_LOOP_423_15: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46369:25: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46372:25: warning: Added loop label VITIS_LOOP_426_16:   [xilinx-label-all-loops]
+                        do { if ((0)) printf("DEBUG: M[%d] =\t%08x (zero)\n", i * 2 + 1, b.M[i * 2 + 1]); } while (0);
+                        ^~
+                        VITIS_LOOP_426_16: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46372:25: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46382:25: warning: Added loop label VITIS_LOOP_436_17:   [xilinx-label-all-loops]
+                        do { if ((0)) printf("DEBUG: M[%d] =\t%08x (64b low)\n", i, b.M[i * 2]); } while (0);
+                        ^~
+                        VITIS_LOOP_436_17: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46382:25: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46401:25: warning: Added loop label VITIS_LOOP_455_18:   [xilinx-label-all-loops]
+                        do { if ((0)) printf("DEBUG: M[%d] =\t%08x (pad 1)\n", i * 2 + 1, b.M[i * 2 + 1]); } while (0);
+                        ^~
+                        VITIS_LOOP_455_18: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46401:25: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46410:17: warning: Added loop label VITIS_LOOP_464_19:   [xilinx-label-all-loops]
+                do { if ((0)) printf("DEBUG: M[%d] =\t%08x (append L)\n", 14, b.M[14]); } while (0);
+                ^~
+                VITIS_LOOP_464_19: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46410:17: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46411:17: warning: Added loop label VITIS_LOOP_465_20:   [xilinx-label-all-loops]
+                do { if ((0)) printf("DEBUG: M[%d] =\t%08x (append L)\n", 15, b.M[15]); } while (0);
+                ^~
+                VITIS_LOOP_465_20: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46411:17: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46414:17: warning: Added loop label VITIS_LOOP_468_21:   [xilinx-label-all-loops]
+                do { if ((0)) printf("DEBUG: block sent\n"); } while (0);
+                ^~
+                VITIS_LOOP_468_21: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46414:17: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46418:17: warning: Added loop label VITIS_LOOP_472_22:   [xilinx-label-all-loops]
+                do { if ((0)) printf("DEBUG: block sent\n"); } while (0);
+                ^~
+                VITIS_LOOP_472_22: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46418:17: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46427:21: warning: Added loop label VITIS_LOOP_481_23:   [xilinx-label-all-loops]
+                    do { if ((0)) printf("DEBUG: M[%d] =\t%08x (zero)\n", i, b1.M[i]); } while (0);
+                    ^~
+                    VITIS_LOOP_481_23: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46427:21: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46432:17: warning: Added loop label VITIS_LOOP_486_24:   [xilinx-label-all-loops]
+                do { if ((0)) printf("DEBUG: M[%d] =\t%08x (append L)\n", 14, b1.M[14]); } while (0);
+                ^~
+                VITIS_LOOP_486_24: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46432:17: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46433:17: warning: Added loop label VITIS_LOOP_487_25:   [xilinx-label-all-loops]
+                do { if ((0)) printf("DEBUG: M[%d] =\t%08x (append L)\n", 15, b1.M[15]); } while (0);
+                ^~
+                VITIS_LOOP_487_25: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46433:17: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46436:17: warning: Added loop label VITIS_LOOP_490_26:   [xilinx-label-all-loops]
+                do { if ((0)) printf("DEBUG: block sent\n"); } while (0);
+                ^~
+                VITIS_LOOP_490_26: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46436:17: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46452:5: warning: Added loop label VITIS_LOOP_506_1:   [xilinx-label-all-loops]
+    while (!e) {
+    ^~~~~
+    VITIS_LOOP_506_1: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46452:5: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46474:5: warning: Added loop label VITIS_LOOP_528_1:   [xilinx-label-all-loops]
+    while (!e) {
+    ^~~~~
+    VITIS_LOOP_528_1: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46474:5: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46476:9: warning: Added loop label VITIS_LOOP_530_2:   [xilinx-label-all-loops]
+        for (uint64_t i = 0; i < n; ++i) {
+        ^~~
+        VITIS_LOOP_530_2: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46476:9: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46500:17: warning: Added loop label VITIS_LOOP_554_3:   [xilinx-label-all-loops]
+                for (unsigned char j = 0; j < 15; ++j) {
+                ^~~
+                VITIS_LOOP_554_3: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46500:17: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46539:5: warning: Added loop label VITIS_LOOP_593_1:   [xilinx-label-all-loops]
+    do { if ((0)) printf("DEBUG: Kt=%08x, Wt=%08x\n" "\ta=%08x, b=%08x, c=%08x, d=%08x\n" "\te=%08x, f=%08x, g=%08x, h=%08x\n", Kt, Wt, a, b, c, d, e, f, g, h); } while (0);
+    ^~
+    VITIS_LOOP_593_1: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46539:5: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46694:9: error: Resource with core_name: FIFO_LUTRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
+#pragma HLS RESOURCE variable = blk_strm core = FIFO_LUTRAM
+        ^
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46699:9: error: Resource with core_name: FIFO_LUTRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
+#pragma HLS RESOURCE variable = nblk_strm core = FIFO_LUTRAM
+        ^
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46702:9: error: Resource with core_name: FIFO_LUTRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
+#pragma HLS RESOURCE variable = nblk_strm1 core = FIFO_LUTRAM
+        ^
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46705:9: error: Resource with core_name: FIFO_LUTRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
+#pragma HLS RESOURCE variable = nblk_strm2 core = FIFO_LUTRAM
+        ^
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46710:9: error: Resource with core_name: FIFO_LUTRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
+#pragma HLS RESOURCE variable = end_nblk_strm core = FIFO_LUTRAM
+        ^
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46713:9: error: Resource with core_name: FIFO_LUTRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
+#pragma HLS RESOURCE variable = end_nblk_strm1 core = FIFO_LUTRAM
+        ^
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46716:9: error: Resource with core_name: FIFO_LUTRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
+#pragma HLS RESOURCE variable = end_nblk_strm2 core = FIFO_LUTRAM
+        ^
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46721:9: error: Resource with core_name: FIFO_LUTRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
+#pragma HLS RESOURCE variable = w_strm core = FIFO_LUTRAM
+        ^
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46812:5: warning: Added loop label VITIS_LOOP_90_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < len; i++) {
+    ^~~
+    VITIS_LOOP_90_1: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46812:5: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46826:5: warning: Added loop label VITIS_LOOP_104_1:   [xilinx-label-all-loops]
+    for (std::string::size_type i = 0; i < data.length(); i++) {
+    ^~~
+    VITIS_LOOP_104_1: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46826:5: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46863:5: warning: Added loop label VITIS_LOOP_190_1:   [xilinx-label-all-loops]
+    for (unsigned int i = 0; i < 2; i++) {
+    ^~~
+    VITIS_LOOP_190_1: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46863:5: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46902:2: warning: Added loop label VITIS_LOOP_229_2:   [xilinx-label-all-loops]
+ for (std::vector<Test>::const_iterator test = tests.begin(); test != tests.end(); test++) {
+ ^~~
+ VITIS_LOOP_229_2: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46902:2: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46914:5: warning: Added loop label VITIS_LOOP_241_3:   [xilinx-label-all-loops]
+    for (std::vector<Test>::const_iterator test = tests.begin(); test != tests.end(); test++) {
+    ^~~
+    VITIS_LOOP_241_3: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46914:5: note: FIX-IT applied suggested code changes
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46919:9: warning: Added loop label VITIS_LOOP_246_4:   [xilinx-label-all-loops]
+        for (unsigned int i = 0; i < 32; i++) {
+        ^~~
+        VITIS_LOOP_246_4: 
+D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp:46919:9: note: FIX-IT applied suggested code changes

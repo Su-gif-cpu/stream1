@@ -1,0 +1,217 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'preProcessing_Pipeline_LOOP_SHA256_GEN_FULL_BLKS'" level="0">
+<item name = "Date">Sat Oct 18 18:24:28 2025
+</item>
+<item name = "Version">2024.2 (Build 5238294 on Nov  8 2024)</item>
+<item name = "Project">hmac_sha256_test.prj</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">3.33 ns, 2.465 ns, 1.05 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">4, 20, 13.320 ns, 66.600 ns, 3, 19, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- LOOP_SHA256_GEN_FULL_BLKS">2, 18, 19, 16, 16, 0 ~ 1, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 36, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, 530, 124, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, 0, 144, -</column>
+<column name="Register">-, -, 620, -, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, 1, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="add_58ns_58ns_58_2_1_U31">add_58ns_58ns_58_2_1, 0, 0, 265, 62, 0</column>
+<column name="icmp_58ns_58ns_1_2_1_U30">icmp_58ns_58ns_1_2_1, 0, 0, 265, 62, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="ap_block_pp0_stage0_11001_grp14">and, 0, 0, 2, 1, 1</column>
+<column name="ap_block_pp0_stage10_11001_grp8">and, 0, 0, 2, 1, 1</column>
+<column name="ap_block_pp0_stage11_11001_grp9">and, 0, 0, 2, 1, 1</column>
+<column name="ap_block_pp0_stage12_11001_grp10">and, 0, 0, 2, 1, 1</column>
+<column name="ap_block_pp0_stage13_11001_grp11">and, 0, 0, 2, 1, 1</column>
+<column name="ap_block_pp0_stage14_11001_grp12">and, 0, 0, 2, 1, 1</column>
+<column name="ap_block_pp0_stage15_11001_grp13">and, 0, 0, 2, 1, 1</column>
+<column name="ap_block_pp0_stage2_01001_grp16">and, 0, 0, 2, 1, 1</column>
+<column name="ap_block_pp0_stage3_11001_grp1">and, 0, 0, 2, 1, 1</column>
+<column name="ap_block_pp0_stage4_11001_grp2">and, 0, 0, 2, 1, 1</column>
+<column name="ap_block_pp0_stage5_11001_grp3">and, 0, 0, 2, 1, 1</column>
+<column name="ap_block_pp0_stage6_11001_grp4">and, 0, 0, 2, 1, 1</column>
+<column name="ap_block_pp0_stage7_11001_grp5">and, 0, 0, 2, 1, 1</column>
+<column name="ap_block_pp0_stage8_11001_grp6">and, 0, 0, 2, 1, 1</column>
+<column name="ap_block_pp0_stage9_11001_grp7">and, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state10_pp0_stage9_iter0_grp7">and, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state19_pp0_stage2_iter1_grp16">or, 0, 0, 2, 1, 1</column>
+<column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">81, 17, 1, 17</column>
+<column name="ap_done_int">9, 2, 1, 2</column>
+<column name="ap_enable_reg_pp0_iter0">9, 2, 1, 2</column>
+<column name="ap_enable_reg_pp0_iter0_reg">9, 2, 1, 2</column>
+<column name="ap_enable_reg_pp0_iter1">9, 2, 1, 2</column>
+<column name="blk_strm_blk_n">9, 2, 1, 2</column>
+<column name="j_fu_64">9, 2, 58, 116</column>
+<column name="mergeKipadStrm_blk_n">9, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">16, 0, 16, 0</column>
+<column name="ap_block_pp0_stage0_subdone_grp0_done_reg">1, 0, 1, 0</column>
+<column name="ap_block_pp0_stage1_subdone_grp0_done_reg">1, 0, 1, 0</column>
+<column name="ap_block_pp0_stage2_subdone_grp0_done_reg">1, 0, 1, 0</column>
+<column name="ap_block_pp0_stage3_subdone_grp0_done_reg">1, 0, 1, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter0_reg">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
+<column name="empty_50_reg_324">8, 0, 8, 0</column>
+<column name="empty_51_reg_344">8, 0, 8, 0</column>
+<column name="empty_52_reg_364">8, 0, 8, 0</column>
+<column name="empty_53_reg_384">8, 0, 8, 0</column>
+<column name="empty_54_reg_404">8, 0, 8, 0</column>
+<column name="empty_55_reg_424">8, 0, 8, 0</column>
+<column name="empty_56_reg_444">8, 0, 8, 0</column>
+<column name="empty_57_reg_464">8, 0, 8, 0</column>
+<column name="empty_58_reg_484">8, 0, 8, 0</column>
+<column name="empty_59_reg_504">8, 0, 8, 0</column>
+<column name="empty_60_reg_524">8, 0, 8, 0</column>
+<column name="empty_61_reg_544">8, 0, 8, 0</column>
+<column name="empty_62_reg_564">8, 0, 8, 0</column>
+<column name="empty_63_reg_584">8, 0, 8, 0</column>
+<column name="empty_reg_304">8, 0, 8, 0</column>
+<column name="icmp_ln101_reg_295">1, 0, 1, 0</column>
+<column name="j_2_reg_299">58, 0, 58, 0</column>
+<column name="j_fu_64">58, 0, 58, 0</column>
+<column name="p_10_reg_374">8, 0, 8, 0</column>
+<column name="p_11_reg_379">8, 0, 8, 0</column>
+<column name="p_12_reg_389">8, 0, 8, 0</column>
+<column name="p_13_reg_394">8, 0, 8, 0</column>
+<column name="p_14_reg_399">8, 0, 8, 0</column>
+<column name="p_15_reg_409">8, 0, 8, 0</column>
+<column name="p_16_reg_414">8, 0, 8, 0</column>
+<column name="p_17_reg_419">8, 0, 8, 0</column>
+<column name="p_18_reg_429">8, 0, 8, 0</column>
+<column name="p_19_reg_434">8, 0, 8, 0</column>
+<column name="p_1_reg_314">8, 0, 8, 0</column>
+<column name="p_20_reg_439">8, 0, 8, 0</column>
+<column name="p_21_reg_449">8, 0, 8, 0</column>
+<column name="p_22_reg_454">8, 0, 8, 0</column>
+<column name="p_23_reg_459">8, 0, 8, 0</column>
+<column name="p_24_reg_469">8, 0, 8, 0</column>
+<column name="p_25_reg_474">8, 0, 8, 0</column>
+<column name="p_26_reg_479">8, 0, 8, 0</column>
+<column name="p_27_reg_489">8, 0, 8, 0</column>
+<column name="p_28_reg_494">8, 0, 8, 0</column>
+<column name="p_29_reg_499">8, 0, 8, 0</column>
+<column name="p_2_reg_319">8, 0, 8, 0</column>
+<column name="p_30_reg_509">8, 0, 8, 0</column>
+<column name="p_31_reg_514">8, 0, 8, 0</column>
+<column name="p_32_reg_519">8, 0, 8, 0</column>
+<column name="p_33_reg_529">8, 0, 8, 0</column>
+<column name="p_34_reg_534">8, 0, 8, 0</column>
+<column name="p_35_reg_539">8, 0, 8, 0</column>
+<column name="p_36_reg_549">8, 0, 8, 0</column>
+<column name="p_37_reg_554">8, 0, 8, 0</column>
+<column name="p_38_reg_559">8, 0, 8, 0</column>
+<column name="p_39_reg_569">8, 0, 8, 0</column>
+<column name="p_3_reg_309">8, 0, 8, 0</column>
+<column name="p_40_reg_574">8, 0, 8, 0</column>
+<column name="p_41_reg_579">8, 0, 8, 0</column>
+<column name="p_42_reg_589">8, 0, 8, 0</column>
+<column name="p_43_reg_594">8, 0, 8, 0</column>
+<column name="p_44_reg_599">8, 0, 8, 0</column>
+<column name="p_4_reg_329">8, 0, 8, 0</column>
+<column name="p_5_reg_334">8, 0, 8, 0</column>
+<column name="p_6_reg_339">8, 0, 8, 0</column>
+<column name="p_7_reg_349">8, 0, 8, 0</column>
+<column name="p_8_reg_354">8, 0, 8, 0</column>
+<column name="p_9_reg_359">8, 0, 8, 0</column>
+<column name="p_s_reg_369">8, 0, 8, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, preProcessing_Pipeline_LOOP_SHA256_GEN_FULL_BLKS, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, preProcessing_Pipeline_LOOP_SHA256_GEN_FULL_BLKS, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, preProcessing_Pipeline_LOOP_SHA256_GEN_FULL_BLKS, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, preProcessing_Pipeline_LOOP_SHA256_GEN_FULL_BLKS, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, preProcessing_Pipeline_LOOP_SHA256_GEN_FULL_BLKS, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, preProcessing_Pipeline_LOOP_SHA256_GEN_FULL_BLKS, return value</column>
+<column name="mergeKipadStrm_dout">in, 32, ap_fifo, mergeKipadStrm, pointer</column>
+<column name="mergeKipadStrm_empty_n">in, 1, ap_fifo, mergeKipadStrm, pointer</column>
+<column name="mergeKipadStrm_read">out, 1, ap_fifo, mergeKipadStrm, pointer</column>
+<column name="mergeKipadStrm_num_data_valid">in, 8, ap_fifo, mergeKipadStrm, pointer</column>
+<column name="mergeKipadStrm_fifo_cap">in, 8, ap_fifo, mergeKipadStrm, pointer</column>
+<column name="blk_strm_din">out, 512, ap_fifo, blk_strm, pointer</column>
+<column name="blk_strm_full_n">in, 1, ap_fifo, blk_strm, pointer</column>
+<column name="blk_strm_write">out, 1, ap_fifo, blk_strm, pointer</column>
+<column name="blk_strm_num_data_valid">in, 6, ap_fifo, blk_strm, pointer</column>
+<column name="blk_strm_fifo_cap">in, 6, ap_fifo, blk_strm, pointer</column>
+<column name="trunc_ln">in, 58, ap_none, trunc_ln, scalar</column>
+</table>
+</item>
+</section>
+</profile>

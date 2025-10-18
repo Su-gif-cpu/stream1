@@ -1,0 +1,40 @@
+#-----------------------------------------------------------
+# xsim v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Sat Oct 18 18:26:24 2025
+# Process ID         : 3356
+# Current directory  : D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/hmac_sha256_test.prj/solution1/sim/verilog
+# Command line       : xsim.exe -mode tcl -source {xsim.dir/test_hmac_sha256/xsim_script.tcl}
+# Log file           : D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/hmac_sha256_test.prj/solution1/sim/verilog/xsim.log
+# Journal file       : D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/hmac_sha256_test.prj/solution1/sim/verilog\xsim.jou
+# Running On         : LAPTOP-H2R0E34P
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : AMD Ryzen 7 6800H with Radeon Graphics         
+# CPU Frequency      : 3194 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 16390 MB
+# Swap memory        : 8321 MB
+# Total Virtual      : 24712 MB
+# Available Virtual  : 7325 MB
+#-----------------------------------------------------------
+source xsim.dir/test_hmac_sha256/xsim_script.tcl
+# xsim {test_hmac_sha256} -autoloadwcfg -tclbatch {test_hmac_sha256.tcl}
+Time resolution is 1 ps
+source test_hmac_sha256.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [n/a] @ "109000"
+// RTL Simulation : 1 / 1 [n/a] @ "2420000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 2439870 ps : File "D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/hmac_sha256_test.prj/solution1/sim/verilog/test_hmac_sha256.autotb.v" Line 490
+## quit
+INFO: [Common 17-206] Exiting xsim at Sat Oct 18 18:26:29 2025...

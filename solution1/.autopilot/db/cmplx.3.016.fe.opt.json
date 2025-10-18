@@ -1,0 +1,170 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "1",
+    "file": "test.cpp",
+    "fileloc": 65,
+    "instructions": 21,
+    "name": "test_hmac_sha256",
+    "total_instructions": 3438
+  },
+  "1": {
+    "basicblocks": 1,
+    "calls": "11 10 13",
+    "file": "hmac.hpp",
+    "fileloc": 260,
+    "instructions": 30,
+    "name": "hmacDataflow<32, 64, 256, 32, 64, sha256_wrapper>",
+    "total_instructions": 3417
+  },
+  "10": {
+    "basicblocks": 1,
+    "calls": "2 5",
+    "file": "hmac.hpp",
+    "fileloc": 180,
+    "instructions": 17,
+    "name": "msgHash<32, 64, 256, 32, 64, sha256_wrapper>",
+    "total_instructions": 1586
+  },
+  "11": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "hmac.hpp",
+    "fileloc": 110,
+    "instructions": 230,
+    "loads": {
+      "L": 2
+    },
+    "name": "kpad<32, 64, 256, 32, 64, sha256_wrapper>",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 230
+  },
+  "12": {
+    "basicblocks": 4,
+    "calls": "",
+    "file": "sha224_256.hpp",
+    "fileloc": 498,
+    "instructions": 36,
+    "loads": {
+      "L": 3
+    },
+    "name": "dup_strm",
+    "stores": {
+      "L": 6
+    },
+    "total_instructions": 36
+  },
+  "13": {
+    "basicblocks": 1,
+    "calls": "9 6",
+    "file": "hmac.hpp",
+    "fileloc": 236,
+    "instructions": 17,
+    "name": "resHash<32, 64, 256, 32, 64, sha256_wrapper>",
+    "total_instructions": 1571
+  },
+  "2": {
+    "basicblocks": 10,
+    "calls": "",
+    "file": "hmac.hpp",
+    "fileloc": 143,
+    "instructions": 69,
+    "loads": {
+      "L": 5
+    },
+    "name": "mergeKipad<32, 64, 256, 64>",
+    "stores": {
+      "L": 6
+    },
+    "total_instructions": 69
+  },
+  "3": {
+    "basicblocks": 125,
+    "calls": "",
+    "file": "sha224_256.hpp",
+    "fileloc": 82,
+    "instructions": 939,
+    "loads": {
+      "L": 47
+    },
+    "name": "preProcessing",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 939
+  },
+  "4": {
+    "basicblocks": 29,
+    "calls": "",
+    "file": "sha224_256.hpp",
+    "fileloc": 523,
+    "instructions": 233,
+    "loads": {
+      "L": 4
+    },
+    "name": "generateMsgSchedule",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 233
+  },
+  "5": {
+    "basicblocks": 1,
+    "calls": "7",
+    "file": "test.cpp",
+    "fileloc": 56,
+    "instructions": 2,
+    "name": "hash",
+    "total_instructions": 1500
+  },
+  "6": {
+    "basicblocks": 1,
+    "calls": "7",
+    "file": "test.cpp",
+    "fileloc": 56,
+    "instructions": 2,
+    "name": "hash",
+    "total_instructions": 1500
+  },
+  "7": {
+    "basicblocks": 1,
+    "calls": "3 12 4 8",
+    "file": "sha224_256.hpp",
+    "fileloc": 747,
+    "instructions": 38,
+    "name": "sha256_top<32, 256>",
+    "total_instructions": 1498
+  },
+  "8": {
+    "basicblocks": 10,
+    "calls": "",
+    "file": "sha224_256.hpp",
+    "fileloc": 610,
+    "instructions": 252,
+    "loads": {
+      "L": 4
+    },
+    "name": "sha256Digest<256>",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 252
+  },
+  "9": {
+    "basicblocks": 10,
+    "calls": "",
+    "file": "hmac.hpp",
+    "fileloc": 207,
+    "instructions": 54,
+    "loads": {
+      "L": 3
+    },
+    "name": "mergeKopad<32, 64, 256, 32, 64>",
+    "stores": {
+      "L": 5
+    },
+    "total_instructions": 54
+  }
+}

@@ -1,0 +1,157 @@
+
+
+================================================================
+== Vitis HLS Report for 'sha256_top_32_256_s'
+================================================================
+* Date:           Sat Oct 18 18:24:33 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        hmac_sha256_test.prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+-----------+------------+
+    |  Clock |  Target | Estimated | Uncertainty|
+    +--------+---------+-----------+------------+
+    |ap_clk  |  3.33 ns|  12.519 ns|     1.05 ns|
+    +--------+---------+-----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|  dataflow|
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        +------------------------+---------------------+---------+---------+-----------+-----------+-----+-----+---------+
+        |                        |                     |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+        |        Instance        |        Module       |   min   |   max   |    min    |    max    | min | max |   Type  |
+        +------------------------+---------------------+---------+---------+-----------+-----------+-----+-----+---------+
+        |preProcessing_U0        |preProcessing        |        ?|        ?|          ?|          ?|    ?|    ?|       no|
+        |dup_strm_U0             |dup_strm             |        6|        6|  19.980 ns|  19.980 ns|    6|    6|       no|
+        |generateMsgSchedule_U0  |generateMsgSchedule  |        ?|        ?|          ?|          ?|    ?|    ?|       no|
+        |sha256Digest_256_U0     |sha256Digest_256_s   |        ?|        ?|          ?|          ?|    ?|    ?|       no|
+        +------------------------+---------------------+---------+---------+-----------+-----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|      4|    -|
+|FIFO             |        -|    -|     792|    680|    -|
+|Instance         |        -|    5|    9232|   4384|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|      -|    -|
+|Register         |        -|    -|       -|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    5|   10024|   5068|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    2|       9|      9|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +------------------------+---------------------+---------+----+------+------+-----+
+    |        Instance        |        Module       | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +------------------------+---------------------+---------+----+------+------+-----+
+    |dup_strm_U0             |dup_strm             |        0|   0|    15|   249|    0|
+    |generateMsgSchedule_U0  |generateMsgSchedule  |        0|   1|  2844|   852|    0|
+    |preProcessing_U0        |preProcessing        |        0|   0|  2912|  1702|    0|
+    |sha256Digest_256_U0     |sha256Digest_256_s   |        0|   4|  3461|  1581|    0|
+    +------------------------+---------------------+---------+----+------+------+-----+
+    |Total                   |                     |        0|   5|  9232|  4384|    0|
+    +------------------------+---------------------+---------+----+------+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    +------------------+---------+----+----+-----+------+-----+---------+
+    |       Name       | BRAM_18K| FF | LUT| URAM| Depth| Bits| Size:D*B|
+    +------------------+---------+----+----+-----+------+-----+---------+
+    |blk_strm_U        |        0|  99|   0|    -|    32|  512|    16384|
+    |end_nblk_strm1_U  |        0|  99|   0|    -|    32|    1|       32|
+    |end_nblk_strm2_U  |        0|  99|   0|    -|    32|    1|       32|
+    |end_nblk_strm_U   |        0|  99|   0|    -|    32|    1|       32|
+    |nblk_strm1_U      |        0|  99|   0|    -|    32|   64|     2048|
+    |nblk_strm2_U      |        0|  99|   0|    -|    32|   64|     2048|
+    |nblk_strm_U       |        0|  99|   0|    -|    32|   64|     2048|
+    |w_strm_U          |        0|  99|   0|    -|    32|   32|     1024|
+    +------------------+---------+----+----+-----+------+-----+---------+
+    |Total             |        0| 792|   0|    0|   256|  739|    23648|
+    +------------------+---------+----+----+-----+------+-----+---------+
+
+    * Expression: 
+    +-------------------------------+----------+----+---+----+------------+------------+
+    |         Variable Name         | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------------------+----------+----+---+----+------------+------------+
+    |ap_idle                        |       and|   0|  0|   2|           1|           1|
+    |preProcessing_U0_start_full_n  |       and|   0|  0|   2|           1|           1|
+    +-------------------------------+----------+----+---+----+------------+------------+
+    |Total                          |          |   0|  0|   4|           2|           2|
+    +-------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------------+-----+-----+------------+---------------------+--------------+
+|          RTL Ports         | Dir | Bits|  Protocol  |    Source Object    |    C Type    |
++----------------------------+-----+-----+------------+---------------------+--------------+
+|mergeKopadStrm_dout         |   in|   32|     ap_fifo|       mergeKopadStrm|       pointer|
+|mergeKopadStrm_empty_n      |   in|    1|     ap_fifo|       mergeKopadStrm|       pointer|
+|mergeKopadStrm_read         |  out|    1|     ap_fifo|       mergeKopadStrm|       pointer|
+|mergeKopadLenStrm_dout      |   in|   64|     ap_fifo|    mergeKopadLenStrm|       pointer|
+|mergeKopadLenStrm_empty_n   |   in|    1|     ap_fifo|    mergeKopadLenStrm|       pointer|
+|mergeKopadLenStrm_read      |  out|    1|     ap_fifo|    mergeKopadLenStrm|       pointer|
+|eMergeKopadLenStrm_dout     |   in|    1|     ap_fifo|   eMergeKopadLenStrm|       pointer|
+|eMergeKopadLenStrm_empty_n  |   in|    1|     ap_fifo|   eMergeKopadLenStrm|       pointer|
+|eMergeKopadLenStrm_read     |  out|    1|     ap_fifo|   eMergeKopadLenStrm|       pointer|
+|hshStrm_din                 |  out|  256|     ap_fifo|              hshStrm|       pointer|
+|hshStrm_full_n              |   in|    1|     ap_fifo|              hshStrm|       pointer|
+|hshStrm_write               |  out|    1|     ap_fifo|              hshStrm|       pointer|
+|eHshStrm_din                |  out|    1|     ap_fifo|             eHshStrm|       pointer|
+|eHshStrm_full_n             |   in|    1|     ap_fifo|             eHshStrm|       pointer|
+|eHshStrm_write              |  out|    1|     ap_fifo|             eHshStrm|       pointer|
+|ap_clk                      |   in|    1|  ap_ctrl_hs|  sha256_top<32, 256>|  return value|
+|ap_rst                      |   in|    1|  ap_ctrl_hs|  sha256_top<32, 256>|  return value|
+|ap_start                    |   in|    1|  ap_ctrl_hs|  sha256_top<32, 256>|  return value|
+|ap_done                     |  out|    1|  ap_ctrl_hs|  sha256_top<32, 256>|  return value|
+|ap_ready                    |  out|    1|  ap_ctrl_hs|  sha256_top<32, 256>|  return value|
+|ap_idle                     |  out|    1|  ap_ctrl_hs|  sha256_top<32, 256>|  return value|
+|ap_continue                 |   in|    1|  ap_ctrl_hs|  sha256_top<32, 256>|  return value|
++----------------------------+-----+-----+------------+---------------------+--------------+
+

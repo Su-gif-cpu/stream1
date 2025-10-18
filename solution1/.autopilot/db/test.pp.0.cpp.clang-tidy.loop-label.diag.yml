@@ -1,0 +1,781 @@
+---
+MainSourceFile:  'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/hmac_sha256_test.prj/solution1/.autopilot/db/test.pp.0.cpp'
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_676_1:  '
+    FileOffset:      676
+    FilePath:        'T:\Xilinx\Vitis\2024.2\common\technology\autopilot\etc\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          1423104
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_676_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_690_1:  '
+    FileOffset:      690
+    FilePath:        'T:\Xilinx\Vitis\2024.2\common\technology\autopilot\etc\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          1423570
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_690_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_704_1:  '
+    FileOffset:      704
+    FilePath:        'T:\Xilinx\Vitis\2024.2\common\technology\autopilot\etc\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          1424037
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_704_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1248_1:  '
+    FileOffset:      1248
+    FilePath:        'T:\Xilinx\Vitis\2024.2\common\technology\autopilot\etc\ap_fixed_base.h'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          1707395
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1248_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_44_1:  '
+    FileOffset:      44
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\hmac.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2079685
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_44_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_57_1:  '
+    FileOffset:      57
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\hmac.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2080137
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_57_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_64_2:  '
+    FileOffset:      64
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\hmac.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2080370
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_64_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_69_3:  '
+    FileOffset:      69
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\hmac.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2080589
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_69_3: '
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Resource with core_name: FIFO_LUTRAM pragma is ignored, because this core doesn''t exist at all '
+    FileOffset:      91
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\hmac.hpp'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Resource with core_name: FIFO_LUTRAM pragma is ignored, because this core doesn''t exist at all '
+    FileOffset:      94
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\hmac.hpp'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Resource with core_name: FIFO_LUTRAM pragma is ignored, because this core doesn''t exist at all '
+    FileOffset:      97
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\hmac.hpp'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Resource with core_name: FIFO_LUTRAM pragma is ignored, because this core doesn''t exist at all '
+    FileOffset:      100
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\hmac.hpp'
+    Replacements:    
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_118_1:  '
+    FileOffset:      118
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\hmac.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2082691
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_118_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_120_2:  '
+    FileOffset:      120
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\hmac.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2082769
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_120_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_129_3:  '
+    FileOffset:      129
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\hmac.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2083145
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_129_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_152_1:  '
+    FileOffset:      152
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\hmac.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2084110
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_152_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_162_2:  '
+    FileOffset:      162
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\hmac.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2084391
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_162_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_171_3:  '
+    FileOffset:      171
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\hmac.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2084661
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_171_3: '
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Resource with core_name: FIFO_BRAM pragma is ignored, because this core doesn''t exist at all '
+    FileOffset:      192
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\hmac.hpp'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Resource with core_name: FIFO_LUTRAM pragma is ignored, because this core doesn''t exist at all '
+    FileOffset:      195
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\hmac.hpp'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Resource with core_name: FIFO_LUTRAM pragma is ignored, because this core doesn''t exist at all '
+    FileOffset:      198
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\hmac.hpp'
+    Replacements:    
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_213_1:  '
+    FileOffset:      213
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\hmac.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2086670
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_213_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_220_2:  '
+    FileOffset:      220
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\hmac.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2086928
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_220_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_226_3:  '
+    FileOffset:      226
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\hmac.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2087148
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_226_3: '
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Resource with core_name: FIFO_LUTRAM pragma is ignored, because this core doesn''t exist at all '
+    FileOffset:      245
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\hmac.hpp'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Resource with core_name: FIFO_LUTRAM pragma is ignored, because this core doesn''t exist at all '
+    FileOffset:      248
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\hmac.hpp'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Resource with core_name: FIFO_LUTRAM pragma is ignored, because this core doesn''t exist at all '
+    FileOffset:      251
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\hmac.hpp'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Resource with core_name: FIFO_LUTRAM pragma is ignored, because this core doesn''t exist at all '
+    FileOffset:      269
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\hmac.hpp'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Resource with core_name: FIFO_LUTRAM pragma is ignored, because this core doesn''t exist at all '
+    FileOffset:      273
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\hmac.hpp'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Resource with core_name: FIFO_LUTRAM pragma is ignored, because this core doesn''t exist at all '
+    FileOffset:      276
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\hmac.hpp'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Resource with core_name: FIFO_LUTRAM pragma is ignored, because this core doesn''t exist at all '
+    FileOffset:      279
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\hmac.hpp'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Resource with core_name: FIFO_LUTRAM pragma is ignored, because this core doesn''t exist at all '
+    FileOffset:      283
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\hmac.hpp'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Resource with core_name: FIFO_LUTRAM pragma is ignored, because this core doesn''t exist at all '
+    FileOffset:      286
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\hmac.hpp'
+    Replacements:    
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_116_1:  '
+    FileOffset:      116
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\sha224_256.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2093592
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_116_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_120_2:  '
+    FileOffset:      120
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\sha224_256.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2093733
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_120_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_127_3:  '
+    FileOffset:      127
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\sha224_256.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2093856
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_127_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_137_4:  '
+    FileOffset:      137
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\sha224_256.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2094110
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_137_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_143_5:  '
+    FileOffset:      143
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\sha224_256.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2094316
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_143_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_148_6:  '
+    FileOffset:      148
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\sha224_256.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2094536
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_148_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_149_7:  '
+    FileOffset:      149
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\sha224_256.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2094633
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_149_7: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_169_8:  '
+    FileOffset:      169
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\sha224_256.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2095254
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_169_8: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_194_9:  '
+    FileOffset:      194
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\sha224_256.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2096287
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_194_9: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_200_10:  '
+    FileOffset:      200
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\sha224_256.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2096526
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_200_10: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_201_11:  '
+    FileOffset:      201
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\sha224_256.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2096623
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_201_11: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_204_12:  '
+    FileOffset:      204
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\sha224_256.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2096752
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_204_12: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_222_13:  '
+    FileOffset:      222
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\sha224_256.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2097294
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_222_13: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_247_14:  '
+    FileOffset:      247
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\sha224_256.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2098327
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_247_14: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_251_15:  '
+    FileOffset:      251
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\sha224_256.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2098482
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_251_15: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_260_16:  '
+    FileOffset:      260
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\sha224_256.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2098744
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_260_16: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_265_17:  '
+    FileOffset:      265
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\sha224_256.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2098967
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_265_17: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_266_18:  '
+    FileOffset:      266
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\sha224_256.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2099065
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_266_18: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_269_19:  '
+    FileOffset:      269
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\sha224_256.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2099196
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_269_19: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_295_1:  '
+    FileOffset:      295
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\sha224_256.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2099963
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_295_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_323_2:  '
+    FileOffset:      323
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\sha224_256.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2100846
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_323_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_330_3:  '
+    FileOffset:      330
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\sha224_256.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2101182
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_330_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_334_4:  '
+    FileOffset:      334
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\sha224_256.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2101327
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_334_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_341_5:  '
+    FileOffset:      341
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\sha224_256.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2101450
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_341_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_351_6:  '
+    FileOffset:      351
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\sha224_256.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2101704
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_351_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_357_7:  '
+    FileOffset:      357
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\sha224_256.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2101910
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_357_7: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_362_8:  '
+    FileOffset:      362
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\sha224_256.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2102130
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_362_8: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_363_9:  '
+    FileOffset:      363
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\sha224_256.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2102227
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_363_9: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_366_10:  '
+    FileOffset:      366
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\sha224_256.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2102356
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_366_10: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_386_11:  '
+    FileOffset:      386
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\sha224_256.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2102992
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_386_11: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_393_12:  '
+    FileOffset:      393
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\sha224_256.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2103356
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_393_12: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_397_13:  '
+    FileOffset:      397
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\sha224_256.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2103560
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_397_13: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_399_14:  '
+    FileOffset:      399
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\sha224_256.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2103709
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_399_14: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_423_15:  '
+    FileOffset:      423
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\sha224_256.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2104887
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_423_15: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_426_16:  '
+    FileOffset:      426
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\sha224_256.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2105046
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_426_16: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_436_17:  '
+    FileOffset:      436
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\sha224_256.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2105529
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_436_17: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_455_18:  '
+    FileOffset:      455
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\sha224_256.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2106445
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_455_18: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_464_19:  '
+    FileOffset:      464
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\sha224_256.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2106764
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_464_19: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_465_20:  '
+    FileOffset:      465
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\sha224_256.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2106865
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_465_20: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_468_21:  '
+    FileOffset:      468
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\sha224_256.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2107002
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_468_21: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_472_22:  '
+    FileOffset:      472
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\sha224_256.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2107133
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_472_22: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_481_23:  '
+    FileOffset:      481
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\sha224_256.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2107407
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_481_23: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_486_24:  '
+    FileOffset:      486
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\sha224_256.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2107646
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_486_24: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_487_25:  '
+    FileOffset:      487
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\sha224_256.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2107748
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_487_25: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_490_26:  '
+    FileOffset:      490
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\sha224_256.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2107887
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_490_26: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_506_1:  '
+    FileOffset:      506
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\sha224_256.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2108368
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_506_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_528_1:  '
+    FileOffset:      528
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\sha224_256.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2109027
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_528_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_530_2:  '
+    FileOffset:      530
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\sha224_256.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2109087
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_530_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_554_3:  '
+    FileOffset:      554
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\sha224_256.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2109859
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_554_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_593_1:  '
+    FileOffset:      593
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\sha224_256.hpp'
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2110998
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_593_1: '
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Resource with core_name: FIFO_LUTRAM pragma is ignored, because this core doesn''t exist at all '
+    FileOffset:      756
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\sha224_256.hpp'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Resource with core_name: FIFO_LUTRAM pragma is ignored, because this core doesn''t exist at all '
+    FileOffset:      761
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\sha224_256.hpp'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Resource with core_name: FIFO_LUTRAM pragma is ignored, because this core doesn''t exist at all '
+    FileOffset:      764
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\sha224_256.hpp'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Resource with core_name: FIFO_LUTRAM pragma is ignored, because this core doesn''t exist at all '
+    FileOffset:      767
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\sha224_256.hpp'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Resource with core_name: FIFO_LUTRAM pragma is ignored, because this core doesn''t exist at all '
+    FileOffset:      772
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\sha224_256.hpp'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Resource with core_name: FIFO_LUTRAM pragma is ignored, because this core doesn''t exist at all '
+    FileOffset:      775
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\sha224_256.hpp'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Resource with core_name: FIFO_LUTRAM pragma is ignored, because this core doesn''t exist at all '
+    FileOffset:      778
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\sha224_256.hpp'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Resource with core_name: FIFO_LUTRAM pragma is ignored, because this core doesn''t exist at all '
+    FileOffset:      783
+    FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\include\xf_security\sha224_256.hpp'
+    Replacements:    
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_90_1:  '
+    FileOffset:      90
+    FilePath:        test.cpp
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2120449
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_90_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_104_1:  '
+    FileOffset:      104
+    FilePath:        test.cpp
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2120877
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_104_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_190_1:  '
+    FileOffset:      190
+    FilePath:        test.cpp
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2121951
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_190_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_229_2:  '
+    FileOffset:      229
+    FilePath:        test.cpp
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2123206
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_229_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_241_3:  '
+    FileOffset:      241
+    FilePath:        test.cpp
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2123646
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_241_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_246_4:  '
+    FileOffset:      246
+    FilePath:        test.cpp
+    Replacements:    
+      - FilePath:        'D:\hlstrack\hlstrack2025-master\security\L1\tests\hmac\sha256\hmac_sha256_test.prj\solution1\.autopilot\db\test.pp.0.cpp'
+        Offset:          2123919
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_246_4: '
+...

@@ -1,0 +1,1502 @@
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 684, Column: 2 }
+Function:        _ZN2xf8security8internal12sha256DigestILi256EEEvRN3hls6streamIyLi0EEERNS4_IbLi0EEERNS4_IjLi0EEERNS4_I7ap_uintIXT_EELi0EEES8_
+Args:            
+  - Callee:          'xf::security::internal::sha256_iter(unsigned int&, unsigned int&, unsigned int&, unsigned int&, unsigned int&, unsigned int&, unsigned int&, unsigned int&, hls::stream<unsigned int, 0>&, unsigned int&, unsigned int const*, short)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                       Line: 576, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void xf::security::internal::sha256Digest<256>(hls::stream<unsigned long long, 0>&, hls::stream<bool, 0>&, hls::stream<unsigned int, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                       Line: 614, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 786, Column: 2 }
+Function:        _ZN2xf8security8internal10sha256_topILi32ELi256EEEvRN3hls6streamI7ap_uintIXT_EELi0EEERNS4_IS5_ILi64EELi0EEERNS4_IbLi0EEERNS4_IS5_IXT0_EELi0EEESD_
+Args:            
+  - Callee:          'xf::security::internal::preProcessing(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<xf::security::internal::SHA256Block, 0>&, hls::stream<unsigned long long, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                       Line: 87, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void xf::security::internal::sha256_top<32, 256>(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                       Line: 751, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 790, Column: 5 }
+Function:        _ZN2xf8security8internal10sha256_topILi32ELi256EEEvRN3hls6streamI7ap_uintIXT_EELi0EEERNS4_IS5_ILi64EELi0EEERNS4_IbLi0EEERNS4_IS5_IXT0_EELi0EEESD_
+Args:            
+  - Callee:          'xf::security::internal::dup_strm(hls::stream<unsigned long long, 0>&, hls::stream<bool, 0>&, hls::stream<unsigned long long, 0>&, hls::stream<bool, 0>&, hls::stream<unsigned long long, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                       Line: 503, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void xf::security::internal::sha256_top<32, 256>(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                       Line: 751, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 793, Column: 5 }
+Function:        _ZN2xf8security8internal10sha256_topILi32ELi256EEEvRN3hls6streamI7ap_uintIXT_EELi0EEERNS4_IS5_ILi64EELi0EEERNS4_IbLi0EEERNS4_IS5_IXT0_EELi0EEESD_
+Args:            
+  - Callee:          'xf::security::internal::generateMsgSchedule(hls::stream<xf::security::internal::SHA256Block, 0>&, hls::stream<unsigned long long, 0>&, hls::stream<bool, 0>&, hls::stream<unsigned int, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                       Line: 526, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void xf::security::internal::sha256_top<32, 256>(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                       Line: 751, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 797, Column: 5 }
+Function:        _ZN2xf8security8internal10sha256_topILi32ELi256EEEvRN3hls6streamI7ap_uintIXT_EELi0EEERNS4_IS5_ILi64EELi0EEERNS4_IbLi0EEERNS4_IS5_IXT0_EELi0EEESD_
+Args:            
+  - Callee:          'void xf::security::internal::sha256Digest<256>(hls::stream<unsigned long long, 0>&, hls::stream<bool, 0>&, hls::stream<unsigned int, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                       Line: 614, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void xf::security::internal::sha256_top<32, 256>(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                       Line: 751, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 832, Column: 5 }
+Function:        _ZN2xf8security6sha256ILi32EEEvRN3hls6streamI7ap_uintIXT_EELi0EEERNS3_IS4_ILi64EELi0EEERNS3_IbLi0EEERNS3_IS4_ILi256EELi0EEESC_
+Args:            
+  - Callee:          'void xf::security::internal::sha256_top<32, 256>(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                       Line: 751, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void xf::security::sha256<32>(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                       Line: 831, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: test.cpp, Line: 61, Column: 9 }
+Function:        _ZN14sha256_wrapperILi32ELi64ELi256EE4hashERN3hls6streamI7ap_uintILi32EELi0EEERNS2_IS3_ILi64EELi0EEERNS2_IbLi0EEERNS2_IS3_ILi256EELi0EEESB_
+Args:            
+  - Callee:          'void xf::security::sha256<32>(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                       Line: 831, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'sha256_wrapper<32, 64, 256>::hash(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: test.cpp, Line: 60, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                   Line: 200, Column: 2 }
+Function:        _ZN2xf8security8internal7msgHashILi32ELi64ELi256ELi32ELi64E14sha256_wrapperEEvRN3hls6streamI7ap_uintIXmlT3_Li8EEELi0EEES9_RNS5_IS6_IXT_EELi0EEERNS5_IS6_IXT0_EELi0EEERNS5_IbLi0EEES9_RNS5_IS6_IXT1_EELi0EEESH_
+Args:            
+  - Callee:          'void xf::security::internal::mergeKipad<32, 64, 256, 64>(hls::stream<ap_uint<(64) * (8)>, 0>&, hls::stream<ap_uint<(64) * (8)>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<(64) * (8)>, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                       Line: 151, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void xf::security::internal::msgHash<32, 64, 256, 32, 64, sha256_wrapper>(hls::stream<ap_uint<(64) * (8)>, 0>&, hls::stream<ap_uint<(64) * (8)>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<(64) * (8)>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                       Line: 187, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                   Line: 203, Column: 5 }
+Function:        _ZN2xf8security8internal7msgHashILi32ELi64ELi256ELi32ELi64E14sha256_wrapperEEvRN3hls6streamI7ap_uintIXmlT3_Li8EEELi0EEES9_RNS5_IS6_IXT_EELi0EEERNS5_IS6_IXT0_EELi0EEERNS5_IbLi0EEES9_RNS5_IS6_IXT1_EELi0EEESH_
+Args:            
+  - Callee:          'sha256_wrapper<32, 64, 256>::hash(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: test.cpp, Line: 60, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void xf::security::internal::msgHash<32, 64, 256, 32, 64, sha256_wrapper>(hls::stream<ap_uint<(64) * (8)>, 0>&, hls::stream<ap_uint<(64) * (8)>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<(64) * (8)>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                       Line: 187, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                   Line: 253, Column: 2 }
+Function:        _ZN2xf8security8internal7resHashILi32ELi64ELi256ELi32ELi64E14sha256_wrapperEEvRN3hls6streamI7ap_uintIXmlT3_Li8EEELi0EEERNS5_IS6_IXT1_EELi0EEERNS5_IbLi0EEESC_SE_
+Args:            
+  - Callee:          'void xf::security::internal::mergeKopad<32, 64, 256, 32, 64>(hls::stream<ap_uint<(64) * (8)>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                       Line: 212, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void xf::security::internal::resHash<32, 64, 256, 32, 64, sha256_wrapper>(hls::stream<ap_uint<(64) * (8)>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                       Line: 240, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                   Line: 256, Column: 5 }
+Function:        _ZN2xf8security8internal7resHashILi32ELi64ELi256ELi32ELi64E14sha256_wrapperEEvRN3hls6streamI7ap_uintIXmlT3_Li8EEELi0EEERNS5_IS6_IXT1_EELi0EEERNS5_IbLi0EEESC_SE_
+Args:            
+  - Callee:          'sha256_wrapper<32, 64, 256>::hash(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: test.cpp, Line: 60, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void xf::security::internal::resHash<32, 64, 256, 32, 64, sha256_wrapper>(hls::stream<ap_uint<(64) * (8)>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                       Line: 240, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                   Line: 288, Column: 2 }
+Function:        _ZN2xf8security8internal12hmacDataflowILi32ELi64ELi256ELi32ELi64E14sha256_wrapperEEvRN3hls6streamI7ap_uintIXT_EELi0EEES9_RNS5_IS6_IXT0_EELi0EEERNS5_IbLi0EEERNS5_IS6_IXT1_EELi0EEESE_
+Args:            
+  - Callee:          'void xf::security::internal::kpad<32, 64, 256, 32, 64, sha256_wrapper>(hls::stream<ap_uint<32>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<(64) * (8)>, 0>&, hls::stream<ap_uint<(64) * (8)>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                       Line: 114, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void xf::security::internal::hmacDataflow<32, 64, 256, 32, 64, sha256_wrapper>(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                       Line: 265, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                   Line: 290, Column: 5 }
+Function:        _ZN2xf8security8internal12hmacDataflowILi32ELi64ELi256ELi32ELi64E14sha256_wrapperEEvRN3hls6streamI7ap_uintIXT_EELi0EEES9_RNS5_IS6_IXT0_EELi0EEERNS5_IbLi0EEERNS5_IS6_IXT1_EELi0EEESE_
+Args:            
+  - Callee:          'void xf::security::internal::msgHash<32, 64, 256, 32, 64, sha256_wrapper>(hls::stream<ap_uint<(64) * (8)>, 0>&, hls::stream<ap_uint<(64) * (8)>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<(64) * (8)>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                       Line: 187, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void xf::security::internal::hmacDataflow<32, 64, 256, 32, 64, sha256_wrapper>(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                       Line: 265, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                   Line: 293, Column: 5 }
+Function:        _ZN2xf8security8internal12hmacDataflowILi32ELi64ELi256ELi32ELi64E14sha256_wrapperEEvRN3hls6streamI7ap_uintIXT_EELi0EEES9_RNS5_IS6_IXT0_EELi0EEERNS5_IbLi0EEERNS5_IS6_IXT1_EELi0EEESE_
+Args:            
+  - Callee:          'void xf::security::internal::resHash<32, 64, 256, 32, 64, sha256_wrapper>(hls::stream<ap_uint<(64) * (8)>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                       Line: 240, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void xf::security::internal::hmacDataflow<32, 64, 256, 32, 64, sha256_wrapper>(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                       Line: 265, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                   Line: 346, Column: 5 }
+Function:        _ZN2xf8security4hmacILi32ELi64ELi256ELi32ELi64E14sha256_wrapperEEvRN3hls6streamI7ap_uintIXT_EELi0EEES8_RNS4_IS5_IXT0_EELi0EEERNS4_IbLi0EEERNS4_IS5_IXT1_EELi0EEESD_
+Args:            
+  - Callee:          'void xf::security::internal::hmacDataflow<32, 64, 256, 32, 64, sha256_wrapper>(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                       Line: 265, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void xf::security::hmac<32, 64, 256, 32, 64, sha256_wrapper>(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                       Line: 345, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: test.cpp, Line: 71, Column: 5 }
+Function:        _Z16test_hmac_sha256RN3hls6streamI7ap_uintILi32EELi0EEES4_RNS0_IS1_ILi64EELi0EEERNS0_IbLi0EEERNS0_IS1_ILi256EELi0EEES9_
+Args:            
+  - Callee:          'void xf::security::hmac<32, 64, 256, 32, 64, sha256_wrapper>(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                       Line: 345, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'test_hmac_sha256(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: test.cpp, Line: 70, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-reg2mem-ssa
+Name:            DisaggrReason
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 255, Column: 9 }
+Function:        _ZN2xf8security8internal13preProcessingERN3hls6streamI7ap_uintILi32EELi0EEERNS3_IS4_ILi64EELi0EEERNS3_IbLi0EEERNS3_INS1_11SHA256BlockELi0EEERNS3_IyLi0EEESC_
+Args:            
+  - String:          'Adding '''
+  - Name:            b1
+  - String:          ''' into disaggregation list because there''s '
+  - String:          array-partition pragma applied on the struct field
+...
+--- !Passed
+Pass:            reflow-reg2mem-ssa
+Name:            DisaggrReason
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 210, Column: 9 }
+Function:        _ZN2xf8security8internal13preProcessingERN3hls6streamI7ap_uintILi32EELi0EEERNS3_IS4_ILi64EELi0EEERNS3_IbLi0EEERNS3_INS1_11SHA256BlockELi0EEERNS3_IyLi0EEESC_
+Args:            
+  - String:          'Adding '''
+  - Name:            b225
+  - String:          ''' into disaggregation list because there''s '
+  - String:          array-partition pragma applied on the struct field
+...
+--- !Passed
+Pass:            reflow-reg2mem-ssa
+Name:            DisaggrReason
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 157, Column: 9 }
+Function:        _ZN2xf8security8internal13preProcessingERN3hls6streamI7ap_uintILi32EELi0EEERNS3_IS4_ILi64EELi0EEERNS3_IbLi0EEERNS3_INS1_11SHA256BlockELi0EEERNS3_IyLi0EEESC_
+Args:            
+  - String:          'Adding '''
+  - Name:            b81
+  - String:          ''' into disaggregation list because there''s '
+  - String:          array-partition pragma applied on the struct field
+...
+--- !Passed
+Pass:            reflow-reg2mem-ssa
+Name:            DisaggrReason
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 134, Column: 9 }
+Function:        _ZN2xf8security8internal13preProcessingERN3hls6streamI7ap_uintILi32EELi0EEERNS3_IS4_ILi64EELi0EEERNS3_IbLi0EEERNS3_INS1_11SHA256BlockELi0EEERNS3_IyLi0EEESC_
+Args:            
+  - String:          'Adding '''
+  - Name:            b
+  - String:          ''' into disaggregation list because there''s '
+  - String:          array-partition pragma applied on the struct field
+...
+--- !Passed
+Pass:            reflow-reg2mem-ssa
+Name:            DisaggrReason
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 106, Column: 9 }
+Function:        _ZN2xf8security8internal13preProcessingERN3hls6streamI7ap_uintILi32EELi0EEERNS3_IS4_ILi64EELi0EEERNS3_IbLi0EEERNS3_INS1_11SHA256BlockELi0EEERNS3_IyLi0EEESC_
+Args:            
+  - String:          'Adding '''
+  - Name:            b0
+  - String:          ''' into disaggregation list because there''s '
+  - String:          array-partition pragma applied on the struct field
+...
+--- !Passed
+Pass:            reflow-reg2mem-ssa
+Name:            DisaggrReason
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 534, Column: 9 }
+Function:        _ZN2xf8security8internal19generateMsgScheduleERN3hls6streamINS1_11SHA256BlockELi0EEERNS3_IyLi0EEERNS3_IbLi0EEERNS3_IjLi0EEE
+Args:            
+  - String:          'Adding '''
+  - Name:            blk
+  - String:          ''' into disaggregation list because there''s '
+  - String:          array-partition pragma applied on the struct field
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrReason
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 255, Column: 9 }
+Function:        _ZN2xf8security8internal13preProcessingERN3hls6streamI7ap_uintILi32EELi0EEERNS3_IS4_ILi64EELi0EEERNS3_IbLi0EEERNS3_INS1_11SHA256BlockELi0EEERNS3_IyLi0EEESC_
+Args:            
+  - String:          'Adding '''
+  - Name:            b1
+  - String:          ''' into disaggregation list because there''s '
+  - String:          array-partition pragma applied on the struct field
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrReason
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 210, Column: 9 }
+Function:        _ZN2xf8security8internal13preProcessingERN3hls6streamI7ap_uintILi32EELi0EEERNS3_IS4_ILi64EELi0EEERNS3_IbLi0EEERNS3_INS1_11SHA256BlockELi0EEERNS3_IyLi0EEESC_
+Args:            
+  - String:          'Adding '''
+  - Name:            b225
+  - String:          ''' into disaggregation list because there''s '
+  - String:          array-partition pragma applied on the struct field
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrReason
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 157, Column: 9 }
+Function:        _ZN2xf8security8internal13preProcessingERN3hls6streamI7ap_uintILi32EELi0EEERNS3_IS4_ILi64EELi0EEERNS3_IbLi0EEERNS3_INS1_11SHA256BlockELi0EEERNS3_IyLi0EEESC_
+Args:            
+  - String:          'Adding '''
+  - Name:            b81
+  - String:          ''' into disaggregation list because there''s '
+  - String:          array-partition pragma applied on the struct field
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrReason
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 134, Column: 9 }
+Function:        _ZN2xf8security8internal13preProcessingERN3hls6streamI7ap_uintILi32EELi0EEERNS3_IS4_ILi64EELi0EEERNS3_IbLi0EEERNS3_INS1_11SHA256BlockELi0EEERNS3_IyLi0EEESC_
+Args:            
+  - String:          'Adding '''
+  - Name:            b
+  - String:          ''' into disaggregation list because there''s '
+  - String:          array-partition pragma applied on the struct field
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrReason
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 106, Column: 9 }
+Function:        _ZN2xf8security8internal13preProcessingERN3hls6streamI7ap_uintILi32EELi0EEERNS3_IS4_ILi64EELi0EEERNS3_IbLi0EEERNS3_INS1_11SHA256BlockELi0EEERNS3_IyLi0EEESC_
+Args:            
+  - String:          'Adding '''
+  - Name:            b0
+  - String:          ''' into disaggregation list because there''s '
+  - String:          array-partition pragma applied on the struct field
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrReason
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 534, Column: 9 }
+Function:        _ZN2xf8security8internal19generateMsgScheduleERN3hls6streamINS1_11SHA256BlockELi0EEERNS3_IyLi0EEERNS3_IbLi0EEERNS3_IjLi0EEE
+Args:            
+  - String:          'Adding '''
+  - Name:            blk
+  - String:          ''' into disaggregation list because there''s '
+  - String:          array-partition pragma applied on the struct field
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrSucc
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 254, Column: 25 }
+Function:        _ZN2xf8security8internal13preProcessingERN3hls6streamI7ap_uintILi32EELi0EEERNS3_IS4_ILi64EELi0EEERNS3_IbLi0EEERNS3_INS1_11SHA256BlockELi0EEERNS3_IyLi0EEESC_
+Args:            
+  - String:          'Disaggregating variable '''
+  - Name:            b1
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrSucc
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 209, Column: 25 }
+Function:        _ZN2xf8security8internal13preProcessingERN3hls6streamI7ap_uintILi32EELi0EEERNS3_IS4_ILi64EELi0EEERNS3_IbLi0EEERNS3_INS1_11SHA256BlockELi0EEERNS3_IyLi0EEESC_
+Args:            
+  - String:          'Disaggregating variable '''
+  - Name:            b225
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrSucc
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 156, Column: 25 }
+Function:        _ZN2xf8security8internal13preProcessingERN3hls6streamI7ap_uintILi32EELi0EEERNS3_IS4_ILi64EELi0EEERNS3_IbLi0EEERNS3_INS1_11SHA256BlockELi0EEERNS3_IyLi0EEESC_
+Args:            
+  - String:          'Disaggregating variable '''
+  - Name:            b81
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrSucc
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 133, Column: 25 }
+Function:        _ZN2xf8security8internal13preProcessingERN3hls6streamI7ap_uintILi32EELi0EEERNS3_IS4_ILi64EELi0EEERNS3_IbLi0EEERNS3_INS1_11SHA256BlockELi0EEERNS3_IyLi0EEESC_
+Args:            
+  - String:          'Disaggregating variable '''
+  - Name:            b
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrSucc
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 105, Column: 14 }
+Function:        _ZN2xf8security8internal13preProcessingERN3hls6streamI7ap_uintILi32EELi0EEERNS3_IS4_ILi64EELi0EEERNS3_IbLi0EEERNS3_INS1_11SHA256BlockELi0EEERNS3_IyLi0EEESC_
+Args:            
+  - String:          'Disaggregating variable '''
+  - Name:            b0
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrSucc
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 533, Column: 14 }
+Function:        _ZN2xf8security8internal19generateMsgScheduleERN3hls6streamINS1_11SHA256BlockELi0EEERNS3_IyLi0EEERNS3_IbLi0EEERNS3_IjLi0EEE
+Args:            
+  - String:          'Disaggregating variable '''
+  - Name:            blk
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 554, Column: 35 }
+Function:        _ZN2xf8security8internal19generateMsgScheduleERN3hls6streamINS1_11SHA256BlockELi0EEERNS3_IyLi0EEERNS3_IbLi0EEERNS3_IjLi0EEE
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_554_3
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 109, Column: 13 }
+Function:        _ZN2xf8security8internal13preProcessingERN3hls6streamI7ap_uintILi32EELi0EEERNS3_IS4_ILi64EELi0EEERNS3_IbLi0EEERNS3_INS1_11SHA256BlockELi0EEERNS3_IyLi0EEESC_.31.45.57
+Args:            
+  - String:          'Loop '''
+  - LoopName:        LOOP_SHA256_GEN_ONE_FULL_BLK
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 614, Column: 0 }
+Function:        _ZN2xf8security8internal12sha256DigestILi256EEEvRN3hls6streamIyLi0EEERNS4_IbLi0EEERNS4_IjLi0EEERNS4_I7ap_uintIXT_EELi0EEES8_.79.92
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        LOOP_SHA256_EMIT_H256
+  - String:          ''' ('
+  - LoopLoc:         'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:718:13'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'xf::security::internal::sha256Digest<256>'
+  - String:          ''' completely with a factor of '
+  - Factor:          '8'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 526, Column: 0 }
+Function:        _ZN2xf8security8internal19generateMsgScheduleERN3hls6streamINS1_11SHA256BlockELi0EEERNS3_IyLi0EEERNS3_IbLi0EEERNS3_IjLi0EEE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_554_3
+  - String:          ''' ('
+  - LoopLoc:         'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:554:35'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'xf::security::internal::generateMsgSchedule'
+  - String:          ''' completely with a factor of '
+  - Factor:          '15'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 87, Column: 0 }
+Function:        _ZN2xf8security8internal13preProcessingERN3hls6streamI7ap_uintILi32EELi0EEERNS3_IS4_ILi64EELi0EEERNS3_IbLi0EEERNS3_INS1_11SHA256BlockELi0EEERNS3_IyLi0EEESC_.31.45.57
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        LOOP_SHA256_GEN_ONE_FULL_BLK
+  - String:          ''' ('
+  - LoopLoc:         'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:109:13'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'xf::security::internal::preProcessing'
+  - String:          ''' completely with a factor of '
+  - Factor:          '16'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 87, Column: 0 }
+Function:        _ZN2xf8security8internal13preProcessingERN3hls6streamI7ap_uintILi32EELi0EEERNS3_IS4_ILi64EELi0EEERNS3_IbLi0EEERNS3_INS1_11SHA256BlockELi0EEERNS3_IyLi0EEESC_.31.45.57
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        LOOP_SHA256_GEN_COPY_TAIL_ONLY
+  - String:          ''' ('
+  - LoopLoc:         'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:213:13'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'xf::security::internal::preProcessing'
+  - String:          ''' completely with a factor of '
+  - Factor:          '16'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 87, Column: 0 }
+Function:        _ZN2xf8security8internal13preProcessingERN3hls6streamI7ap_uintILi32EELi0EEERNS3_IS4_ILi64EELi0EEERNS3_IbLi0EEERNS3_INS1_11SHA256BlockELi0EEERNS3_IyLi0EEESC_.31.45.57
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        LOOP_SHA256_GEN_L_ONLY_BLK
+  - String:          ''' ('
+  - LoopLoc:         'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:257:13'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'xf::security::internal::preProcessing'
+  - String:          ''' completely with a factor of '
+  - Factor:          '14'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 87, Column: 0 }
+Function:        _ZN2xf8security8internal13preProcessingERN3hls6streamI7ap_uintILi32EELi0EEERNS3_IS4_ILi64EELi0EEERNS3_IbLi0EEERNS3_INS1_11SHA256BlockELi0EEERNS3_IyLi0EEESC_.31.45.57
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        LOOP_SHA256_GEN_PAD_13_ZEROS
+  - String:          ''' ('
+  - LoopLoc:         'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:140:13'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'xf::security::internal::preProcessing'
+  - String:          ''' completely with a factor of '
+  - Factor:          '13'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                   Line: 114, Column: 0 }
+Function:        _ZN2xf8security8internal4kpadILi32ELi64ELi256ELi32ELi64E14sha256_wrapperEEvRN3hls6streamI7ap_uintIXT_EELi0EEERNS5_IbLi0EEERNS5_IS6_IXmlT3_Li8EEELi0EEESE_SB_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_129_3
+  - String:          ''' ('
+  - LoopLoc:         'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:129:31'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'xf::security::internal::kpad<32, 64, 256, 32, 64, sha256_wrapper>'
+  - String:          ''' completely with a factor of '
+  - Factor:          '64'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 684, Column: 2 }
+Function:        _ZN2xf8security8internal12sha256DigestILi256EEEvRN3hls6streamIyLi0EEERNS4_IbLi0EEERNS4_IjLi0EEERNS4_I7ap_uintIXT_EELi0EEES8_.79.92
+Args:            
+  - Callee:          'xf::security::internal::sha256_iter(unsigned int&, unsigned int&, unsigned int&, unsigned int&, unsigned int&, unsigned int&, unsigned int&, unsigned int&, hls::stream<unsigned int, 0>&, unsigned int&, unsigned int const*, short)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                       Line: 576, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void xf::security::internal::sha256Digest<256>(hls::stream<unsigned long long, 0>&, hls::stream<bool, 0>&, hls::stream<unsigned int, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&) (.79.92)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                       Line: 614, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 786, Column: 2 }
+Function:        _ZN2xf8security8internal10sha256_topILi32ELi256EEEvRN3hls6streamI7ap_uintIXT_EELi0EEERNS4_IS5_ILi64EELi0EEERNS4_IbLi0EEERNS4_IS5_IXT0_EELi0EEESD_.28.42.54.76.89
+Args:            
+  - Callee:          'xf::security::internal::preProcessing(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<xf::security::internal::SHA256Block, 0>&, hls::stream<unsigned long long, 0>&, hls::stream<bool, 0>&) (.31.45.57)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                       Line: 87, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void xf::security::internal::sha256_top<32, 256>(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&) (.28.42.54.76.89)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                       Line: 751, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 790, Column: 5 }
+Function:        _ZN2xf8security8internal10sha256_topILi32ELi256EEEvRN3hls6streamI7ap_uintIXT_EELi0EEERNS4_IS5_ILi64EELi0EEERNS4_IbLi0EEERNS4_IS5_IXT0_EELi0EEESD_.28.42.54.76.89
+Args:            
+  - Callee:          'xf::security::internal::dup_strm(hls::stream<unsigned long long, 0>&, hls::stream<bool, 0>&, hls::stream<unsigned long long, 0>&, hls::stream<bool, 0>&, hls::stream<unsigned long long, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                       Line: 503, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void xf::security::internal::sha256_top<32, 256>(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&) (.28.42.54.76.89)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                       Line: 751, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 793, Column: 5 }
+Function:        _ZN2xf8security8internal10sha256_topILi32ELi256EEEvRN3hls6streamI7ap_uintIXT_EELi0EEERNS4_IS5_ILi64EELi0EEERNS4_IbLi0EEERNS4_IS5_IXT0_EELi0EEESD_.28.42.54.76.89
+Args:            
+  - Callee:          'xf::security::internal::generateMsgSchedule(hls::stream<xf::security::internal::SHA256Block, 0>&, hls::stream<unsigned long long, 0>&, hls::stream<bool, 0>&, hls::stream<unsigned int, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                       Line: 526, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void xf::security::internal::sha256_top<32, 256>(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&) (.28.42.54.76.89)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                       Line: 751, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 797, Column: 5 }
+Function:        _ZN2xf8security8internal10sha256_topILi32ELi256EEEvRN3hls6streamI7ap_uintIXT_EELi0EEERNS4_IS5_ILi64EELi0EEERNS4_IbLi0EEERNS4_IS5_IXT0_EELi0EEESD_.28.42.54.76.89
+Args:            
+  - Callee:          'void xf::security::internal::sha256Digest<256>(hls::stream<unsigned long long, 0>&, hls::stream<bool, 0>&, hls::stream<unsigned int, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&) (.79.92)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                       Line: 614, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void xf::security::internal::sha256_top<32, 256>(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&) (.28.42.54.76.89)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                       Line: 751, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 832, Column: 5 }
+Function:        _ZN2xf8security6sha256ILi32EEEvRN3hls6streamI7ap_uintIXT_EELi0EEERNS3_IS4_ILi64EELi0EEERNS3_IbLi0EEERNS3_IS4_ILi256EELi0EEESC_.25.39.51.73.86
+Args:            
+  - Callee:          'void xf::security::internal::sha256_top<32, 256>(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&) (.28.42.54.76.89)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                       Line: 751, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void xf::security::sha256<32>(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&) (.25.39.51.73.86)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                       Line: 831, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: test.cpp, Line: 61, Column: 9 }
+Function:        _ZN14sha256_wrapperILi32ELi64ELi256EE4hashERN3hls6streamI7ap_uintILi32EELi0EEERNS2_IS3_ILi64EELi0EEERNS2_IbLi0EEERNS2_IS3_ILi256EELi0EEESB_
+Args:            
+  - Callee:          'void xf::security::sha256<32>(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&) (.25.39.51.73.86)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                       Line: 831, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'sha256_wrapper<32, 64, 256>::hash(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: test.cpp, Line: 60, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                   Line: 200, Column: 2 }
+Function:        _ZN2xf8security8internal7msgHashILi32ELi64ELi256ELi32ELi64E14sha256_wrapperEEvRN3hls6streamI7ap_uintIXmlT3_Li8EEELi0EEES9_RNS5_IS6_IXT_EELi0EEERNS5_IS6_IXT0_EELi0EEERNS5_IbLi0EEES9_RNS5_IS6_IXT1_EELi0EEESH_
+Args:            
+  - Callee:          'void xf::security::internal::mergeKipad<32, 64, 256, 64>(hls::stream<ap_uint<(64) * (8)>, 0>&, hls::stream<ap_uint<(64) * (8)>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<(64) * (8)>, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                       Line: 151, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void xf::security::internal::msgHash<32, 64, 256, 32, 64, sha256_wrapper>(hls::stream<ap_uint<(64) * (8)>, 0>&, hls::stream<ap_uint<(64) * (8)>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<(64) * (8)>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                       Line: 187, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                   Line: 203, Column: 5 }
+Function:        _ZN2xf8security8internal7msgHashILi32ELi64ELi256ELi32ELi64E14sha256_wrapperEEvRN3hls6streamI7ap_uintIXmlT3_Li8EEELi0EEES9_RNS5_IS6_IXT_EELi0EEERNS5_IS6_IXT0_EELi0EEERNS5_IbLi0EEES9_RNS5_IS6_IXT1_EELi0EEESH_
+Args:            
+  - Callee:          'sha256_wrapper<32, 64, 256>::hash(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: test.cpp, Line: 60, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void xf::security::internal::msgHash<32, 64, 256, 32, 64, sha256_wrapper>(hls::stream<ap_uint<(64) * (8)>, 0>&, hls::stream<ap_uint<(64) * (8)>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<(64) * (8)>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                       Line: 187, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                   Line: 253, Column: 2 }
+Function:        _ZN2xf8security8internal7resHashILi32ELi64ELi256ELi32ELi64E14sha256_wrapperEEvRN3hls6streamI7ap_uintIXmlT3_Li8EEELi0EEERNS5_IS6_IXT1_EELi0EEERNS5_IbLi0EEESC_SE_
+Args:            
+  - Callee:          'void xf::security::internal::mergeKopad<32, 64, 256, 32, 64>(hls::stream<ap_uint<(64) * (8)>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                       Line: 212, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void xf::security::internal::resHash<32, 64, 256, 32, 64, sha256_wrapper>(hls::stream<ap_uint<(64) * (8)>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                       Line: 240, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                   Line: 256, Column: 5 }
+Function:        _ZN2xf8security8internal7resHashILi32ELi64ELi256ELi32ELi64E14sha256_wrapperEEvRN3hls6streamI7ap_uintIXmlT3_Li8EEELi0EEERNS5_IS6_IXT1_EELi0EEERNS5_IbLi0EEESC_SE_
+Args:            
+  - Callee:          'sha256_wrapper<32, 64, 256>::hash(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: test.cpp, Line: 60, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void xf::security::internal::resHash<32, 64, 256, 32, 64, sha256_wrapper>(hls::stream<ap_uint<(64) * (8)>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                       Line: 240, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                   Line: 288, Column: 2 }
+Function:        _ZN2xf8security8internal12hmacDataflowILi32ELi64ELi256ELi32ELi64E14sha256_wrapperEEvRN3hls6streamI7ap_uintIXT_EELi0EEES9_RNS5_IS6_IXT0_EELi0EEERNS5_IbLi0EEERNS5_IS6_IXT1_EELi0EEESE_
+Args:            
+  - Callee:          'void xf::security::internal::kpad<32, 64, 256, 32, 64, sha256_wrapper>(hls::stream<ap_uint<32>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<(64) * (8)>, 0>&, hls::stream<ap_uint<(64) * (8)>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                       Line: 114, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void xf::security::internal::hmacDataflow<32, 64, 256, 32, 64, sha256_wrapper>(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                       Line: 265, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                   Line: 290, Column: 5 }
+Function:        _ZN2xf8security8internal12hmacDataflowILi32ELi64ELi256ELi32ELi64E14sha256_wrapperEEvRN3hls6streamI7ap_uintIXT_EELi0EEES9_RNS5_IS6_IXT0_EELi0EEERNS5_IbLi0EEERNS5_IS6_IXT1_EELi0EEESE_
+Args:            
+  - Callee:          'void xf::security::internal::msgHash<32, 64, 256, 32, 64, sha256_wrapper>(hls::stream<ap_uint<(64) * (8)>, 0>&, hls::stream<ap_uint<(64) * (8)>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<(64) * (8)>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                       Line: 187, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void xf::security::internal::hmacDataflow<32, 64, 256, 32, 64, sha256_wrapper>(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                       Line: 265, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                   Line: 293, Column: 5 }
+Function:        _ZN2xf8security8internal12hmacDataflowILi32ELi64ELi256ELi32ELi64E14sha256_wrapperEEvRN3hls6streamI7ap_uintIXT_EELi0EEES9_RNS5_IS6_IXT0_EELi0EEERNS5_IbLi0EEERNS5_IS6_IXT1_EELi0EEESE_
+Args:            
+  - Callee:          'void xf::security::internal::resHash<32, 64, 256, 32, 64, sha256_wrapper>(hls::stream<ap_uint<(64) * (8)>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                       Line: 240, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void xf::security::internal::hmacDataflow<32, 64, 256, 32, 64, sha256_wrapper>(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                       Line: 265, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                   Line: 346, Column: 5 }
+Function:        _ZN2xf8security4hmacILi32ELi64ELi256ELi32ELi64E14sha256_wrapperEEvRN3hls6streamI7ap_uintIXT_EELi0EEES8_RNS4_IS5_IXT0_EELi0EEERNS4_IbLi0EEERNS4_IS5_IXT1_EELi0EEESD_
+Args:            
+  - Callee:          'void xf::security::internal::hmacDataflow<32, 64, 256, 32, 64, sha256_wrapper>(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                       Line: 265, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void xf::security::hmac<32, 64, 256, 32, 64, sha256_wrapper>(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                       Line: 345, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: test.cpp, Line: 71, Column: 5 }
+Function:        _Z16test_hmac_sha256RN3hls6streamI7ap_uintILi32EELi0EEES4_RNS0_IS1_ILi64EELi0EEERNS0_IbLi0EEERNS0_IS1_ILi256EELi0EEES9_
+Args:            
+  - Callee:          'void xf::security::hmac<32, 64, 256, 32, 64, sha256_wrapper>(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                       Line: 345, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'test_hmac_sha256(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: test.cpp, Line: 70, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_test_hmac_sha256_ir
+Args:            
+  - Callee:          'test_hmac_sha256(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: test.cpp, Line: 70, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_test_hmac_sha256_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 614, Column: 0 }
+Function:        _ZN2xf8security8internal12sha256DigestILi256EEEvRN3hls6streamIyLi0EEERNS4_IbLi0EEERNS4_IjLi0EEERNS4_I7ap_uintIXT_EELi0EEES8_.79.92
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'xf::security::internal::sha256_iter(unsigned int&, unsigned int&, unsigned int&, unsigned int&, unsigned int&, unsigned int&, unsigned int&, unsigned int&, hls::stream<unsigned int, 0>&, unsigned int&, unsigned int const*, short)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                       Line: 576, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'void xf::security::internal::sha256Digest<256>(hls::stream<unsigned long long, 0>&, hls::stream<bool, 0>&, hls::stream<unsigned int, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&) (.79.92)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                       Line: 614, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: test.cpp, Line: 60, Column: 0 }
+Function:        _ZN14sha256_wrapperILi32ELi64ELi256EE4hashERN3hls6streamI7ap_uintILi32EELi0EEERNS2_IS3_ILi64EELi0EEERNS2_IbLi0EEERNS2_IS3_ILi256EELi0EEESB_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void xf::security::sha256<32>(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&) (.25.39.51.73.86)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                       Line: 831, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'sha256_wrapper<32, 64, 256>::hash(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: test.cpp, Line: 60, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: test.cpp, Line: 70, Column: 0 }
+Function:        _Z16test_hmac_sha256RN3hls6streamI7ap_uintILi32EELi0EEES4_RNS0_IS1_ILi64EELi0EEERNS0_IbLi0EEERNS0_IS1_ILi256EELi0EEES9_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void xf::security::hmac<32, 64, 256, 32, 64, sha256_wrapper>(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                       Line: 345, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'test_hmac_sha256(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: test.cpp, Line: 70, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 620, Column: 0 }
+Function:        _ZN2xf8security8internal12sha256DigestILi256EEEvRN3hls6streamIyLi0EEERNS4_IbLi0EEERNS4_IjLi0EEERNS4_I7ap_uintIXT_EELi0EEES8_.79.92
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZZN2xf8security8internal12sha256DigestILi256EEEvRN3hls6streamIyLi0EEERNS4_IbLi0EEERNS4_IjLi0EEERNS4_I7ap_uintIXT_EELi0EEES8_E1K
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 156, Column: 25 }
+Function:        _ZN2xf8security8internal13preProcessingERN3hls6streamI7ap_uintILi32EELi0EEERNS3_IS4_ILi64EELi0EEERNS3_IbLi0EEERNS3_INS1_11SHA256BlockELi0EEERNS3_IyLi0EEESC_.31.45.57
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          b81
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 533, Column: 14 }
+Function:        _ZN2xf8security8internal19generateMsgScheduleERN3hls6streamINS1_11SHA256BlockELi0EEERNS3_IyLi0EEERNS3_IbLi0EEERNS3_IjLi0EEE
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          blk
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 537, Column: 11 }
+Function:        _ZN2xf8security8internal19generateMsgScheduleERN3hls6streamINS1_11SHA256BlockELi0EEERNS3_IyLi0EEERNS3_IbLi0EEERNS3_IjLi0EEE
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          W
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 638, Column: 18 }
+Function:        _ZN2xf8security8internal12sha256DigestILi256EEEvRN3hls6streamIyLi0EEERNS4_IbLi0EEERNS4_IjLi0EEERNS4_I7ap_uintIXT_EELi0EEES8_.79.92
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          H
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 600, Column: 20 }
+Function:        _ZN2xf8security8internal12sha256DigestILi256EEEvRN3hls6streamIyLi0EEERNS4_IbLi0EEERNS4_IjLi0EEERNS4_I7ap_uintIXT_EELi0EEES8_.79.92
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 754, Column: 27 }
+Function:        _ZN2xf8security8internal10sha256_topILi32ELi256EEEvRN3hls6streamI7ap_uintIXT_EELi0EEERNS4_IS5_ILi64EELi0EEERNS4_IbLi0EEERNS4_IS5_IXT0_EELi0EEESD_.28.42.54.76.89
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        'fifo (hls::stream)'
+  - String:          ' variable '''
+  - Name:            blk_strm
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '512'
+  - String:          '-bits'
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                   Line: 118, Column: 27 }
+Function:        _ZN2xf8security8internal4kpadILi32ELi64ELi256ELi32ELi64E14sha256_wrapperEEvRN3hls6streamI7ap_uintIXT_EELi0EEERNS5_IbLi0EEERNS5_IS6_IXmlT3_Li8EEELi0EEESE_SB_
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_118_1
+  - String:          ' '
+  - LoopLoc:         'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:118:27'
+  - String:          ' '
+  - Function:        'void xf::security::internal::kpad<32, 64, 256, 32, 64, sha256_wrapper>(hls::stream<ap_uint<32>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<(64) * (8)>, 0>&, hls::stream<ap_uint<(64) * (8)>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                       Line: 114, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                   Line: 213, Column: 23 }
+Function:        _ZN2xf8security8internal10mergeKopadILi32ELi64ELi256ELi32ELi64EEEvRN3hls6streamI7ap_uintIXmlT3_Li8EEELi0EEERNS4_IS5_IXT1_EELi0EEERNS4_IbLi0EEERNS4_IS5_IXT_EELi0EEERNS4_IS5_IXT0_EELi0EEESD_
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_213_1
+  - String:          ' '
+  - LoopLoc:         'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:213:23'
+  - String:          ' '
+  - Function:        'void xf::security::internal::mergeKopad<32, 64, 256, 32, 64>(hls::stream<ap_uint<(64) * (8)>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                       Line: 212, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 506, Column: 23 }
+Function:        _ZN2xf8security8internal8dup_strmERN3hls6streamIyLi0EEERNS3_IbLi0EEES5_S7_S5_S7_
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_506_1
+  - String:          ' '
+  - LoopLoc:         'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:506:23'
+  - String:          ' '
+  - Function:        'xf::security::internal::dup_strm(hls::stream<unsigned long long, 0>&, hls::stream<bool, 0>&, hls::stream<unsigned long long, 0>&, hls::stream<bool, 0>&, hls::stream<unsigned long long, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                       Line: 503, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 528, Column: 23 }
+Function:        _ZN2xf8security8internal19generateMsgScheduleERN3hls6streamINS1_11SHA256BlockELi0EEERNS3_IyLi0EEERNS3_IbLi0EEERNS3_IjLi0EEE
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_528_1
+  - String:          ' '
+  - LoopLoc:         'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:528:23'
+  - String:          ' '
+  - Function:        'xf::security::internal::generateMsgSchedule(hls::stream<xf::security::internal::SHA256Block, 0>&, hls::stream<unsigned long long, 0>&, hls::stream<bool, 0>&, hls::stream<unsigned int, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                       Line: 526, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                   Line: 152, Column: 23 }
+Function:        _ZN2xf8security8internal10mergeKipadILi32ELi64ELi256ELi64EEEvRN3hls6streamI7ap_uintIXmlT2_Li8EEELi0EEES8_RNS4_IS5_IXT_EELi0EEERNS4_IS5_IXT0_EELi0EEERNS4_IbLi0EEESB_SE_SG_S8_
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_152_1
+  - String:          ' '
+  - LoopLoc:         'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:152:23'
+  - String:          ' '
+  - Function:        'void xf::security::internal::mergeKipad<32, 64, 256, 64>(hls::stream<ap_uint<(64) * (8)>, 0>&, hls::stream<ap_uint<(64) * (8)>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<(64) * (8)>, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                       Line: 151, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 89, Column: 5 }
+Function:        _ZN2xf8security8internal13preProcessingERN3hls6streamI7ap_uintILi32EELi0EEERNS3_IS4_ILi64EELi0EEERNS3_IbLi0EEERNS3_INS1_11SHA256BlockELi0EEERNS3_IyLi0EEESC_.31.45.57
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        LOOP_SHA256_GENENERATE_MAIN
+  - String:          ' '
+  - LoopLoc:         'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:89:5'
+  - String:          ' '
+  - Function:        'xf::security::internal::preProcessing(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<xf::security::internal::SHA256Block, 0>&, hls::stream<unsigned long long, 0>&, hls::stream<bool, 0>&) (.31.45.57)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                       Line: 87, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 632, Column: 5 }
+Function:        _ZN2xf8security8internal12sha256DigestILi256EEEvRN3hls6streamIyLi0EEERNS4_IbLi0EEERNS4_IjLi0EEERNS4_I7ap_uintIXT_EELi0EEES8_.79.92
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        LOOP_SHA256_DIGEST_MAIN
+  - String:          ' '
+  - LoopLoc:         'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:632:5'
+  - String:          ' '
+  - Function:        'void xf::security::internal::sha256Digest<256>(hls::stream<unsigned long long, 0>&, hls::stream<bool, 0>&, hls::stream<unsigned int, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&) (.79.92)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                       Line: 614, Column: 0 }
+  - String:          ' '
+...
+--- !Failure
+Pass:            reflow-occurrence-inference
+Name:            NonComputableLoopForm
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                   Line: 118, Column: 27 }
+Function:        _ZN2xf8security8internal4kpadILi32ELi64ELi256ELi32ELi64E14sha256_wrapperEEvRN3hls6streamI7ap_uintIXT_EELi0EEERNS5_IbLi0EEERNS5_IS6_IXmlT3_Li8EEELi0EEESE_SB_
+Args:            
+  - String:          'Could not analyze occurrence information within '''
+  - LoopName:        VITIS_LOOP_118_1
+  - String:          '''('
+  - LoopLoc:         'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:118:27'
+  - String:          ') . Requires loop in simplify form and with single exit.'
+...
+--- !Failure
+Pass:            reflow-occurrence-inference
+Name:            NonComputableLoopForm
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                   Line: 213, Column: 23 }
+Function:        _ZN2xf8security8internal10mergeKopadILi32ELi64ELi256ELi32ELi64EEEvRN3hls6streamI7ap_uintIXmlT3_Li8EEELi0EEERNS4_IS5_IXT1_EELi0EEERNS4_IbLi0EEERNS4_IS5_IXT_EELi0EEERNS4_IS5_IXT0_EELi0EEESD_
+Args:            
+  - String:          'Could not analyze occurrence information within '''
+  - LoopName:        VITIS_LOOP_213_1
+  - String:          '''('
+  - LoopLoc:         'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:213:23'
+  - String:          ') . Requires loop in simplify form and with single exit.'
+...
+--- !Failure
+Pass:            reflow-occurrence-inference
+Name:            NonComputableLoopForm
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 506, Column: 23 }
+Function:        _ZN2xf8security8internal8dup_strmERN3hls6streamIyLi0EEERNS3_IbLi0EEES5_S7_S5_S7_
+Args:            
+  - String:          'Could not analyze occurrence information within '''
+  - LoopName:        VITIS_LOOP_506_1
+  - String:          '''('
+  - LoopLoc:         'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:506:23'
+  - String:          ') . Requires loop in simplify form and with single exit.'
+...
+--- !Failure
+Pass:            reflow-occurrence-inference
+Name:            NonComputableLoopForm
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 528, Column: 23 }
+Function:        _ZN2xf8security8internal19generateMsgScheduleERN3hls6streamINS1_11SHA256BlockELi0EEERNS3_IyLi0EEERNS3_IbLi0EEERNS3_IjLi0EEE
+Args:            
+  - String:          'Could not analyze occurrence information within '''
+  - LoopName:        VITIS_LOOP_528_1
+  - String:          '''('
+  - LoopLoc:         'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:528:23'
+  - String:          ') . Requires loop in simplify form and with single exit.'
+...
+--- !Failure
+Pass:            reflow-occurrence-inference
+Name:            NonComputableLoopForm
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                   Line: 152, Column: 23 }
+Function:        _ZN2xf8security8internal10mergeKipadILi32ELi64ELi256ELi64EEEvRN3hls6streamI7ap_uintIXmlT2_Li8EEELi0EEES8_RNS4_IS5_IXT_EELi0EEERNS4_IS5_IXT0_EELi0EEERNS4_IbLi0EEESB_SE_SG_S8_
+Args:            
+  - String:          'Could not analyze occurrence information within '''
+  - LoopName:        VITIS_LOOP_152_1
+  - String:          '''('
+  - LoopLoc:         'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:152:23'
+  - String:          ') . Requires loop in simplify form and with single exit.'
+...
+--- !Failure
+Pass:            reflow-occurrence-inference
+Name:            NonComputableLoopForm
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 89, Column: 5 }
+Function:        _ZN2xf8security8internal13preProcessingERN3hls6streamI7ap_uintILi32EELi0EEERNS3_IS4_ILi64EELi0EEERNS3_IbLi0EEERNS3_INS1_11SHA256BlockELi0EEERNS3_IyLi0EEESC_.31.45.57
+Args:            
+  - String:          'Could not analyze occurrence information within '''
+  - LoopName:        LOOP_SHA256_GENENERATE_MAIN
+  - String:          '''('
+  - LoopLoc:         'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:89:5'
+  - String:          ') . Requires loop in simplify form and with single exit.'
+...
+--- !Failure
+Pass:            reflow-occurrence-inference
+Name:            NonComputableLoopForm
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 632, Column: 5 }
+Function:        _ZN2xf8security8internal12sha256DigestILi256EEEvRN3hls6streamIyLi0EEERNS4_IbLi0EEERNS4_IjLi0EEERNS4_I7ap_uintIXT_EELi0EEES8_.79.92
+Args:            
+  - String:          'Could not analyze occurrence information within '''
+  - LoopName:        LOOP_SHA256_DIGEST_MAIN
+  - String:          '''('
+  - LoopLoc:         'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:632:5'
+  - String:          ') . Requires loop in simplify form and with single exit.'
+...
+--- !Passed
+Pass:            reflow-loop-flatten-cost-model
+Name:            FlattenOffInference
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 632, Column: 5 }
+Function:        _ZN2xf8security8internal12sha256DigestILi256EEEvRN3hls6streamIyLi0EEERNS4_IbLi0EEERNS4_IjLi0EEERNS4_I7ap_uintIXT_EELi0EEES8_.79.92
+Args:            
+  - String:          'Automatically disabling loop flattening for loop '''
+  - LoopName:        LOOP_SHA256_DIGEST_MAIN
+  - String:          '''.'
+...
+--- !Passed
+Pass:            reflow-loop-flatten-cost-model
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 632, Column: 5 }
+Function:        _ZN2xf8security8internal12sha256DigestILi256EEEvRN3hls6streamIyLi0EEERNS4_IbLi0EEERNS4_IjLi0EEERNS4_I7ap_uintIXT_EELi0EEES8_.79.92
+Args:            
+  - PragmaType:      loop_flatten
+  - String:          ' '
+  - PragmaOptions:   off
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  'xf::security::internal::sha256Digest<256>'
+  - String:          ' '
+  - PragmaSrcLoc:    'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:632:5'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                       Line: 632, Column: 5 }
+  - LoopName:        LOOP_SHA256_DIGEST_MAIN
+  - String:          ' '
+  - LoopLoc:         'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:632:5'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                       Line: 632, Column: 5 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 786, Column: 2 }
+Function:        _ZN2xf8security8internal10sha256_topILi32ELi256EEEvRN3hls6streamI7ap_uintIXT_EELi0EEERNS4_IS5_ILi64EELi0EEERNS4_IbLi0EEERNS4_IS5_IXT0_EELi0EEESD_.28.42.54.76.89
+Args:            
+  - Callee:          'xf::security::internal::preProcessing(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<xf::security::internal::SHA256Block, 0>&, hls::stream<unsigned long long, 0>&, hls::stream<bool, 0>&) (.31.45.57)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                       Line: 87, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void xf::security::internal::sha256_top<32, 256>(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&) (.28.42.54.76.89)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                       Line: 751, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 790, Column: 5 }
+Function:        _ZN2xf8security8internal10sha256_topILi32ELi256EEEvRN3hls6streamI7ap_uintIXT_EELi0EEERNS4_IS5_ILi64EELi0EEERNS4_IbLi0EEERNS4_IS5_IXT0_EELi0EEESD_.28.42.54.76.89
+Args:            
+  - Callee:          'xf::security::internal::dup_strm(hls::stream<unsigned long long, 0>&, hls::stream<bool, 0>&, hls::stream<unsigned long long, 0>&, hls::stream<bool, 0>&, hls::stream<unsigned long long, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                       Line: 503, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void xf::security::internal::sha256_top<32, 256>(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&) (.28.42.54.76.89)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                       Line: 751, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 793, Column: 5 }
+Function:        _ZN2xf8security8internal10sha256_topILi32ELi256EEEvRN3hls6streamI7ap_uintIXT_EELi0EEERNS4_IS5_ILi64EELi0EEERNS4_IbLi0EEERNS4_IS5_IXT0_EELi0EEESD_.28.42.54.76.89
+Args:            
+  - Callee:          'xf::security::internal::generateMsgSchedule(hls::stream<xf::security::internal::SHA256Block, 0>&, hls::stream<unsigned long long, 0>&, hls::stream<bool, 0>&, hls::stream<unsigned int, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                       Line: 526, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void xf::security::internal::sha256_top<32, 256>(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&) (.28.42.54.76.89)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                       Line: 751, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 797, Column: 5 }
+Function:        _ZN2xf8security8internal10sha256_topILi32ELi256EEEvRN3hls6streamI7ap_uintIXT_EELi0EEERNS4_IS5_ILi64EELi0EEERNS4_IbLi0EEERNS4_IS5_IXT0_EELi0EEESD_.28.42.54.76.89
+Args:            
+  - Callee:          'void xf::security::internal::sha256Digest<256>(hls::stream<unsigned long long, 0>&, hls::stream<bool, 0>&, hls::stream<unsigned int, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&) (.79.92)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                       Line: 614, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void xf::security::internal::sha256_top<32, 256>(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&) (.28.42.54.76.89)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                       Line: 751, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 832, Column: 5 }
+Function:        _ZN14sha256_wrapperILi32ELi64ELi256EE4hashERN3hls6streamI7ap_uintILi32EELi0EEERNS2_IS3_ILi64EELi0EEERNS2_IbLi0EEERNS2_IS3_ILi256EELi0EEESB_
+Args:            
+  - Callee:          'void xf::security::internal::sha256_top<32, 256>(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&) (.28.42.54.76.89)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                       Line: 751, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'sha256_wrapper<32, 64, 256>::hash(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: test.cpp, Line: 60, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                   Line: 200, Column: 2 }
+Function:        _ZN2xf8security8internal7msgHashILi32ELi64ELi256ELi32ELi64E14sha256_wrapperEEvRN3hls6streamI7ap_uintIXmlT3_Li8EEELi0EEES9_RNS5_IS6_IXT_EELi0EEERNS5_IS6_IXT0_EELi0EEERNS5_IbLi0EEES9_RNS5_IS6_IXT1_EELi0EEESH_
+Args:            
+  - Callee:          'void xf::security::internal::mergeKipad<32, 64, 256, 64>(hls::stream<ap_uint<(64) * (8)>, 0>&, hls::stream<ap_uint<(64) * (8)>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<(64) * (8)>, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                       Line: 151, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void xf::security::internal::msgHash<32, 64, 256, 32, 64, sha256_wrapper>(hls::stream<ap_uint<(64) * (8)>, 0>&, hls::stream<ap_uint<(64) * (8)>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<(64) * (8)>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                       Line: 187, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                   Line: 203, Column: 5 }
+Function:        _ZN2xf8security8internal7msgHashILi32ELi64ELi256ELi32ELi64E14sha256_wrapperEEvRN3hls6streamI7ap_uintIXmlT3_Li8EEELi0EEES9_RNS5_IS6_IXT_EELi0EEERNS5_IS6_IXT0_EELi0EEERNS5_IbLi0EEES9_RNS5_IS6_IXT1_EELi0EEESH_
+Args:            
+  - Callee:          'sha256_wrapper<32, 64, 256>::hash(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: test.cpp, Line: 60, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void xf::security::internal::msgHash<32, 64, 256, 32, 64, sha256_wrapper>(hls::stream<ap_uint<(64) * (8)>, 0>&, hls::stream<ap_uint<(64) * (8)>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<(64) * (8)>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                       Line: 187, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                   Line: 832, Column: 5 }
+Function:        _ZN14sha256_wrapperILi32ELi64ELi256EE4hashERN3hls6streamI7ap_uintILi32EELi0EEERNS2_IS3_ILi64EELi0EEERNS2_IbLi0EEERNS2_IS3_ILi256EELi0EEESB_.190
+Args:            
+  - Callee:          'void xf::security::internal::sha256_top<32, 256>(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&) (.28.42.54.76.89)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp', 
+                       Line: 751, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'sha256_wrapper<32, 64, 256>::hash(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&) (.190)'
+    DebugLoc:        { File: test.cpp, Line: 60, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                   Line: 253, Column: 2 }
+Function:        _ZN2xf8security8internal7resHashILi32ELi64ELi256ELi32ELi64E14sha256_wrapperEEvRN3hls6streamI7ap_uintIXmlT3_Li8EEELi0EEERNS5_IS6_IXT1_EELi0EEERNS5_IbLi0EEESC_SE_
+Args:            
+  - Callee:          'void xf::security::internal::mergeKopad<32, 64, 256, 32, 64>(hls::stream<ap_uint<(64) * (8)>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                       Line: 212, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void xf::security::internal::resHash<32, 64, 256, 32, 64, sha256_wrapper>(hls::stream<ap_uint<(64) * (8)>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                       Line: 240, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                   Line: 256, Column: 5 }
+Function:        _ZN2xf8security8internal7resHashILi32ELi64ELi256ELi32ELi64E14sha256_wrapperEEvRN3hls6streamI7ap_uintIXmlT3_Li8EEELi0EEERNS5_IS6_IXT1_EELi0EEERNS5_IbLi0EEESC_SE_
+Args:            
+  - Callee:          'sha256_wrapper<32, 64, 256>::hash(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&) (.190)'
+    DebugLoc:        { File: test.cpp, Line: 60, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void xf::security::internal::resHash<32, 64, 256, 32, 64, sha256_wrapper>(hls::stream<ap_uint<(64) * (8)>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                       Line: 240, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                   Line: 288, Column: 2 }
+Function:        _ZN2xf8security8internal12hmacDataflowILi32ELi64ELi256ELi32ELi64E14sha256_wrapperEEvRN3hls6streamI7ap_uintIXT_EELi0EEES9_RNS5_IS6_IXT0_EELi0EEERNS5_IbLi0EEERNS5_IS6_IXT1_EELi0EEESE_
+Args:            
+  - Callee:          'void xf::security::internal::kpad<32, 64, 256, 32, 64, sha256_wrapper>(hls::stream<ap_uint<32>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<(64) * (8)>, 0>&, hls::stream<ap_uint<(64) * (8)>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                       Line: 114, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void xf::security::internal::hmacDataflow<32, 64, 256, 32, 64, sha256_wrapper>(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                       Line: 265, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                   Line: 290, Column: 5 }
+Function:        _ZN2xf8security8internal12hmacDataflowILi32ELi64ELi256ELi32ELi64E14sha256_wrapperEEvRN3hls6streamI7ap_uintIXT_EELi0EEES9_RNS5_IS6_IXT0_EELi0EEERNS5_IbLi0EEERNS5_IS6_IXT1_EELi0EEESE_
+Args:            
+  - Callee:          'void xf::security::internal::msgHash<32, 64, 256, 32, 64, sha256_wrapper>(hls::stream<ap_uint<(64) * (8)>, 0>&, hls::stream<ap_uint<(64) * (8)>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<(64) * (8)>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                       Line: 187, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void xf::security::internal::hmacDataflow<32, 64, 256, 32, 64, sha256_wrapper>(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                       Line: 265, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                   Line: 293, Column: 5 }
+Function:        _ZN2xf8security8internal12hmacDataflowILi32ELi64ELi256ELi32ELi64E14sha256_wrapperEEvRN3hls6streamI7ap_uintIXT_EELi0EEES9_RNS5_IS6_IXT0_EELi0EEERNS5_IbLi0EEERNS5_IS6_IXT1_EELi0EEESE_
+Args:            
+  - Callee:          'void xf::security::internal::resHash<32, 64, 256, 32, 64, sha256_wrapper>(hls::stream<ap_uint<(64) * (8)>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                       Line: 240, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void xf::security::internal::hmacDataflow<32, 64, 256, 32, 64, sha256_wrapper>(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                       Line: 265, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                   Line: 346, Column: 5 }
+Function:        _Z16test_hmac_sha256RN3hls6streamI7ap_uintILi32EELi0EEES4_RNS0_IS1_ILi64EELi0EEERNS0_IbLi0EEERNS0_IS1_ILi256EELi0EEES9_
+Args:            
+  - Callee:          'void xf::security::internal::hmacDataflow<32, 64, 256, 32, 64, sha256_wrapper>(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: 'D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp', 
+                       Line: 265, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'test_hmac_sha256(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: test.cpp, Line: 70, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...

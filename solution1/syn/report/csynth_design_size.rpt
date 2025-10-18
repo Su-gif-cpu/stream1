@@ -1,0 +1,90 @@
+================================================================
+== Design Size Report
+================================================================
+
+* Total Instructions per Compilation Phase
++---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
+| Phase         | Step                        | Instructions | Description                                                                            |
++---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
+| Compile/Link  |                             | 5,771        | After all functions are compiled and linked into a single design                       |
+|               |                             |              |                                                                                        |
+| Unroll/Inline |                             |              | After user unroll and inline pragmas are applied                                       |
+|               | (1) unroll                  | 4,609        | user unroll pragmas are applied                                                        |
+|               | (2) simplification          | 3,547        | simplification of applied user unroll pragmas                                          |
+|               | (3) inline                  | 3,056        | user inline pragmas are applied                                                        |
+|               | (4) simplification          | 2,930        | simplification of applied user inline pragmas                                          |
+|               |                             |              |                                                                                        |
+| Array/Struct  |                             |              | After user array partition and struct aggregate/disaggregate pragmas are applied       |
+|               | (1) array partition         | 2,909        | user array partition pragmas are applied                                               |
+|               | (2) simplification          | 2,055        | simplification of applied user array partition & struct aggregate/disaggregate pragmas |
+|               | (3) aggregate/disaggregate  | 2,067        | user struct aggregate/disaggregate pragmas are applied                                 |
+|               | (4) array reshape           | 2,801        | apply array reshape pragmas                                                            |
+|               | (5) access patterns         | 2,899        | array access pattern optmizations                                                      |
+|               |                             |              |                                                                                        |
+| Performance   |                             |              | After transformations are applied to meet performance pragma targets                   |
+|               | (1) loop simplification     | 2,897        | loop and instruction simplification                                                    |
+|               | (2) parallelization         | 2,804        | loops are unrolled or pipelined to meet performance targets                            |
+|               | (3) array partition         | 2,797        | arrays are partitioned to meet performance targets                                     |
+|               | (4) simplification          | 2,797        | simplification of design after performance transformations                             |
+|               |                             |              |                                                                                        |
+| HW Transforms |                             |              | After hardware transfomations                                                          |
+|               | (1) lowering                | 2,849        | initial conversion to HW specific instructions                                         |
+|               | (2) optimizations           | 3,438        | high level synthesis optimizations                                                     |
++---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
+
+* Instructions per Function for each Compilation Phase
++---------------------------------------+--------------------+--------------+---------------+--------------+-------------+---------------+
+| Function                              | Location           | Compile/Link | Unroll/Inline | Array/Struct | Performance | HW Transforms |
++---------------------------------------+--------------------+--------------+---------------+--------------+-------------+---------------+
+| + test_hmac_sha256                    | test.cpp:65        | 5,771        | 2,930         | 2,899        | 2,797       | 3,438         |
+|  + hmac<32, 64, 256, 32, 64, sh...    | hmac.hpp:340       | 5,763        |               |              |             |               |
+|   + hmacDataflow<32, 64, 256, 32...   | hmac.hpp:260       | 5,761        |               |              |             |               |
+|      kpad<32, 64, 256, 32, 64, sh...  | hmac.hpp:110       |  828         |               |              |             |               |
+|    + msgHash<32, 64, 256, 32, 64,...  | hmac.hpp:180       | 2,584        |               |              |             |               |
+|       mergeKipad<32, 64, 256, 64>     | hmac.hpp:143       |  902         |               |              |             |               |
+|     + hash                            | test.cpp:56        | 1,652        |               |              |             |               |
+|      + sha256<32>                     | sha224_256.hpp:827 | 1,650        |               |              |             |               |
+|       + sha256_top<32, 256>           | sha224_256.hpp:747 | 1,648        |               |              |             |               |
+|          preProcessing                | sha224_256.hpp:82  |  700         |               |              |             |               |
+|          dup_strm                     | sha224_256.hpp:498 |  106         |               |              |             |               |
+|          generateMsgSchedule          | sha224_256.hpp:523 |  193         |               |              |             |               |
+|        + sha256Digest<256>            | sha224_256.hpp:610 |  572         |               |              |             |               |
+|           sha256_iter                 | sha224_256.hpp:565 |  102         |               |              |             |               |
+|    + resHash<32, 64, 256, 32, 64,...  | hmac.hpp:236       | 2,291        |               |              |             |               |
+|       mergeKopad<32, 64, 256, 32, ... | hmac.hpp:207       |  609         |               |              |             |               |
+|     + hash                            | test.cpp:56        | 1,652        |               |              |             |               |
+|      + sha256<32>                     | sha224_256.hpp:827 | 1,650        |               |              |             |               |
+|       + sha256_top<32, 256>           | sha224_256.hpp:747 | 1,648        |               |              |             |               |
+|          preProcessing                | sha224_256.hpp:82  |  700         |               |              |             |               |
+|          dup_strm                     | sha224_256.hpp:498 |  106         |               |              |             |               |
+|          generateMsgSchedule          | sha224_256.hpp:523 |  193         |               |              |             |               |
+|        + sha256Digest<256>            | sha224_256.hpp:610 |  572         |               |              |             |               |
+|           sha256_iter                 | sha224_256.hpp:565 |  102         |               |              |             |               |
+|  + hmacDataflow<32, 64, 256, 32...    | hmac.hpp:260       |              | 2,928         | 2,897        | 2,795       | 3,417         |
+|     kpad<32, 64, 256, 32, 64, sh...   | hmac.hpp:110       |              |  213          |  214         |  213        |  230          |
+|   + msgHash<32, 64, 256, 32, 64,...   | hmac.hpp:180       |              | 1,350         | 1,334        | 1,283       | 1,586         |
+|      mergeKipad<32, 64, 256, 64>      | hmac.hpp:143       |              |   42          |   42         |   41        |   69          |
+|    + hash                             | test.cpp:56        |              | 1,293         | 1,277        | 1,227       | 1,500         |
+|     + sha256_top<32, 256>             | sha224_256.hpp:747 |              | 1,291         | 1,275        | 1,225       | 1,498         |
+|        preProcessing                  | sha224_256.hpp:82  |              |  804          |  767         |  751        |  939          |
+|        dup_strm                       | sha224_256.hpp:498 |              |   15          |   15         |   15        |   36          |
+|        generateMsgSchedule            | sha224_256.hpp:523 |              |  164          |  201         |  184        |  233          |
+|        sha256Digest<256>              | sha224_256.hpp:610 |              |  271          |  255         |  238        |  252          |
+|   + resHash<32, 64, 256, 32, 64,...   | hmac.hpp:236       |              | 1,337         | 1,321        | 1,271       | 1,571         |
+|      mergeKopad<32, 64, 256, 32, ...  | hmac.hpp:207       |              |   29          |   29         |   29        |   54          |
+|    + hash                             | test.cpp:56        |              | 1,293         | 1,277        | 1,227       | 1,500         |
+|     + sha256_top<32, 256>             | sha224_256.hpp:747 |              | 1,291         | 1,275        | 1,225       | 1,498         |
+|        preProcessing                  | sha224_256.hpp:82  |              |  804          |  767         |  751        |  939          |
+|        dup_strm                       | sha224_256.hpp:498 |              |   15          |   15         |   15        |   36          |
+|        generateMsgSchedule            | sha224_256.hpp:523 |              |  164          |  201         |  184        |  233          |
+|        sha256Digest<256>              | sha224_256.hpp:610 |              |  271          |  255         |  238        |  252          |
++---------------------------------------+--------------------+--------------+---------------+--------------+-------------+---------------+
+
+* Design Size Message Settings
++---------------------------------------------+--------+------------------------------------------------------------------+
+| Message Setting                             | Value  | Description                                                      |
++---------------------------------------------+--------+------------------------------------------------------------------+
+| config_compile -design_size_maximum_warning | 100000 | Show a warning when total design instructions exceeds this value |
++---------------------------------------------+--------+------------------------------------------------------------------+
+
+

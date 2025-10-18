@@ -1,0 +1,7 @@
+Running: xsim.dir/test_hmac_sha256/xsimk.exe -simmode gui -wdb test_hmac_sha256.wdb -simrunnum 0 -socket 17785
+Design successfully loaded
+Design Loading Memory Usage: 34120 KB (Peak: 34120 KB)
+Design Loading CPU Usage: 1781 ms
+Simulation completed
+Simulation Memory Usage: 37888 KB (Peak: 37888 KB)
+Simulation CPU Usage: 1983 ms

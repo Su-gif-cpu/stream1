@@ -9,8 +9,8 @@
 <ProductFamily>zynq</ProductFamily>
 <Part>xc7z020-clg484-1</Part>
 <TopModelName>sha256Digest_256_s</TopModelName>
-<TargetClockPeriod>3.33</TargetClockPeriod>
-<ClockUncertainty>1.05</ClockUncertainty>
+<TargetClockPeriod>15.00</TargetClockPeriod>
+<ClockUncertainty>1.50</ClockUncertainty>
 <FlowTarget>vivado</FlowTarget>
 </UserAssignments>
 
@@ -18,7 +18,7 @@
 <PipelineType>no</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>12.519</EstimatedClockPeriod>
+<EstimatedClockPeriod>12.882</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
@@ -33,26 +33,26 @@
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <LOOP_SHA256_DIGEST_MAIN>
-<Slack>2.28</Slack>
+<Slack>13.50</Slack>
 <TripCount>undef</TripCount>
 <Latency>undef</Latency>
 <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
-<IterationLatency>79</IterationLatency>
+<IterationLatency>73</IterationLatency>
 <InstanceList>
 </InstanceList>
 <LOOP_SHA256_DIGEST_NBLK>
-<Slack>2.28</Slack>
+<Slack>13.50</Slack>
 <TripCount>1</TripCount>
-<Latency>77</Latency>
-<AbsoluteTimeLatency>963</AbsoluteTimeLatency>
-<IterationLatency>74</IterationLatency>
+<Latency>71</Latency>
+<AbsoluteTimeLatency>1065</AbsoluteTimeLatency>
+<IterationLatency>71</IterationLatency>
 <InstanceList>
 </InstanceList>
 </LOOP_SHA256_DIGEST_NBLK>
 </LOOP_SHA256_DIGEST_MAIN>
 </SummaryOfLoopLatency>
 <SummaryOfViolations>
-<IssueType>Timing Violation</IssueType>
+<IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
 <SourceLocation>D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:632</SourceLocation>
 <SummaryOfLoopViolations>
@@ -74,10 +74,10 @@
 
 <AreaEstimates>
 <Resources>
-<DSP>4</DSP>
-<FF>3461</FF>
-<LUT>1581</LUT>
+<FF>1093</FF>
+<LUT>1694</LUT>
 <BRAM_18K>0</BRAM_18K>
+<DSP>0</DSP>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'sha256Digest_256_s'" level="0">
-<item name = "Date">Sat Oct 18 18:24:24 2025
+<item name = "Date">Tue Oct 21 20:18:58 2025
 </item>
 <item name = "Version">2024.2 (Build 5238294 on Nov  8 2024)</item>
 <item name = "Project">hmac_sha256_test.prj</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">3.33 ns, 12.519 ns, 1.05 ns</column>
+<column name="ap_clk">15.00 ns, 12.882 ns, 1.50 ns</column>
 </table>
 </item>
 </section>
@@ -31,13 +31,13 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273">sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS, 68, 68, 0.851 us, 0.851 us, 65, 65, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272">sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS, 68, 68, 1.020 us, 1.020 us, 65, 65, loop auto-rewind stp (delay=0 clock cycles(s))</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- LOOP_SHA256_DIGEST_MAIN">?, ?, 79, -, -, ?, no</column>
-<column name=" + LOOP_SHA256_DIGEST_NBLK">77, 77, 74, -, -, 1, no</column>
+<column name="- LOOP_SHA256_DIGEST_MAIN">?, ?, 73, -, -, ?, no</column>
+<column name=" + LOOP_SHA256_DIGEST_NBLK">71, 71, 71, -, -, 1, no</column>
 </table>
 </item>
 </section>

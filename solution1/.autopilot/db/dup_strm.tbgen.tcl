@@ -204,7 +204,7 @@ set RtlHierarchyInfo {[
 set ArgLastReadFirstWriteLatency {
 	dup_strm {
 		nblk_strm {Type I LastRead 1 FirstWrite -1}
-		end_nblk_strm {Type I LastRead 1 FirstWrite -1}
+		end_nblk_strm {Type I LastRead 0 FirstWrite -1}
 		nblk_strm1 {Type O LastRead -1 FirstWrite 1}
 		end_nblk_strm1 {Type O LastRead -1 FirstWrite 1}
 		nblk_strm2 {Type O LastRead -1 FirstWrite 1}
@@ -216,7 +216,7 @@ set ArgLastReadFirstWriteLatency {
 		end_nblk_strm1 {Type O LastRead -1 FirstWrite 1}
 		nblk_strm2 {Type O LastRead -1 FirstWrite 1}
 		end_nblk_strm2 {Type O LastRead -1 FirstWrite 1}
-		end_nblk_strm {Type I LastRead 1 FirstWrite -1}}}
+		end_nblk_strm {Type I LastRead 0 FirstWrite -1}}}
 
 set hasDtUnsupportedChannel 0
 

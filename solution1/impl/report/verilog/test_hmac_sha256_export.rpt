@@ -1,0 +1,23 @@
+
+
+Implementation tool: Xilinx Vivado v.2024.2
+Project:             hmac_sha256_test.prj
+Solution:            solution1
+Device target:       xc7z020-clg484-1
+Report date:         Tue Oct 21 20:26:17 +0800 2025
+
+#=== Post-Synthesis Resource usage ===
+SLICE:            0
+LUT:           7952
+FF:           13792
+DSP:              0
+BRAM:             1
+URAM:             0
+LATCH:            0
+SRL:              0
+CLB:              0
+
+#=== Final timing ===
+CP required:                     15.000
+CP achieved post-synthesis:      9.011
+Timing met

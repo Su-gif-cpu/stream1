@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'sha256Digest_256_s'" level="0">
-<item name = "Date">Sat Oct 18 18:24:33 2025
+<item name = "Date">Tue Oct 21 20:19:07 2025
 </item>
 <item name = "Version">2024.2 (Build 5238294 on Nov  8 2024)</item>
 <item name = "Project">hmac_sha256_test.prj</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">3.33 ns, 12.519 ns, 1.05 ns</column>
+<column name="ap_clk">15.00 ns, 12.882 ns, 1.50 ns</column>
 </table>
 </item>
 </section>
@@ -31,13 +31,13 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273">sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS, 68, 68, 0.851 us, 0.851 us, 65, 65, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272">sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS, 68, 68, 1.020 us, 1.020 us, 65, 65, loop auto-rewind stp (delay=0 clock cycles(s))</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- LOOP_SHA256_DIGEST_MAIN">?, ?, 79, -, -, ?, no</column>
-<column name=" + LOOP_SHA256_DIGEST_NBLK">77, 77, 74, -, -, 1, no</column>
+<column name="- LOOP_SHA256_DIGEST_MAIN">?, ?, 73, -, -, ?, no</column>
+<column name=" + LOOP_SHA256_DIGEST_NBLK">71, 71, 71, -, -, 1, no</column>
 </table>
 </item>
 </section>
@@ -50,23 +50,21 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="DSP">-, -, -, -, -</column>
-<column name="Expression">-, -, 0, 6, -</column>
+<column name="Expression">-, -, 0, 148, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">-, 4, 2999, 1373, -</column>
+<column name="Instance">-, -, 637, 1375, -</column>
 <column name="Memory">-, -, -, -, -</column>
-<column name="Multiplexer">-, -, 0, 202, -</column>
-<column name="Register">-, -, 462, -, -</column>
+<column name="Multiplexer">-, -, 0, 171, -</column>
+<column name="Register">-, -, 456, -, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
-<specialColumn name="Utilization (%)">0, 1, 3, 2, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, 1, 3, 0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="add_64ns_64ns_64_3_1_U174">add_64ns_64ns_64_3_1, 0, 0, 389, 66, 0</column>
-<column name="icmp_64ns_64ns_1_3_1_U173">icmp_64ns_64ns_1_3_1, 0, 0, 389, 66, 0</column>
-<column name="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273">sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS, 0, 4, 2221, 1241, 0</column>
+<column name="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272">sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS, 0, 0, 637, 1375, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -83,51 +81,50 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="n_1_fu_307_p2">+, 0, 0, 71, 64, 1</column>
+<column name="icmp_ln663_fu_302_p2">icmp, 0, 0, 71, 64, 64</column>
 <column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state2">or, 0, 0, 2, 1, 1</column>
 <column name="ap_block_state3">or, 0, 0, 2, 1, 1</column>
-<column name="ap_block_state7">or, 0, 0, 2, 1, 1</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
-<column name="a_reg_261">9, 2, 32, 64</column>
-<column name="ap_NS_fsm">53, 10, 1, 10</column>
+<column name="a_reg_249">9, 2, 32, 64</column>
+<column name="ap_NS_fsm">31, 6, 1, 6</column>
 <column name="ap_done">9, 2, 1, 2</column>
-<column name="b_reg_249">9, 2, 32, 64</column>
-<column name="c_reg_237">9, 2, 32, 64</column>
-<column name="d_reg_225">9, 2, 32, 64</column>
+<column name="b_reg_237">9, 2, 32, 64</column>
+<column name="c_reg_225">9, 2, 32, 64</column>
+<column name="d_reg_213">9, 2, 32, 64</column>
 <column name="eMsgHashStrm_blk_n">9, 2, 1, 2</column>
 <column name="eMsgHashStrm_din">14, 3, 1, 3</column>
-<column name="e_reg_213">9, 2, 32, 64</column>
-<column name="end_flag_1_reg_156">9, 2, 1, 2</column>
+<column name="e_reg_201">9, 2, 32, 64</column>
 <column name="end_nblk_strm2_blk_n">9, 2, 1, 2</column>
-<column name="f_reg_201">9, 2, 32, 64</column>
-<column name="g_reg_189">9, 2, 32, 64</column>
-<column name="h_reg_177">9, 2, 32, 64</column>
+<column name="f_reg_189">9, 2, 32, 64</column>
+<column name="g_reg_177">9, 2, 32, 64</column>
+<column name="h_reg_165">9, 2, 32, 64</column>
 <column name="msgHashStrm_blk_n">9, 2, 1, 2</column>
-<column name="n_reg_165">9, 2, 64, 128</column>
+<column name="n_reg_261">9, 2, 64, 128</column>
 <column name="nblk_strm2_blk_n">9, 2, 1, 2</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="a_reg_261">32, 0, 32, 0</column>
-<column name="ap_CS_fsm">9, 0, 9, 0</column>
+<column name="a_reg_249">32, 0, 32, 0</column>
+<column name="ap_CS_fsm">5, 0, 5, 0</column>
 <column name="ap_done_reg">1, 0, 1, 0</column>
-<column name="b_reg_249">32, 0, 32, 0</column>
-<column name="blk_num_reg_732">64, 0, 64, 0</column>
-<column name="c_reg_237">32, 0, 32, 0</column>
-<column name="d_reg_225">32, 0, 32, 0</column>
-<column name="e_reg_213">32, 0, 32, 0</column>
+<column name="b_reg_237">32, 0, 32, 0</column>
+<column name="blk_num_reg_731">64, 0, 64, 0</column>
+<column name="c_reg_225">32, 0, 32, 0</column>
+<column name="d_reg_213">32, 0, 32, 0</column>
+<column name="e_reg_201">32, 0, 32, 0</column>
 <column name="end_flag_1_reg_156">1, 0, 1, 0</column>
-<column name="end_flag_reg_727">1, 0, 1, 0</column>
-<column name="f_reg_201">32, 0, 32, 0</column>
-<column name="g_reg_189">32, 0, 32, 0</column>
-<column name="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_ap_start_reg">1, 0, 1, 0</column>
-<column name="h_reg_177">32, 0, 32, 0</column>
-<column name="icmp_ln663_reg_737">1, 0, 1, 0</column>
-<column name="n_1_reg_741">64, 0, 64, 0</column>
-<column name="n_reg_165">64, 0, 64, 0</column>
+<column name="f_reg_189">32, 0, 32, 0</column>
+<column name="g_reg_177">32, 0, 32, 0</column>
+<column name="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_ap_start_reg">1, 0, 1, 0</column>
+<column name="h_reg_165">32, 0, 32, 0</column>
+<column name="n_1_reg_739">64, 0, 64, 0</column>
+<column name="n_reg_261">64, 0, 64, 0</column>
 </table>
 </item>
 </section>

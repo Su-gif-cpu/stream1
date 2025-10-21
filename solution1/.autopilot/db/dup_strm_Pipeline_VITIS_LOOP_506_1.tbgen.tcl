@@ -46,6 +46,11 @@ set portList {
 	{ ap_done sc_out sc_logic 1 predone -1 } 
 	{ ap_idle sc_out sc_logic 1 done -1 } 
 	{ ap_ready sc_out sc_logic 1 ready -1 } 
+	{ end_nblk_strm_dout sc_in sc_lv 1 signal 6 } 
+	{ end_nblk_strm_empty_n sc_in sc_logic 1 signal 6 } 
+	{ end_nblk_strm_read sc_out sc_logic 1 signal 6 } 
+	{ end_nblk_strm_num_data_valid sc_in sc_lv 6 signal 6 } 
+	{ end_nblk_strm_fifo_cap sc_in sc_lv 6 signal 6 } 
 	{ nblk_strm_dout sc_in sc_lv 64 signal 1 } 
 	{ nblk_strm_empty_n sc_in sc_logic 1 signal 1 } 
 	{ nblk_strm_read sc_out sc_logic 1 signal 1 } 
@@ -71,11 +76,6 @@ set portList {
 	{ end_nblk_strm2_write sc_out sc_logic 1 signal 5 } 
 	{ end_nblk_strm2_num_data_valid sc_in sc_lv 32 signal 5 } 
 	{ end_nblk_strm2_fifo_cap sc_in sc_lv 32 signal 5 } 
-	{ end_nblk_strm_dout sc_in sc_lv 1 signal 6 } 
-	{ end_nblk_strm_empty_n sc_in sc_logic 1 signal 6 } 
-	{ end_nblk_strm_read sc_out sc_logic 1 signal 6 } 
-	{ end_nblk_strm_num_data_valid sc_in sc_lv 6 signal 6 } 
-	{ end_nblk_strm_fifo_cap sc_in sc_lv 6 signal 6 } 
 	{ e sc_in sc_lv 1 signal 0 } 
 }
 set NewPortList {[ 
@@ -85,6 +85,11 @@ set NewPortList {[
  	{ "name": "ap_done", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "predone", "bundle":{"name": "ap_done", "role": "default" }} , 
  	{ "name": "ap_idle", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "done", "bundle":{"name": "ap_idle", "role": "default" }} , 
  	{ "name": "ap_ready", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "ready", "bundle":{"name": "ap_ready", "role": "default" }} , 
+ 	{ "name": "end_nblk_strm_dout", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "end_nblk_strm", "role": "dout" }} , 
+ 	{ "name": "end_nblk_strm_empty_n", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "end_nblk_strm", "role": "empty_n" }} , 
+ 	{ "name": "end_nblk_strm_read", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "end_nblk_strm", "role": "read" }} , 
+ 	{ "name": "end_nblk_strm_num_data_valid", "direction": "in", "datatype": "sc_lv", "bitwidth":6, "type": "signal", "bundle":{"name": "end_nblk_strm", "role": "num_data_valid" }} , 
+ 	{ "name": "end_nblk_strm_fifo_cap", "direction": "in", "datatype": "sc_lv", "bitwidth":6, "type": "signal", "bundle":{"name": "end_nblk_strm", "role": "fifo_cap" }} , 
  	{ "name": "nblk_strm_dout", "direction": "in", "datatype": "sc_lv", "bitwidth":64, "type": "signal", "bundle":{"name": "nblk_strm", "role": "dout" }} , 
  	{ "name": "nblk_strm_empty_n", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "nblk_strm", "role": "empty_n" }} , 
  	{ "name": "nblk_strm_read", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "nblk_strm", "role": "read" }} , 
@@ -110,11 +115,6 @@ set NewPortList {[
  	{ "name": "end_nblk_strm2_write", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "end_nblk_strm2", "role": "write" }} , 
  	{ "name": "end_nblk_strm2_num_data_valid", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "end_nblk_strm2", "role": "num_data_valid" }} , 
  	{ "name": "end_nblk_strm2_fifo_cap", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "end_nblk_strm2", "role": "fifo_cap" }} , 
- 	{ "name": "end_nblk_strm_dout", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "end_nblk_strm", "role": "dout" }} , 
- 	{ "name": "end_nblk_strm_empty_n", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "end_nblk_strm", "role": "empty_n" }} , 
- 	{ "name": "end_nblk_strm_read", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "end_nblk_strm", "role": "read" }} , 
- 	{ "name": "end_nblk_strm_num_data_valid", "direction": "in", "datatype": "sc_lv", "bitwidth":6, "type": "signal", "bundle":{"name": "end_nblk_strm", "role": "num_data_valid" }} , 
- 	{ "name": "end_nblk_strm_fifo_cap", "direction": "in", "datatype": "sc_lv", "bitwidth":6, "type": "signal", "bundle":{"name": "end_nblk_strm", "role": "fifo_cap" }} , 
  	{ "name": "e", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "e", "role": "default" }}  ]}
 
 set RtlHierarchyInfo {[
@@ -166,7 +166,7 @@ set ArgLastReadFirstWriteLatency {
 		end_nblk_strm1 {Type O LastRead -1 FirstWrite 1}
 		nblk_strm2 {Type O LastRead -1 FirstWrite 1}
 		end_nblk_strm2 {Type O LastRead -1 FirstWrite 1}
-		end_nblk_strm {Type I LastRead 1 FirstWrite -1}}}
+		end_nblk_strm {Type I LastRead 0 FirstWrite -1}}}
 
 set hasDtUnsupportedChannel 0
 

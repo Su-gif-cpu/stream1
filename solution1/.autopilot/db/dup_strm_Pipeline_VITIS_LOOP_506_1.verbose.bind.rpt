@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'dup_strm_Pipeline_VITIS_LOOP_506_1'
 ================================================================
-* Date:           Sat Oct 18 18:24:22 2025
+* Date:           Tue Oct 21 20:18:57 2025
 
 * Version:        2024.2 (Build 5238294 on Nov  8 2024)
 * Project:        hmac_sha256_test.prj
@@ -17,20 +17,20 @@
 ================================================================
 + Timing: 
     * Summary: 
-    +--------+---------+----------+------------+
-    |  Clock |  Target | Estimated| Uncertainty|
-    +--------+---------+----------+------------+
-    |ap_clk  |  3.33 ns|  2.728 ns|     1.05 ns|
-    +--------+---------+----------+------------+
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  15.00 ns|  7.452 ns|     1.50 ns|
+    +--------+----------+----------+------------+
 
 + Latency: 
     * Summary: 
-    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
-    |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                    |
-    |   min   |   max   |    min   |    max   | min | max |                      Type                      |
-    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
-    |        3|        3|  9.990 ns|  9.990 ns|    2|    2|  loop auto-rewind stp (delay=0 clock cycles(s))|
-    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    +---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval |                    Pipeline                    |
+    |   min   |   max   |    min    |    max    | min | max |                      Type                      |
+    +---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
+    |        3|        3|  45.000 ns|  45.000 ns|    2|    2|  loop auto-rewind stp (delay=0 clock cycles(s))|
+    +---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
 
     + Detail: 
         * Instance: 
@@ -84,7 +84,7 @@ IsGatedGlobalClock: 0
 
 * FSM state operations: 
 
-State 1 <SV = 0> <Delay = 1.58>
+State 1 <SV = 0> <Delay = 5.31>
 ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i64 %nblk_strm, i64 666, i64 9, i64 18446744073709551615"   --->   Operation 5 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i64 %nblk_strm1, i64 666, i64 9, i64 18446744073709551615"   --->   Operation 6 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i64 %nblk_strm2, i64 666, i64 9, i64 18446744073709551615"   --->   Operation 7 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
@@ -101,18 +101,18 @@ ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%e_read = read i1 @_ssdm_op_Read.ap
 ST_1 : Operation 18 [1/1] (1.58ns)   --->   "%br_ln506 = br void %while.cond" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:506]   --->   Operation 18 'br' 'br_ln506' <Predicate = true> <Delay = 1.58>
 ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%e_6 = phi i1 %e_read, void %newFuncRoot, i1 %e_7, void %while.body"   --->   Operation 19 'phi' 'e_6' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%br_ln506 = br i1 %e_6, void %while.body, void %while.end.exitStub" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:506]   --->   Operation 20 'br' 'br_ln506' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] ( I:3.72ns O:3.72ns )   --->   "%e_7 = read i1 @_ssdm_op_Read.ap_fifo.volatile.i1P0A, i1 %end_nblk_strm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:516]   --->   Operation 21 'read' 'e_7' <Predicate = (!e_6)> <Delay = 3.72> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.72> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 32> <FIFO>
 ST_1 : Operation 31 [1/1] (1.58ns)   --->   "%ret_ln0 = ret"   --->   Operation 31 'ret' 'ret_ln0' <Predicate = (e_6)> <Delay = 1.58>
 
-State 2 <SV = 1> <Delay = 2.72>
-ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%specpipeline_ln508 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_1" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:508]   --->   Operation 21 'specpipeline' 'specpipeline_ln508' <Predicate = (!e_6)> <Delay = 0.00>
-ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%speclooptripcount_ln507 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 1, i64 1, i64 1" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:507]   --->   Operation 22 'speclooptripcount' 'speclooptripcount_ln507' <Predicate = (!e_6)> <Delay = 0.00>
-ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%specloopname_ln506 = specloopname void @_ssdm_op_SpecLoopName, void @empty_10" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:506]   --->   Operation 23 'specloopname' 'specloopname_ln506' <Predicate = (!e_6)> <Delay = 0.00>
-ST_2 : Operation 24 [1/1] ( I:1.14ns O:1.14ns )   --->   "%in_r = read i64 @_ssdm_op_Read.ap_fifo.volatile.i64P0A, i64 %nblk_strm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:509]   --->   Operation 24 'read' 'in_r' <Predicate = (!e_6)> <Delay = 1.14> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.72> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 32> <FIFO>
-ST_2 : Operation 25 [1/1] ( I:1.14ns O:1.14ns )   --->   "%write_ln511 = write void @_ssdm_op_Write.ap_fifo.volatile.i64P0A, i64 %nblk_strm1, i64 %in_r" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:511]   --->   Operation 25 'write' 'write_ln511' <Predicate = (!e_6)> <Delay = 1.14> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.72> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 32> <FIFO>
-ST_2 : Operation 26 [1/1] ( I:1.14ns O:1.14ns )   --->   "%write_ln512 = write void @_ssdm_op_Write.ap_fifo.volatile.i1P0A, i1 %end_nblk_strm1, i1 0" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:512]   --->   Operation 26 'write' 'write_ln512' <Predicate = (!e_6)> <Delay = 1.14> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.72> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 32> <FIFO>
-ST_2 : Operation 27 [1/1] ( I:1.14ns O:1.14ns )   --->   "%write_ln513 = write void @_ssdm_op_Write.ap_fifo.volatile.i64P0A, i64 %nblk_strm2, i64 %in_r" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:513]   --->   Operation 27 'write' 'write_ln513' <Predicate = (!e_6)> <Delay = 1.14> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.72> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 32> <FIFO>
-ST_2 : Operation 28 [1/1] ( I:1.14ns O:1.14ns )   --->   "%write_ln514 = write void @_ssdm_op_Write.ap_fifo.volatile.i1P0A, i1 %end_nblk_strm2, i1 0" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:514]   --->   Operation 28 'write' 'write_ln514' <Predicate = (!e_6)> <Delay = 1.14> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.72> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 32> <FIFO>
-ST_2 : Operation 29 [1/1] ( I:1.14ns O:1.14ns )   --->   "%e_7 = read i1 @_ssdm_op_Read.ap_fifo.volatile.i1P0A, i1 %end_nblk_strm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:516]   --->   Operation 29 'read' 'e_7' <Predicate = (!e_6)> <Delay = 1.14> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.72> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 32> <FIFO>
+State 2 <SV = 1> <Delay = 7.45>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%specpipeline_ln508 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_1" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:508]   --->   Operation 22 'specpipeline' 'specpipeline_ln508' <Predicate = (!e_6)> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%speclooptripcount_ln507 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 1, i64 1, i64 1" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:507]   --->   Operation 23 'speclooptripcount' 'speclooptripcount_ln507' <Predicate = (!e_6)> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%specloopname_ln506 = specloopname void @_ssdm_op_SpecLoopName, void @empty_10" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:506]   --->   Operation 24 'specloopname' 'specloopname_ln506' <Predicate = (!e_6)> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] ( I:3.72ns O:3.72ns )   --->   "%in_r = read i64 @_ssdm_op_Read.ap_fifo.volatile.i64P0A, i64 %nblk_strm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:509]   --->   Operation 25 'read' 'in_r' <Predicate = (!e_6)> <Delay = 3.72> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.72> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 32> <FIFO>
+ST_2 : Operation 26 [1/1] ( I:3.72ns O:3.72ns )   --->   "%write_ln511 = write void @_ssdm_op_Write.ap_fifo.volatile.i64P0A, i64 %nblk_strm1, i64 %in_r" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:511]   --->   Operation 26 'write' 'write_ln511' <Predicate = (!e_6)> <Delay = 3.72> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.72> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 32> <FIFO>
+ST_2 : Operation 27 [1/1] ( I:3.72ns O:3.72ns )   --->   "%write_ln512 = write void @_ssdm_op_Write.ap_fifo.volatile.i1P0A, i1 %end_nblk_strm1, i1 0" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:512]   --->   Operation 27 'write' 'write_ln512' <Predicate = (!e_6)> <Delay = 3.72> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.72> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 32> <FIFO>
+ST_2 : Operation 28 [1/1] ( I:3.72ns O:3.72ns )   --->   "%write_ln513 = write void @_ssdm_op_Write.ap_fifo.volatile.i64P0A, i64 %nblk_strm2, i64 %in_r" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:513]   --->   Operation 28 'write' 'write_ln513' <Predicate = (!e_6)> <Delay = 3.72> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.72> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 32> <FIFO>
+ST_2 : Operation 29 [1/1] ( I:3.72ns O:3.72ns )   --->   "%write_ln514 = write void @_ssdm_op_Write.ap_fifo.volatile.i1P0A, i1 %end_nblk_strm2, i1 0" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:514]   --->   Operation 29 'write' 'write_ln514' <Predicate = (!e_6)> <Delay = 3.72> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.72> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 32> <FIFO>
 ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%br_ln506 = br void %while.cond" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:506]   --->   Operation 30 'br' 'br_ln506' <Predicate = (!e_6)> <Delay = 0.00>
 
 
@@ -156,6 +156,7 @@ e_read                  (read             ) [ 000]
 br_ln506                (br               ) [ 000]
 e_6                     (phi              ) [ 011]
 br_ln506                (br               ) [ 000]
+e_7                     (read             ) [ 011]
 specpipeline_ln508      (specpipeline     ) [ 000]
 speclooptripcount_ln507 (speclooptripcount) [ 000]
 specloopname_ln506      (specloopname     ) [ 000]
@@ -164,7 +165,6 @@ write_ln511             (write            ) [ 000]
 write_ln512             (write            ) [ 000]
 write_ln513             (write            ) [ 000]
 write_ln514             (write            ) [ 000]
-e_7                     (read             ) [ 011]
 br_ln506                (br               ) [ 011]
 ret_ln0                 (ret              ) [ 000]
 </LifeTime>
@@ -327,10 +327,10 @@ ret_ln0                 (ret              ) [ 000]
 
 <comp id="34" class="1001" name="const_34">
 <pin_list>
-<pin id="35" dir="1" index="0" bw="1" slack="2147483647"/>
+<pin id="35" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="_ssdm_op_SpecPipeline"/></StgValue>
+<StgValue><ssdm name="_ssdm_op_Read.ap_fifo.volatile.i1P0A"/></StgValue>
 </bind>
 </comp>
 
@@ -339,7 +339,7 @@ ret_ln0                 (ret              ) [ 000]
 <pin id="37" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name=""/></StgValue>
+<StgValue><ssdm name="_ssdm_op_SpecPipeline"/></StgValue>
 </bind>
 </comp>
 
@@ -348,7 +348,7 @@ ret_ln0                 (ret              ) [ 000]
 <pin id="39" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="_ssdm_op_SpecLoopTripCount"/></StgValue>
+<StgValue><ssdm name=""/></StgValue>
 </bind>
 </comp>
 
@@ -357,7 +357,7 @@ ret_ln0                 (ret              ) [ 000]
 <pin id="41" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name=""/></StgValue>
+<StgValue><ssdm name="_ssdm_op_SpecLoopTripCount"/></StgValue>
 </bind>
 </comp>
 
@@ -366,7 +366,7 @@ ret_ln0                 (ret              ) [ 000]
 <pin id="43" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="_ssdm_op_SpecLoopName"/></StgValue>
+<StgValue><ssdm name=""/></StgValue>
 </bind>
 </comp>
 
@@ -375,16 +375,16 @@ ret_ln0                 (ret              ) [ 000]
 <pin id="45" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_10"/></StgValue>
+<StgValue><ssdm name="_ssdm_op_SpecLoopName"/></StgValue>
 </bind>
 </comp>
 
 <comp id="46" class="1001" name="const_46">
 <pin_list>
-<pin id="47" dir="1" index="0" bw="1" slack="0"/>
+<pin id="47" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="_ssdm_op_Read.ap_fifo.volatile.i64P0A"/></StgValue>
+<StgValue><ssdm name="empty_10"/></StgValue>
 </bind>
 </comp>
 
@@ -393,7 +393,7 @@ ret_ln0                 (ret              ) [ 000]
 <pin id="49" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="_ssdm_op_Write.ap_fifo.volatile.i64P0A"/></StgValue>
+<StgValue><ssdm name="_ssdm_op_Read.ap_fifo.volatile.i64P0A"/></StgValue>
 </bind>
 </comp>
 
@@ -402,7 +402,7 @@ ret_ln0                 (ret              ) [ 000]
 <pin id="51" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="_ssdm_op_Write.ap_fifo.volatile.i1P0A"/></StgValue>
+<StgValue><ssdm name="_ssdm_op_Write.ap_fifo.volatile.i64P0A"/></StgValue>
 </bind>
 </comp>
 
@@ -411,7 +411,7 @@ ret_ln0                 (ret              ) [ 000]
 <pin id="53" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name=""/></StgValue>
+<StgValue><ssdm name="_ssdm_op_Write.ap_fifo.volatile.i1P0A"/></StgValue>
 </bind>
 </comp>
 
@@ -420,7 +420,7 @@ ret_ln0                 (ret              ) [ 000]
 <pin id="55" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="_ssdm_op_Read.ap_fifo.volatile.i1P0A"/></StgValue>
+<StgValue><ssdm name=""/></StgValue>
 </bind>
 </comp>
 
@@ -436,11 +436,23 @@ ret_ln0                 (ret              ) [ 000]
 </bind>
 </comp>
 
-<comp id="62" class="1004" name="in_r_read_fu_62">
+<comp id="62" class="1004" name="e_7_read_fu_62">
 <pin_list>
-<pin id="63" dir="0" index="0" bw="64" slack="0"/>
-<pin id="64" dir="0" index="1" bw="64" slack="0"/>
-<pin id="65" dir="1" index="2" bw="64" slack="0"/>
+<pin id="63" dir="0" index="0" bw="1" slack="0"/>
+<pin id="64" dir="0" index="1" bw="1" slack="0"/>
+<pin id="65" dir="1" index="2" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="e_7/1 "/>
+</bind>
+</comp>
+
+<comp id="68" class="1004" name="in_r_read_fu_68">
+<pin_list>
+<pin id="69" dir="0" index="0" bw="64" slack="0"/>
+<pin id="70" dir="0" index="1" bw="64" slack="0"/>
+<pin id="71" dir="1" index="2" bw="64" slack="0"/>
 </pin_list>
 <bind>
 <opcode="read(1150) " fcode="read"/>
@@ -448,12 +460,12 @@ ret_ln0                 (ret              ) [ 000]
 </bind>
 </comp>
 
-<comp id="68" class="1004" name="write_ln511_write_fu_68">
+<comp id="74" class="1004" name="write_ln511_write_fu_74">
 <pin_list>
-<pin id="69" dir="0" index="0" bw="0" slack="0"/>
-<pin id="70" dir="0" index="1" bw="64" slack="0"/>
-<pin id="71" dir="0" index="2" bw="64" slack="0"/>
-<pin id="72" dir="1" index="3" bw="0" slack="2147483647"/>
+<pin id="75" dir="0" index="0" bw="0" slack="0"/>
+<pin id="76" dir="0" index="1" bw="64" slack="0"/>
+<pin id="77" dir="0" index="2" bw="64" slack="0"/>
+<pin id="78" dir="1" index="3" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="write(1151) " fcode="write"/>
@@ -461,12 +473,12 @@ ret_ln0                 (ret              ) [ 000]
 </bind>
 </comp>
 
-<comp id="76" class="1004" name="write_ln512_write_fu_76">
+<comp id="82" class="1004" name="write_ln512_write_fu_82">
 <pin_list>
-<pin id="77" dir="0" index="0" bw="0" slack="0"/>
-<pin id="78" dir="0" index="1" bw="1" slack="0"/>
-<pin id="79" dir="0" index="2" bw="1" slack="0"/>
-<pin id="80" dir="1" index="3" bw="0" slack="2147483647"/>
+<pin id="83" dir="0" index="0" bw="0" slack="0"/>
+<pin id="84" dir="0" index="1" bw="1" slack="0"/>
+<pin id="85" dir="0" index="2" bw="1" slack="0"/>
+<pin id="86" dir="1" index="3" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="write(1151) " fcode="write"/>
@@ -474,12 +486,12 @@ ret_ln0                 (ret              ) [ 000]
 </bind>
 </comp>
 
-<comp id="84" class="1004" name="write_ln513_write_fu_84">
+<comp id="90" class="1004" name="write_ln513_write_fu_90">
 <pin_list>
-<pin id="85" dir="0" index="0" bw="0" slack="0"/>
-<pin id="86" dir="0" index="1" bw="64" slack="0"/>
-<pin id="87" dir="0" index="2" bw="64" slack="0"/>
-<pin id="88" dir="1" index="3" bw="0" slack="2147483647"/>
+<pin id="91" dir="0" index="0" bw="0" slack="0"/>
+<pin id="92" dir="0" index="1" bw="64" slack="0"/>
+<pin id="93" dir="0" index="2" bw="64" slack="0"/>
+<pin id="94" dir="1" index="3" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="write(1151) " fcode="write"/>
@@ -487,28 +499,16 @@ ret_ln0                 (ret              ) [ 000]
 </bind>
 </comp>
 
-<comp id="92" class="1004" name="write_ln514_write_fu_92">
+<comp id="98" class="1004" name="write_ln514_write_fu_98">
 <pin_list>
-<pin id="93" dir="0" index="0" bw="0" slack="0"/>
-<pin id="94" dir="0" index="1" bw="1" slack="0"/>
-<pin id="95" dir="0" index="2" bw="1" slack="0"/>
-<pin id="96" dir="1" index="3" bw="0" slack="2147483647"/>
+<pin id="99" dir="0" index="0" bw="0" slack="0"/>
+<pin id="100" dir="0" index="1" bw="1" slack="0"/>
+<pin id="101" dir="0" index="2" bw="1" slack="0"/>
+<pin id="102" dir="1" index="3" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="write(1151) " fcode="write"/>
 <opset="write_ln514/2 "/>
-</bind>
-</comp>
-
-<comp id="100" class="1004" name="e_7_read_fu_100">
-<pin_list>
-<pin id="101" dir="0" index="0" bw="1" slack="0"/>
-<pin id="102" dir="0" index="1" bw="1" slack="0"/>
-<pin id="103" dir="1" index="2" bw="1" slack="1"/>
-</pin_list>
-<bind>
-<opcode="read(1150) " fcode="read"/>
-<opset="e_7/2 "/>
 </bind>
 </comp>
 
@@ -526,7 +526,7 @@ ret_ln0                 (ret              ) [ 000]
 <pin_list>
 <pin id="110" dir="0" index="0" bw="1" slack="0"/>
 <pin id="111" dir="0" index="1" bw="0" slack="2147483647"/>
-<pin id="112" dir="0" index="2" bw="1" slack="1"/>
+<pin id="112" dir="0" index="2" bw="1" slack="0"/>
 <pin id="113" dir="0" index="3" bw="0" slack="2147483647"/>
 <pin id="114" dir="1" index="4" bw="1" slack="1"/>
 </pin_list>
@@ -538,8 +538,8 @@ ret_ln0                 (ret              ) [ 000]
 
 <comp id="117" class="1005" name="e_7_reg_117">
 <pin_list>
-<pin id="118" dir="0" index="0" bw="1" slack="1"/>
-<pin id="119" dir="1" index="1" bw="1" slack="1"/>
+<pin id="118" dir="0" index="0" bw="1" slack="0"/>
+<pin id="119" dir="1" index="1" bw="1" slack="0"/>
 </pin_list>
 <bind>
 <opset="e_7 "/>
@@ -553,43 +553,43 @@ ret_ln0                 (ret              ) [ 000]
 
 <net id="61"><net_src comp="0" pin="0"/><net_sink comp="56" pin=1"/></net>
 
-<net id="66"><net_src comp="46" pin="0"/><net_sink comp="62" pin=0"/></net>
+<net id="66"><net_src comp="34" pin="0"/><net_sink comp="62" pin=0"/></net>
 
-<net id="67"><net_src comp="2" pin="0"/><net_sink comp="62" pin=1"/></net>
+<net id="67"><net_src comp="12" pin="0"/><net_sink comp="62" pin=1"/></net>
 
-<net id="73"><net_src comp="48" pin="0"/><net_sink comp="68" pin=0"/></net>
+<net id="72"><net_src comp="48" pin="0"/><net_sink comp="68" pin=0"/></net>
 
-<net id="74"><net_src comp="4" pin="0"/><net_sink comp="68" pin=1"/></net>
+<net id="73"><net_src comp="2" pin="0"/><net_sink comp="68" pin=1"/></net>
 
-<net id="75"><net_src comp="62" pin="2"/><net_sink comp="68" pin=2"/></net>
+<net id="79"><net_src comp="50" pin="0"/><net_sink comp="74" pin=0"/></net>
 
-<net id="81"><net_src comp="50" pin="0"/><net_sink comp="76" pin=0"/></net>
+<net id="80"><net_src comp="4" pin="0"/><net_sink comp="74" pin=1"/></net>
 
-<net id="82"><net_src comp="6" pin="0"/><net_sink comp="76" pin=1"/></net>
+<net id="81"><net_src comp="68" pin="2"/><net_sink comp="74" pin=2"/></net>
 
-<net id="83"><net_src comp="52" pin="0"/><net_sink comp="76" pin=2"/></net>
+<net id="87"><net_src comp="52" pin="0"/><net_sink comp="82" pin=0"/></net>
 
-<net id="89"><net_src comp="48" pin="0"/><net_sink comp="84" pin=0"/></net>
+<net id="88"><net_src comp="6" pin="0"/><net_sink comp="82" pin=1"/></net>
 
-<net id="90"><net_src comp="8" pin="0"/><net_sink comp="84" pin=1"/></net>
+<net id="89"><net_src comp="54" pin="0"/><net_sink comp="82" pin=2"/></net>
 
-<net id="91"><net_src comp="62" pin="2"/><net_sink comp="84" pin=2"/></net>
+<net id="95"><net_src comp="50" pin="0"/><net_sink comp="90" pin=0"/></net>
 
-<net id="97"><net_src comp="50" pin="0"/><net_sink comp="92" pin=0"/></net>
+<net id="96"><net_src comp="8" pin="0"/><net_sink comp="90" pin=1"/></net>
 
-<net id="98"><net_src comp="10" pin="0"/><net_sink comp="92" pin=1"/></net>
+<net id="97"><net_src comp="68" pin="2"/><net_sink comp="90" pin=2"/></net>
 
-<net id="99"><net_src comp="52" pin="0"/><net_sink comp="92" pin=2"/></net>
+<net id="103"><net_src comp="52" pin="0"/><net_sink comp="98" pin=0"/></net>
 
-<net id="104"><net_src comp="54" pin="0"/><net_sink comp="100" pin=0"/></net>
+<net id="104"><net_src comp="10" pin="0"/><net_sink comp="98" pin=1"/></net>
 
-<net id="105"><net_src comp="12" pin="0"/><net_sink comp="100" pin=1"/></net>
+<net id="105"><net_src comp="54" pin="0"/><net_sink comp="98" pin=2"/></net>
 
 <net id="115"><net_src comp="56" pin="2"/><net_sink comp="109" pin=0"/></net>
 
 <net id="116"><net_src comp="109" pin="4"/><net_sink comp="106" pin=0"/></net>
 
-<net id="120"><net_src comp="100" pin="2"/><net_sink comp="117" pin=0"/></net>
+<net id="120"><net_src comp="62" pin="2"/><net_sink comp="117" pin=0"/></net>
 
 <net id="121"><net_src comp="117" pin="1"/><net_sink comp="109" pin=2"/></net>
 
@@ -607,7 +607,7 @@ ret_ln0                 (ret              ) [ 000]
  - Input state : 
 	Port: dup_strm_Pipeline_VITIS_LOOP_506_1 : e | {1 }
 	Port: dup_strm_Pipeline_VITIS_LOOP_506_1 : nblk_strm | {2 }
-	Port: dup_strm_Pipeline_VITIS_LOOP_506_1 : end_nblk_strm | {2 }
+	Port: dup_strm_Pipeline_VITIS_LOOP_506_1 : end_nblk_strm | {1 }
   - Chain level:
 	State 1
 		e_6 : 1
@@ -624,13 +624,13 @@ ret_ln0                 (ret              ) [ 000]
 | Operation|     Functional Unit     |
 |----------|-------------------------|
 |          |    e_read_read_fu_56    |
-|   read   |     in_r_read_fu_62     |
-|          |     e_7_read_fu_100     |
+|   read   |      e_7_read_fu_62     |
+|          |     in_r_read_fu_68     |
 |----------|-------------------------|
-|          | write_ln511_write_fu_68 |
-|   write  | write_ln512_write_fu_76 |
-|          | write_ln513_write_fu_84 |
-|          | write_ln514_write_fu_92 |
+|          | write_ln511_write_fu_74 |
+|   write  | write_ln512_write_fu_82 |
+|          | write_ln513_write_fu_90 |
+|          | write_ln514_write_fu_98 |
 |----------|-------------------------|
 |   Total  |                         |
 |----------|-------------------------|

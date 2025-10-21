@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'kpad_32_64_256_32_64_sha256_wrapper_Pipeline_VITIS_LOOP_120_2'
 ================================================================
-* Date:           Sat Oct 18 18:24:26 2025
+* Date:           Tue Oct 21 20:19:00 2025
 
 * Version:        2024.2 (Build 5238294 on Nov  8 2024)
 * Project:        hmac_sha256_test.prj
@@ -17,20 +17,20 @@
 ================================================================
 + Timing: 
     * Summary: 
-    +--------+---------+----------+------------+
-    |  Clock |  Target | Estimated| Uncertainty|
-    +--------+---------+----------+------------+
-    |ap_clk  |  3.33 ns|  4.911 ns|     1.05 ns|
-    +--------+---------+----------+------------+
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  15.00 ns|  5.065 ns|     1.50 ns|
+    +--------+----------+----------+------------+
 
 + Latency: 
     * Summary: 
-    +---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
-    |  Latency (cycles) |   Latency (absolute)  |  Interval |                    Pipeline                    |
-    |   min   |   max   |    min    |    max    | min | max |                      Type                      |
-    +---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
-    |       10|       10|  49.110 ns|  49.110 ns|    9|    9|  loop auto-rewind stp (delay=0 clock cycles(s))|
-    +---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                    |
+    |   min   |   max   |    min   |    max   | min | max |                      Type                      |
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |       10|       10|  0.150 us|  0.150 us|    9|    9|  loop auto-rewind stp (delay=0 clock cycles(s))|
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
 
     + Detail: 
         * Instance: 
@@ -198,12 +198,12 @@ ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%k1_load_1 = load i512 %k1"   ---> 
 ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i512P0A, i512 %k1_out, i512 %k1_load_1"   --->   Operation 27 'write' 'write_ln0' <Predicate = (icmp_ln120)> <Delay = 0.00>
 ST_1 : Operation 28 [1/1] (1.58ns)   --->   "%ret_ln0 = ret"   --->   Operation 28 'ret' 'ret_ln0' <Predicate = (icmp_ln120)> <Delay = 1.58>
 
-State 2 <SV = 1> <Delay = 2.72>
+State 2 <SV = 1> <Delay = 5.06>
 ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%k1_load = load i512 %k1" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:124]   --->   Operation 16 'load' 'k1_load' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%specpipeline_ln121 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_1" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:121]   --->   Operation 17 'specpipeline' 'specpipeline_ln121' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%speclooptripcount_ln119 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 8, i64 8, i64 8" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:119]   --->   Operation 18 'speclooptripcount' 'speclooptripcount_ln119' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%specloopname_ln120 = specloopname void @_ssdm_op_SpecLoopName, void @empty" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:120]   --->   Operation 19 'specloopname' 'specloopname_ln120' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 20 [1/1] ( I:1.14ns O:1.14ns )   --->   "%tmp = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P0A, i32 %keyStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:122]   --->   Operation 20 'read' 'tmp' <Predicate = true> <Delay = 1.14> <CoreInst = "FIFO">   --->   Core 77 'FIFO' <Latency = 0> <II = 1> <Delay = 3.47> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_2 : Operation 20 [1/1] ( I:3.47ns O:3.47ns )   --->   "%tmp = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P0A, i32 %keyStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:122]   --->   Operation 20 'read' 'tmp' <Predicate = true> <Delay = 3.47> <CoreInst = "FIFO">   --->   Core 77 'FIFO' <Latency = 0> <II = 1> <Delay = 3.47> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
 ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%tmp_s = partselect i224 @_ssdm_op_PartSelect.i224.i512.i32.i32, i512 %k1_load, i32 256, i32 479" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:124]   --->   Operation 21 'partselect' 'tmp_s' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%trunc_ln124 = trunc i512 %k1_load" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:124]   --->   Operation 22 'trunc' 'trunc_ln124' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%k1_1 = bitconcatenate i512 @_ssdm_op_BitConcatenate.i512.i224.i32.i224.i32, i224 %tmp_s, i32 %tmp, i224 %trunc_ln124, i32 0" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:124]   --->   Operation 23 'bitconcatenate' 'k1_1' <Predicate = true> <Delay = 0.00>

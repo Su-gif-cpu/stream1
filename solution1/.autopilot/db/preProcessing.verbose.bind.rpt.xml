@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'preProcessing'" level="0">
-<item name = "Date">Sat Oct 18 18:24:22 2025
+<item name = "Date">Tue Oct 21 20:18:57 2025
 </item>
 <item name = "Version">2024.2 (Build 5238294 on Nov  8 2024)</item>
 <item name = "Project">hmac_sha256_test.prj</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">3.33 ns, 4.053 ns, 1.05 ns</column>
+<column name="ap_clk">15.00 ns, 12.550 ns, 1.50 ns</column>
 </table>
 </item>
 </section>
@@ -31,13 +31,13 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_preProcessing_Pipeline_LOOP_SHA256_GEN_FULL_BLKS_fu_271">preProcessing_Pipeline_LOOP_SHA256_GEN_FULL_BLKS, 4, 20, 13.320 ns, 66.600 ns, 3, 19, loop auto-rewind stp (delay=0 clock cycles(s))</column>
-<column name="grp_preProcessing_Pipeline_LOOP_SHA256_GEN_COPY_TAIL_AND_ONE_fu_280">preProcessing_Pipeline_LOOP_SHA256_GEN_COPY_TAIL_AND_ONE, 31, 31, 0.103 us, 0.103 us, 30, 30, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_preProcessing_Pipeline_LOOP_SHA256_GEN_FULL_BLKS_fu_270">preProcessing_Pipeline_LOOP_SHA256_GEN_FULL_BLKS, 2, 18, 30.000 ns, 0.270 us, 1, 17, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_preProcessing_Pipeline_LOOP_SHA256_GEN_COPY_TAIL_AND_ONE_fu_279">preProcessing_Pipeline_LOOP_SHA256_GEN_COPY_TAIL_AND_ONE, 16, 16, 0.240 us, 0.240 us, 15, 15, loop auto-rewind stp (delay=0 clock cycles(s))</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- LOOP_SHA256_GENENERATE_MAIN">?, ?, 15 ~ 64, -, -, ?, no</column>
+<column name="- LOOP_SHA256_GENENERATE_MAIN">?, ?, 7 ~ 41, -, -, ?, no</column>
 </table>
 </item>
 </section>

@@ -1,6 +1,6 @@
 
 set TopModule "test_hmac_sha256"
-set ClockPeriod 3.33
+set ClockPeriod 15
 set ClockList ap_clk
 set AxiliteClockList {}
 set HasVivadoClockPeriod 0

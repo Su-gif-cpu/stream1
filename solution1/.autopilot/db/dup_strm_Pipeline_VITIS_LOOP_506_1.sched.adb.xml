@@ -3,7 +3,7 @@
 
 <trans_list>
 
-<trans id="39" from="1" to="2">
+<trans id="40" from="1" to="2">
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
@@ -256,6 +256,22 @@ while.cond:1 %br_ln506 = br i1 %e_6, void %while.body, void %while.end.exitStub
 <StgValue><ssdm name="br_ln506"/></StgValue>
 </operation>
 
+<operation id="21" st_id="1" stage="1" lat="1">
+<core>FIFO_LUTRAM</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="e_6" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="34" bw="1" op_0_bw="1" op_1_bw="1">
+<![CDATA[
+while.body:8 %e_7 = read i1 @_ssdm_op_Read.ap_fifo.volatile.i1P0A, i1 %end_nblk_strm
+
+]]></Node>
+<StgValue><ssdm name="e_7"/></StgValue>
+</operation>
+
 <operation id="31" st_id="1" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
@@ -275,7 +291,7 @@ while.end.exitStub:0 %ret_ln0 = ret
 
 <state id="2" st_id="3">
 
-<operation id="21" st_id="2" stage="1" lat="1">
+<operation id="22" st_id="2" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -291,7 +307,7 @@ while.body:0 %specpipeline_ln508 = specpipeline void @_ssdm_op_SpecPipeline, i32
 <StgValue><ssdm name="specpipeline_ln508"/></StgValue>
 </operation>
 
-<operation id="22" st_id="2" stage="1" lat="1">
+<operation id="23" st_id="2" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -307,7 +323,7 @@ while.body:1 %speclooptripcount_ln507 = speclooptripcount void @_ssdm_op_SpecLoo
 <StgValue><ssdm name="speclooptripcount_ln507"/></StgValue>
 </operation>
 
-<operation id="23" st_id="2" stage="1" lat="1">
+<operation id="24" st_id="2" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -323,7 +339,7 @@ while.body:2 %specloopname_ln506 = specloopname void @_ssdm_op_SpecLoopName, voi
 <StgValue><ssdm name="specloopname_ln506"/></StgValue>
 </operation>
 
-<operation id="24" st_id="2" stage="1" lat="1">
+<operation id="25" st_id="2" stage="1" lat="1">
 <core>FIFO_LUTRAM</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -339,7 +355,7 @@ while.body:3 %in_r = read i64 @_ssdm_op_Read.ap_fifo.volatile.i64P0A, i64 %nblk_
 <StgValue><ssdm name="in_r"/></StgValue>
 </operation>
 
-<operation id="25" st_id="2" stage="1" lat="1">
+<operation id="26" st_id="2" stage="1" lat="1">
 <core>FIFO_LUTRAM</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -355,7 +371,7 @@ while.body:4 %write_ln511 = write void @_ssdm_op_Write.ap_fifo.volatile.i64P0A, 
 <StgValue><ssdm name="write_ln511"/></StgValue>
 </operation>
 
-<operation id="26" st_id="2" stage="1" lat="1">
+<operation id="27" st_id="2" stage="1" lat="1">
 <core>FIFO_LUTRAM</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -371,7 +387,7 @@ while.body:5 %write_ln512 = write void @_ssdm_op_Write.ap_fifo.volatile.i1P0A, i
 <StgValue><ssdm name="write_ln512"/></StgValue>
 </operation>
 
-<operation id="27" st_id="2" stage="1" lat="1">
+<operation id="28" st_id="2" stage="1" lat="1">
 <core>FIFO_LUTRAM</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -387,7 +403,7 @@ while.body:6 %write_ln513 = write void @_ssdm_op_Write.ap_fifo.volatile.i64P0A, 
 <StgValue><ssdm name="write_ln513"/></StgValue>
 </operation>
 
-<operation id="28" st_id="2" stage="1" lat="1">
+<operation id="29" st_id="2" stage="1" lat="1">
 <core>FIFO_LUTRAM</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -401,22 +417,6 @@ while.body:7 %write_ln514 = write void @_ssdm_op_Write.ap_fifo.volatile.i1P0A, i
 
 ]]></Node>
 <StgValue><ssdm name="write_ln514"/></StgValue>
-</operation>
-
-<operation id="29" st_id="2" stage="1" lat="1">
-<core>FIFO_LUTRAM</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp><literal name="e_6" val="0"/>
-</and_exp></or_exp>
-</condition>
-
-<Node id="34" bw="1" op_0_bw="1" op_1_bw="1">
-<![CDATA[
-while.body:8 %e_7 = read i1 @_ssdm_op_Read.ap_fifo.volatile.i1P0A, i1 %end_nblk_strm
-
-]]></Node>
-<StgValue><ssdm name="e_7"/></StgValue>
 </operation>
 
 <operation id="30" st_id="2" stage="1" lat="1">

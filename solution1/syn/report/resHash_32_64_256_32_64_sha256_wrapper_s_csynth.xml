@@ -9,8 +9,8 @@
 <ProductFamily>zynq</ProductFamily>
 <Part>xc7z020-clg484-1</Part>
 <TopModelName>resHash_32_64_256_32_64_sha256_wrapper_s</TopModelName>
-<TargetClockPeriod>3.33</TargetClockPeriod>
-<ClockUncertainty>1.05</ClockUncertainty>
+<TargetClockPeriod>15.00</TargetClockPeriod>
+<ClockUncertainty>1.50</ClockUncertainty>
 <FlowTarget>vivado</FlowTarget>
 </UserAssignments>
 
@@ -18,7 +18,7 @@
 <PipelineType>dataflow</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>12.519</EstimatedClockPeriod>
+<EstimatedClockPeriod>12.882</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
@@ -41,10 +41,10 @@
 
 <AreaEstimates>
 <Resources>
-<DSP>5</DSP>
-<FF>11888</FF>
-<LUT>5611</LUT>
+<FF>7309</FF>
+<LUT>5453</LUT>
 <BRAM_18K>0</BRAM_18K>
+<DSP>0</DSP>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>

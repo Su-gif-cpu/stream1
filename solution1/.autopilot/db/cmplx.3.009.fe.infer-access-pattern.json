@@ -1,7 +1,7 @@
 {
   "0": {
     "basicblocks": 1,
-    "calls": "12",
+    "calls": "7",
     "file": "test.cpp",
     "fileloc": 65,
     "instructions": 2,
@@ -10,12 +10,12 @@
   },
   "1": {
     "basicblocks": 1,
-    "calls": "6 13",
+    "calls": "10 4",
     "file": "hmac.hpp",
-    "fileloc": 180,
+    "fileloc": 236,
     "instructions": 15,
-    "name": "msgHash<32, 64, 256, 32, 64, sha256_wrapper>",
-    "total_instructions": 1334
+    "name": "resHash<32, 64, 256, 32, 64, sha256_wrapper>",
+    "total_instructions": 1321
   },
   "10": {
     "basicblocks": 8,
@@ -27,69 +27,6 @@
     "total_instructions": 29
   },
   "11": {
-    "basicblocks": 28,
-    "calls": "",
-    "file": "sha224_256.hpp",
-    "fileloc": 523,
-    "instructions": 153,
-    "name": "generateMsgSchedule",
-    "total_instructions": 201
-  },
-  "12": {
-    "basicblocks": 1,
-    "calls": "8 1 2",
-    "file": "hmac.hpp",
-    "fileloc": 260,
-    "instructions": 28,
-    "name": "hmacDataflow<32, 64, 256, 32, 64, sha256_wrapper>",
-    "total_instructions": 2897
-  },
-  "13": {
-    "basicblocks": 1,
-    "calls": "3",
-    "file": "test.cpp",
-    "fileloc": 56,
-    "instructions": 2,
-    "name": "hash",
-    "total_instructions": 1277
-  },
-  "2": {
-    "basicblocks": 1,
-    "calls": "10 5",
-    "file": "hmac.hpp",
-    "fileloc": 236,
-    "instructions": 15,
-    "name": "resHash<32, 64, 256, 32, 64, sha256_wrapper>",
-    "total_instructions": 1321
-  },
-  "3": {
-    "basicblocks": 1,
-    "calls": "4 7 11 9",
-    "file": "sha224_256.hpp",
-    "fileloc": 747,
-    "instructions": 37,
-    "name": "sha256_top<32, 256>",
-    "total_instructions": 1275
-  },
-  "4": {
-    "basicblocks": 125,
-    "calls": "",
-    "file": "sha224_256.hpp",
-    "fileloc": 82,
-    "instructions": 447,
-    "name": "preProcessing",
-    "total_instructions": 767
-  },
-  "5": {
-    "basicblocks": 1,
-    "calls": "3",
-    "file": "test.cpp",
-    "fileloc": 56,
-    "instructions": 2,
-    "name": "hash",
-    "total_instructions": 1277
-  },
-  "6": {
     "basicblocks": 10,
     "calls": "",
     "file": "hmac.hpp",
@@ -98,7 +35,16 @@
     "name": "mergeKipad<32, 64, 256, 64>",
     "total_instructions": 42
   },
-  "7": {
+  "12": {
+    "basicblocks": 28,
+    "calls": "",
+    "file": "sha224_256.hpp",
+    "fileloc": 523,
+    "instructions": 153,
+    "name": "generateMsgSchedule",
+    "total_instructions": 201
+  },
+  "13": {
     "basicblocks": 4,
     "calls": "",
     "file": "sha224_256.hpp",
@@ -107,7 +53,7 @@
     "name": "dup_strm",
     "total_instructions": 15
   },
-  "8": {
+  "2": {
     "basicblocks": 6,
     "calls": "",
     "file": "hmac.hpp",
@@ -116,7 +62,34 @@
     "name": "kpad<32, 64, 256, 32, 64, sha256_wrapper>",
     "total_instructions": 214
   },
-  "9": {
+  "3": {
+    "basicblocks": 1,
+    "calls": "9",
+    "file": "test.cpp",
+    "fileloc": 56,
+    "instructions": 2,
+    "name": "hash",
+    "total_instructions": 1277
+  },
+  "4": {
+    "basicblocks": 1,
+    "calls": "9",
+    "file": "test.cpp",
+    "fileloc": 56,
+    "instructions": 2,
+    "name": "hash",
+    "total_instructions": 1277
+  },
+  "5": {
+    "basicblocks": 1,
+    "calls": "11 3",
+    "file": "hmac.hpp",
+    "fileloc": 180,
+    "instructions": 15,
+    "name": "msgHash<32, 64, 256, 32, 64, sha256_wrapper>",
+    "total_instructions": 1334
+  },
+  "6": {
     "basicblocks": 10,
     "calls": "",
     "file": "sha224_256.hpp",
@@ -124,5 +97,32 @@
     "instructions": 255,
     "name": "sha256Digest<256>",
     "total_instructions": 255
+  },
+  "7": {
+    "basicblocks": 1,
+    "calls": "2 5 1",
+    "file": "hmac.hpp",
+    "fileloc": 260,
+    "instructions": 28,
+    "name": "hmacDataflow<32, 64, 256, 32, 64, sha256_wrapper>",
+    "total_instructions": 2897
+  },
+  "8": {
+    "basicblocks": 125,
+    "calls": "",
+    "file": "sha224_256.hpp",
+    "fileloc": 82,
+    "instructions": 447,
+    "name": "preProcessing",
+    "total_instructions": 767
+  },
+  "9": {
+    "basicblocks": 1,
+    "calls": "8 13 12 6",
+    "file": "sha224_256.hpp",
+    "fileloc": 747,
+    "instructions": 37,
+    "name": "sha256_top<32, 256>",
+    "total_instructions": 1275
   }
 }

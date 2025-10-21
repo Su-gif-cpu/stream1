@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64'" level="0">
-<item name = "Date">Sat Oct 18 18:24:31 2025
+<item name = "Date">Tue Oct 21 20:19:05 2025
 </item>
 <item name = "Version">2024.2 (Build 5238294 on Nov  8 2024)</item>
 <item name = "Project">hmac_sha256_test.prj</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">3.33 ns, 7.847 ns, 1.05 ns</column>
+<column name="ap_clk">15.00 ns, 8.511 ns, 1.50 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">51, 51, 0.400 us, 0.400 us, 49, 49, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="">50, 50, 0.750 us, 0.750 us, 49, 49, loop auto-rewind stp (delay=0 clock cycles(s))</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- LOOP_SHA256_PREPARE_WT64">49, 49, 2, 1, 1, 48, yes</column>
+<column name="- LOOP_SHA256_PREPARE_WT64">48, 48, 2, 1, 1, 48, yes</column>
 </table>
 </item>
 </section>
@@ -48,23 +48,20 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="DSP">-, -, -, -, -</column>
-<column name="Expression">-, -, 0, 163, -</column>
+<column name="Expression">-, -, 0, 264, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">-, 1, 296, 72, -</column>
+<column name="Instance">-, -, -, -, -</column>
 <column name="Memory">-, -, -, -, -</column>
-<column name="Multiplexer">-, -, 0, 198, -</column>
-<column name="Register">-, -, 525, -, -</column>
+<column name="Multiplexer">-, -, 0, 189, -</column>
+<column name="Register">-, -, 555, -, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
-<specialColumn name="Utilization (%)">0, ~0, ~0, ~0, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="add_32ns_32ns_32_1_1_U112">add_32ns_32ns_32_1_1, 0, 1, 0, 0, 0</column>
-<column name="add_32ns_32ns_32_2_1_U110">add_32ns_32ns_32_2_1, 0, 0, 148, 36, 0</column>
-<column name="add_32ns_32ns_32_2_1_U111">add_32ns_32ns_32_2_1, 0, 0, 148, 36, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -81,23 +78,24 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="t_3_fu_570_p2">+, 0, 0, 14, 7, 1</column>
-<column name="ap_block_pp0_stage0_01001">and, 0, 0, 2, 1, 1</column>
-<column name="ap_block_state3_pp0_stage0_iter2">and, 0, 0, 2, 1, 1</column>
-<column name="icmp_ln549_fu_403_p2">icmp, 0, 0, 15, 7, 8</column>
+<column name="Wt_fu_573_p2">+, 0, 0, 32, 32, 32</column>
+<column name="add_ln553_1_fu_567_p2">+, 0, 0, 39, 32, 32</column>
+<column name="add_ln553_fu_561_p2">+, 0, 0, 32, 32, 32</column>
+<column name="t_3_fu_579_p2">+, 0, 0, 14, 7, 1</column>
+<column name="ap_block_pp0_stage0_01001_grp1">and, 0, 0, 2, 1, 1</column>
+<column name="icmp_ln549_fu_406_p2">icmp, 0, 0, 15, 7, 8</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
-<column name="grp_fu_558_p1">xor, 0, 0, 32, 32, 32</column>
-<column name="grp_fu_564_p0">xor, 0, 0, 32, 32, 32</column>
-<column name="xor_ln553_2_fu_546_p2">xor, 0, 0, 32, 32, 32</column>
-<column name="xor_ln553_fu_534_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln553_1_fu_543_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln553_2_fu_549_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln553_3_fu_555_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln553_fu_537_p2">xor, 0, 0, 32, 32, 32</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
 <column name="ap_done_int">9, 2, 1, 2</column>
 <column name="ap_enable_reg_pp0_iter1">9, 2, 1, 2</column>
-<column name="ap_loop_exit_ready_pp0_iter2_reg">9, 2, 1, 2</column>
-<column name="ap_sig_allocacmp_p_load38">9, 2, 32, 64</column>
+<column name="ap_enable_reg_pp0_iter2">9, 2, 1, 2</column>
 <column name="empty_100_fu_172">9, 2, 32, 64</column>
 <column name="empty_86_fu_116">9, 2, 32, 64</column>
 <column name="empty_87_fu_120">9, 2, 32, 64</column>
@@ -120,11 +118,11 @@
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="Wt_reg_792">32, 0, 32, 0</column>
 <column name="ap_CS_fsm">1, 0, 1, 0</column>
 <column name="ap_done_reg">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter2">1, 0, 1, 0</column>
-<column name="ap_loop_exit_ready_pp0_iter2_reg">1, 0, 1, 0</column>
 <column name="empty_100_fu_172">32, 0, 32, 0</column>
 <column name="empty_86_fu_116">32, 0, 32, 0</column>
 <column name="empty_87_fu_120">32, 0, 32, 0</column>
@@ -141,7 +139,6 @@
 <column name="empty_98_fu_164">32, 0, 32, 0</column>
 <column name="empty_99_fu_168">32, 0, 32, 0</column>
 <column name="empty_fu_112">32, 0, 32, 0</column>
-<column name="icmp_ln549_reg_790">1, 0, 1, 0</column>
 <column name="t_2_fu_108">7, 0, 7, 0</column>
 </table>
 </item>

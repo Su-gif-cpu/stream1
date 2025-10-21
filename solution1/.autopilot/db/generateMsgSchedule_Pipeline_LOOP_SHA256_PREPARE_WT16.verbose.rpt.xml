@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16'" level="0">
-<item name = "Date">Sat Oct 18 18:24:31 2025
+<item name = "Date">Tue Oct 21 20:19:05 2025
 </item>
 <item name = "Version">2024.2 (Build 5238294 on Nov  8 2024)</item>
 <item name = "Project">hmac_sha256_test.prj</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">3.33 ns, 4.956 ns, 1.05 ns</column>
+<column name="ap_clk">15.00 ns, 4.956 ns, 1.50 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">18, 18, 89.208 ns, 89.208 ns, 17, 17, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="">18, 18, 0.270 us, 0.270 us, 17, 17, loop auto-rewind stp (delay=0 clock cycles(s))</column>
 </table>
 </item>
 <item name = "Detail">
@@ -53,7 +53,7 @@
 <column name="Instance">-, -, 0, 65, -</column>
 <column name="Memory">-, -, -, -, -</column>
 <column name="Multiplexer">-, -, 0, 45, -</column>
-<column name="Register">-, -, 524, -, -</column>
+<column name="Register">-, -, 552, -, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
 <specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
 </table>
@@ -62,7 +62,7 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="sparsemux_33_4_32_1_1_U75">sparsemux_33_4_32_1_1, 0, 0, 0, 65, 0</column>
+<column name="sparsemux_33_4_32_1_1_U61">sparsemux_33_4_32_1_1, 0, 0, 0, 65, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -80,7 +80,7 @@
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
 <column name="add_ln541_fu_441_p2">+, 0, 0, 13, 5, 1</column>
-<column name="ap_block_pp0_stage0_01001_grp1">and, 0, 0, 2, 1, 1</column>
+<column name="ap_block_pp0_stage0_01001">and, 0, 0, 2, 1, 1</column>
 <column name="icmp_ln541_fu_435_p2">icmp, 0, 0, 14, 5, 6</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
 </table>
@@ -112,11 +112,11 @@
 <column name="W_8_fu_180">32, 0, 32, 0</column>
 <column name="W_9_fu_184">32, 0, 32, 0</column>
 <column name="W_fu_148">32, 0, 32, 0</column>
+<column name="Wt_reg_781">32, 0, 32, 0</column>
 <column name="ap_CS_fsm">1, 0, 1, 0</column>
 <column name="ap_done_reg">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
 <column name="t_fu_144">5, 0, 5, 0</column>
-<column name="trunc_ln541_reg_842">4, 0, 4, 0</column>
 </table>
 </item>
 </section>

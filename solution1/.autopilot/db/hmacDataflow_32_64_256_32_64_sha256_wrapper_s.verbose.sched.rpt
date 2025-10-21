@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'hmacDataflow_32_64_256_32_64_sha256_wrapper_s'
 ================================================================
-* Date:           Sat Oct 18 18:24:25 2025
+* Date:           Tue Oct 21 20:19:00 2025
 
 * Version:        2024.2 (Build 5238294 on Nov  8 2024)
 * Project:        hmac_sha256_test.prj
@@ -17,11 +17,11 @@
 ================================================================
 + Timing: 
     * Summary: 
-    +--------+---------+-----------+------------+
-    |  Clock |  Target | Estimated | Uncertainty|
-    +--------+---------+-----------+------------+
-    |ap_clk  |  3.33 ns|  12.519 ns|     1.05 ns|
-    +--------+---------+-----------+------------+
+    +--------+----------+-----------+------------+
+    |  Clock |  Target  | Estimated | Uncertainty|
+    +--------+----------+-----------+------------+
+    |ap_clk  |  15.00 ns|  12.882 ns|     1.50 ns|
+    +--------+----------+-----------+------------+
 
 + Latency: 
     * Summary: 
@@ -89,8 +89,8 @@ ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%msgHashStrm = alloca i64 1" [D:/hl
 ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%eMsgHashStrm = alloca i64 1" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:284]   --->   Operation 12 'alloca' 'eMsgHashStrm' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 4> <FIFO>
 ST_1 : Operation 13 [2/2] (0.00ns)   --->   "%call_ln288 = call void @kpad<32, 64, 256, 32, 64, sha256_wrapper>, i32 %keyStrm, i1 %eLenStrm, i512 %kipadStrm, i512 %kopadStrm, i1 %eKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:288]   --->   Operation 13 'call' 'call_ln288' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
 
-State 2 <SV = 1> <Delay = 1.14>
-ST_2 : Operation 14 [1/2] (1.14ns)   --->   "%call_ln288 = call void @kpad<32, 64, 256, 32, 64, sha256_wrapper>, i32 %keyStrm, i1 %eLenStrm, i512 %kipadStrm, i512 %kopadStrm, i1 %eKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:288]   --->   Operation 14 'call' 'call_ln288' <Predicate = true> <Delay = 1.14> <CoreType = "Generic">   --->   Generic Core
+State 2 <SV = 1> <Delay = 3.47>
+ST_2 : Operation 14 [1/2] (3.47ns)   --->   "%call_ln288 = call void @kpad<32, 64, 256, 32, 64, sha256_wrapper>, i32 %keyStrm, i1 %eLenStrm, i512 %kipadStrm, i512 %kopadStrm, i1 %eKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:288]   --->   Operation 14 'call' 'call_ln288' <Predicate = true> <Delay = 3.47> <CoreType = "Generic">   --->   Generic Core
 
 State 3 <SV = 2> <Delay = 0.00>
 ST_3 : Operation 15 [2/2] (0.00ns)   --->   "%call_ln290 = call void @msgHash<32, 64, 256, 32, 64, sha256_wrapper>, i512 %kipadStrm, i512 %kopadStrm, i32 %msgStrm, i64 %lenStrm, i1 %eKipadStrm, i512 %kopad2Strm, i256 %msgHashStrm, i1 %eMsgHashStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:290]   --->   Operation 15 'call' 'call_ln290' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
@@ -136,14 +136,14 @@ ST_6 : Operation 46 [1/1] (0.00ns)   --->   "%ret_ln294 = ret" [D:/hlstrack/hlst
 ============================================================
 + Verbose Summary: Timing violations
 ============================================================
-Target clock period: 3.330ns, clock uncertainty: 1.050ns.
+Target clock period: 15.000ns, clock uncertainty: 1.500ns.
 
  <State 1>: 0.000ns
 The critical path consists of the following:
 
- <State 2>: 1.140ns
+ <State 2>: 3.477ns
 The critical path consists of the following:
-	'call' operation 0 bit ('call_ln288', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:288) to 'kpad<32, 64, 256, 32, 64, sha256_wrapper>' [40]  (1.140 ns)
+	'call' operation 0 bit ('call_ln288', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:288) to 'kpad<32, 64, 256, 32, 64, sha256_wrapper>' [40]  (3.477 ns)
 
  <State 3>: 0.000ns
 The critical path consists of the following:

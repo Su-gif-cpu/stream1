@@ -1,20 +1,5 @@
 # This script segment is generated automatically by AutoPilot
 
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler test_hmac_sha256_icmp_58ns_58ns_1_2_1 BINDTYPE {op} TYPE {seteq} IMPL {auto}
-}
-
-
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler test_hmac_sha256_icmp_58ns_58ns_1_2_1_sub BINDTYPE {op} TYPE {seteq} IMPL {auto} LATENCY 1
-}
-
-
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler test_hmac_sha256_add_58ns_58ns_58_2_1 BINDTYPE {op} TYPE {add} IMPL {fabric} LATENCY 1
-}
-
-
 # clear list
 if {${::AESL::PGuard_autoexp_gen}} {
     cg_default_interface_gen_dc_begin
@@ -25,7 +10,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 34 \
+    id 22 \
     name trunc_ln \
     type other \
     dir I \
@@ -40,7 +25,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 35 \
+    id 23 \
     name mergeKipadStrm \
     type fifo \
     dir I \
@@ -55,7 +40,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 36 \
+    id 24 \
     name blk_strm \
     type fifo \
     dir O \

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'preProcessing'" level="0">
-<item name = "Date">Sat Oct 18 18:24:22 2025
+<item name = "Date">Tue Oct 21 20:18:56 2025
 </item>
 <item name = "Version">2024.2 (Build 5238294 on Nov  8 2024)</item>
 <item name = "Project">hmac_sha256_test.prj</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">3.33 ns, 4.053 ns, 1.05 ns</column>
+<column name="ap_clk">15.00 ns, 12.550 ns, 1.50 ns</column>
 </table>
 </item>
 </section>
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- LOOP_SHA256_GENENERATE_MAIN">?, ?, 15 ~ 64, -, -, ?, no</column>
+<column name="- LOOP_SHA256_GENENERATE_MAIN">?, ?, 7 ~ 41, -, -, ?, no</column>
 </table>
 </item>
 </section>

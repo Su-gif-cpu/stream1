@@ -575,19 +575,15 @@
         <item class_id="36" tracking_level="0" version="0">
           <first>grp_sha256_top_32_256_s_fu_30 (sha256_top_32_256_s)</first>
           <second class_id="37" tracking_level="0" version="0">
-            <count>3</count>
+            <count>2</count>
             <item_version>0</item_version>
             <item class_id="38" tracking_level="0" version="0">
-              <first>DSP</first>
-              <second>5</second>
-            </item>
-            <item>
               <first>FF</first>
-              <second>10024</second>
+              <second>5445</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>5068</second>
+              <second>4910</second>
             </item>
           </second>
         </item>

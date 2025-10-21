@@ -120,6 +120,7 @@ wire    grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62_ap_start;
 wire    grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62_ap_done;
 wire    grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62_ap_idle;
 wire    grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62_ap_ready;
+wire    grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62_end_nblk_strm_read;
 wire    grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62_nblk_strm_read;
 wire   [63:0] grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62_nblk_strm1_din;
 wire    grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62_nblk_strm1_write;
@@ -129,7 +130,6 @@ wire   [63:0] grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62_nblk_strm2_din;
 wire    grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62_nblk_strm2_write;
 wire   [0:0] grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62_end_nblk_strm2_din;
 wire    grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62_end_nblk_strm2_write;
-wire    grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62_end_nblk_strm_read;
 reg    grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62_ap_start_reg;
 wire    ap_CS_fsm_state2;
 wire    ap_CS_fsm_state3;
@@ -156,6 +156,11 @@ test_hmac_sha256_dup_strm_Pipeline_VITIS_LOOP_506_1 grp_dup_strm_Pipeline_VITIS_
     .ap_done(grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62_ap_done),
     .ap_idle(grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62_ap_idle),
     .ap_ready(grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62_ap_ready),
+    .end_nblk_strm_dout(end_nblk_strm_dout),
+    .end_nblk_strm_empty_n(end_nblk_strm_empty_n),
+    .end_nblk_strm_read(grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62_end_nblk_strm_read),
+    .end_nblk_strm_num_data_valid(6'd0),
+    .end_nblk_strm_fifo_cap(6'd0),
     .nblk_strm_dout(nblk_strm_dout),
     .nblk_strm_empty_n(nblk_strm_empty_n),
     .nblk_strm_read(grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62_nblk_strm_read),
@@ -181,11 +186,6 @@ test_hmac_sha256_dup_strm_Pipeline_VITIS_LOOP_506_1 grp_dup_strm_Pipeline_VITIS_
     .end_nblk_strm2_write(grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62_end_nblk_strm2_write),
     .end_nblk_strm2_num_data_valid(end_nblk_strm2_num_data_valid),
     .end_nblk_strm2_fifo_cap(end_nblk_strm2_fifo_cap),
-    .end_nblk_strm_dout(end_nblk_strm_dout),
-    .end_nblk_strm_empty_n(end_nblk_strm_empty_n),
-    .end_nblk_strm_read(grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62_end_nblk_strm_read),
-    .end_nblk_strm_num_data_valid(6'd0),
-    .end_nblk_strm_fifo_cap(6'd0),
     .e(e_reg_121)
 );
 

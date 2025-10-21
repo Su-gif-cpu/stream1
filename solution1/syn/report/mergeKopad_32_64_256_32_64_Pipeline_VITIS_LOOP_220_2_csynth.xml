@@ -9,8 +9,8 @@
 <ProductFamily>zynq</ProductFamily>
 <Part>xc7z020-clg484-1</Part>
 <TopModelName>mergeKopad_32_64_256_32_64_Pipeline_VITIS_LOOP_220_2</TopModelName>
-<TargetClockPeriod>3.33</TargetClockPeriod>
-<ClockUncertainty>1.05</ClockUncertainty>
+<TargetClockPeriod>15.00</TargetClockPeriod>
+<ClockUncertainty>1.50</ClockUncertainty>
 <FlowTarget>vivado</FlowTarget>
 </UserAssignments>
 
@@ -25,18 +25,18 @@
 <Best-caseLatency>18</Best-caseLatency>
 <Average-caseLatency>18</Average-caseLatency>
 <Worst-caseLatency>18</Worst-caseLatency>
-<Best-caseRealTimeLatency>89.208 ns</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>89.208 ns</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>89.208 ns</Worst-caseRealTimeLatency>
+<Best-caseRealTimeLatency>0.270 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>0.270 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>0.270 us</Worst-caseRealTimeLatency>
 <Interval-min>17</Interval-min>
 <Interval-max>17</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <VITIS_LOOP_220_2>
-<Slack>2.28</Slack>
+<Slack>13.50</Slack>
 <TripCount>16</TripCount>
 <Latency>16</Latency>
-<AbsoluteTimeLatency>79</AbsoluteTimeLatency>
+<AbsoluteTimeLatency>240</AbsoluteTimeLatency>
 <PipelineII>1</PipelineII>
 <PipelineDepth>2</PipelineDepth>
 <InstanceList>
@@ -44,7 +44,7 @@
 </VITIS_LOOP_220_2>
 </SummaryOfLoopLatency>
 <SummaryOfViolations>
-<IssueType>Timing Violation</IssueType>
+<IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
 <SourceLocation>D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:217</SourceLocation>
 <SummaryOfLoopViolations>

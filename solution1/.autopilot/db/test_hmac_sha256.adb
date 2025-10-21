@@ -644,23 +644,19 @@
         <item class_id="36" tracking_level="0" version="0">
           <first>grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38 (hmacDataflow_32_64_256_32_64_sha256_wrapper_s)</first>
           <second class_id="37" tracking_level="0" version="0">
-            <count>4</count>
+            <count>3</count>
             <item_version>0</item_version>
             <item class_id="38" tracking_level="0" version="0">
               <first>BRAM</first>
               <second>2</second>
             </item>
             <item>
-              <first>DSP</first>
-              <second>10</second>
-            </item>
-            <item>
               <first>FF</first>
-              <second>25816</second>
+              <second>15154</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>13166</second>
+              <second>12819</second>
             </item>
           </second>
         </item>

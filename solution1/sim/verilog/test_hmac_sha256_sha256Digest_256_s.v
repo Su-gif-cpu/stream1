@@ -41,15 +41,11 @@ module test_hmac_sha256_sha256Digest_256_s (
         eMsgHashStrm_fifo_cap
 );
 
-parameter    ap_ST_fsm_state1 = 9'd1;
-parameter    ap_ST_fsm_state2 = 9'd2;
-parameter    ap_ST_fsm_state3 = 9'd4;
-parameter    ap_ST_fsm_state4 = 9'd8;
-parameter    ap_ST_fsm_state5 = 9'd16;
-parameter    ap_ST_fsm_state6 = 9'd32;
-parameter    ap_ST_fsm_state7 = 9'd64;
-parameter    ap_ST_fsm_state8 = 9'd128;
-parameter    ap_ST_fsm_state9 = 9'd256;
+parameter    ap_ST_fsm_state1 = 5'd1;
+parameter    ap_ST_fsm_state2 = 5'd2;
+parameter    ap_ST_fsm_state3 = 5'd4;
+parameter    ap_ST_fsm_state4 = 5'd8;
+parameter    ap_ST_fsm_state5 = 5'd16;
 
 input   ap_clk;
 input   ap_rst;
@@ -94,179 +90,139 @@ reg[0:0] eMsgHashStrm_din;
 reg eMsgHashStrm_write;
 
 reg    ap_done_reg;
-(* fsm_encoding = "none" *) reg   [8:0] ap_CS_fsm;
+(* fsm_encoding = "none" *) reg   [4:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
 reg    nblk_strm2_blk_n;
-wire    ap_CS_fsm_state3;
+wire    ap_CS_fsm_state2;
 reg    end_nblk_strm2_blk_n;
-wire    ap_CS_fsm_state7;
-reg   [0:0] icmp_ln663_reg_737;
+wire    ap_CS_fsm_state3;
+wire   [0:0] icmp_ln663_fu_302_p2;
 reg    msgHashStrm_blk_n;
 reg    eMsgHashStrm_blk_n;
-reg   [0:0] end_flag_reg_727;
 reg    ap_block_state1;
-reg   [63:0] blk_num_reg_732;
+reg   [63:0] blk_num_reg_731;
+reg    ap_block_state2;
+wire   [63:0] n_1_fu_307_p2;
+reg   [63:0] n_1_reg_739;
 reg    ap_block_state3;
-wire   [0:0] grp_fu_303_p2;
-wire    ap_CS_fsm_state6;
-wire   [63:0] grp_fu_308_p2;
-reg   [63:0] n_1_reg_741;
-reg    ap_block_state7;
-wire    grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_ap_start;
-wire    grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_ap_done;
-wire    grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_ap_idle;
-wire    grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_ap_ready;
-wire    grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_w_strm_read;
-wire   [31:0] grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_add_ln6888_out;
-wire    grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_add_ln6888_out_ap_vld;
-wire   [31:0] grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_add_ln6897_out;
-wire    grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_add_ln6897_out_ap_vld;
-wire   [31:0] grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_add_ln6906_out;
-wire    grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_add_ln6906_out_ap_vld;
-wire   [31:0] grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_add_ln6915_out;
-wire    grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_add_ln6915_out_ap_vld;
-wire   [31:0] grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_add_ln6924_out;
-wire    grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_add_ln6924_out_ap_vld;
-wire   [31:0] grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_add_ln6933_out;
-wire    grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_add_ln6933_out_ap_vld;
-wire   [31:0] grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_add_ln6942_out;
-wire    grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_add_ln6942_out_ap_vld;
-wire   [31:0] grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_add_ln6951_out;
-wire    grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_add_ln6951_out_ap_vld;
+wire    grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_ap_start;
+wire    grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_ap_done;
+wire    grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_ap_idle;
+wire    grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_ap_ready;
+wire    grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_w_strm_read;
+wire   [31:0] grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_add_ln6888_out;
+wire    grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_add_ln6888_out_ap_vld;
+wire   [31:0] grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_add_ln6897_out;
+wire    grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_add_ln6897_out_ap_vld;
+wire   [31:0] grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_add_ln6906_out;
+wire    grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_add_ln6906_out_ap_vld;
+wire   [31:0] grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_add_ln6915_out;
+wire    grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_add_ln6915_out_ap_vld;
+wire   [31:0] grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_add_ln6924_out;
+wire    grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_add_ln6924_out_ap_vld;
+wire   [31:0] grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_add_ln6933_out;
+wire    grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_add_ln6933_out_ap_vld;
+wire   [31:0] grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_add_ln6942_out;
+wire    grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_add_ln6942_out_ap_vld;
+wire   [31:0] grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_add_ln6951_out;
+wire    grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_add_ln6951_out_ap_vld;
 reg   [0:0] end_flag_1_reg_156;
-wire    ap_CS_fsm_state2;
-reg   [63:0] n_reg_165;
-wire    ap_CS_fsm_state9;
-reg   [31:0] h_reg_177;
-reg   [31:0] g_reg_189;
-reg   [31:0] f_reg_201;
-reg   [31:0] e_reg_213;
-reg   [31:0] d_reg_225;
-reg   [31:0] c_reg_237;
-reg   [31:0] b_reg_249;
-reg   [31:0] a_reg_261;
-reg    grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_ap_start_reg;
-reg    ap_block_state7_ignore_call3;
-wire    ap_CS_fsm_state8;
+reg   [31:0] h_reg_165;
+wire    ap_CS_fsm_state5;
+reg   [31:0] g_reg_177;
+reg   [31:0] f_reg_189;
+reg   [31:0] e_reg_201;
+reg   [31:0] d_reg_213;
+reg   [31:0] c_reg_225;
+reg   [31:0] b_reg_237;
+reg   [31:0] a_reg_249;
+reg   [63:0] n_reg_261;
+reg    grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_ap_start_reg;
+reg    ap_block_state3_ignore_call3;
 wire    ap_CS_fsm_state4;
-wire   [7:0] t3_7_fu_562_p1;
-wire   [7:0] trunc_ln727_5_fu_576_p4;
-wire   [7:0] tmp_7_fu_566_p4;
-wire   [7:0] t0_7_fu_552_p4;
-wire   [7:0] t3_6_fu_528_p1;
-wire   [7:0] trunc_ln727_4_fu_542_p4;
-wire   [7:0] tmp_6_fu_532_p4;
-wire   [7:0] t0_6_fu_518_p4;
-wire   [7:0] t3_5_fu_494_p1;
-wire   [7:0] trunc_ln727_3_fu_508_p4;
-wire   [7:0] tmp_5_fu_498_p4;
-wire   [7:0] t0_5_fu_484_p4;
-wire   [7:0] t3_4_fu_460_p1;
-wire   [7:0] trunc_ln727_2_fu_474_p4;
-wire   [7:0] tmp_4_fu_464_p4;
-wire   [7:0] t0_4_fu_450_p4;
-wire   [7:0] t3_3_fu_426_p1;
-wire   [7:0] trunc_ln727_1_fu_440_p4;
-wire   [7:0] tmp_3_fu_430_p4;
-wire   [7:0] t0_3_fu_416_p4;
-wire   [7:0] t3_2_fu_392_p1;
-wire   [7:0] trunc_ln727_s_fu_406_p4;
-wire   [7:0] tmp_2_fu_396_p4;
-wire   [7:0] t0_2_fu_382_p4;
-wire   [7:0] t3_1_fu_358_p1;
-wire   [7:0] trunc_ln727_9_fu_372_p4;
-wire   [7:0] tmp_1_fu_362_p4;
-wire   [7:0] t0_1_fu_348_p4;
-wire   [7:0] t3_fu_324_p1;
-wire   [7:0] trunc_ln727_8_fu_338_p4;
-wire   [7:0] tmp_fu_328_p4;
-wire   [7:0] t0_fu_314_p4;
-reg   [8:0] ap_NS_fsm;
+wire   [7:0] t3_7_fu_561_p1;
+wire   [7:0] trunc_ln727_5_fu_575_p4;
+wire   [7:0] tmp_7_fu_565_p4;
+wire   [7:0] t0_7_fu_551_p4;
+wire   [7:0] t3_6_fu_527_p1;
+wire   [7:0] trunc_ln727_4_fu_541_p4;
+wire   [7:0] tmp_6_fu_531_p4;
+wire   [7:0] t0_6_fu_517_p4;
+wire   [7:0] t3_5_fu_493_p1;
+wire   [7:0] trunc_ln727_3_fu_507_p4;
+wire   [7:0] tmp_5_fu_497_p4;
+wire   [7:0] t0_5_fu_483_p4;
+wire   [7:0] t3_4_fu_459_p1;
+wire   [7:0] trunc_ln727_2_fu_473_p4;
+wire   [7:0] tmp_4_fu_463_p4;
+wire   [7:0] t0_4_fu_449_p4;
+wire   [7:0] t3_3_fu_425_p1;
+wire   [7:0] trunc_ln727_1_fu_439_p4;
+wire   [7:0] tmp_3_fu_429_p4;
+wire   [7:0] t0_3_fu_415_p4;
+wire   [7:0] t3_2_fu_391_p1;
+wire   [7:0] trunc_ln727_s_fu_405_p4;
+wire   [7:0] tmp_2_fu_395_p4;
+wire   [7:0] t0_2_fu_381_p4;
+wire   [7:0] t3_1_fu_357_p1;
+wire   [7:0] trunc_ln727_9_fu_371_p4;
+wire   [7:0] tmp_1_fu_361_p4;
+wire   [7:0] t0_1_fu_347_p4;
+wire   [7:0] t3_fu_323_p1;
+wire   [7:0] trunc_ln727_8_fu_337_p4;
+wire   [7:0] tmp_fu_327_p4;
+wire   [7:0] t0_fu_313_p4;
+reg   [4:0] ap_NS_fsm;
 reg    ap_ST_fsm_state1_blk;
-wire    ap_ST_fsm_state2_blk;
+reg    ap_ST_fsm_state2_blk;
 reg    ap_ST_fsm_state3_blk;
-wire    ap_ST_fsm_state4_blk;
+reg    ap_ST_fsm_state4_blk;
 wire    ap_ST_fsm_state5_blk;
-wire    ap_ST_fsm_state6_blk;
-reg    ap_ST_fsm_state7_blk;
-reg    ap_ST_fsm_state8_blk;
-wire    ap_ST_fsm_state9_blk;
 wire    ap_ce_reg;
 
 // power-on initialization
 initial begin
 #0 ap_done_reg = 1'b0;
-#0 ap_CS_fsm = 9'd1;
-#0 grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_ap_start_reg = 1'b0;
+#0 ap_CS_fsm = 5'd1;
+#0 grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_ap_start_reg = 1'b0;
 end
 
-test_hmac_sha256_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273(
+test_hmac_sha256_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst),
-    .ap_start(grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_ap_start),
-    .ap_done(grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_ap_done),
-    .ap_idle(grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_ap_idle),
-    .ap_ready(grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_ap_ready),
+    .ap_start(grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_ap_start),
+    .ap_done(grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_ap_done),
+    .ap_idle(grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_ap_idle),
+    .ap_ready(grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_ap_ready),
     .w_strm_dout(w_strm_dout),
     .w_strm_empty_n(w_strm_empty_n),
-    .w_strm_read(grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_w_strm_read),
+    .w_strm_read(grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_w_strm_read),
     .w_strm_num_data_valid(6'd0),
     .w_strm_fifo_cap(6'd0),
-    .h(h_reg_177),
-    .g(g_reg_189),
-    .f(f_reg_201),
-    .e(e_reg_213),
-    .d(d_reg_225),
-    .c(c_reg_237),
-    .b(b_reg_249),
-    .a(a_reg_261),
-    .add_ln6888_out(grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_add_ln6888_out),
-    .add_ln6888_out_ap_vld(grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_add_ln6888_out_ap_vld),
-    .add_ln6897_out(grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_add_ln6897_out),
-    .add_ln6897_out_ap_vld(grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_add_ln6897_out_ap_vld),
-    .add_ln6906_out(grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_add_ln6906_out),
-    .add_ln6906_out_ap_vld(grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_add_ln6906_out_ap_vld),
-    .add_ln6915_out(grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_add_ln6915_out),
-    .add_ln6915_out_ap_vld(grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_add_ln6915_out_ap_vld),
-    .add_ln6924_out(grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_add_ln6924_out),
-    .add_ln6924_out_ap_vld(grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_add_ln6924_out_ap_vld),
-    .add_ln6933_out(grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_add_ln6933_out),
-    .add_ln6933_out_ap_vld(grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_add_ln6933_out_ap_vld),
-    .add_ln6942_out(grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_add_ln6942_out),
-    .add_ln6942_out_ap_vld(grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_add_ln6942_out_ap_vld),
-    .add_ln6951_out(grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_add_ln6951_out),
-    .add_ln6951_out_ap_vld(grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_add_ln6951_out_ap_vld)
-);
-
-test_hmac_sha256_icmp_64ns_64ns_1_3_1 #(
-    .ID( 1 ),
-    .NUM_STAGE( 3 ),
-    .din0_WIDTH( 64 ),
-    .din1_WIDTH( 64 ),
-    .OP_CODE( 0 ),
-    .dout_WIDTH( 1 ))
-icmp_64ns_64ns_1_3_1_U173(
-    .clk(ap_clk),
-    .reset(ap_rst),
-    .din0(n_reg_165),
-    .din1(blk_num_reg_732),
-    .ce(1'b1),
-    .dout(grp_fu_303_p2)
-);
-
-test_hmac_sha256_add_64ns_64ns_64_3_1 #(
-    .ID( 1 ),
-    .NUM_STAGE( 3 ),
-    .din0_WIDTH( 64 ),
-    .din1_WIDTH( 64 ),
-    .dout_WIDTH( 64 ))
-add_64ns_64ns_64_3_1_U174(
-    .clk(ap_clk),
-    .reset(ap_rst),
-    .din0(n_reg_165),
-    .din1(64'd1),
-    .ce(1'b1),
-    .dout(grp_fu_308_p2)
+    .h(h_reg_165),
+    .g(g_reg_177),
+    .f(f_reg_189),
+    .e(e_reg_201),
+    .d(d_reg_213),
+    .c(c_reg_225),
+    .b(b_reg_237),
+    .a(a_reg_249),
+    .add_ln6888_out(grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_add_ln6888_out),
+    .add_ln6888_out_ap_vld(grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_add_ln6888_out_ap_vld),
+    .add_ln6897_out(grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_add_ln6897_out),
+    .add_ln6897_out_ap_vld(grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_add_ln6897_out_ap_vld),
+    .add_ln6906_out(grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_add_ln6906_out),
+    .add_ln6906_out_ap_vld(grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_add_ln6906_out_ap_vld),
+    .add_ln6915_out(grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_add_ln6915_out),
+    .add_ln6915_out_ap_vld(grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_add_ln6915_out_ap_vld),
+    .add_ln6924_out(grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_add_ln6924_out),
+    .add_ln6924_out_ap_vld(grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_add_ln6924_out_ap_vld),
+    .add_ln6933_out(grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_add_ln6933_out),
+    .add_ln6933_out_ap_vld(grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_add_ln6933_out_ap_vld),
+    .add_ln6942_out(grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_add_ln6942_out),
+    .add_ln6942_out_ap_vld(grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_add_ln6942_out_ap_vld),
+    .add_ln6951_out(grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_add_ln6951_out),
+    .add_ln6951_out_ap_vld(grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_add_ln6951_out_ap_vld)
 );
 
 always @ (posedge ap_clk) begin
@@ -283,7 +239,7 @@ always @ (posedge ap_clk) begin
     end else begin
         if ((ap_continue == 1'b1)) begin
             ap_done_reg <= 1'b0;
-        end else if (((1'b0 == ap_block_state3) & (end_flag_1_reg_156 == 1'd1) & (1'b1 == ap_CS_fsm_state3))) begin
+        end else if (((1'b0 == ap_block_state2) & (end_flag_1_reg_156 == 1'd1) & (1'b1 == ap_CS_fsm_state2))) begin
             ap_done_reg <= 1'b1;
         end
     end
@@ -291,112 +247,103 @@ end
 
 always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
-        grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_ap_start_reg <= 1'b0;
+        grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_ap_start_reg <= 1'b0;
     end else begin
-        if (((1'b0 == ap_block_state7_ignore_call3) & (icmp_ln663_reg_737 == 1'd0) & (1'b1 == ap_CS_fsm_state7))) begin
-            grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_ap_start_reg <= 1'b1;
-        end else if ((grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_ap_ready == 1'b1)) begin
-            grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_ap_start_reg <= 1'b0;
+        if (((1'b0 == ap_block_state3_ignore_call3) & (icmp_ln663_fu_302_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state3))) begin
+            grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_ap_start_reg <= 1'b1;
+        end else if ((grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_ap_ready == 1'b1)) begin
+            grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_ap_start_reg <= 1'b0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state9)) begin
-        a_reg_261 <= grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_add_ln6888_out;
-    end else if (((1'b0 == ap_block_state3) & (end_flag_1_reg_156 == 1'd0) & (1'b1 == ap_CS_fsm_state3))) begin
-        a_reg_261 <= 32'd1779033703;
+    if ((1'b1 == ap_CS_fsm_state5)) begin
+        a_reg_249 <= grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_add_ln6888_out;
+    end else if (((1'b0 == ap_block_state2) & (end_flag_1_reg_156 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
+        a_reg_249 <= 32'd1779033703;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state9)) begin
-        b_reg_249 <= grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_add_ln6897_out;
-    end else if (((1'b0 == ap_block_state3) & (end_flag_1_reg_156 == 1'd0) & (1'b1 == ap_CS_fsm_state3))) begin
-        b_reg_249 <= 32'd3144134277;
+    if ((1'b1 == ap_CS_fsm_state5)) begin
+        b_reg_237 <= grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_add_ln6897_out;
+    end else if (((1'b0 == ap_block_state2) & (end_flag_1_reg_156 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
+        b_reg_237 <= 32'd3144134277;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state9)) begin
-        c_reg_237 <= grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_add_ln6906_out;
-    end else if (((1'b0 == ap_block_state3) & (end_flag_1_reg_156 == 1'd0) & (1'b1 == ap_CS_fsm_state3))) begin
-        c_reg_237 <= 32'd1013904242;
+    if ((1'b1 == ap_CS_fsm_state5)) begin
+        c_reg_225 <= grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_add_ln6906_out;
+    end else if (((1'b0 == ap_block_state2) & (end_flag_1_reg_156 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
+        c_reg_225 <= 32'd1013904242;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state9)) begin
-        d_reg_225 <= grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_add_ln6915_out;
-    end else if (((1'b0 == ap_block_state3) & (end_flag_1_reg_156 == 1'd0) & (1'b1 == ap_CS_fsm_state3))) begin
-        d_reg_225 <= 32'd2773480762;
+    if ((1'b1 == ap_CS_fsm_state5)) begin
+        d_reg_213 <= grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_add_ln6915_out;
+    end else if (((1'b0 == ap_block_state2) & (end_flag_1_reg_156 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
+        d_reg_213 <= 32'd2773480762;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state9)) begin
-        e_reg_213 <= grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_add_ln6924_out;
-    end else if (((1'b0 == ap_block_state3) & (end_flag_1_reg_156 == 1'd0) & (1'b1 == ap_CS_fsm_state3))) begin
-        e_reg_213 <= 32'd1359893119;
+    if ((1'b1 == ap_CS_fsm_state5)) begin
+        e_reg_201 <= grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_add_ln6924_out;
+    end else if (((1'b0 == ap_block_state2) & (end_flag_1_reg_156 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
+        e_reg_201 <= 32'd1359893119;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_state7) & (icmp_ln663_reg_737 == 1'd1) & (1'b1 == ap_CS_fsm_state7))) begin
+    if ((1'b1 == ap_CS_fsm_state5)) begin
+        f_reg_189 <= grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_add_ln6933_out;
+    end else if (((1'b0 == ap_block_state2) & (end_flag_1_reg_156 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
+        f_reg_189 <= 32'd2600822924;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_CS_fsm_state5)) begin
+        g_reg_177 <= grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_add_ln6942_out;
+    end else if (((1'b0 == ap_block_state2) & (end_flag_1_reg_156 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
+        g_reg_177 <= 32'd528734635;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_CS_fsm_state5)) begin
+        h_reg_165 <= grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_add_ln6951_out;
+    end else if (((1'b0 == ap_block_state2) & (end_flag_1_reg_156 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
+        h_reg_165 <= 32'd1541459225;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_CS_fsm_state5)) begin
+        n_reg_261 <= n_1_reg_739;
+    end else if (((1'b0 == ap_block_state2) & (end_flag_1_reg_156 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
+        n_reg_261 <= 64'd0;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((1'b0 == ap_block_state2) & (1'b1 == ap_CS_fsm_state2))) begin
+        blk_num_reg_731 <= nblk_strm2_dout;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((((1'b0 == ap_block_state1) & (1'b1 == ap_CS_fsm_state1)) | ((1'b0 == ap_block_state3) & (icmp_ln663_fu_302_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state3)))) begin
         end_flag_1_reg_156 <= end_nblk_strm2_dout;
-    end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        end_flag_1_reg_156 <= end_flag_reg_727;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state9)) begin
-        f_reg_201 <= grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_add_ln6933_out;
-    end else if (((1'b0 == ap_block_state3) & (end_flag_1_reg_156 == 1'd0) & (1'b1 == ap_CS_fsm_state3))) begin
-        f_reg_201 <= 32'd2600822924;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state9)) begin
-        g_reg_189 <= grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_add_ln6942_out;
-    end else if (((1'b0 == ap_block_state3) & (end_flag_1_reg_156 == 1'd0) & (1'b1 == ap_CS_fsm_state3))) begin
-        g_reg_189 <= 32'd528734635;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state9)) begin
-        h_reg_177 <= grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_add_ln6951_out;
-    end else if (((1'b0 == ap_block_state3) & (end_flag_1_reg_156 == 1'd0) & (1'b1 == ap_CS_fsm_state3))) begin
-        h_reg_177 <= 32'd1541459225;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state9)) begin
-        n_reg_165 <= n_1_reg_741;
-    end else if (((1'b0 == ap_block_state3) & (end_flag_1_reg_156 == 1'd0) & (1'b1 == ap_CS_fsm_state3))) begin
-        n_reg_165 <= 64'd0;
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_state3) & (1'b1 == ap_CS_fsm_state3))) begin
-        blk_num_reg_732 <= nblk_strm2_dout;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_state1) & (1'b1 == ap_CS_fsm_state1))) begin
-        end_flag_reg_727 <= end_nblk_strm2_dout;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state6)) begin
-        icmp_ln663_reg_737 <= grp_fu_303_p2;
-        n_1_reg_741 <= grp_fu_308_p2;
+        n_1_reg_739 <= n_1_fu_307_p2;
     end
 end
 
@@ -408,7 +355,13 @@ always @ (*) begin
     end
 end
 
-assign ap_ST_fsm_state2_blk = 1'b0;
+always @ (*) begin
+    if ((1'b1 == ap_block_state2)) begin
+        ap_ST_fsm_state2_blk = 1'b1;
+    end else begin
+        ap_ST_fsm_state2_blk = 1'b0;
+    end
+end
 
 always @ (*) begin
     if ((1'b1 == ap_block_state3)) begin
@@ -418,32 +371,18 @@ always @ (*) begin
     end
 end
 
-assign ap_ST_fsm_state4_blk = 1'b0;
+always @ (*) begin
+    if ((grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_ap_done == 1'b0)) begin
+        ap_ST_fsm_state4_blk = 1'b1;
+    end else begin
+        ap_ST_fsm_state4_blk = 1'b0;
+    end
+end
 
 assign ap_ST_fsm_state5_blk = 1'b0;
 
-assign ap_ST_fsm_state6_blk = 1'b0;
-
 always @ (*) begin
-    if ((1'b1 == ap_block_state7)) begin
-        ap_ST_fsm_state7_blk = 1'b1;
-    end else begin
-        ap_ST_fsm_state7_blk = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_ap_done == 1'b0)) begin
-        ap_ST_fsm_state8_blk = 1'b1;
-    end else begin
-        ap_ST_fsm_state8_blk = 1'b0;
-    end
-end
-
-assign ap_ST_fsm_state9_blk = 1'b0;
-
-always @ (*) begin
-    if (((1'b0 == ap_block_state3) & (end_flag_1_reg_156 == 1'd1) & (1'b1 == ap_CS_fsm_state3))) begin
+    if (((1'b0 == ap_block_state2) & (end_flag_1_reg_156 == 1'd1) & (1'b1 == ap_CS_fsm_state2))) begin
         ap_done = 1'b1;
     end else begin
         ap_done = ap_done_reg;
@@ -459,7 +398,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_state3) & (end_flag_1_reg_156 == 1'd1) & (1'b1 == ap_CS_fsm_state3))) begin
+    if (((1'b0 == ap_block_state2) & (end_flag_1_reg_156 == 1'd1) & (1'b1 == ap_CS_fsm_state2))) begin
         ap_ready = 1'b1;
     end else begin
         ap_ready = 1'b0;
@@ -467,7 +406,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((((end_flag_1_reg_156 == 1'd1) & (1'b1 == ap_CS_fsm_state3)) | ((icmp_ln663_reg_737 == 1'd1) & (1'b1 == ap_CS_fsm_state7)))) begin
+    if ((((end_flag_1_reg_156 == 1'd1) & (1'b1 == ap_CS_fsm_state2)) | ((icmp_ln663_fu_302_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state3)))) begin
         eMsgHashStrm_blk_n = eMsgHashStrm_full_n;
     end else begin
         eMsgHashStrm_blk_n = 1'b1;
@@ -475,9 +414,9 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_state7) & (icmp_ln663_reg_737 == 1'd1) & (1'b1 == ap_CS_fsm_state7))) begin
+    if (((1'b0 == ap_block_state3) & (icmp_ln663_fu_302_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state3))) begin
         eMsgHashStrm_din = 1'd0;
-    end else if (((1'b0 == ap_block_state3) & (end_flag_1_reg_156 == 1'd1) & (1'b1 == ap_CS_fsm_state3))) begin
+    end else if (((1'b0 == ap_block_state2) & (end_flag_1_reg_156 == 1'd1) & (1'b1 == ap_CS_fsm_state2))) begin
         eMsgHashStrm_din = 1'd1;
     end else begin
         eMsgHashStrm_din = 'bx;
@@ -485,7 +424,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((((1'b0 == ap_block_state7) & (icmp_ln663_reg_737 == 1'd1) & (1'b1 == ap_CS_fsm_state7)) | ((1'b0 == ap_block_state3) & (end_flag_1_reg_156 == 1'd1) & (1'b1 == ap_CS_fsm_state3)))) begin
+    if ((((1'b0 == ap_block_state3) & (icmp_ln663_fu_302_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state3)) | ((1'b0 == ap_block_state2) & (end_flag_1_reg_156 == 1'd1) & (1'b1 == ap_CS_fsm_state2)))) begin
         eMsgHashStrm_write = 1'b1;
     end else begin
         eMsgHashStrm_write = 1'b0;
@@ -493,7 +432,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((((icmp_ln663_reg_737 == 1'd1) & (1'b1 == ap_CS_fsm_state7)) | (~((ap_done_reg == 1'b1) | (ap_start == 1'b0)) & (1'b1 == ap_CS_fsm_state1)))) begin
+    if ((((icmp_ln663_fu_302_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state3)) | (~((ap_done_reg == 1'b1) | (ap_start == 1'b0)) & (1'b1 == ap_CS_fsm_state1)))) begin
         end_nblk_strm2_blk_n = end_nblk_strm2_empty_n;
     end else begin
         end_nblk_strm2_blk_n = 1'b1;
@@ -501,7 +440,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((((1'b0 == ap_block_state1) & (1'b1 == ap_CS_fsm_state1)) | ((1'b0 == ap_block_state7) & (icmp_ln663_reg_737 == 1'd1) & (1'b1 == ap_CS_fsm_state7)))) begin
+    if ((((1'b0 == ap_block_state1) & (1'b1 == ap_CS_fsm_state1)) | ((1'b0 == ap_block_state3) & (icmp_ln663_fu_302_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state3)))) begin
         end_nblk_strm2_read = 1'b1;
     end else begin
         end_nblk_strm2_read = 1'b0;
@@ -509,7 +448,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln663_reg_737 == 1'd1) & (1'b1 == ap_CS_fsm_state7))) begin
+    if (((icmp_ln663_fu_302_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state3))) begin
         msgHashStrm_blk_n = msgHashStrm_full_n;
     end else begin
         msgHashStrm_blk_n = 1'b1;
@@ -517,7 +456,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_state7) & (icmp_ln663_reg_737 == 1'd1) & (1'b1 == ap_CS_fsm_state7))) begin
+    if (((1'b0 == ap_block_state3) & (icmp_ln663_fu_302_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state3))) begin
         msgHashStrm_write = 1'b1;
     end else begin
         msgHashStrm_write = 1'b0;
@@ -525,7 +464,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((end_flag_1_reg_156 == 1'd0) & (1'b1 == ap_CS_fsm_state3))) begin
+    if (((end_flag_1_reg_156 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
         nblk_strm2_blk_n = nblk_strm2_empty_n;
     end else begin
         nblk_strm2_blk_n = 1'b1;
@@ -533,7 +472,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_state3) & (end_flag_1_reg_156 == 1'd0) & (1'b1 == ap_CS_fsm_state3))) begin
+    if (((1'b0 == ap_block_state2) & (end_flag_1_reg_156 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
         nblk_strm2_read = 1'b1;
     end else begin
         nblk_strm2_read = 1'b0;
@@ -550,44 +489,32 @@ always @ (*) begin
             end
         end
         ap_ST_fsm_state2 : begin
-            ap_NS_fsm = ap_ST_fsm_state3;
+            if (((1'b0 == ap_block_state2) & (end_flag_1_reg_156 == 1'd1) & (1'b1 == ap_CS_fsm_state2))) begin
+                ap_NS_fsm = ap_ST_fsm_state1;
+            end else if (((1'b0 == ap_block_state2) & (end_flag_1_reg_156 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
+                ap_NS_fsm = ap_ST_fsm_state3;
+            end else begin
+                ap_NS_fsm = ap_ST_fsm_state2;
+            end
         end
         ap_ST_fsm_state3 : begin
-            if (((1'b0 == ap_block_state3) & (end_flag_1_reg_156 == 1'd1) & (1'b1 == ap_CS_fsm_state3))) begin
-                ap_NS_fsm = ap_ST_fsm_state1;
-            end else if (((1'b0 == ap_block_state3) & (end_flag_1_reg_156 == 1'd0) & (1'b1 == ap_CS_fsm_state3))) begin
+            if (((1'b0 == ap_block_state3) & (icmp_ln663_fu_302_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state3))) begin
+                ap_NS_fsm = ap_ST_fsm_state2;
+            end else if (((1'b0 == ap_block_state3) & (icmp_ln663_fu_302_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state3))) begin
                 ap_NS_fsm = ap_ST_fsm_state4;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state3;
             end
         end
         ap_ST_fsm_state4 : begin
-            ap_NS_fsm = ap_ST_fsm_state5;
+            if (((1'b1 == ap_CS_fsm_state4) & (grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_ap_done == 1'b1))) begin
+                ap_NS_fsm = ap_ST_fsm_state5;
+            end else begin
+                ap_NS_fsm = ap_ST_fsm_state4;
+            end
         end
         ap_ST_fsm_state5 : begin
-            ap_NS_fsm = ap_ST_fsm_state6;
-        end
-        ap_ST_fsm_state6 : begin
-            ap_NS_fsm = ap_ST_fsm_state7;
-        end
-        ap_ST_fsm_state7 : begin
-            if (((1'b0 == ap_block_state7) & (icmp_ln663_reg_737 == 1'd1) & (1'b1 == ap_CS_fsm_state7))) begin
-                ap_NS_fsm = ap_ST_fsm_state3;
-            end else if (((1'b0 == ap_block_state7) & (icmp_ln663_reg_737 == 1'd0) & (1'b1 == ap_CS_fsm_state7))) begin
-                ap_NS_fsm = ap_ST_fsm_state8;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_state7;
-            end
-        end
-        ap_ST_fsm_state8 : begin
-            if (((1'b1 == ap_CS_fsm_state8) & (grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_ap_done == 1'b1))) begin
-                ap_NS_fsm = ap_ST_fsm_state9;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_state8;
-            end
-        end
-        ap_ST_fsm_state9 : begin
-            ap_NS_fsm = ap_ST_fsm_state4;
+            ap_NS_fsm = ap_ST_fsm_state3;
         end
         default : begin
             ap_NS_fsm = 'bx;
@@ -603,98 +530,96 @@ assign ap_CS_fsm_state3 = ap_CS_fsm[32'd2];
 
 assign ap_CS_fsm_state4 = ap_CS_fsm[32'd3];
 
-assign ap_CS_fsm_state6 = ap_CS_fsm[32'd5];
-
-assign ap_CS_fsm_state7 = ap_CS_fsm[32'd6];
-
-assign ap_CS_fsm_state8 = ap_CS_fsm[32'd7];
-
-assign ap_CS_fsm_state9 = ap_CS_fsm[32'd8];
+assign ap_CS_fsm_state5 = ap_CS_fsm[32'd4];
 
 always @ (*) begin
     ap_block_state1 = ((end_nblk_strm2_empty_n == 1'b0) | (ap_done_reg == 1'b1) | (ap_start == 1'b0));
 end
 
 always @ (*) begin
-    ap_block_state3 = (((end_flag_1_reg_156 == 1'd1) & (eMsgHashStrm_full_n == 1'b0)) | ((end_flag_1_reg_156 == 1'd0) & (nblk_strm2_empty_n == 1'b0)));
+    ap_block_state2 = (((end_flag_1_reg_156 == 1'd1) & (eMsgHashStrm_full_n == 1'b0)) | ((end_flag_1_reg_156 == 1'd0) & (nblk_strm2_empty_n == 1'b0)));
 end
 
 always @ (*) begin
-    ap_block_state7 = (((icmp_ln663_reg_737 == 1'd1) & (end_nblk_strm2_empty_n == 1'b0)) | ((icmp_ln663_reg_737 == 1'd1) & (msgHashStrm_full_n == 1'b0)) | ((icmp_ln663_reg_737 == 1'd1) & (eMsgHashStrm_full_n == 1'b0)));
+    ap_block_state3 = (((icmp_ln663_fu_302_p2 == 1'd1) & (end_nblk_strm2_empty_n == 1'b0)) | ((icmp_ln663_fu_302_p2 == 1'd1) & (msgHashStrm_full_n == 1'b0)) | ((icmp_ln663_fu_302_p2 == 1'd1) & (eMsgHashStrm_full_n == 1'b0)));
 end
 
 always @ (*) begin
-    ap_block_state7_ignore_call3 = (((icmp_ln663_reg_737 == 1'd1) & (end_nblk_strm2_empty_n == 1'b0)) | ((icmp_ln663_reg_737 == 1'd1) & (msgHashStrm_full_n == 1'b0)) | ((icmp_ln663_reg_737 == 1'd1) & (eMsgHashStrm_full_n == 1'b0)));
+    ap_block_state3_ignore_call3 = (((icmp_ln663_fu_302_p2 == 1'd1) & (end_nblk_strm2_empty_n == 1'b0)) | ((icmp_ln663_fu_302_p2 == 1'd1) & (msgHashStrm_full_n == 1'b0)) | ((icmp_ln663_fu_302_p2 == 1'd1) & (eMsgHashStrm_full_n == 1'b0)));
 end
 
-assign grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_ap_start = grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_ap_start_reg;
+assign grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_ap_start = grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_ap_start_reg;
 
-assign msgHashStrm_din = {{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{t3_7_fu_562_p1}, {trunc_ln727_5_fu_576_p4}}, {tmp_7_fu_566_p4}}, {t0_7_fu_552_p4}}, {t3_6_fu_528_p1}}, {trunc_ln727_4_fu_542_p4}}, {tmp_6_fu_532_p4}}, {t0_6_fu_518_p4}}, {t3_5_fu_494_p1}}, {trunc_ln727_3_fu_508_p4}}, {tmp_5_fu_498_p4}}, {t0_5_fu_484_p4}}, {t3_4_fu_460_p1}}, {trunc_ln727_2_fu_474_p4}}, {tmp_4_fu_464_p4}}, {t0_4_fu_450_p4}}, {t3_3_fu_426_p1}}, {trunc_ln727_1_fu_440_p4}}, {tmp_3_fu_430_p4}}, {t0_3_fu_416_p4}}, {t3_2_fu_392_p1}}, {trunc_ln727_s_fu_406_p4}}, {tmp_2_fu_396_p4}}, {t0_2_fu_382_p4}}, {t3_1_fu_358_p1}}, {trunc_ln727_9_fu_372_p4}}, {tmp_1_fu_362_p4}}, {t0_1_fu_348_p4}}, {t3_fu_324_p1}}, {trunc_ln727_8_fu_338_p4}}, {tmp_fu_328_p4}}, {t0_fu_314_p4}};
+assign icmp_ln663_fu_302_p2 = ((n_reg_261 == blk_num_reg_731) ? 1'b1 : 1'b0);
 
-assign t0_1_fu_348_p4 = {{b_reg_249[31:24]}};
+assign msgHashStrm_din = {{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{t3_7_fu_561_p1}, {trunc_ln727_5_fu_575_p4}}, {tmp_7_fu_565_p4}}, {t0_7_fu_551_p4}}, {t3_6_fu_527_p1}}, {trunc_ln727_4_fu_541_p4}}, {tmp_6_fu_531_p4}}, {t0_6_fu_517_p4}}, {t3_5_fu_493_p1}}, {trunc_ln727_3_fu_507_p4}}, {tmp_5_fu_497_p4}}, {t0_5_fu_483_p4}}, {t3_4_fu_459_p1}}, {trunc_ln727_2_fu_473_p4}}, {tmp_4_fu_463_p4}}, {t0_4_fu_449_p4}}, {t3_3_fu_425_p1}}, {trunc_ln727_1_fu_439_p4}}, {tmp_3_fu_429_p4}}, {t0_3_fu_415_p4}}, {t3_2_fu_391_p1}}, {trunc_ln727_s_fu_405_p4}}, {tmp_2_fu_395_p4}}, {t0_2_fu_381_p4}}, {t3_1_fu_357_p1}}, {trunc_ln727_9_fu_371_p4}}, {tmp_1_fu_361_p4}}, {t0_1_fu_347_p4}}, {t3_fu_323_p1}}, {trunc_ln727_8_fu_337_p4}}, {tmp_fu_327_p4}}, {t0_fu_313_p4}};
 
-assign t0_2_fu_382_p4 = {{c_reg_237[31:24]}};
+assign n_1_fu_307_p2 = (n_reg_261 + 64'd1);
 
-assign t0_3_fu_416_p4 = {{d_reg_225[31:24]}};
+assign t0_1_fu_347_p4 = {{b_reg_237[31:24]}};
 
-assign t0_4_fu_450_p4 = {{e_reg_213[31:24]}};
+assign t0_2_fu_381_p4 = {{c_reg_225[31:24]}};
 
-assign t0_5_fu_484_p4 = {{f_reg_201[31:24]}};
+assign t0_3_fu_415_p4 = {{d_reg_213[31:24]}};
 
-assign t0_6_fu_518_p4 = {{g_reg_189[31:24]}};
+assign t0_4_fu_449_p4 = {{e_reg_201[31:24]}};
 
-assign t0_7_fu_552_p4 = {{h_reg_177[31:24]}};
+assign t0_5_fu_483_p4 = {{f_reg_189[31:24]}};
 
-assign t0_fu_314_p4 = {{a_reg_261[31:24]}};
+assign t0_6_fu_517_p4 = {{g_reg_177[31:24]}};
 
-assign t3_1_fu_358_p1 = b_reg_249[7:0];
+assign t0_7_fu_551_p4 = {{h_reg_165[31:24]}};
 
-assign t3_2_fu_392_p1 = c_reg_237[7:0];
+assign t0_fu_313_p4 = {{a_reg_249[31:24]}};
 
-assign t3_3_fu_426_p1 = d_reg_225[7:0];
+assign t3_1_fu_357_p1 = b_reg_237[7:0];
 
-assign t3_4_fu_460_p1 = e_reg_213[7:0];
+assign t3_2_fu_391_p1 = c_reg_225[7:0];
 
-assign t3_5_fu_494_p1 = f_reg_201[7:0];
+assign t3_3_fu_425_p1 = d_reg_213[7:0];
 
-assign t3_6_fu_528_p1 = g_reg_189[7:0];
+assign t3_4_fu_459_p1 = e_reg_201[7:0];
 
-assign t3_7_fu_562_p1 = h_reg_177[7:0];
+assign t3_5_fu_493_p1 = f_reg_189[7:0];
 
-assign t3_fu_324_p1 = a_reg_261[7:0];
+assign t3_6_fu_527_p1 = g_reg_177[7:0];
 
-assign tmp_1_fu_362_p4 = {{b_reg_249[23:16]}};
+assign t3_7_fu_561_p1 = h_reg_165[7:0];
 
-assign tmp_2_fu_396_p4 = {{c_reg_237[23:16]}};
+assign t3_fu_323_p1 = a_reg_249[7:0];
 
-assign tmp_3_fu_430_p4 = {{d_reg_225[23:16]}};
+assign tmp_1_fu_361_p4 = {{b_reg_237[23:16]}};
 
-assign tmp_4_fu_464_p4 = {{e_reg_213[23:16]}};
+assign tmp_2_fu_395_p4 = {{c_reg_225[23:16]}};
 
-assign tmp_5_fu_498_p4 = {{f_reg_201[23:16]}};
+assign tmp_3_fu_429_p4 = {{d_reg_213[23:16]}};
 
-assign tmp_6_fu_532_p4 = {{g_reg_189[23:16]}};
+assign tmp_4_fu_463_p4 = {{e_reg_201[23:16]}};
 
-assign tmp_7_fu_566_p4 = {{h_reg_177[23:16]}};
+assign tmp_5_fu_497_p4 = {{f_reg_189[23:16]}};
 
-assign tmp_fu_328_p4 = {{a_reg_261[23:16]}};
+assign tmp_6_fu_531_p4 = {{g_reg_177[23:16]}};
 
-assign trunc_ln727_1_fu_440_p4 = {{d_reg_225[15:8]}};
+assign tmp_7_fu_565_p4 = {{h_reg_165[23:16]}};
 
-assign trunc_ln727_2_fu_474_p4 = {{e_reg_213[15:8]}};
+assign tmp_fu_327_p4 = {{a_reg_249[23:16]}};
 
-assign trunc_ln727_3_fu_508_p4 = {{f_reg_201[15:8]}};
+assign trunc_ln727_1_fu_439_p4 = {{d_reg_213[15:8]}};
 
-assign trunc_ln727_4_fu_542_p4 = {{g_reg_189[15:8]}};
+assign trunc_ln727_2_fu_473_p4 = {{e_reg_201[15:8]}};
 
-assign trunc_ln727_5_fu_576_p4 = {{h_reg_177[15:8]}};
+assign trunc_ln727_3_fu_507_p4 = {{f_reg_189[15:8]}};
 
-assign trunc_ln727_8_fu_338_p4 = {{a_reg_261[15:8]}};
+assign trunc_ln727_4_fu_541_p4 = {{g_reg_177[15:8]}};
 
-assign trunc_ln727_9_fu_372_p4 = {{b_reg_249[15:8]}};
+assign trunc_ln727_5_fu_575_p4 = {{h_reg_165[15:8]}};
 
-assign trunc_ln727_s_fu_406_p4 = {{c_reg_237[15:8]}};
+assign trunc_ln727_8_fu_337_p4 = {{a_reg_249[15:8]}};
 
-assign w_strm_read = grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273_w_strm_read;
+assign trunc_ln727_9_fu_371_p4 = {{b_reg_237[15:8]}};
+
+assign trunc_ln727_s_fu_405_p4 = {{c_reg_225[15:8]}};
+
+assign w_strm_read = grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272_w_strm_read;
 
 endmodule //test_hmac_sha256_sha256Digest_256_s

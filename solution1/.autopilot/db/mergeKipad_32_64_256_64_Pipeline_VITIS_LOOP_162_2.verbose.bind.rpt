@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_162_2'
 ================================================================
-* Date:           Sat Oct 18 18:24:21 2025
+* Date:           Tue Oct 21 20:18:55 2025
 
 * Version:        2024.2 (Build 5238294 on Nov  8 2024)
 * Project:        hmac_sha256_test.prj
@@ -17,20 +17,20 @@
 ================================================================
 + Timing: 
     * Summary: 
-    +--------+---------+----------+------------+
-    |  Clock |  Target | Estimated| Uncertainty|
-    +--------+---------+----------+------------+
-    |ap_clk  |  3.33 ns|  4.956 ns|     1.05 ns|
-    +--------+---------+----------+------------+
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  15.00 ns|  4.956 ns|     1.50 ns|
+    +--------+----------+----------+------------+
 
 + Latency: 
     * Summary: 
-    +---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
-    |  Latency (cycles) |   Latency (absolute)  |  Interval |                    Pipeline                    |
-    |   min   |   max   |    min    |    max    | min | max |                      Type                      |
-    +---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
-    |       18|       18|  89.208 ns|  89.208 ns|   17|   17|  loop auto-rewind stp (delay=0 clock cycles(s))|
-    +---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                    |
+    |   min   |   max   |    min   |    max   | min | max |                      Type                      |
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |       18|       18|  0.270 us|  0.270 us|   17|   17|  loop auto-rewind stp (delay=0 clock cycles(s))|
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
 
     + Detail: 
         * Instance: 
@@ -100,13 +100,13 @@ ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%br_ln162 = br i1 %icmp_ln162, void
 ST_1 : Operation 17 [1/1] (1.58ns)   --->   "%store_ln162 = store i5 %i_7, i5 %i" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:162]   --->   Operation 17 'store' 'store_ln162' <Predicate = (!icmp_ln162)> <Delay = 1.58>
 ST_1 : Operation 27 [1/1] (1.58ns)   --->   "%ret_ln0 = ret"   --->   Operation 27 'ret' 'ret_ln0' <Predicate = (icmp_ln162)> <Delay = 1.58>
 
-State 2 <SV = 1> <Delay = 1.58>
+State 2 <SV = 1> <Delay = 3.52>
 ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%kipad_1_load = load i512 %kipad_1" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:166]   --->   Operation 18 'load' 'kipad_1_load' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%specpipeline_ln163 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_1" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:163]   --->   Operation 19 'specpipeline' 'specpipeline_ln163' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%speclooptripcount_ln160 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 16, i64 16, i64 16" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:160]   --->   Operation 20 'speclooptripcount' 'speclooptripcount_ln160' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%specloopname_ln162 = specloopname void @_ssdm_op_SpecLoopName, void @empty_15" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:162]   --->   Operation 21 'specloopname' 'specloopname_ln162' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%p_0 = partselect i32 @_ssdm_op_PartSelect.i32.i512.i32, i512 %kipad_1_load, i32 480" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:165]   --->   Operation 22 'partselect' 'p_0' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 23 [1/1] ( I:1.14ns O:1.14ns )   --->   "%write_ln165 = write void @_ssdm_op_Write.ap_fifo.volatile.i32P0A, i32 %mergeKipadStrm, i32 %p_0" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:165]   --->   Operation 23 'write' 'write_ln165' <Predicate = true> <Delay = 1.14> <CoreInst = "FIFO_BRAM">   --->   Core 78 'FIFO_BRAM' <Latency = 0> <II = 1> <Delay = 3.52> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 128> <FIFO>
+ST_2 : Operation 23 [1/1] ( I:3.52ns O:3.52ns )   --->   "%write_ln165 = write void @_ssdm_op_Write.ap_fifo.volatile.i32P0A, i32 %mergeKipadStrm, i32 %p_0" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:165]   --->   Operation 23 'write' 'write_ln165' <Predicate = true> <Delay = 3.52> <CoreInst = "FIFO_BRAM">   --->   Core 78 'FIFO_BRAM' <Latency = 0> <II = 1> <Delay = 3.52> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 128> <FIFO>
 ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%kipad_2 = shl i512 %kipad_1_load, i512 32" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:166]   --->   Operation 24 'shl' 'kipad_2' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 25 [1/1] (1.58ns)   --->   "%store_ln160 = store i512 %kipad_2, i512 %kipad_1" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:160]   --->   Operation 25 'store' 'store_ln160' <Predicate = true> <Delay = 1.58>
 ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%br_ln162 = br void %for.inc" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:162]   --->   Operation 26 'br' 'br_ln162' <Predicate = true> <Delay = 0.00>

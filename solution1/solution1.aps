@@ -13,7 +13,7 @@
         <library value="xilinx/zynq/zynq" name="DefaultPlatform"/>
     </libraryList>
     <clockList>
-        <clock name="default" period="3.33" default="false" uncertainty="1.05"/>
+        <clock name="default" period="15.0" default="false" uncertainty="10%"/>
     </clockList>
     <Simulation argv="">
         <SimFlow name="cosim" setup="false" dumpTrace="none" optimizeCompile="false" ldflags="" mflags="" compiledLibrary="" toolName="xsim">
@@ -21,5 +21,8 @@
             <Rtl name="vhdl" active="false"/>
         </SimFlow>
     </Simulation>
+    <config>
+        <config_export flow="syn" rtl="verilog"/>
+    </config>
 </AutoPilot:solution>
 

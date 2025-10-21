@@ -67,31 +67,25 @@ end;
 architecture behav of test_hmac_sha256_mergeKipad_32_64_256_64_s is 
     constant ap_const_logic_1 : STD_LOGIC := '1';
     constant ap_const_logic_0 : STD_LOGIC := '0';
-    constant ap_ST_fsm_state1 : STD_LOGIC_VECTOR (10 downto 0) := "00000000001";
-    constant ap_ST_fsm_state2 : STD_LOGIC_VECTOR (10 downto 0) := "00000000010";
-    constant ap_ST_fsm_state3 : STD_LOGIC_VECTOR (10 downto 0) := "00000000100";
-    constant ap_ST_fsm_state4 : STD_LOGIC_VECTOR (10 downto 0) := "00000001000";
-    constant ap_ST_fsm_state5 : STD_LOGIC_VECTOR (10 downto 0) := "00000010000";
-    constant ap_ST_fsm_state6 : STD_LOGIC_VECTOR (10 downto 0) := "00000100000";
-    constant ap_ST_fsm_state7 : STD_LOGIC_VECTOR (10 downto 0) := "00001000000";
-    constant ap_ST_fsm_state8 : STD_LOGIC_VECTOR (10 downto 0) := "00010000000";
-    constant ap_ST_fsm_state9 : STD_LOGIC_VECTOR (10 downto 0) := "00100000000";
-    constant ap_ST_fsm_state10 : STD_LOGIC_VECTOR (10 downto 0) := "01000000000";
-    constant ap_ST_fsm_state11 : STD_LOGIC_VECTOR (10 downto 0) := "10000000000";
+    constant ap_ST_fsm_state1 : STD_LOGIC_VECTOR (6 downto 0) := "0000001";
+    constant ap_ST_fsm_state2 : STD_LOGIC_VECTOR (6 downto 0) := "0000010";
+    constant ap_ST_fsm_state3 : STD_LOGIC_VECTOR (6 downto 0) := "0000100";
+    constant ap_ST_fsm_state4 : STD_LOGIC_VECTOR (6 downto 0) := "0001000";
+    constant ap_ST_fsm_state5 : STD_LOGIC_VECTOR (6 downto 0) := "0010000";
+    constant ap_ST_fsm_state6 : STD_LOGIC_VECTOR (6 downto 0) := "0100000";
+    constant ap_ST_fsm_state7 : STD_LOGIC_VECTOR (6 downto 0) := "1000000";
     constant ap_const_boolean_1 : BOOLEAN := true;
     constant ap_const_lv32_0 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000000";
     constant ap_const_lv32_1 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000001";
     constant ap_const_lv1_0 : STD_LOGIC_VECTOR (0 downto 0) := "0";
-    constant ap_const_lv32_8 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000001000";
-    constant ap_const_lv32_5 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000101";
+    constant ap_const_lv32_4 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000100";
     constant ap_const_lv1_1 : STD_LOGIC_VECTOR (0 downto 0) := "1";
     constant ap_const_boolean_0 : BOOLEAN := false;
     constant ap_const_lv32_2 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000010";
-    constant ap_const_lv32_4 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000100";
+    constant ap_const_lv32_3 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000011";
+    constant ap_const_lv32_5 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000101";
     constant ap_const_lv32_6 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000110";
     constant ap_const_lv32_7 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000111";
-    constant ap_const_lv32_9 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000001001";
-    constant ap_const_lv32_A : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000001010";
     constant ap_const_lv64_40 : STD_LOGIC_VECTOR (63 downto 0) := "0000000000000000000000000000000000000000000000000000000001000000";
     constant ap_const_lv3_0 : STD_LOGIC_VECTOR (2 downto 0) := "000";
     constant ap_const_lv68_1F : STD_LOGIC_VECTOR (67 downto 0) := "00000000000000000000000000000000000000000000000000000000000000011111";
@@ -101,7 +95,7 @@ attribute shreg_extract : string;
     signal real_start : STD_LOGIC;
     signal start_once_reg : STD_LOGIC := '0';
     signal ap_done_reg : STD_LOGIC := '0';
-    signal ap_CS_fsm : STD_LOGIC_VECTOR (10 downto 0) := "00000000001";
+    signal ap_CS_fsm : STD_LOGIC_VECTOR (6 downto 0) := "0000001";
     attribute fsm_encoding : string;
     attribute fsm_encoding of ap_CS_fsm : signal is "none";
     signal ap_CS_fsm_state1 : STD_LOGIC;
@@ -111,25 +105,16 @@ attribute shreg_extract : string;
     signal ap_CS_fsm_state2 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state2 : signal is "none";
     signal kopadStrm_blk_n : STD_LOGIC;
-    signal ap_CS_fsm_state9 : STD_LOGIC;
-    attribute fsm_encoding of ap_CS_fsm_state9 : signal is "none";
+    signal ap_CS_fsm_state5 : STD_LOGIC;
+    attribute fsm_encoding of ap_CS_fsm_state5 : signal is "none";
     signal lenStrm_blk_n : STD_LOGIC;
     signal eKipadStrm_blk_n : STD_LOGIC;
     signal mergeKipadLenStrm_blk_n : STD_LOGIC;
-    signal ap_CS_fsm_state6 : STD_LOGIC;
-    attribute fsm_encoding of ap_CS_fsm_state6 : signal is "none";
     signal eMergeKipadLenStrm_blk_n : STD_LOGIC;
     signal kopad2Strm_blk_n : STD_LOGIC;
-    signal ml_reg_237 : STD_LOGIC_VECTOR (63 downto 0);
+    signal kipad_reg_240 : STD_LOGIC_VECTOR (511 downto 0);
     signal ap_block_state2 : BOOLEAN;
-    signal kipad_reg_243 : STD_LOGIC_VECTOR (511 downto 0);
-    signal ap_CS_fsm_state3 : STD_LOGIC;
-    attribute fsm_encoding of ap_CS_fsm_state3 : signal is "none";
-    signal grp_fu_142_p2 : STD_LOGIC_VECTOR (63 downto 0);
-    signal mergeKipadLen_reg_253 : STD_LOGIC_VECTOR (63 downto 0);
-    signal ap_CS_fsm_state5 : STD_LOGIC;
-    attribute fsm_encoding of ap_CS_fsm_state5 : signal is "none";
-    signal tmp_1_reg_258 : STD_LOGIC_VECTOR (62 downto 0);
+    signal tmp_1_reg_245 : STD_LOGIC_VECTOR (62 downto 0);
     signal grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_162_2_fu_126_ap_start : STD_LOGIC;
     signal grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_162_2_fu_126_ap_done : STD_LOGIC;
     signal grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_162_2_fu_126_ap_idle : STD_LOGIC;
@@ -146,21 +131,19 @@ attribute shreg_extract : string;
     signal grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133_mergeKipadStrm_num_data_valid : STD_LOGIC_VECTOR (7 downto 0);
     signal grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133_mergeKipadStrm_fifo_cap : STD_LOGIC_VECTOR (7 downto 0);
     signal grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_162_2_fu_126_ap_start_reg : STD_LOGIC := '0';
+    signal ap_CS_fsm_state3 : STD_LOGIC;
+    attribute fsm_encoding of ap_CS_fsm_state3 : signal is "none";
+    signal ap_CS_fsm_state4 : STD_LOGIC;
+    attribute fsm_encoding of ap_CS_fsm_state4 : signal is "none";
+    signal grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133_ap_start_reg : STD_LOGIC := '0';
+    signal ap_NS_fsm : STD_LOGIC_VECTOR (6 downto 0);
+    signal ap_NS_fsm_state6 : STD_LOGIC;
     signal ap_CS_fsm_state7 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state7 : signal is "none";
-    signal ap_CS_fsm_state8 : STD_LOGIC;
-    attribute fsm_encoding of ap_CS_fsm_state8 : signal is "none";
-    signal grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133_ap_start_reg : STD_LOGIC := '0';
-    signal ap_CS_fsm_state10 : STD_LOGIC;
-    attribute fsm_encoding of ap_CS_fsm_state10 : signal is "none";
-    signal ap_CS_fsm_state11 : STD_LOGIC;
-    attribute fsm_encoding of ap_CS_fsm_state11 : signal is "none";
-    signal ap_block_state6 : BOOLEAN;
-    signal ap_block_state9 : BOOLEAN;
-    signal tmp_fu_147_p3 : STD_LOGIC_VECTOR (66 downto 0);
-    signal grp_fu_158_p0 : STD_LOGIC_VECTOR (67 downto 0);
-    signal grp_fu_158_p2 : STD_LOGIC_VECTOR (67 downto 0);
-    signal ap_NS_fsm : STD_LOGIC_VECTOR (10 downto 0);
+    signal ap_block_state5 : BOOLEAN;
+    signal tmp_fu_149_p3 : STD_LOGIC_VECTOR (66 downto 0);
+    signal p_cast_fu_157_p1 : STD_LOGIC_VECTOR (67 downto 0);
+    signal add_ln171_fu_161_p2 : STD_LOGIC_VECTOR (67 downto 0);
     signal ap_block_state1 : BOOLEAN;
     signal ap_ST_fsm_state1_blk : STD_LOGIC;
     signal ap_ST_fsm_state2_blk : STD_LOGIC;
@@ -169,10 +152,6 @@ attribute shreg_extract : string;
     signal ap_ST_fsm_state5_blk : STD_LOGIC;
     signal ap_ST_fsm_state6_blk : STD_LOGIC;
     signal ap_ST_fsm_state7_blk : STD_LOGIC;
-    signal ap_ST_fsm_state8_blk : STD_LOGIC;
-    signal ap_ST_fsm_state9_blk : STD_LOGIC;
-    signal ap_ST_fsm_state10_blk : STD_LOGIC;
-    signal ap_ST_fsm_state11_blk : STD_LOGIC;
     signal grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133_mergeKipadStrm_fifo_cap0 : STD_LOGIC_VECTOR (31 downto 0);
     signal grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133_mergeKipadStrm_num_data_valid0 : STD_LOGIC_VECTOR (31 downto 0);
     signal ap_ce_reg : STD_LOGIC;
@@ -202,7 +181,6 @@ attribute shreg_extract : string;
         ap_done : OUT STD_LOGIC;
         ap_idle : OUT STD_LOGIC;
         ap_ready : OUT STD_LOGIC;
-        empty : IN STD_LOGIC_VECTOR (62 downto 0);
         msgStrm_dout : IN STD_LOGIC_VECTOR (31 downto 0);
         msgStrm_empty_n : IN STD_LOGIC;
         msgStrm_read : OUT STD_LOGIC;
@@ -210,41 +188,8 @@ attribute shreg_extract : string;
         mergeKipadStrm_full_n : IN STD_LOGIC;
         mergeKipadStrm_write : OUT STD_LOGIC;
         mergeKipadStrm_num_data_valid : IN STD_LOGIC_VECTOR (7 downto 0);
-        mergeKipadStrm_fifo_cap : IN STD_LOGIC_VECTOR (7 downto 0) );
-    end component;
-
-
-    component test_hmac_sha256_add_64ns_64ns_64_3_1 IS
-    generic (
-        ID : INTEGER;
-        NUM_STAGE : INTEGER;
-        din0_WIDTH : INTEGER;
-        din1_WIDTH : INTEGER;
-        dout_WIDTH : INTEGER );
-    port (
-        clk : IN STD_LOGIC;
-        reset : IN STD_LOGIC;
-        din0 : IN STD_LOGIC_VECTOR (63 downto 0);
-        din1 : IN STD_LOGIC_VECTOR (63 downto 0);
-        ce : IN STD_LOGIC;
-        dout : OUT STD_LOGIC_VECTOR (63 downto 0) );
-    end component;
-
-
-    component test_hmac_sha256_add_68ns_68ns_68_3_1 IS
-    generic (
-        ID : INTEGER;
-        NUM_STAGE : INTEGER;
-        din0_WIDTH : INTEGER;
-        din1_WIDTH : INTEGER;
-        dout_WIDTH : INTEGER );
-    port (
-        clk : IN STD_LOGIC;
-        reset : IN STD_LOGIC;
-        din0 : IN STD_LOGIC_VECTOR (67 downto 0);
-        din1 : IN STD_LOGIC_VECTOR (67 downto 0);
-        ce : IN STD_LOGIC;
-        dout : OUT STD_LOGIC_VECTOR (67 downto 0) );
+        mergeKipadStrm_fifo_cap : IN STD_LOGIC_VECTOR (7 downto 0);
+        empty : IN STD_LOGIC_VECTOR (62 downto 0) );
     end component;
 
 
@@ -263,7 +208,7 @@ begin
         mergeKipadStrm_write => grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_162_2_fu_126_mergeKipadStrm_write,
         mergeKipadStrm_num_data_valid => mergeKipadStrm_num_data_valid,
         mergeKipadStrm_fifo_cap => mergeKipadStrm_fifo_cap,
-        kipad => kipad_reg_243);
+        kipad => kipad_reg_240);
 
     grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133 : component test_hmac_sha256_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3
     port map (
@@ -273,7 +218,6 @@ begin
         ap_done => grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133_ap_done,
         ap_idle => grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133_ap_idle,
         ap_ready => grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133_ap_ready,
-        empty => tmp_1_reg_258,
         msgStrm_dout => msgStrm_dout,
         msgStrm_empty_n => msgStrm_empty_n,
         msgStrm_read => grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133_msgStrm_read,
@@ -281,37 +225,8 @@ begin
         mergeKipadStrm_full_n => mergeKipadStrm_full_n,
         mergeKipadStrm_write => grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133_mergeKipadStrm_write,
         mergeKipadStrm_num_data_valid => grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133_mergeKipadStrm_num_data_valid,
-        mergeKipadStrm_fifo_cap => grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133_mergeKipadStrm_fifo_cap);
-
-    add_64ns_64ns_64_3_1_U17 : component test_hmac_sha256_add_64ns_64ns_64_3_1
-    generic map (
-        ID => 1,
-        NUM_STAGE => 3,
-        din0_WIDTH => 64,
-        din1_WIDTH => 64,
-        dout_WIDTH => 64)
-    port map (
-        clk => ap_clk,
-        reset => ap_rst,
-        din0 => ml_reg_237,
-        din1 => ap_const_lv64_40,
-        ce => ap_const_logic_1,
-        dout => grp_fu_142_p2);
-
-    add_68ns_68ns_68_3_1_U18 : component test_hmac_sha256_add_68ns_68ns_68_3_1
-    generic map (
-        ID => 1,
-        NUM_STAGE => 3,
-        din0_WIDTH => 68,
-        din1_WIDTH => 68,
-        dout_WIDTH => 68)
-    port map (
-        clk => ap_clk,
-        reset => ap_rst,
-        din0 => grp_fu_158_p0,
-        din1 => ap_const_lv68_1F,
-        ce => ap_const_logic_1,
-        dout => grp_fu_158_p2);
+        mergeKipadStrm_fifo_cap => grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133_mergeKipadStrm_fifo_cap,
+        empty => tmp_1_reg_245);
 
 
 
@@ -337,7 +252,7 @@ begin
             else
                 if ((ap_continue = ap_const_logic_1)) then 
                     ap_done_reg <= ap_const_logic_0;
-                elsif (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_boolean_0 = ap_block_state2) and (eKipadStrm_dout = ap_const_lv1_1))) then 
+                elsif (((eKipadStrm_dout = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_boolean_0 = ap_block_state2))) then 
                     ap_done_reg <= ap_const_logic_1;
                 end if; 
             end if;
@@ -351,7 +266,7 @@ begin
             if (ap_rst = '1') then
                 grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_162_2_fu_126_ap_start_reg <= ap_const_logic_0;
             else
-                if ((ap_const_logic_1 = ap_CS_fsm_state7)) then 
+                if ((ap_const_logic_1 = ap_CS_fsm_state3)) then 
                     grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_162_2_fu_126_ap_start_reg <= ap_const_logic_1;
                 elsif ((grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_162_2_fu_126_ap_ready = ap_const_logic_1)) then 
                     grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_162_2_fu_126_ap_start_reg <= ap_const_logic_0;
@@ -367,7 +282,7 @@ begin
             if (ap_rst = '1') then
                 grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133_ap_start_reg <= ap_const_logic_0;
             else
-                if ((ap_const_logic_1 = ap_CS_fsm_state10)) then 
+                if (((ap_const_logic_1 = ap_NS_fsm_state6) and (ap_const_logic_1 = ap_CS_fsm_state5))) then 
                     grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133_ap_start_reg <= ap_const_logic_1;
                 elsif ((grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133_ap_ready = ap_const_logic_1)) then 
                     grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133_ap_start_reg <= ap_const_logic_0;
@@ -396,22 +311,13 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_boolean_0 = ap_block_state2))) then
-                kipad_reg_243 <= kipadStrm_dout;
-                ml_reg_237 <= lenStrm_dout;
-            end if;
-        end if;
-    end process;
-    process (ap_clk)
-    begin
-        if (ap_clk'event and ap_clk = '1') then
-            if ((ap_const_logic_1 = ap_CS_fsm_state5)) then
-                mergeKipadLen_reg_253 <= grp_fu_142_p2;
-                tmp_1_reg_258 <= grp_fu_158_p2(67 downto 5);
+                kipad_reg_240 <= kipadStrm_dout;
+                tmp_1_reg_245 <= add_ln171_fu_161_p2(67 downto 5);
             end if;
         end if;
     end process;
 
-    ap_NS_fsm_assign_proc : process (ap_CS_fsm, ap_CS_fsm_state1, eKipadStrm_dout, ap_CS_fsm_state2, ap_CS_fsm_state9, ap_CS_fsm_state6, ap_block_state2, grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_162_2_fu_126_ap_done, grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133_ap_done, ap_CS_fsm_state8, ap_CS_fsm_state11, ap_block_state6, ap_block_state9, ap_block_state1)
+    ap_NS_fsm_assign_proc : process (ap_CS_fsm, ap_CS_fsm_state1, eKipadStrm_dout, ap_CS_fsm_state2, ap_CS_fsm_state5, ap_block_state2, grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_162_2_fu_126_ap_done, grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133_ap_done, ap_CS_fsm_state4, ap_CS_fsm_state7, ap_block_state5, ap_block_state1)
     begin
         case ap_CS_fsm is
             when ap_ST_fsm_state1 => 
@@ -421,9 +327,9 @@ begin
                     ap_NS_fsm <= ap_ST_fsm_state1;
                 end if;
             when ap_ST_fsm_state2 => 
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_boolean_0 = ap_block_state2) and (eKipadStrm_dout = ap_const_lv1_1))) then
+                if (((eKipadStrm_dout = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_boolean_0 = ap_block_state2))) then
                     ap_NS_fsm <= ap_ST_fsm_state1;
-                elsif (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_boolean_0 = ap_block_state2) and (eKipadStrm_dout = ap_const_lv1_0))) then
+                elsif (((eKipadStrm_dout = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_boolean_0 = ap_block_state2))) then
                     ap_NS_fsm <= ap_ST_fsm_state3;
                 else
                     ap_NS_fsm <= ap_ST_fsm_state2;
@@ -431,62 +337,37 @@ begin
             when ap_ST_fsm_state3 => 
                 ap_NS_fsm <= ap_ST_fsm_state4;
             when ap_ST_fsm_state4 => 
-                ap_NS_fsm <= ap_ST_fsm_state5;
+                if (((ap_const_logic_1 = ap_CS_fsm_state4) and (grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_162_2_fu_126_ap_done = ap_const_logic_1))) then
+                    ap_NS_fsm <= ap_ST_fsm_state5;
+                else
+                    ap_NS_fsm <= ap_ST_fsm_state4;
+                end if;
             when ap_ST_fsm_state5 => 
-                ap_NS_fsm <= ap_ST_fsm_state6;
-            when ap_ST_fsm_state6 => 
-                if (((ap_const_logic_1 = ap_CS_fsm_state6) and (ap_const_boolean_0 = ap_block_state6))) then
-                    ap_NS_fsm <= ap_ST_fsm_state7;
-                else
+                if (((ap_const_logic_1 = ap_CS_fsm_state5) and (ap_const_boolean_0 = ap_block_state5))) then
                     ap_NS_fsm <= ap_ST_fsm_state6;
+                else
+                    ap_NS_fsm <= ap_ST_fsm_state5;
                 end if;
+            when ap_ST_fsm_state6 => 
+                ap_NS_fsm <= ap_ST_fsm_state7;
             when ap_ST_fsm_state7 => 
-                ap_NS_fsm <= ap_ST_fsm_state8;
-            when ap_ST_fsm_state8 => 
-                if (((ap_const_logic_1 = ap_CS_fsm_state8) and (grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_162_2_fu_126_ap_done = ap_const_logic_1))) then
-                    ap_NS_fsm <= ap_ST_fsm_state9;
-                else
-                    ap_NS_fsm <= ap_ST_fsm_state8;
-                end if;
-            when ap_ST_fsm_state9 => 
-                if (((ap_const_logic_1 = ap_CS_fsm_state9) and (ap_const_boolean_0 = ap_block_state9))) then
-                    ap_NS_fsm <= ap_ST_fsm_state10;
-                else
-                    ap_NS_fsm <= ap_ST_fsm_state9;
-                end if;
-            when ap_ST_fsm_state10 => 
-                ap_NS_fsm <= ap_ST_fsm_state11;
-            when ap_ST_fsm_state11 => 
-                if (((ap_const_logic_1 = ap_CS_fsm_state11) and (grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133_ap_done = ap_const_logic_1))) then
+                if (((ap_const_logic_1 = ap_CS_fsm_state7) and (grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133_ap_done = ap_const_logic_1))) then
                     ap_NS_fsm <= ap_ST_fsm_state2;
                 else
-                    ap_NS_fsm <= ap_ST_fsm_state11;
+                    ap_NS_fsm <= ap_ST_fsm_state7;
                 end if;
             when others =>  
-                ap_NS_fsm <= "XXXXXXXXXXX";
+                ap_NS_fsm <= "XXXXXXX";
         end case;
     end process;
+    add_ln171_fu_161_p2 <= std_logic_vector(unsigned(p_cast_fu_157_p1) + unsigned(ap_const_lv68_1F));
     ap_CS_fsm_state1 <= ap_CS_fsm(0);
-    ap_CS_fsm_state10 <= ap_CS_fsm(9);
-    ap_CS_fsm_state11 <= ap_CS_fsm(10);
     ap_CS_fsm_state2 <= ap_CS_fsm(1);
     ap_CS_fsm_state3 <= ap_CS_fsm(2);
+    ap_CS_fsm_state4 <= ap_CS_fsm(3);
     ap_CS_fsm_state5 <= ap_CS_fsm(4);
-    ap_CS_fsm_state6 <= ap_CS_fsm(5);
     ap_CS_fsm_state7 <= ap_CS_fsm(6);
-    ap_CS_fsm_state8 <= ap_CS_fsm(7);
-    ap_CS_fsm_state9 <= ap_CS_fsm(8);
-    ap_ST_fsm_state10_blk <= ap_const_logic_0;
-
-    ap_ST_fsm_state11_blk_assign_proc : process(grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133_ap_done)
-    begin
-        if ((grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133_ap_done = ap_const_logic_0)) then 
-            ap_ST_fsm_state11_blk <= ap_const_logic_1;
-        else 
-            ap_ST_fsm_state11_blk <= ap_const_logic_0;
-        end if; 
-    end process;
-
+    ap_NS_fsm_state6 <= ap_NS_fsm(5);
 
     ap_ST_fsm_state1_blk_assign_proc : process(ap_block_state1)
     begin
@@ -508,36 +389,34 @@ begin
     end process;
 
     ap_ST_fsm_state3_blk <= ap_const_logic_0;
-    ap_ST_fsm_state4_blk <= ap_const_logic_0;
-    ap_ST_fsm_state5_blk <= ap_const_logic_0;
 
-    ap_ST_fsm_state6_blk_assign_proc : process(ap_block_state6)
-    begin
-        if ((ap_const_boolean_1 = ap_block_state6)) then 
-            ap_ST_fsm_state6_blk <= ap_const_logic_1;
-        else 
-            ap_ST_fsm_state6_blk <= ap_const_logic_0;
-        end if; 
-    end process;
-
-    ap_ST_fsm_state7_blk <= ap_const_logic_0;
-
-    ap_ST_fsm_state8_blk_assign_proc : process(grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_162_2_fu_126_ap_done)
+    ap_ST_fsm_state4_blk_assign_proc : process(grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_162_2_fu_126_ap_done)
     begin
         if ((grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_162_2_fu_126_ap_done = ap_const_logic_0)) then 
-            ap_ST_fsm_state8_blk <= ap_const_logic_1;
+            ap_ST_fsm_state4_blk <= ap_const_logic_1;
         else 
-            ap_ST_fsm_state8_blk <= ap_const_logic_0;
+            ap_ST_fsm_state4_blk <= ap_const_logic_0;
         end if; 
     end process;
 
 
-    ap_ST_fsm_state9_blk_assign_proc : process(ap_block_state9)
+    ap_ST_fsm_state5_blk_assign_proc : process(ap_block_state5)
     begin
-        if ((ap_const_boolean_1 = ap_block_state9)) then 
-            ap_ST_fsm_state9_blk <= ap_const_logic_1;
+        if ((ap_const_boolean_1 = ap_block_state5)) then 
+            ap_ST_fsm_state5_blk <= ap_const_logic_1;
         else 
-            ap_ST_fsm_state9_blk <= ap_const_logic_0;
+            ap_ST_fsm_state5_blk <= ap_const_logic_0;
+        end if; 
+    end process;
+
+    ap_ST_fsm_state6_blk <= ap_const_logic_0;
+
+    ap_ST_fsm_state7_blk_assign_proc : process(grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133_ap_done)
+    begin
+        if ((grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133_ap_done = ap_const_logic_0)) then 
+            ap_ST_fsm_state7_blk <= ap_const_logic_1;
+        else 
+            ap_ST_fsm_state7_blk <= ap_const_logic_0;
         end if; 
     end process;
 
@@ -548,27 +427,21 @@ begin
     end process;
 
 
-    ap_block_state2_assign_proc : process(kipadStrm_empty_n, lenStrm_empty_n, eKipadStrm_dout, eKipadStrm_empty_n, eMergeKipadLenStrm_full_n)
+    ap_block_state2_assign_proc : process(kipadStrm_empty_n, lenStrm_empty_n, eKipadStrm_dout, eKipadStrm_empty_n, mergeKipadLenStrm_full_n, eMergeKipadLenStrm_full_n)
     begin
-                ap_block_state2 <= ((eKipadStrm_empty_n = ap_const_logic_0) or ((eMergeKipadLenStrm_full_n = ap_const_logic_0) and (eKipadStrm_dout = ap_const_lv1_1)) or ((kipadStrm_empty_n = ap_const_logic_0) and (eKipadStrm_dout = ap_const_lv1_0)) or ((lenStrm_empty_n = ap_const_logic_0) and (eKipadStrm_dout = ap_const_lv1_0)));
+                ap_block_state2 <= ((eKipadStrm_empty_n = ap_const_logic_0) or ((eKipadStrm_dout = ap_const_lv1_1) and (eMergeKipadLenStrm_full_n = ap_const_logic_0)) or ((eKipadStrm_dout = ap_const_lv1_0) and (kipadStrm_empty_n = ap_const_logic_0)) or ((eKipadStrm_dout = ap_const_lv1_0) and (mergeKipadLenStrm_full_n = ap_const_logic_0)) or ((eKipadStrm_dout = ap_const_lv1_0) and (lenStrm_empty_n = ap_const_logic_0)) or ((eKipadStrm_dout = ap_const_lv1_0) and (eMergeKipadLenStrm_full_n = ap_const_logic_0)));
     end process;
 
 
-    ap_block_state6_assign_proc : process(mergeKipadLenStrm_full_n, eMergeKipadLenStrm_full_n)
+    ap_block_state5_assign_proc : process(kopadStrm_empty_n, kopad2Strm_full_n)
     begin
-                ap_block_state6 <= ((eMergeKipadLenStrm_full_n = ap_const_logic_0) or (mergeKipadLenStrm_full_n = ap_const_logic_0));
-    end process;
-
-
-    ap_block_state9_assign_proc : process(kopadStrm_empty_n, kopad2Strm_full_n)
-    begin
-                ap_block_state9 <= ((kopad2Strm_full_n = ap_const_logic_0) or (kopadStrm_empty_n = ap_const_logic_0));
+                ap_block_state5 <= ((kopad2Strm_full_n = ap_const_logic_0) or (kopadStrm_empty_n = ap_const_logic_0));
     end process;
 
 
     ap_done_assign_proc : process(ap_done_reg, eKipadStrm_dout, ap_CS_fsm_state2, ap_block_state2)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_boolean_0 = ap_block_state2) and (eKipadStrm_dout = ap_const_lv1_1))) then 
+        if (((eKipadStrm_dout = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_boolean_0 = ap_block_state2))) then 
             ap_done <= ap_const_logic_1;
         else 
             ap_done <= ap_done_reg;
@@ -607,9 +480,9 @@ begin
     end process;
 
 
-    eMergeKipadLenStrm_blk_n_assign_proc : process(eKipadStrm_dout, eMergeKipadLenStrm_full_n, ap_CS_fsm_state2, ap_CS_fsm_state6)
+    eMergeKipadLenStrm_blk_n_assign_proc : process(eKipadStrm_dout, eMergeKipadLenStrm_full_n, ap_CS_fsm_state2)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state6) or ((ap_const_logic_1 = ap_CS_fsm_state2) and (eKipadStrm_dout = ap_const_lv1_1)))) then 
+        if ((((eKipadStrm_dout = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state2)) or ((eKipadStrm_dout = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state2)))) then 
             eMergeKipadLenStrm_blk_n <= eMergeKipadLenStrm_full_n;
         else 
             eMergeKipadLenStrm_blk_n <= ap_const_logic_1;
@@ -617,28 +490,31 @@ begin
     end process;
 
 
-    eMergeKipadLenStrm_din_assign_proc : process(eKipadStrm_dout, ap_CS_fsm_state2, ap_CS_fsm_state6, ap_block_state2, ap_block_state6)
+    eMergeKipadLenStrm_din_assign_proc : process(eKipadStrm_dout, ap_CS_fsm_state2, ap_block_state2)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state6) and (ap_const_boolean_0 = ap_block_state6))) then 
-            eMergeKipadLenStrm_din <= ap_const_lv1_0;
-        elsif (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_boolean_0 = ap_block_state2) and (eKipadStrm_dout = ap_const_lv1_1))) then 
-            eMergeKipadLenStrm_din <= ap_const_lv1_1;
+        if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_boolean_0 = ap_block_state2))) then
+            if ((eKipadStrm_dout = ap_const_lv1_1)) then 
+                eMergeKipadLenStrm_din <= ap_const_lv1_1;
+            elsif ((eKipadStrm_dout = ap_const_lv1_0)) then 
+                eMergeKipadLenStrm_din <= ap_const_lv1_0;
+            else 
+                eMergeKipadLenStrm_din <= "X";
+            end if;
         else 
             eMergeKipadLenStrm_din <= "X";
         end if; 
     end process;
 
 
-    eMergeKipadLenStrm_write_assign_proc : process(eKipadStrm_dout, ap_CS_fsm_state2, ap_CS_fsm_state6, ap_block_state2, ap_block_state6)
+    eMergeKipadLenStrm_write_assign_proc : process(eKipadStrm_dout, ap_CS_fsm_state2, ap_block_state2)
     begin
-        if ((((ap_const_logic_1 = ap_CS_fsm_state6) and (ap_const_boolean_0 = ap_block_state6)) or ((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_boolean_0 = ap_block_state2) and (eKipadStrm_dout = ap_const_lv1_1)))) then 
+        if ((((eKipadStrm_dout = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_boolean_0 = ap_block_state2)) or ((eKipadStrm_dout = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_boolean_0 = ap_block_state2)))) then 
             eMergeKipadLenStrm_write <= ap_const_logic_1;
         else 
             eMergeKipadLenStrm_write <= ap_const_logic_0;
         end if; 
     end process;
 
-    grp_fu_158_p0 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(tmp_fu_147_p3),68));
     grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_162_2_fu_126_ap_start <= grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_162_2_fu_126_ap_start_reg;
     grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133_ap_start <= grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133_ap_start_reg;
     grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133_mergeKipadStrm_fifo_cap <= grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133_mergeKipadStrm_fifo_cap0(8 - 1 downto 0);
@@ -712,7 +588,7 @@ begin
 
     internal_ap_ready_assign_proc : process(eKipadStrm_dout, ap_CS_fsm_state2, ap_block_state2)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_boolean_0 = ap_block_state2) and (eKipadStrm_dout = ap_const_lv1_1))) then 
+        if (((eKipadStrm_dout = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_boolean_0 = ap_block_state2))) then 
             internal_ap_ready <= ap_const_logic_1;
         else 
             internal_ap_ready <= ap_const_logic_0;
@@ -722,7 +598,7 @@ begin
 
     kipadStrm_blk_n_assign_proc : process(kipadStrm_empty_n, eKipadStrm_dout, ap_CS_fsm_state2)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state2) and (eKipadStrm_dout = ap_const_lv1_0))) then 
+        if (((eKipadStrm_dout = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
             kipadStrm_blk_n <= kipadStrm_empty_n;
         else 
             kipadStrm_blk_n <= ap_const_logic_1;
@@ -732,7 +608,7 @@ begin
 
     kipadStrm_read_assign_proc : process(eKipadStrm_dout, ap_CS_fsm_state2, ap_block_state2)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_boolean_0 = ap_block_state2) and (eKipadStrm_dout = ap_const_lv1_0))) then 
+        if (((eKipadStrm_dout = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_boolean_0 = ap_block_state2))) then 
             kipadStrm_read <= ap_const_logic_1;
         else 
             kipadStrm_read <= ap_const_logic_0;
@@ -740,9 +616,9 @@ begin
     end process;
 
 
-    kopad2Strm_blk_n_assign_proc : process(kopad2Strm_full_n, ap_CS_fsm_state9)
+    kopad2Strm_blk_n_assign_proc : process(kopad2Strm_full_n, ap_CS_fsm_state5)
     begin
-        if ((ap_const_logic_1 = ap_CS_fsm_state9)) then 
+        if ((ap_const_logic_1 = ap_CS_fsm_state5)) then 
             kopad2Strm_blk_n <= kopad2Strm_full_n;
         else 
             kopad2Strm_blk_n <= ap_const_logic_1;
@@ -751,9 +627,9 @@ begin
 
     kopad2Strm_din <= kopadStrm_dout;
 
-    kopad2Strm_write_assign_proc : process(ap_CS_fsm_state9, ap_block_state9)
+    kopad2Strm_write_assign_proc : process(ap_CS_fsm_state5, ap_block_state5)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state9) and (ap_const_boolean_0 = ap_block_state9))) then 
+        if (((ap_const_logic_1 = ap_CS_fsm_state5) and (ap_const_boolean_0 = ap_block_state5))) then 
             kopad2Strm_write <= ap_const_logic_1;
         else 
             kopad2Strm_write <= ap_const_logic_0;
@@ -761,9 +637,9 @@ begin
     end process;
 
 
-    kopadStrm_blk_n_assign_proc : process(kopadStrm_empty_n, ap_CS_fsm_state9)
+    kopadStrm_blk_n_assign_proc : process(kopadStrm_empty_n, ap_CS_fsm_state5)
     begin
-        if ((ap_const_logic_1 = ap_CS_fsm_state9)) then 
+        if ((ap_const_logic_1 = ap_CS_fsm_state5)) then 
             kopadStrm_blk_n <= kopadStrm_empty_n;
         else 
             kopadStrm_blk_n <= ap_const_logic_1;
@@ -771,9 +647,9 @@ begin
     end process;
 
 
-    kopadStrm_read_assign_proc : process(ap_CS_fsm_state9, ap_block_state9)
+    kopadStrm_read_assign_proc : process(ap_CS_fsm_state5, ap_block_state5)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state9) and (ap_const_boolean_0 = ap_block_state9))) then 
+        if (((ap_const_logic_1 = ap_CS_fsm_state5) and (ap_const_boolean_0 = ap_block_state5))) then 
             kopadStrm_read <= ap_const_logic_1;
         else 
             kopadStrm_read <= ap_const_logic_0;
@@ -783,7 +659,7 @@ begin
 
     lenStrm_blk_n_assign_proc : process(lenStrm_empty_n, eKipadStrm_dout, ap_CS_fsm_state2)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state2) and (eKipadStrm_dout = ap_const_lv1_0))) then 
+        if (((eKipadStrm_dout = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
             lenStrm_blk_n <= lenStrm_empty_n;
         else 
             lenStrm_blk_n <= ap_const_logic_1;
@@ -793,7 +669,7 @@ begin
 
     lenStrm_read_assign_proc : process(eKipadStrm_dout, ap_CS_fsm_state2, ap_block_state2)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_boolean_0 = ap_block_state2) and (eKipadStrm_dout = ap_const_lv1_0))) then 
+        if (((eKipadStrm_dout = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_boolean_0 = ap_block_state2))) then 
             lenStrm_read <= ap_const_logic_1;
         else 
             lenStrm_read <= ap_const_logic_0;
@@ -801,20 +677,20 @@ begin
     end process;
 
 
-    mergeKipadLenStrm_blk_n_assign_proc : process(mergeKipadLenStrm_full_n, ap_CS_fsm_state6)
+    mergeKipadLenStrm_blk_n_assign_proc : process(eKipadStrm_dout, mergeKipadLenStrm_full_n, ap_CS_fsm_state2)
     begin
-        if ((ap_const_logic_1 = ap_CS_fsm_state6)) then 
+        if (((eKipadStrm_dout = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
             mergeKipadLenStrm_blk_n <= mergeKipadLenStrm_full_n;
         else 
             mergeKipadLenStrm_blk_n <= ap_const_logic_1;
         end if; 
     end process;
 
-    mergeKipadLenStrm_din <= mergeKipadLen_reg_253;
+    mergeKipadLenStrm_din <= std_logic_vector(unsigned(lenStrm_dout) + unsigned(ap_const_lv64_40));
 
-    mergeKipadLenStrm_write_assign_proc : process(ap_CS_fsm_state6, ap_block_state6)
+    mergeKipadLenStrm_write_assign_proc : process(eKipadStrm_dout, ap_CS_fsm_state2, ap_block_state2)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state6) and (ap_const_boolean_0 = ap_block_state6))) then 
+        if (((eKipadStrm_dout = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_boolean_0 = ap_block_state2))) then 
             mergeKipadLenStrm_write <= ap_const_logic_1;
         else 
             mergeKipadLenStrm_write <= ap_const_logic_0;
@@ -822,11 +698,11 @@ begin
     end process;
 
 
-    mergeKipadStrm_din_assign_proc : process(grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_162_2_fu_126_mergeKipadStrm_din, grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133_mergeKipadStrm_din, ap_CS_fsm_state8, ap_CS_fsm_state11)
+    mergeKipadStrm_din_assign_proc : process(grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_162_2_fu_126_mergeKipadStrm_din, grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133_mergeKipadStrm_din, ap_CS_fsm_state4, ap_CS_fsm_state7)
     begin
-        if ((ap_const_logic_1 = ap_CS_fsm_state11)) then 
+        if ((ap_const_logic_1 = ap_CS_fsm_state7)) then 
             mergeKipadStrm_din <= grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133_mergeKipadStrm_din;
-        elsif ((ap_const_logic_1 = ap_CS_fsm_state8)) then 
+        elsif ((ap_const_logic_1 = ap_CS_fsm_state4)) then 
             mergeKipadStrm_din <= grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_162_2_fu_126_mergeKipadStrm_din;
         else 
             mergeKipadStrm_din <= grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133_mergeKipadStrm_din;
@@ -834,11 +710,11 @@ begin
     end process;
 
 
-    mergeKipadStrm_write_assign_proc : process(grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_162_2_fu_126_mergeKipadStrm_write, grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133_mergeKipadStrm_write, ap_CS_fsm_state8, ap_CS_fsm_state11)
+    mergeKipadStrm_write_assign_proc : process(grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_162_2_fu_126_mergeKipadStrm_write, grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133_mergeKipadStrm_write, ap_CS_fsm_state4, ap_CS_fsm_state7)
     begin
-        if ((ap_const_logic_1 = ap_CS_fsm_state11)) then 
+        if ((ap_const_logic_1 = ap_CS_fsm_state7)) then 
             mergeKipadStrm_write <= grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133_mergeKipadStrm_write;
-        elsif ((ap_const_logic_1 = ap_CS_fsm_state8)) then 
+        elsif ((ap_const_logic_1 = ap_CS_fsm_state4)) then 
             mergeKipadStrm_write <= grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_162_2_fu_126_mergeKipadStrm_write;
         else 
             mergeKipadStrm_write <= ap_const_logic_0;
@@ -846,6 +722,7 @@ begin
     end process;
 
     msgStrm_read <= grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133_msgStrm_read;
+    p_cast_fu_157_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(tmp_fu_149_p3),68));
 
     real_start_assign_proc : process(ap_start, start_full_n, start_once_reg)
     begin
@@ -867,5 +744,5 @@ begin
         end if; 
     end process;
 
-    tmp_fu_147_p3 <= (ml_reg_237 & ap_const_lv3_0);
+    tmp_fu_149_p3 <= (lenStrm_dout & ap_const_lv3_0);
 end behav;

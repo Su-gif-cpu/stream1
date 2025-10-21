@@ -90,6 +90,7 @@ attribute shreg_extract : string;
     signal grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62_ap_done : STD_LOGIC;
     signal grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62_ap_idle : STD_LOGIC;
     signal grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62_ap_ready : STD_LOGIC;
+    signal grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62_end_nblk_strm_read : STD_LOGIC;
     signal grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62_nblk_strm_read : STD_LOGIC;
     signal grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62_nblk_strm1_din : STD_LOGIC_VECTOR (63 downto 0);
     signal grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62_nblk_strm1_write : STD_LOGIC;
@@ -99,7 +100,6 @@ attribute shreg_extract : string;
     signal grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62_nblk_strm2_write : STD_LOGIC;
     signal grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62_end_nblk_strm2_din : STD_LOGIC_VECTOR (0 downto 0);
     signal grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62_end_nblk_strm2_write : STD_LOGIC;
-    signal grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62_end_nblk_strm_read : STD_LOGIC;
     signal grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62_ap_start_reg : STD_LOGIC := '0';
     signal ap_CS_fsm_state2 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state2 : signal is "none";
@@ -121,6 +121,11 @@ attribute shreg_extract : string;
         ap_done : OUT STD_LOGIC;
         ap_idle : OUT STD_LOGIC;
         ap_ready : OUT STD_LOGIC;
+        end_nblk_strm_dout : IN STD_LOGIC_VECTOR (0 downto 0);
+        end_nblk_strm_empty_n : IN STD_LOGIC;
+        end_nblk_strm_read : OUT STD_LOGIC;
+        end_nblk_strm_num_data_valid : IN STD_LOGIC_VECTOR (5 downto 0);
+        end_nblk_strm_fifo_cap : IN STD_LOGIC_VECTOR (5 downto 0);
         nblk_strm_dout : IN STD_LOGIC_VECTOR (63 downto 0);
         nblk_strm_empty_n : IN STD_LOGIC;
         nblk_strm_read : OUT STD_LOGIC;
@@ -146,11 +151,6 @@ attribute shreg_extract : string;
         end_nblk_strm2_write : OUT STD_LOGIC;
         end_nblk_strm2_num_data_valid : IN STD_LOGIC_VECTOR (31 downto 0);
         end_nblk_strm2_fifo_cap : IN STD_LOGIC_VECTOR (31 downto 0);
-        end_nblk_strm_dout : IN STD_LOGIC_VECTOR (0 downto 0);
-        end_nblk_strm_empty_n : IN STD_LOGIC;
-        end_nblk_strm_read : OUT STD_LOGIC;
-        end_nblk_strm_num_data_valid : IN STD_LOGIC_VECTOR (5 downto 0);
-        end_nblk_strm_fifo_cap : IN STD_LOGIC_VECTOR (5 downto 0);
         e : IN STD_LOGIC_VECTOR (0 downto 0) );
     end component;
 
@@ -165,6 +165,11 @@ begin
         ap_done => grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62_ap_done,
         ap_idle => grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62_ap_idle,
         ap_ready => grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62_ap_ready,
+        end_nblk_strm_dout => end_nblk_strm_dout,
+        end_nblk_strm_empty_n => end_nblk_strm_empty_n,
+        end_nblk_strm_read => grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62_end_nblk_strm_read,
+        end_nblk_strm_num_data_valid => ap_const_lv6_0,
+        end_nblk_strm_fifo_cap => ap_const_lv6_0,
         nblk_strm_dout => nblk_strm_dout,
         nblk_strm_empty_n => nblk_strm_empty_n,
         nblk_strm_read => grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62_nblk_strm_read,
@@ -190,11 +195,6 @@ begin
         end_nblk_strm2_write => grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62_end_nblk_strm2_write,
         end_nblk_strm2_num_data_valid => end_nblk_strm2_num_data_valid,
         end_nblk_strm2_fifo_cap => end_nblk_strm2_fifo_cap,
-        end_nblk_strm_dout => end_nblk_strm_dout,
-        end_nblk_strm_empty_n => end_nblk_strm_empty_n,
-        end_nblk_strm_read => grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62_end_nblk_strm_read,
-        end_nblk_strm_num_data_valid => ap_const_lv6_0,
-        end_nblk_strm_fifo_cap => ap_const_lv6_0,
         e => e_reg_121);
 
 

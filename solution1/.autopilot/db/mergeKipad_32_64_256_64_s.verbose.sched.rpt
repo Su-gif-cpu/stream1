@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'mergeKipad_32_64_256_64_s'
 ================================================================
-* Date:           Sat Oct 18 18:24:21 2025
+* Date:           Tue Oct 21 20:18:55 2025
 
 * Version:        2024.2 (Build 5238294 on Nov  8 2024)
 * Project:        hmac_sha256_test.prj
@@ -17,11 +17,11 @@
 ================================================================
 + Timing: 
     * Summary: 
-    +--------+---------+----------+------------+
-    |  Clock |  Target | Estimated| Uncertainty|
-    +--------+---------+----------+------------+
-    |ap_clk  |  3.33 ns|  4.956 ns|     1.05 ns|
-    +--------+---------+----------+------------+
+    +--------+----------+-----------+------------+
+    |  Clock |  Target  | Estimated | Uncertainty|
+    +--------+----------+-----------+------------+
+    |ap_clk  |  15.00 ns|  10.631 ns|     1.50 ns|
+    +--------+----------+-----------+------------+
 
 + Latency: 
     * Summary: 
@@ -70,7 +70,7 @@ IsGatedGlobalClock: 0
 ============================================================
 + Verbose Summary: Schedule
 ============================================================
-* Number of FSM states : 11
+* Number of FSM states : 7
 * Pipeline : 0
 * Dataflow Pipeline: 0
 
@@ -81,131 +81,100 @@ IsGatedGlobalClock: 0
 4 --> 5 
 5 --> 6 
 6 --> 7 
-7 --> 8 
-8 --> 9 
-9 --> 10 
-10 --> 11 
-11 --> 2 
+7 --> 2 
 
 * FSM state operations: 
 
 State 1 <SV = 0> <Delay = 0.00>
-ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i1 %eMergeKipadLenStrm, i64 666, i64 9, i64 18446744073709551615"   --->   Operation 12 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i64 %mergeKipadLenStrm, i64 666, i64 9, i64 18446744073709551615"   --->   Operation 13 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %mergeKipadStrm, i64 666, i64 8, i64 18446744073709551615"   --->   Operation 14 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i1 %eKipadStrm, i64 666, i64 9, i64 18446744073709551615"   --->   Operation 15 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i512 %kipadStrm, i64 666, i64 9, i64 18446744073709551615"   --->   Operation 16 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i512 %kopadStrm, i64 666, i64 9, i64 18446744073709551615"   --->   Operation 17 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i512 %kopad2Strm, i64 666, i64 9, i64 18446744073709551615"   --->   Operation 18 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %eMergeKipadLenStrm, void @empty_3, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 19 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %mergeKipadLenStrm, void @empty_3, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 20 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %mergeKipadStrm, void @empty_3, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 21 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %lenStrm, void @empty_3, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 22 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %msgStrm, void @empty_3, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 23 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %eKipadStrm, void @empty_3, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 24 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %kipadStrm, void @empty_3, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 25 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %kopadStrm, void @empty_3, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 26 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %kopad2Strm, void @empty_3, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 27 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%br_ln152 = br void %while.cond" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:152]   --->   Operation 28 'br' 'br_ln152' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i1 %eMergeKipadLenStrm, i64 666, i64 9, i64 18446744073709551615"   --->   Operation 8 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i64 %mergeKipadLenStrm, i64 666, i64 9, i64 18446744073709551615"   --->   Operation 9 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %mergeKipadStrm, i64 666, i64 8, i64 18446744073709551615"   --->   Operation 10 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i1 %eKipadStrm, i64 666, i64 9, i64 18446744073709551615"   --->   Operation 11 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i512 %kipadStrm, i64 666, i64 9, i64 18446744073709551615"   --->   Operation 12 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i512 %kopadStrm, i64 666, i64 9, i64 18446744073709551615"   --->   Operation 13 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i512 %kopad2Strm, i64 666, i64 9, i64 18446744073709551615"   --->   Operation 14 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %eMergeKipadLenStrm, void @empty_3, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %mergeKipadLenStrm, void @empty_3, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 16 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %mergeKipadStrm, void @empty_3, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 17 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %lenStrm, void @empty_3, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 18 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %msgStrm, void @empty_3, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 19 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %eKipadStrm, void @empty_3, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 20 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %kipadStrm, void @empty_3, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 21 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %kopadStrm, void @empty_3, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 22 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %kopad2Strm, void @empty_3, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 23 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%br_ln152 = br void %while.cond" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:152]   --->   Operation 24 'br' 'br_ln152' <Predicate = true> <Delay = 0.00>
 
-State 2 <SV = 1> <Delay = 2.28>
-ST_2 : Operation 29 [1/1] ( I:1.14ns O:1.14ns )   --->   "%eKipadStrm_read = read i1 @_ssdm_op_Read.ap_fifo.volatile.i1P0A, i1 %eKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:152]   --->   Operation 29 'read' 'eKipadStrm_read' <Predicate = true> <Delay = 1.14> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 4> <FIFO>
-ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%br_ln152 = br i1 %eKipadStrm_read, void %VITIS_LOOP_162_2, void %while.end" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:152]   --->   Operation 30 'br' 'br_ln152' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 31 [1/1] ( I:1.14ns O:1.14ns )   --->   "%ml = read i64 @_ssdm_op_Read.ap_fifo.volatile.i64P0A, i64 %lenStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:155]   --->   Operation 31 'read' 'ml' <Predicate = (!eKipadStrm_read)> <Delay = 1.14> <CoreInst = "FIFO">   --->   Core 77 'FIFO' <Latency = 0> <II = 1> <Delay = 3.47> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
-ST_2 : Operation 32 [1/1] ( I:1.14ns O:1.14ns )   --->   "%kipad = read i512 @_ssdm_op_Read.ap_fifo.volatile.i512P0A, i512 %kipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:160]   --->   Operation 32 'read' 'kipad' <Predicate = (!eKipadStrm_read)> <Delay = 1.14> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 512> <Depth = 4> <FIFO>
-ST_2 : Operation 33 [1/1] ( I:1.14ns O:1.14ns )   --->   "%write_ln176 = write void @_ssdm_op_Write.ap_fifo.volatile.i1P0A, i1 %eMergeKipadLenStrm, i1 1" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:176]   --->   Operation 33 'write' 'write_ln176' <Predicate = (eKipadStrm_read)> <Delay = 1.14> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 4> <FIFO>
-ST_2 : Operation 34 [1/1] (0.00ns)   --->   "%ret_ln177 = ret" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:177]   --->   Operation 34 'ret' 'ret_ln177' <Predicate = (eKipadStrm_read)> <Delay = 0.00>
+State 2 <SV = 1> <Delay = 10.6>
+ST_2 : Operation 25 [1/1] ( I:3.63ns O:3.63ns )   --->   "%eKipadStrm_read = read i1 @_ssdm_op_Read.ap_fifo.volatile.i1P0A, i1 %eKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:152]   --->   Operation 25 'read' 'eKipadStrm_read' <Predicate = true> <Delay = 3.63> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 4> <FIFO>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%br_ln152 = br i1 %eKipadStrm_read, void %VITIS_LOOP_162_2, void %while.end" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:152]   --->   Operation 26 'br' 'br_ln152' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] ( I:3.63ns O:3.63ns )   --->   "%write_ln153 = write void @_ssdm_op_Write.ap_fifo.volatile.i1P0A, i1 %eMergeKipadLenStrm, i1 0" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:153]   --->   Operation 27 'write' 'write_ln153' <Predicate = (!eKipadStrm_read)> <Delay = 3.63> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 4> <FIFO>
+ST_2 : Operation 28 [1/1] ( I:3.47ns O:3.47ns )   --->   "%ml = read i64 @_ssdm_op_Read.ap_fifo.volatile.i64P0A, i64 %lenStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:155]   --->   Operation 28 'read' 'ml' <Predicate = (!eKipadStrm_read)> <Delay = 3.47> <CoreInst = "FIFO">   --->   Core 77 'FIFO' <Latency = 0> <II = 1> <Delay = 3.47> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_2 : Operation 29 [1/1] (3.52ns)   --->   "%mergeKipadLen = add i64 %ml, i64 64" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:156]   --->   Operation 29 'add' 'mergeKipadLen' <Predicate = (!eKipadStrm_read)> <Delay = 3.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 30 [1/1] ( I:3.63ns O:3.63ns )   --->   "%write_ln158 = write void @_ssdm_op_Write.ap_fifo.volatile.i64P0A, i64 %mergeKipadLenStrm, i64 %mergeKipadLen" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:158]   --->   Operation 30 'write' 'write_ln158' <Predicate = (!eKipadStrm_read)> <Delay = 3.63> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 4> <FIFO>
+ST_2 : Operation 31 [1/1] ( I:3.63ns O:3.63ns )   --->   "%kipad = read i512 @_ssdm_op_Read.ap_fifo.volatile.i512P0A, i512 %kipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:160]   --->   Operation 31 'read' 'kipad' <Predicate = (!eKipadStrm_read)> <Delay = 3.63> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 512> <Depth = 4> <FIFO>
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%tmp = bitconcatenate i67 @_ssdm_op_BitConcatenate.i67.i64.i3, i64 %ml, i3 0" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:171]   --->   Operation 32 'bitconcatenate' 'tmp' <Predicate = (!eKipadStrm_read)> <Delay = 0.00>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "%p_cast = zext i67 %tmp" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:171]   --->   Operation 33 'zext' 'p_cast' <Predicate = (!eKipadStrm_read)> <Delay = 0.00>
+ST_2 : Operation 34 [1/1] (3.60ns)   --->   "%add_ln171 = add i68 %p_cast, i68 31" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:171]   --->   Operation 34 'add' 'add_ln171' <Predicate = (!eKipadStrm_read)> <Delay = 3.60> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.60> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%tmp_1 = partselect i63 @_ssdm_op_PartSelect.i63.i68.i32.i32, i68 %add_ln171, i32 5, i32 67" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:171]   --->   Operation 35 'partselect' 'tmp_1' <Predicate = (!eKipadStrm_read)> <Delay = 0.00>
+ST_2 : Operation 36 [1/1] ( I:3.63ns O:3.63ns )   --->   "%write_ln176 = write void @_ssdm_op_Write.ap_fifo.volatile.i1P0A, i1 %eMergeKipadLenStrm, i1 1" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:176]   --->   Operation 36 'write' 'write_ln176' <Predicate = (eKipadStrm_read)> <Delay = 3.63> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 4> <FIFO>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "%ret_ln177 = ret" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:177]   --->   Operation 37 'ret' 'ret_ln177' <Predicate = (eKipadStrm_read)> <Delay = 0.00>
 
-State 3 <SV = 2> <Delay = 2.53>
-ST_3 : Operation 35 [3/3] (2.45ns)   --->   "%mergeKipadLen = add i64 %ml, i64 64" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:156]   --->   Operation 35 'add' 'mergeKipadLen' <Predicate = true> <Delay = 2.45> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 2> <II = 1> <Delay = 2.45> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 36 [1/1] (0.00ns)   --->   "%tmp = bitconcatenate i67 @_ssdm_op_BitConcatenate.i67.i64.i3, i64 %ml, i3 0" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:171]   --->   Operation 36 'bitconcatenate' 'tmp' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 37 [1/1] (0.00ns)   --->   "%p_cast = zext i67 %tmp" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:171]   --->   Operation 37 'zext' 'p_cast' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 38 [3/3] (2.53ns)   --->   "%add_ln171 = add i68 %p_cast, i68 31" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:171]   --->   Operation 38 'add' 'add_ln171' <Predicate = true> <Delay = 2.53> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 2> <II = 1> <Delay = 2.53> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+State 3 <SV = 2> <Delay = 1.58>
+ST_3 : Operation 38 [1/1] (0.00ns)   --->   "%fence_ln162 = fence void @_ssdm_op_Fence, i1 %eKipadStrm, i1 %eMergeKipadLenStrm, i64 %lenStrm, i64 %mergeKipadLenStrm, i512 %kipadStrm, i32 4294967295, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:162]   --->   Operation 38 'fence' 'fence_ln162' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 39 [2/2] (1.58ns)   --->   "%call_ln160 = call void @mergeKipad<32, 64, 256, 64>_Pipeline_VITIS_LOOP_162_2, i512 %kipad, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:160]   --->   Operation 39 'call' 'call_ln160' <Predicate = true> <Delay = 1.58> <CoreType = "Generic">   --->   Generic Core
 
-State 4 <SV = 3> <Delay = 2.53>
-ST_4 : Operation 39 [2/3] (2.45ns)   --->   "%mergeKipadLen = add i64 %ml, i64 64" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:156]   --->   Operation 39 'add' 'mergeKipadLen' <Predicate = true> <Delay = 2.45> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 2> <II = 1> <Delay = 2.45> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_4 : Operation 40 [2/3] (2.53ns)   --->   "%add_ln171 = add i68 %p_cast, i68 31" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:171]   --->   Operation 40 'add' 'add_ln171' <Predicate = true> <Delay = 2.53> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 2> <II = 1> <Delay = 2.53> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+State 4 <SV = 3> <Delay = 4.95>
+ST_4 : Operation 40 [1/2] (4.95ns)   --->   "%call_ln160 = call void @mergeKipad<32, 64, 256, 64>_Pipeline_VITIS_LOOP_162_2, i512 %kipad, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:160]   --->   Operation 40 'call' 'call_ln160' <Predicate = true> <Delay = 4.95> <CoreType = "Generic">   --->   Generic Core
 
-State 5 <SV = 4> <Delay = 2.53>
-ST_5 : Operation 41 [1/3] (2.45ns)   --->   "%mergeKipadLen = add i64 %ml, i64 64" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:156]   --->   Operation 41 'add' 'mergeKipadLen' <Predicate = true> <Delay = 2.45> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 2> <II = 1> <Delay = 2.45> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_5 : Operation 42 [1/3] (2.53ns)   --->   "%add_ln171 = add i68 %p_cast, i68 31" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:171]   --->   Operation 42 'add' 'add_ln171' <Predicate = true> <Delay = 2.53> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 2> <II = 1> <Delay = 2.53> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_5 : Operation 43 [1/1] (0.00ns)   --->   "%tmp_1 = partselect i63 @_ssdm_op_PartSelect.i63.i68.i32.i32, i68 %add_ln171, i32 5, i32 67" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:171]   --->   Operation 43 'partselect' 'tmp_1' <Predicate = true> <Delay = 0.00>
+State 5 <SV = 4> <Delay = 7.26>
+ST_5 : Operation 41 [1/1] (0.00ns)   --->   "%fence_ln169 = fence void @_ssdm_op_Fence, i32 %mergeKipadStrm, i32 4294967295, i512 %kopadStrm, i512 %kopad2Strm, i32 %msgStrm, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:169]   --->   Operation 41 'fence' 'fence_ln169' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 42 [1/1] ( I:3.63ns O:3.63ns )   --->   "%kopadStrm_read = read i512 @_ssdm_op_Read.ap_fifo.volatile.i512P0A, i512 %kopadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:169]   --->   Operation 42 'read' 'kopadStrm_read' <Predicate = true> <Delay = 3.63> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 512> <Depth = 4> <FIFO>
+ST_5 : Operation 43 [1/1] ( I:3.63ns O:3.63ns )   --->   "%write_ln169 = write void @_ssdm_op_Write.ap_fifo.volatile.i512P0A, i512 %kopad2Strm, i512 %kopadStrm_read" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:169]   --->   Operation 43 'write' 'write_ln169' <Predicate = true> <Delay = 3.63> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 512> <Depth = 4> <FIFO>
 
-State 6 <SV = 5> <Delay = 1.14>
-ST_6 : Operation 44 [1/1] ( I:1.14ns O:1.14ns )   --->   "%write_ln153 = write void @_ssdm_op_Write.ap_fifo.volatile.i1P0A, i1 %eMergeKipadLenStrm, i1 0" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:153]   --->   Operation 44 'write' 'write_ln153' <Predicate = true> <Delay = 1.14> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 4> <FIFO>
-ST_6 : Operation 45 [1/1] ( I:1.14ns O:1.14ns )   --->   "%write_ln158 = write void @_ssdm_op_Write.ap_fifo.volatile.i64P0A, i64 %mergeKipadLenStrm, i64 %mergeKipadLen" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:158]   --->   Operation 45 'write' 'write_ln158' <Predicate = true> <Delay = 1.14> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 4> <FIFO>
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 44 [1/1] (0.00ns)   --->   "%fence_ln171 = fence void @_ssdm_op_Fence, i1 %eKipadStrm, i1 %eMergeKipadLenStrm, i64 %lenStrm, i64 %mergeKipadLenStrm, i512 %kipadStrm, i32 %mergeKipadStrm, i512 %kopadStrm, i512 %kopad2Strm, i32 4294967295, i32 %msgStrm, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:171]   --->   Operation 44 'fence' 'fence_ln171' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 45 [2/2] (0.00ns)   --->   "%call_ln171 = call void @mergeKipad<32, 64, 256, 64>_Pipeline_VITIS_LOOP_171_3, i63 %tmp_1, i32 %msgStrm, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:171]   --->   Operation 45 'call' 'call_ln171' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
 
-State 7 <SV = 6> <Delay = 1.58>
-ST_7 : Operation 46 [1/1] (0.00ns)   --->   "%fence_ln162 = fence void @_ssdm_op_Fence, i1 %eKipadStrm, i1 %eMergeKipadLenStrm, i64 %lenStrm, i64 %mergeKipadLenStrm, i512 %kipadStrm, i32 4294967295, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:162]   --->   Operation 46 'fence' 'fence_ln162' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 47 [2/2] (1.58ns)   --->   "%call_ln160 = call void @mergeKipad<32, 64, 256, 64>_Pipeline_VITIS_LOOP_162_2, i512 %kipad, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:160]   --->   Operation 47 'call' 'call_ln160' <Predicate = true> <Delay = 1.58> <CoreType = "Generic">   --->   Generic Core
-
-State 8 <SV = 7> <Delay = 4.95>
-ST_8 : Operation 48 [1/2] (4.95ns)   --->   "%call_ln160 = call void @mergeKipad<32, 64, 256, 64>_Pipeline_VITIS_LOOP_162_2, i512 %kipad, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:160]   --->   Operation 48 'call' 'call_ln160' <Predicate = true> <Delay = 4.95> <CoreType = "Generic">   --->   Generic Core
-
-State 9 <SV = 8> <Delay = 2.28>
-ST_9 : Operation 49 [1/1] (0.00ns)   --->   "%fence_ln169 = fence void @_ssdm_op_Fence, i32 %mergeKipadStrm, i32 4294967295, i512 %kopadStrm, i512 %kopad2Strm, i32 %msgStrm, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:169]   --->   Operation 49 'fence' 'fence_ln169' <Predicate = true> <Delay = 0.00>
-ST_9 : Operation 50 [1/1] ( I:1.14ns O:1.14ns )   --->   "%kopadStrm_read = read i512 @_ssdm_op_Read.ap_fifo.volatile.i512P0A, i512 %kopadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:169]   --->   Operation 50 'read' 'kopadStrm_read' <Predicate = true> <Delay = 1.14> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 512> <Depth = 4> <FIFO>
-ST_9 : Operation 51 [1/1] ( I:1.14ns O:1.14ns )   --->   "%write_ln169 = write void @_ssdm_op_Write.ap_fifo.volatile.i512P0A, i512 %kopad2Strm, i512 %kopadStrm_read" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:169]   --->   Operation 51 'write' 'write_ln169' <Predicate = true> <Delay = 1.14> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 512> <Depth = 4> <FIFO>
-
-State 10 <SV = 9> <Delay = 2.60>
-ST_10 : Operation 52 [1/1] (0.00ns)   --->   "%fence_ln171 = fence void @_ssdm_op_Fence, i1 %eKipadStrm, i1 %eMergeKipadLenStrm, i64 %lenStrm, i64 %mergeKipadLenStrm, i512 %kipadStrm, i32 %mergeKipadStrm, i512 %kopadStrm, i512 %kopad2Strm, i32 4294967295, i32 %msgStrm, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:171]   --->   Operation 52 'fence' 'fence_ln171' <Predicate = true> <Delay = 0.00>
-ST_10 : Operation 53 [2/2] (2.60ns)   --->   "%call_ln171 = call void @mergeKipad<32, 64, 256, 64>_Pipeline_VITIS_LOOP_171_3, i63 %tmp_1, i32 %msgStrm, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:171]   --->   Operation 53 'call' 'call_ln171' <Predicate = true> <Delay = 2.60> <CoreType = "Generic">   --->   Generic Core
-
-State 11 <SV = 10> <Delay = 4.19>
-ST_11 : Operation 54 [1/1] (0.00ns)   --->   "%specloopname_ln152 = specloopname void @_ssdm_op_SpecLoopName, void @empty_18" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:152]   --->   Operation 54 'specloopname' 'specloopname_ln152' <Predicate = true> <Delay = 0.00>
-ST_11 : Operation 55 [1/2] (4.19ns)   --->   "%call_ln171 = call void @mergeKipad<32, 64, 256, 64>_Pipeline_VITIS_LOOP_171_3, i63 %tmp_1, i32 %msgStrm, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:171]   --->   Operation 55 'call' 'call_ln171' <Predicate = true> <Delay = 4.19> <CoreType = "Generic">   --->   Generic Core
-ST_11 : Operation 56 [1/1] (0.00ns)   --->   "%br_ln152 = br void %while.cond" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:152]   --->   Operation 56 'br' 'br_ln152' <Predicate = true> <Delay = 0.00>
+State 7 <SV = 6> <Delay = 5.08>
+ST_7 : Operation 46 [1/1] (0.00ns)   --->   "%specloopname_ln152 = specloopname void @_ssdm_op_SpecLoopName, void @empty_18" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:152]   --->   Operation 46 'specloopname' 'specloopname_ln152' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 47 [1/2] (5.08ns)   --->   "%call_ln171 = call void @mergeKipad<32, 64, 256, 64>_Pipeline_VITIS_LOOP_171_3, i63 %tmp_1, i32 %msgStrm, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:171]   --->   Operation 47 'call' 'call_ln171' <Predicate = true> <Delay = 5.08> <CoreType = "Generic">   --->   Generic Core
+ST_7 : Operation 48 [1/1] (0.00ns)   --->   "%br_ln152 = br void %while.cond" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:152]   --->   Operation 48 'br' 'br_ln152' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
 + Verbose Summary: Timing violations
 ============================================================
-Target clock period: 3.330ns, clock uncertainty: 1.050ns.
+Target clock period: 15.000ns, clock uncertainty: 1.500ns.
 
  <State 1>: 0.000ns
 The critical path consists of the following:
 
- <State 2>: 2.280ns
+ <State 2>: 10.631ns
 The critical path consists of the following:
-	fifo read operation ('eKipadStrm_read', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:152) on port 'eKipadStrm' (D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:152) [28]  (1.140 ns)
-	fifo write operation ('write_ln176', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:176) on port 'eMergeKipadLenStrm' (D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:176) [50]  (1.140 ns)
+	fifo read operation ('eKipadStrm_read', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:152) on port 'eKipadStrm' (D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:152) [28]  (3.634 ns)
+	fifo read operation ('ml', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:155) on port 'lenStrm' (D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:155) [33]  (3.477 ns)
+	'add' operation 64 bit ('mergeKipadLen', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:156) [34]  (3.520 ns)
+	fifo write operation ('write_ln158', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:158) on port 'mergeKipadLenStrm' (D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:158) [35]  (3.634 ns)
 
- <State 3>: 2.531ns
-The critical path consists of the following:
-	'add' operation 68 bit ('add_ln171', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:171) [44]  (2.531 ns)
-
- <State 4>: 2.531ns
-The critical path consists of the following:
-	'add' operation 68 bit ('add_ln171', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:171) [44]  (2.531 ns)
-
- <State 5>: 2.531ns
-The critical path consists of the following:
-	'add' operation 68 bit ('add_ln171', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:171) [44]  (2.531 ns)
-
- <State 6>: 1.140ns
-The critical path consists of the following:
-	fifo write operation ('write_ln153', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:153) on port 'eMergeKipadLenStrm' (D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:153) [32]  (1.140 ns)
-
- <State 7>: 1.588ns
+ <State 3>: 1.588ns
 The critical path consists of the following:
 	'call' operation 0 bit ('call_ln160', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:160) to 'mergeKipad<32, 64, 256, 64>_Pipeline_VITIS_LOOP_162_2' [38]  (1.588 ns)
 
- <State 8>: 4.956ns
+ <State 4>: 4.956ns
 The critical path consists of the following:
 	'call' operation 0 bit ('call_ln160', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:160) to 'mergeKipad<32, 64, 256, 64>_Pipeline_VITIS_LOOP_162_2' [38]  (4.956 ns)
 
- <State 9>: 2.280ns
+ <State 5>: 7.268ns
 The critical path consists of the following:
-	fifo read operation ('kopadStrm_read', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:169) on port 'kopadStrm' (D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:169) [40]  (1.140 ns)
-	fifo write operation ('write_ln169', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:169) on port 'kopad2Strm' (D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:169) [41]  (1.140 ns)
+	fifo read operation ('kopadStrm_read', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:169) on port 'kopadStrm' (D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:169) [40]  (3.634 ns)
+	fifo write operation ('write_ln169', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:169) on port 'kopad2Strm' (D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:169) [41]  (3.634 ns)
 
- <State 10>: 2.609ns
+ <State 6>: 0.000ns
 The critical path consists of the following:
-	'call' operation 0 bit ('call_ln171', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:171) to 'mergeKipad<32, 64, 256, 64>_Pipeline_VITIS_LOOP_171_3' [47]  (2.609 ns)
 
- <State 11>: 4.197ns
+ <State 7>: 5.082ns
 The critical path consists of the following:
-	'call' operation 0 bit ('call_ln171', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:171) to 'mergeKipad<32, 64, 256, 64>_Pipeline_VITIS_LOOP_171_3' [47]  (4.197 ns)
+	'call' operation 0 bit ('call_ln171', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:171) to 'mergeKipad<32, 64, 256, 64>_Pipeline_VITIS_LOOP_171_3' [47]  (5.082 ns)
 
 
 ============================================================
@@ -223,10 +192,6 @@ N/A
 	State 5
 	State 6
 	State 7
-	State 8
-	State 9
-	State 10
-	State 11
 
 
 ============================================================

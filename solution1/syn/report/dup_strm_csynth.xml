@@ -9,8 +9,8 @@
 <ProductFamily>zynq</ProductFamily>
 <Part>xc7z020-clg484-1</Part>
 <TopModelName>dup_strm</TopModelName>
-<TargetClockPeriod>3.33</TargetClockPeriod>
-<ClockUncertainty>1.05</ClockUncertainty>
+<TargetClockPeriod>15.00</TargetClockPeriod>
+<ClockUncertainty>1.50</ClockUncertainty>
 <FlowTarget>vivado</FlowTarget>
 </UserAssignments>
 
@@ -18,21 +18,21 @@
 <PipelineType>no</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>3.176</EstimatedClockPeriod>
+<EstimatedClockPeriod>7.452</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
 <Best-caseLatency>6</Best-caseLatency>
 <Average-caseLatency>6</Average-caseLatency>
 <Worst-caseLatency>6</Worst-caseLatency>
-<Best-caseRealTimeLatency>19.980 ns</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>19.980 ns</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>19.980 ns</Worst-caseRealTimeLatency>
+<Best-caseRealTimeLatency>90.000 ns</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>90.000 ns</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>90.000 ns</Worst-caseRealTimeLatency>
 <Interval-min>6</Interval-min>
 <Interval-max>6</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfViolations>
-<IssueType>Timing Violation</IssueType>
+<IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
 <SourceLocation>D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:504</SourceLocation>
 </SummaryOfViolations>
@@ -40,8 +40,8 @@
 
 <AreaEstimates>
 <Resources>
-<FF>15</FF>
-<LUT>249</LUT>
+<FF>16</FF>
+<LUT>251</LUT>
 <BRAM_18K>0</BRAM_18K>
 <DSP>0</DSP>
 <URAM>0</URAM>

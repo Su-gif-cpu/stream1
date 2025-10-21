@@ -1342,19 +1342,15 @@
         <item class_id="46" tracking_level="0" version="0">
           <first>hash_1_U0 (hash_1)</first>
           <second class_id="47" tracking_level="0" version="0">
-            <count>3</count>
+            <count>2</count>
             <item_version>0</item_version>
             <item class_id="48" tracking_level="0" version="0">
-              <first>DSP</first>
-              <second>5</second>
-            </item>
-            <item>
               <first>FF</first>
-              <second>10030</second>
+              <second>5451</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>5095</second>
+              <second>4937</second>
             </item>
           </second>
         </item>

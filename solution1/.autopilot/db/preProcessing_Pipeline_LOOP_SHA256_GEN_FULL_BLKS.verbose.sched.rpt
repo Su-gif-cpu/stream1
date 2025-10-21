@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'preProcessing_Pipeline_LOOP_SHA256_GEN_FULL_BLKS'
 ================================================================
-* Date:           Sat Oct 18 18:24:21 2025
+* Date:           Tue Oct 21 20:18:56 2025
 
 * Version:        2024.2 (Build 5238294 on Nov  8 2024)
 * Project:        hmac_sha256_test.prj
@@ -17,20 +17,20 @@
 ================================================================
 + Timing: 
     * Summary: 
-    +--------+---------+----------+------------+
-    |  Clock |  Target | Estimated| Uncertainty|
-    +--------+---------+----------+------------+
-    |ap_clk  |  3.33 ns|  2.465 ns|     1.05 ns|
-    +--------+---------+----------+------------+
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  15.00 ns|  7.360 ns|     1.50 ns|
+    +--------+----------+----------+------------+
 
 + Latency: 
     * Summary: 
-    +---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
-    |  Latency (cycles) |   Latency (absolute)  |  Interval |                    Pipeline                    |
-    |   min   |   max   |    min    |    max    | min | max |                      Type                      |
-    +---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
-    |        4|       20|  13.320 ns|  66.600 ns|    3|   19|  loop auto-rewind stp (delay=0 clock cycles(s))|
-    +---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
+    +---------+---------+-----------+----------+-----+-----+------------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute)  |  Interval |                    Pipeline                    |
+    |   min   |   max   |    min    |    max   | min | max |                      Type                      |
+    +---------+---------+-----------+----------+-----+-----+------------------------------------------------+
+    |        2|       18|  30.000 ns|  0.270 us|    1|   17|  loop auto-rewind stp (delay=0 clock cycles(s))|
+    +---------+---------+-----------+----------+-----+-----+------------------------------------------------+
 
     + Detail: 
         * Instance: 
@@ -41,7 +41,7 @@
         |                             |  Latency (cycles) | Iteration|  Initiation Interval  |  Trip |          |
         |          Loop Name          |   min   |   max   |  Latency |  achieved |   target  | Count | Pipelined|
         +-----------------------------+---------+---------+----------+-----------+-----------+-------+----------+
-        |- LOOP_SHA256_GEN_FULL_BLKS  |        2|       18|        19|         16|         16|  0 ~ 1|       yes|
+        |- LOOP_SHA256_GEN_FULL_BLKS  |        0|       16|        17|         16|         16|  0 ~ 1|       yes|
         +-----------------------------+---------+---------+----------+-----------+-----------+-------+----------+
 
 ============================================================
@@ -67,15 +67,15 @@ HasImplIP: 0
 IsGatedGlobalClock: 0
 
 + Individual pipeline summary: 
-  * Pipeline-0: initiation interval (II) = 16, depth = 19
+  * Pipeline-0: initiation interval (II) = 16, depth = 18
 
 
 ============================================================
 + Verbose Summary: Schedule
 ============================================================
-* Number of FSM states : 19
+* Number of FSM states : 18
 * Pipeline : 1
-  Pipeline-0 : II = 16, D = 19, States = { 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 }
+  Pipeline-0 : II = 16, D = 18, States = { 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 }
 * Dataflow Pipeline: 0
 
 * FSM state transitions: 
@@ -96,234 +96,227 @@ IsGatedGlobalClock: 0
 15 --> 16 
 16 --> 17 
 17 --> 18 
-18 --> 19 
-19 --> 
+18 --> 
 
 * FSM state operations: 
 
 State 1 <SV = 0> <Delay = 1.58>
-ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%j = alloca i32 1" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:101]   --->   Operation 22 'alloca' 'j' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %mergeKipadStrm, i64 666, i64 9, i64 18446744073709551615"   --->   Operation 23 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i512 %blk_strm, i64 666, i64 9, i64 18446744073709551615"   --->   Operation 24 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %mergeKipadStrm, void @empty_3, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 25 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %blk_strm, void @empty_3, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 26 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%trunc_ln_read = read i58 @_ssdm_op_Read.ap_auto.i58, i58 %trunc_ln" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:82]   --->   Operation 27 'read' 'trunc_ln_read' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 28 [1/1] (1.58ns)   --->   "%store_ln101 = store i58 0, i58 %j" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:101]   --->   Operation 28 'store' 'store_ln101' <Predicate = true> <Delay = 1.58>
-ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%br_ln101 = br void %LOOP_SHA256_GEN_ONE_FULL_BLK" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:101]   --->   Operation 29 'br' 'br_ln101' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%j = alloca i32 1" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:101]   --->   Operation 20 'alloca' 'j' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %mergeKipadStrm, i64 666, i64 9, i64 18446744073709551615"   --->   Operation 21 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i512 %blk_strm, i64 666, i64 9, i64 18446744073709551615"   --->   Operation 22 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %mergeKipadStrm, void @empty_3, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 23 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %blk_strm, void @empty_3, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 24 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%trunc_ln_read = read i58 @_ssdm_op_Read.ap_auto.i58, i58 %trunc_ln" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:82]   --->   Operation 25 'read' 'trunc_ln_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (1.58ns)   --->   "%store_ln101 = store i58 0, i58 %j" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:101]   --->   Operation 26 'store' 'store_ln101' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%br_ln101 = br void %LOOP_SHA256_GEN_ONE_FULL_BLK" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:101]   --->   Operation 27 'br' 'br_ln101' <Predicate = true> <Delay = 0.00>
 
-State 2 <SV = 1> <Delay = 2.46>
-ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%j_1 = load i58 %j" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:101]   --->   Operation 30 'load' 'j_1' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 31 [2/2] (2.46ns)   --->   "%icmp_ln101 = icmp_eq  i58 %j_1, i58 %trunc_ln_read" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:101]   --->   Operation 31 'icmp' 'icmp_ln101' <Predicate = true> <Delay = 2.46> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 1> <II = 1> <Delay = 2.46> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 32 [2/2] (2.46ns)   --->   "%j_2 = add i58 %j_1, i58 1" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:101]   --->   Operation 32 'add' 'j_2' <Predicate = true> <Delay = 2.46> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 1> <II = 1> <Delay = 2.46> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+State 2 <SV = 1> <Delay = 4.95>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%j_1 = load i58 %j" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:101]   --->   Operation 28 'load' 'j_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 29 [1/1] (3.36ns)   --->   "%icmp_ln101 = icmp_eq  i58 %j_1, i58 %trunc_ln_read" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:101]   --->   Operation 29 'icmp' 'icmp_ln101' <Predicate = true> <Delay = 3.36> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 3.36> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 30 [1/1] (3.36ns)   --->   "%j_2 = add i58 %j_1, i58 1" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:101]   --->   Operation 30 'add' 'j_2' <Predicate = true> <Delay = 3.36> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.36> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%br_ln101 = br i1 %icmp_ln101, void %LOOP_SHA256_GEN_ONE_FULL_BLK.split, void %do.end40.loopexit.exitStub" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:101]   --->   Operation 31 'br' 'br_ln101' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 32 [1/1] (1.58ns)   --->   "%store_ln101 = store i58 %j_2, i58 %j" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:101]   --->   Operation 32 'store' 'store_ln101' <Predicate = (!icmp_ln101)> <Delay = 1.58>
+ST_2 : Operation 119 [1/1] (1.58ns)   --->   "%ret_ln0 = ret"   --->   Operation 119 'ret' 'ret_ln0' <Predicate = (icmp_ln101)> <Delay = 1.58>
 
-State 3 <SV = 2> <Delay = 2.46>
-ST_3 : Operation 33 [1/2] (2.46ns)   --->   "%icmp_ln101 = icmp_eq  i58 %j_1, i58 %trunc_ln_read" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:101]   --->   Operation 33 'icmp' 'icmp_ln101' <Predicate = true> <Delay = 2.46> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 1> <II = 1> <Delay = 2.46> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 34 [1/2] (2.46ns)   --->   "%j_2 = add i58 %j_1, i58 1" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:101]   --->   Operation 34 'add' 'j_2' <Predicate = true> <Delay = 2.46> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 1> <II = 1> <Delay = 2.46> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 35 [1/1] (0.00ns)   --->   "%br_ln101 = br i1 %icmp_ln101, void %LOOP_SHA256_GEN_ONE_FULL_BLK.split, void %do.end40.loopexit.exitStub" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:101]   --->   Operation 35 'br' 'br_ln101' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 123 [1/1] (1.58ns)   --->   "%ret_ln0 = ret"   --->   Operation 123 'ret' 'ret_ln0' <Predicate = (icmp_ln101)> <Delay = 1.58>
+State 3 <SV = 2> <Delay = 3.63>
+ST_3 : Operation 33 [1/1] ( I:3.63ns O:3.63ns )   --->   "%l = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P0A, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 33 'read' 'l' <Predicate = (!icmp_ln101)> <Delay = 3.63> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_3 : Operation 34 [1/1] (0.00ns)   --->   "%empty = trunc i32 %l" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 34 'trunc' 'empty' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+ST_3 : Operation 35 [1/1] (0.00ns)   --->   "%p_3 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l, i32 24, i32 31" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 35 'partselect' 'p_3' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+ST_3 : Operation 36 [1/1] (0.00ns)   --->   "%p_1 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l, i32 8, i32 15" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 36 'partselect' 'p_1' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+ST_3 : Operation 37 [1/1] (0.00ns)   --->   "%p_2 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l, i32 16, i32 23" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 37 'partselect' 'p_2' <Predicate = (!icmp_ln101)> <Delay = 0.00>
 
-State 4 <SV = 3> <Delay = 1.58>
-ST_4 : Operation 36 [1/1] ( I:1.14ns O:1.14ns )   --->   "%l = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P0A, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 36 'read' 'l' <Predicate = (!icmp_ln101)> <Delay = 1.14> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
-ST_4 : Operation 37 [1/1] (0.00ns)   --->   "%empty = trunc i32 %l" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 37 'trunc' 'empty' <Predicate = (!icmp_ln101)> <Delay = 0.00>
-ST_4 : Operation 38 [1/1] (0.00ns)   --->   "%p_3 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l, i32 24, i32 31" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 38 'partselect' 'p_3' <Predicate = (!icmp_ln101)> <Delay = 0.00>
-ST_4 : Operation 39 [1/1] (0.00ns)   --->   "%p_1 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l, i32 8, i32 15" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 39 'partselect' 'p_1' <Predicate = (!icmp_ln101)> <Delay = 0.00>
-ST_4 : Operation 40 [1/1] (0.00ns)   --->   "%p_2 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l, i32 16, i32 23" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 40 'partselect' 'p_2' <Predicate = (!icmp_ln101)> <Delay = 0.00>
-ST_4 : Operation 41 [1/1] (1.58ns)   --->   "%store_ln101 = store i58 %j_2, i58 %j" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:101]   --->   Operation 41 'store' 'store_ln101' <Predicate = (!icmp_ln101)> <Delay = 1.58>
+State 4 <SV = 3> <Delay = 3.63>
+ST_4 : Operation 38 [1/1] ( I:3.63ns O:3.63ns )   --->   "%l_8 = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P0A, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 38 'read' 'l_8' <Predicate = (!icmp_ln101)> <Delay = 3.63> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_4 : Operation 39 [1/1] (0.00ns)   --->   "%empty_50 = trunc i32 %l_8" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 39 'trunc' 'empty_50' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+ST_4 : Operation 40 [1/1] (0.00ns)   --->   "%p_4 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_8, i32 24, i32 31" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 40 'partselect' 'p_4' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+ST_4 : Operation 41 [1/1] (0.00ns)   --->   "%p_5 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_8, i32 8, i32 15" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 41 'partselect' 'p_5' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+ST_4 : Operation 42 [1/1] (0.00ns)   --->   "%p_6 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_8, i32 16, i32 23" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 42 'partselect' 'p_6' <Predicate = (!icmp_ln101)> <Delay = 0.00>
 
-State 5 <SV = 4> <Delay = 1.14>
-ST_5 : Operation 42 [1/1] ( I:1.14ns O:1.14ns )   --->   "%l_8 = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P0A, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 42 'read' 'l_8' <Predicate = (!icmp_ln101)> <Delay = 1.14> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
-ST_5 : Operation 43 [1/1] (0.00ns)   --->   "%empty_50 = trunc i32 %l_8" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 43 'trunc' 'empty_50' <Predicate = (!icmp_ln101)> <Delay = 0.00>
-ST_5 : Operation 44 [1/1] (0.00ns)   --->   "%p_4 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_8, i32 24, i32 31" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 44 'partselect' 'p_4' <Predicate = (!icmp_ln101)> <Delay = 0.00>
-ST_5 : Operation 45 [1/1] (0.00ns)   --->   "%p_5 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_8, i32 8, i32 15" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 45 'partselect' 'p_5' <Predicate = (!icmp_ln101)> <Delay = 0.00>
-ST_5 : Operation 46 [1/1] (0.00ns)   --->   "%p_6 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_8, i32 16, i32 23" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 46 'partselect' 'p_6' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+State 5 <SV = 4> <Delay = 3.63>
+ST_5 : Operation 43 [1/1] ( I:3.63ns O:3.63ns )   --->   "%l_9 = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P0A, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 43 'read' 'l_9' <Predicate = (!icmp_ln101)> <Delay = 3.63> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_5 : Operation 44 [1/1] (0.00ns)   --->   "%empty_51 = trunc i32 %l_9" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 44 'trunc' 'empty_51' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+ST_5 : Operation 45 [1/1] (0.00ns)   --->   "%p_7 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_9, i32 24, i32 31" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 45 'partselect' 'p_7' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+ST_5 : Operation 46 [1/1] (0.00ns)   --->   "%p_8 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_9, i32 8, i32 15" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 46 'partselect' 'p_8' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+ST_5 : Operation 47 [1/1] (0.00ns)   --->   "%p_9 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_9, i32 16, i32 23" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 47 'partselect' 'p_9' <Predicate = (!icmp_ln101)> <Delay = 0.00>
 
-State 6 <SV = 5> <Delay = 1.14>
-ST_6 : Operation 47 [1/1] ( I:1.14ns O:1.14ns )   --->   "%l_9 = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P0A, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 47 'read' 'l_9' <Predicate = (!icmp_ln101)> <Delay = 1.14> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
-ST_6 : Operation 48 [1/1] (0.00ns)   --->   "%empty_51 = trunc i32 %l_9" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 48 'trunc' 'empty_51' <Predicate = (!icmp_ln101)> <Delay = 0.00>
-ST_6 : Operation 49 [1/1] (0.00ns)   --->   "%p_7 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_9, i32 24, i32 31" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 49 'partselect' 'p_7' <Predicate = (!icmp_ln101)> <Delay = 0.00>
-ST_6 : Operation 50 [1/1] (0.00ns)   --->   "%p_8 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_9, i32 8, i32 15" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 50 'partselect' 'p_8' <Predicate = (!icmp_ln101)> <Delay = 0.00>
-ST_6 : Operation 51 [1/1] (0.00ns)   --->   "%p_9 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_9, i32 16, i32 23" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 51 'partselect' 'p_9' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+State 6 <SV = 5> <Delay = 3.63>
+ST_6 : Operation 48 [1/1] ( I:3.63ns O:3.63ns )   --->   "%l_10 = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P0A, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 48 'read' 'l_10' <Predicate = (!icmp_ln101)> <Delay = 3.63> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_6 : Operation 49 [1/1] (0.00ns)   --->   "%empty_52 = trunc i32 %l_10" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 49 'trunc' 'empty_52' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+ST_6 : Operation 50 [1/1] (0.00ns)   --->   "%p_s = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_10, i32 24, i32 31" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 50 'partselect' 'p_s' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+ST_6 : Operation 51 [1/1] (0.00ns)   --->   "%p_10 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_10, i32 8, i32 15" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 51 'partselect' 'p_10' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+ST_6 : Operation 52 [1/1] (0.00ns)   --->   "%p_11 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_10, i32 16, i32 23" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 52 'partselect' 'p_11' <Predicate = (!icmp_ln101)> <Delay = 0.00>
 
-State 7 <SV = 6> <Delay = 1.14>
-ST_7 : Operation 52 [1/1] ( I:1.14ns O:1.14ns )   --->   "%l_10 = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P0A, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 52 'read' 'l_10' <Predicate = (!icmp_ln101)> <Delay = 1.14> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
-ST_7 : Operation 53 [1/1] (0.00ns)   --->   "%empty_52 = trunc i32 %l_10" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 53 'trunc' 'empty_52' <Predicate = (!icmp_ln101)> <Delay = 0.00>
-ST_7 : Operation 54 [1/1] (0.00ns)   --->   "%p_s = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_10, i32 24, i32 31" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 54 'partselect' 'p_s' <Predicate = (!icmp_ln101)> <Delay = 0.00>
-ST_7 : Operation 55 [1/1] (0.00ns)   --->   "%p_10 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_10, i32 8, i32 15" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 55 'partselect' 'p_10' <Predicate = (!icmp_ln101)> <Delay = 0.00>
-ST_7 : Operation 56 [1/1] (0.00ns)   --->   "%p_11 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_10, i32 16, i32 23" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 56 'partselect' 'p_11' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+State 7 <SV = 6> <Delay = 3.63>
+ST_7 : Operation 53 [1/1] ( I:3.63ns O:3.63ns )   --->   "%l_11 = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P0A, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 53 'read' 'l_11' <Predicate = (!icmp_ln101)> <Delay = 3.63> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_7 : Operation 54 [1/1] (0.00ns)   --->   "%empty_53 = trunc i32 %l_11" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 54 'trunc' 'empty_53' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+ST_7 : Operation 55 [1/1] (0.00ns)   --->   "%p_12 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_11, i32 24, i32 31" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 55 'partselect' 'p_12' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+ST_7 : Operation 56 [1/1] (0.00ns)   --->   "%p_13 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_11, i32 8, i32 15" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 56 'partselect' 'p_13' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+ST_7 : Operation 57 [1/1] (0.00ns)   --->   "%p_14 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_11, i32 16, i32 23" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 57 'partselect' 'p_14' <Predicate = (!icmp_ln101)> <Delay = 0.00>
 
-State 8 <SV = 7> <Delay = 1.14>
-ST_8 : Operation 57 [1/1] ( I:1.14ns O:1.14ns )   --->   "%l_11 = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P0A, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 57 'read' 'l_11' <Predicate = (!icmp_ln101)> <Delay = 1.14> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
-ST_8 : Operation 58 [1/1] (0.00ns)   --->   "%empty_53 = trunc i32 %l_11" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 58 'trunc' 'empty_53' <Predicate = (!icmp_ln101)> <Delay = 0.00>
-ST_8 : Operation 59 [1/1] (0.00ns)   --->   "%p_12 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_11, i32 24, i32 31" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 59 'partselect' 'p_12' <Predicate = (!icmp_ln101)> <Delay = 0.00>
-ST_8 : Operation 60 [1/1] (0.00ns)   --->   "%p_13 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_11, i32 8, i32 15" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 60 'partselect' 'p_13' <Predicate = (!icmp_ln101)> <Delay = 0.00>
-ST_8 : Operation 61 [1/1] (0.00ns)   --->   "%p_14 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_11, i32 16, i32 23" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 61 'partselect' 'p_14' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+State 8 <SV = 7> <Delay = 3.63>
+ST_8 : Operation 58 [1/1] ( I:3.63ns O:3.63ns )   --->   "%l_12 = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P0A, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 58 'read' 'l_12' <Predicate = (!icmp_ln101)> <Delay = 3.63> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_8 : Operation 59 [1/1] (0.00ns)   --->   "%empty_54 = trunc i32 %l_12" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 59 'trunc' 'empty_54' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+ST_8 : Operation 60 [1/1] (0.00ns)   --->   "%p_15 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_12, i32 24, i32 31" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 60 'partselect' 'p_15' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+ST_8 : Operation 61 [1/1] (0.00ns)   --->   "%p_16 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_12, i32 8, i32 15" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 61 'partselect' 'p_16' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+ST_8 : Operation 62 [1/1] (0.00ns)   --->   "%p_17 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_12, i32 16, i32 23" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 62 'partselect' 'p_17' <Predicate = (!icmp_ln101)> <Delay = 0.00>
 
-State 9 <SV = 8> <Delay = 1.14>
-ST_9 : Operation 62 [1/1] ( I:1.14ns O:1.14ns )   --->   "%l_12 = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P0A, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 62 'read' 'l_12' <Predicate = (!icmp_ln101)> <Delay = 1.14> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
-ST_9 : Operation 63 [1/1] (0.00ns)   --->   "%empty_54 = trunc i32 %l_12" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 63 'trunc' 'empty_54' <Predicate = (!icmp_ln101)> <Delay = 0.00>
-ST_9 : Operation 64 [1/1] (0.00ns)   --->   "%p_15 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_12, i32 24, i32 31" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 64 'partselect' 'p_15' <Predicate = (!icmp_ln101)> <Delay = 0.00>
-ST_9 : Operation 65 [1/1] (0.00ns)   --->   "%p_16 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_12, i32 8, i32 15" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 65 'partselect' 'p_16' <Predicate = (!icmp_ln101)> <Delay = 0.00>
-ST_9 : Operation 66 [1/1] (0.00ns)   --->   "%p_17 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_12, i32 16, i32 23" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 66 'partselect' 'p_17' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+State 9 <SV = 8> <Delay = 3.63>
+ST_9 : Operation 63 [1/1] ( I:3.63ns O:3.63ns )   --->   "%l_13 = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P0A, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 63 'read' 'l_13' <Predicate = (!icmp_ln101)> <Delay = 3.63> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_9 : Operation 64 [1/1] (0.00ns)   --->   "%empty_55 = trunc i32 %l_13" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 64 'trunc' 'empty_55' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+ST_9 : Operation 65 [1/1] (0.00ns)   --->   "%p_18 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_13, i32 24, i32 31" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 65 'partselect' 'p_18' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+ST_9 : Operation 66 [1/1] (0.00ns)   --->   "%p_19 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_13, i32 8, i32 15" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 66 'partselect' 'p_19' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+ST_9 : Operation 67 [1/1] (0.00ns)   --->   "%p_20 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_13, i32 16, i32 23" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 67 'partselect' 'p_20' <Predicate = (!icmp_ln101)> <Delay = 0.00>
 
-State 10 <SV = 9> <Delay = 1.14>
-ST_10 : Operation 67 [1/1] ( I:1.14ns O:1.14ns )   --->   "%l_13 = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P0A, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 67 'read' 'l_13' <Predicate = (!icmp_ln101)> <Delay = 1.14> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
-ST_10 : Operation 68 [1/1] (0.00ns)   --->   "%empty_55 = trunc i32 %l_13" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 68 'trunc' 'empty_55' <Predicate = (!icmp_ln101)> <Delay = 0.00>
-ST_10 : Operation 69 [1/1] (0.00ns)   --->   "%p_18 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_13, i32 24, i32 31" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 69 'partselect' 'p_18' <Predicate = (!icmp_ln101)> <Delay = 0.00>
-ST_10 : Operation 70 [1/1] (0.00ns)   --->   "%p_19 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_13, i32 8, i32 15" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 70 'partselect' 'p_19' <Predicate = (!icmp_ln101)> <Delay = 0.00>
-ST_10 : Operation 71 [1/1] (0.00ns)   --->   "%p_20 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_13, i32 16, i32 23" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 71 'partselect' 'p_20' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+State 10 <SV = 9> <Delay = 3.63>
+ST_10 : Operation 68 [1/1] ( I:3.63ns O:3.63ns )   --->   "%l_14 = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P0A, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 68 'read' 'l_14' <Predicate = (!icmp_ln101)> <Delay = 3.63> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_10 : Operation 69 [1/1] (0.00ns)   --->   "%empty_56 = trunc i32 %l_14" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 69 'trunc' 'empty_56' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+ST_10 : Operation 70 [1/1] (0.00ns)   --->   "%p_21 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_14, i32 24, i32 31" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 70 'partselect' 'p_21' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+ST_10 : Operation 71 [1/1] (0.00ns)   --->   "%p_22 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_14, i32 8, i32 15" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 71 'partselect' 'p_22' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+ST_10 : Operation 72 [1/1] (0.00ns)   --->   "%p_23 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_14, i32 16, i32 23" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 72 'partselect' 'p_23' <Predicate = (!icmp_ln101)> <Delay = 0.00>
 
-State 11 <SV = 10> <Delay = 1.14>
-ST_11 : Operation 72 [1/1] ( I:1.14ns O:1.14ns )   --->   "%l_14 = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P0A, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 72 'read' 'l_14' <Predicate = (!icmp_ln101)> <Delay = 1.14> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
-ST_11 : Operation 73 [1/1] (0.00ns)   --->   "%empty_56 = trunc i32 %l_14" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 73 'trunc' 'empty_56' <Predicate = (!icmp_ln101)> <Delay = 0.00>
-ST_11 : Operation 74 [1/1] (0.00ns)   --->   "%p_21 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_14, i32 24, i32 31" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 74 'partselect' 'p_21' <Predicate = (!icmp_ln101)> <Delay = 0.00>
-ST_11 : Operation 75 [1/1] (0.00ns)   --->   "%p_22 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_14, i32 8, i32 15" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 75 'partselect' 'p_22' <Predicate = (!icmp_ln101)> <Delay = 0.00>
-ST_11 : Operation 76 [1/1] (0.00ns)   --->   "%p_23 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_14, i32 16, i32 23" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 76 'partselect' 'p_23' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+State 11 <SV = 10> <Delay = 3.63>
+ST_11 : Operation 73 [1/1] ( I:3.63ns O:3.63ns )   --->   "%l_15 = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P0A, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 73 'read' 'l_15' <Predicate = (!icmp_ln101)> <Delay = 3.63> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_11 : Operation 74 [1/1] (0.00ns)   --->   "%empty_57 = trunc i32 %l_15" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 74 'trunc' 'empty_57' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+ST_11 : Operation 75 [1/1] (0.00ns)   --->   "%p_24 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_15, i32 24, i32 31" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 75 'partselect' 'p_24' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+ST_11 : Operation 76 [1/1] (0.00ns)   --->   "%p_25 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_15, i32 8, i32 15" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 76 'partselect' 'p_25' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+ST_11 : Operation 77 [1/1] (0.00ns)   --->   "%p_26 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_15, i32 16, i32 23" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 77 'partselect' 'p_26' <Predicate = (!icmp_ln101)> <Delay = 0.00>
 
-State 12 <SV = 11> <Delay = 1.14>
-ST_12 : Operation 77 [1/1] ( I:1.14ns O:1.14ns )   --->   "%l_15 = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P0A, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 77 'read' 'l_15' <Predicate = (!icmp_ln101)> <Delay = 1.14> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
-ST_12 : Operation 78 [1/1] (0.00ns)   --->   "%empty_57 = trunc i32 %l_15" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 78 'trunc' 'empty_57' <Predicate = (!icmp_ln101)> <Delay = 0.00>
-ST_12 : Operation 79 [1/1] (0.00ns)   --->   "%p_24 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_15, i32 24, i32 31" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 79 'partselect' 'p_24' <Predicate = (!icmp_ln101)> <Delay = 0.00>
-ST_12 : Operation 80 [1/1] (0.00ns)   --->   "%p_25 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_15, i32 8, i32 15" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 80 'partselect' 'p_25' <Predicate = (!icmp_ln101)> <Delay = 0.00>
-ST_12 : Operation 81 [1/1] (0.00ns)   --->   "%p_26 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_15, i32 16, i32 23" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 81 'partselect' 'p_26' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+State 12 <SV = 11> <Delay = 3.63>
+ST_12 : Operation 78 [1/1] ( I:3.63ns O:3.63ns )   --->   "%l_16 = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P0A, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 78 'read' 'l_16' <Predicate = (!icmp_ln101)> <Delay = 3.63> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_12 : Operation 79 [1/1] (0.00ns)   --->   "%empty_58 = trunc i32 %l_16" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 79 'trunc' 'empty_58' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+ST_12 : Operation 80 [1/1] (0.00ns)   --->   "%p_27 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_16, i32 24, i32 31" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 80 'partselect' 'p_27' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+ST_12 : Operation 81 [1/1] (0.00ns)   --->   "%p_28 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_16, i32 8, i32 15" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 81 'partselect' 'p_28' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+ST_12 : Operation 82 [1/1] (0.00ns)   --->   "%p_29 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_16, i32 16, i32 23" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 82 'partselect' 'p_29' <Predicate = (!icmp_ln101)> <Delay = 0.00>
 
-State 13 <SV = 12> <Delay = 1.14>
-ST_13 : Operation 82 [1/1] ( I:1.14ns O:1.14ns )   --->   "%l_16 = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P0A, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 82 'read' 'l_16' <Predicate = (!icmp_ln101)> <Delay = 1.14> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
-ST_13 : Operation 83 [1/1] (0.00ns)   --->   "%empty_58 = trunc i32 %l_16" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 83 'trunc' 'empty_58' <Predicate = (!icmp_ln101)> <Delay = 0.00>
-ST_13 : Operation 84 [1/1] (0.00ns)   --->   "%p_27 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_16, i32 24, i32 31" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 84 'partselect' 'p_27' <Predicate = (!icmp_ln101)> <Delay = 0.00>
-ST_13 : Operation 85 [1/1] (0.00ns)   --->   "%p_28 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_16, i32 8, i32 15" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 85 'partselect' 'p_28' <Predicate = (!icmp_ln101)> <Delay = 0.00>
-ST_13 : Operation 86 [1/1] (0.00ns)   --->   "%p_29 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_16, i32 16, i32 23" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 86 'partselect' 'p_29' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+State 13 <SV = 12> <Delay = 3.63>
+ST_13 : Operation 83 [1/1] ( I:3.63ns O:3.63ns )   --->   "%l_17 = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P0A, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 83 'read' 'l_17' <Predicate = (!icmp_ln101)> <Delay = 3.63> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_13 : Operation 84 [1/1] (0.00ns)   --->   "%empty_59 = trunc i32 %l_17" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 84 'trunc' 'empty_59' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+ST_13 : Operation 85 [1/1] (0.00ns)   --->   "%p_30 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_17, i32 24, i32 31" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 85 'partselect' 'p_30' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+ST_13 : Operation 86 [1/1] (0.00ns)   --->   "%p_31 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_17, i32 8, i32 15" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 86 'partselect' 'p_31' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+ST_13 : Operation 87 [1/1] (0.00ns)   --->   "%p_32 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_17, i32 16, i32 23" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 87 'partselect' 'p_32' <Predicate = (!icmp_ln101)> <Delay = 0.00>
 
-State 14 <SV = 13> <Delay = 1.14>
-ST_14 : Operation 87 [1/1] ( I:1.14ns O:1.14ns )   --->   "%l_17 = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P0A, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 87 'read' 'l_17' <Predicate = (!icmp_ln101)> <Delay = 1.14> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
-ST_14 : Operation 88 [1/1] (0.00ns)   --->   "%empty_59 = trunc i32 %l_17" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 88 'trunc' 'empty_59' <Predicate = (!icmp_ln101)> <Delay = 0.00>
-ST_14 : Operation 89 [1/1] (0.00ns)   --->   "%p_30 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_17, i32 24, i32 31" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 89 'partselect' 'p_30' <Predicate = (!icmp_ln101)> <Delay = 0.00>
-ST_14 : Operation 90 [1/1] (0.00ns)   --->   "%p_31 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_17, i32 8, i32 15" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 90 'partselect' 'p_31' <Predicate = (!icmp_ln101)> <Delay = 0.00>
-ST_14 : Operation 91 [1/1] (0.00ns)   --->   "%p_32 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_17, i32 16, i32 23" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 91 'partselect' 'p_32' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+State 14 <SV = 13> <Delay = 3.63>
+ST_14 : Operation 88 [1/1] ( I:3.63ns O:3.63ns )   --->   "%l_18 = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P0A, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 88 'read' 'l_18' <Predicate = (!icmp_ln101)> <Delay = 3.63> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_14 : Operation 89 [1/1] (0.00ns)   --->   "%empty_60 = trunc i32 %l_18" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 89 'trunc' 'empty_60' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+ST_14 : Operation 90 [1/1] (0.00ns)   --->   "%p_33 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_18, i32 24, i32 31" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 90 'partselect' 'p_33' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+ST_14 : Operation 91 [1/1] (0.00ns)   --->   "%p_34 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_18, i32 8, i32 15" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 91 'partselect' 'p_34' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+ST_14 : Operation 92 [1/1] (0.00ns)   --->   "%p_35 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_18, i32 16, i32 23" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 92 'partselect' 'p_35' <Predicate = (!icmp_ln101)> <Delay = 0.00>
 
-State 15 <SV = 14> <Delay = 1.14>
-ST_15 : Operation 92 [1/1] ( I:1.14ns O:1.14ns )   --->   "%l_18 = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P0A, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 92 'read' 'l_18' <Predicate = (!icmp_ln101)> <Delay = 1.14> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
-ST_15 : Operation 93 [1/1] (0.00ns)   --->   "%empty_60 = trunc i32 %l_18" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 93 'trunc' 'empty_60' <Predicate = (!icmp_ln101)> <Delay = 0.00>
-ST_15 : Operation 94 [1/1] (0.00ns)   --->   "%p_33 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_18, i32 24, i32 31" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 94 'partselect' 'p_33' <Predicate = (!icmp_ln101)> <Delay = 0.00>
-ST_15 : Operation 95 [1/1] (0.00ns)   --->   "%p_34 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_18, i32 8, i32 15" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 95 'partselect' 'p_34' <Predicate = (!icmp_ln101)> <Delay = 0.00>
-ST_15 : Operation 96 [1/1] (0.00ns)   --->   "%p_35 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_18, i32 16, i32 23" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 96 'partselect' 'p_35' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+State 15 <SV = 14> <Delay = 3.63>
+ST_15 : Operation 93 [1/1] ( I:3.63ns O:3.63ns )   --->   "%l_19 = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P0A, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 93 'read' 'l_19' <Predicate = (!icmp_ln101)> <Delay = 3.63> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_15 : Operation 94 [1/1] (0.00ns)   --->   "%empty_61 = trunc i32 %l_19" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 94 'trunc' 'empty_61' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+ST_15 : Operation 95 [1/1] (0.00ns)   --->   "%p_36 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_19, i32 24, i32 31" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 95 'partselect' 'p_36' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+ST_15 : Operation 96 [1/1] (0.00ns)   --->   "%p_37 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_19, i32 8, i32 15" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 96 'partselect' 'p_37' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+ST_15 : Operation 97 [1/1] (0.00ns)   --->   "%p_38 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_19, i32 16, i32 23" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 97 'partselect' 'p_38' <Predicate = (!icmp_ln101)> <Delay = 0.00>
 
-State 16 <SV = 15> <Delay = 1.14>
-ST_16 : Operation 97 [1/1] ( I:1.14ns O:1.14ns )   --->   "%l_19 = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P0A, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 97 'read' 'l_19' <Predicate = (!icmp_ln101)> <Delay = 1.14> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
-ST_16 : Operation 98 [1/1] (0.00ns)   --->   "%empty_61 = trunc i32 %l_19" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 98 'trunc' 'empty_61' <Predicate = (!icmp_ln101)> <Delay = 0.00>
-ST_16 : Operation 99 [1/1] (0.00ns)   --->   "%p_36 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_19, i32 24, i32 31" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 99 'partselect' 'p_36' <Predicate = (!icmp_ln101)> <Delay = 0.00>
-ST_16 : Operation 100 [1/1] (0.00ns)   --->   "%p_37 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_19, i32 8, i32 15" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 100 'partselect' 'p_37' <Predicate = (!icmp_ln101)> <Delay = 0.00>
-ST_16 : Operation 101 [1/1] (0.00ns)   --->   "%p_38 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_19, i32 16, i32 23" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 101 'partselect' 'p_38' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+State 16 <SV = 15> <Delay = 3.63>
+ST_16 : Operation 98 [1/1] ( I:3.63ns O:3.63ns )   --->   "%l_20 = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P0A, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 98 'read' 'l_20' <Predicate = (!icmp_ln101)> <Delay = 3.63> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_16 : Operation 99 [1/1] (0.00ns)   --->   "%empty_62 = trunc i32 %l_20" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 99 'trunc' 'empty_62' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+ST_16 : Operation 100 [1/1] (0.00ns)   --->   "%p_39 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_20, i32 24, i32 31" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 100 'partselect' 'p_39' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+ST_16 : Operation 101 [1/1] (0.00ns)   --->   "%p_40 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_20, i32 8, i32 15" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 101 'partselect' 'p_40' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+ST_16 : Operation 102 [1/1] (0.00ns)   --->   "%p_41 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_20, i32 16, i32 23" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 102 'partselect' 'p_41' <Predicate = (!icmp_ln101)> <Delay = 0.00>
 
-State 17 <SV = 16> <Delay = 1.14>
-ST_17 : Operation 102 [1/1] ( I:1.14ns O:1.14ns )   --->   "%l_20 = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P0A, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 102 'read' 'l_20' <Predicate = true> <Delay = 1.14> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
-ST_17 : Operation 103 [1/1] (0.00ns)   --->   "%empty_62 = trunc i32 %l_20" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 103 'trunc' 'empty_62' <Predicate = true> <Delay = 0.00>
-ST_17 : Operation 104 [1/1] (0.00ns)   --->   "%p_39 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_20, i32 24, i32 31" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 104 'partselect' 'p_39' <Predicate = true> <Delay = 0.00>
-ST_17 : Operation 105 [1/1] (0.00ns)   --->   "%p_40 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_20, i32 8, i32 15" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 105 'partselect' 'p_40' <Predicate = true> <Delay = 0.00>
-ST_17 : Operation 106 [1/1] (0.00ns)   --->   "%p_41 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_20, i32 16, i32 23" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 106 'partselect' 'p_41' <Predicate = true> <Delay = 0.00>
+State 17 <SV = 16> <Delay = 3.63>
+ST_17 : Operation 103 [1/1] ( I:3.63ns O:3.63ns )   --->   "%l_21 = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P0A, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 103 'read' 'l_21' <Predicate = (!icmp_ln101)> <Delay = 3.63> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_17 : Operation 104 [1/1] (0.00ns)   --->   "%empty_63 = trunc i32 %l_21" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 104 'trunc' 'empty_63' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+ST_17 : Operation 105 [1/1] (0.00ns)   --->   "%p_42 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_21, i32 24, i32 31" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 105 'partselect' 'p_42' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+ST_17 : Operation 106 [1/1] (0.00ns)   --->   "%p_43 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_21, i32 8, i32 15" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 106 'partselect' 'p_43' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+ST_17 : Operation 107 [1/1] (0.00ns)   --->   "%p_44 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_21, i32 16, i32 23" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 107 'partselect' 'p_44' <Predicate = (!icmp_ln101)> <Delay = 0.00>
 
-State 18 <SV = 17> <Delay = 1.14>
-ST_18 : Operation 107 [1/1] ( I:1.14ns O:1.14ns )   --->   "%l_21 = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P0A, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 107 'read' 'l_21' <Predicate = true> <Delay = 1.14> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
-ST_18 : Operation 108 [1/1] (0.00ns)   --->   "%empty_63 = trunc i32 %l_21" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 108 'trunc' 'empty_63' <Predicate = true> <Delay = 0.00>
-ST_18 : Operation 109 [1/1] (0.00ns)   --->   "%p_42 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_21, i32 24, i32 31" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 109 'partselect' 'p_42' <Predicate = true> <Delay = 0.00>
-ST_18 : Operation 110 [1/1] (0.00ns)   --->   "%p_43 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_21, i32 8, i32 15" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 110 'partselect' 'p_43' <Predicate = true> <Delay = 0.00>
-ST_18 : Operation 111 [1/1] (0.00ns)   --->   "%p_44 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_21, i32 16, i32 23" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 111 'partselect' 'p_44' <Predicate = true> <Delay = 0.00>
-
-State 19 <SV = 18> <Delay = 2.28>
-ST_19 : Operation 112 [1/1] (0.00ns)   --->   "%specpipeline_ln102 = specpipeline void @_ssdm_op_SpecPipeline, i32 16, i32 0, i32 0, i32 0, void @empty_1" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:102]   --->   Operation 112 'specpipeline' 'specpipeline_ln102' <Predicate = true> <Delay = 0.00>
-ST_19 : Operation 113 [1/1] (0.00ns)   --->   "%speclooptripcount_ln103 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 0, i64 1, i64 0" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:103]   --->   Operation 113 'speclooptripcount' 'speclooptripcount_ln103' <Predicate = true> <Delay = 0.00>
-ST_19 : Operation 114 [1/1] (0.00ns)   --->   "%specloopname_ln101 = specloopname void @_ssdm_op_SpecLoopName, void @empty_17" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:101]   --->   Operation 114 'specloopname' 'specloopname_ln101' <Predicate = true> <Delay = 0.00>
-ST_19 : Operation 115 [1/1] ( I:1.14ns O:1.14ns )   --->   "%l_22 = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P0A, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 115 'read' 'l_22' <Predicate = true> <Delay = 1.14> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
-ST_19 : Operation 116 [1/1] (0.00ns)   --->   "%empty_64 = trunc i32 %l_22" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 116 'trunc' 'empty_64' <Predicate = true> <Delay = 0.00>
-ST_19 : Operation 117 [1/1] (0.00ns)   --->   "%p_45 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_22, i32 24, i32 31" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 117 'partselect' 'p_45' <Predicate = true> <Delay = 0.00>
-ST_19 : Operation 118 [1/1] (0.00ns)   --->   "%p_46 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_22, i32 8, i32 15" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 118 'partselect' 'p_46' <Predicate = true> <Delay = 0.00>
-ST_19 : Operation 119 [1/1] (0.00ns)   --->   "%p_47 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_22, i32 16, i32 23" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 119 'partselect' 'p_47' <Predicate = true> <Delay = 0.00>
-ST_19 : Operation 120 [1/1] (0.00ns)   --->   "%or_ln119_s = bitconcatenate i512 @_ssdm_op_BitConcatenate.i512.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8, i8 %empty_64, i8 %p_46, i8 %p_47, i8 %p_45, i8 %empty_63, i8 %p_43, i8 %p_44, i8 %p_42, i8 %empty_62, i8 %p_40, i8 %p_41, i8 %p_39, i8 %empty_61, i8 %p_37, i8 %p_38, i8 %p_36, i8 %empty_60, i8 %p_34, i8 %p_35, i8 %p_33, i8 %empty_59, i8 %p_31, i8 %p_32, i8 %p_30, i8 %empty_58, i8 %p_28, i8 %p_29, i8 %p_27, i8 %empty_57, i8 %p_25, i8 %p_26, i8 %p_24, i8 %empty_56, i8 %p_22, i8 %p_23, i8 %p_21, i8 %empty_55, i8 %p_19, i8 %p_20, i8 %p_18, i8 %empty_54, i8 %p_16, i8 %p_17, i8 %p_15, i8 %empty_53, i8 %p_13, i8 %p_14, i8 %p_12, i8 %empty_52, i8 %p_10, i8 %p_11, i8 %p_s, i8 %empty_51, i8 %p_8, i8 %p_9, i8 %p_7, i8 %empty_50, i8 %p_5, i8 %p_6, i8 %p_4, i8 %empty, i8 %p_1, i8 %p_2, i8 %p_3" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:119]   --->   Operation 120 'bitconcatenate' 'or_ln119_s' <Predicate = true> <Delay = 0.00>
-ST_19 : Operation 121 [1/1] ( I:1.14ns O:1.14ns )   --->   "%write_ln119 = write void @_ssdm_op_Write.ap_fifo.volatile.i512P0A, i512 %blk_strm, i512 %or_ln119_s" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:119]   --->   Operation 121 'write' 'write_ln119' <Predicate = true> <Delay = 1.14> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.72> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 512> <Depth = 32> <FIFO>
-ST_19 : Operation 122 [1/1] (0.00ns)   --->   "%br_ln101 = br void %LOOP_SHA256_GEN_ONE_FULL_BLK" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:101]   --->   Operation 122 'br' 'br_ln101' <Predicate = true> <Delay = 0.00>
+State 18 <SV = 17> <Delay = 7.36>
+ST_18 : Operation 108 [1/1] (0.00ns)   --->   "%specpipeline_ln102 = specpipeline void @_ssdm_op_SpecPipeline, i32 16, i32 0, i32 0, i32 0, void @empty_1" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:102]   --->   Operation 108 'specpipeline' 'specpipeline_ln102' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 109 [1/1] (0.00ns)   --->   "%speclooptripcount_ln103 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 0, i64 1, i64 0" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:103]   --->   Operation 109 'speclooptripcount' 'speclooptripcount_ln103' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 110 [1/1] (0.00ns)   --->   "%specloopname_ln101 = specloopname void @_ssdm_op_SpecLoopName, void @empty_17" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:101]   --->   Operation 110 'specloopname' 'specloopname_ln101' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 111 [1/1] ( I:3.63ns O:3.63ns )   --->   "%l_22 = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P0A, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 111 'read' 'l_22' <Predicate = true> <Delay = 3.63> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_18 : Operation 112 [1/1] (0.00ns)   --->   "%empty_64 = trunc i32 %l_22" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 112 'trunc' 'empty_64' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 113 [1/1] (0.00ns)   --->   "%p_45 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_22, i32 24, i32 31" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 113 'partselect' 'p_45' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 114 [1/1] (0.00ns)   --->   "%p_46 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_22, i32 8, i32 15" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 114 'partselect' 'p_46' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 115 [1/1] (0.00ns)   --->   "%p_47 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %l_22, i32 16, i32 23" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111]   --->   Operation 115 'partselect' 'p_47' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 116 [1/1] (0.00ns)   --->   "%or_ln119_s = bitconcatenate i512 @_ssdm_op_BitConcatenate.i512.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8, i8 %empty_64, i8 %p_46, i8 %p_47, i8 %p_45, i8 %empty_63, i8 %p_43, i8 %p_44, i8 %p_42, i8 %empty_62, i8 %p_40, i8 %p_41, i8 %p_39, i8 %empty_61, i8 %p_37, i8 %p_38, i8 %p_36, i8 %empty_60, i8 %p_34, i8 %p_35, i8 %p_33, i8 %empty_59, i8 %p_31, i8 %p_32, i8 %p_30, i8 %empty_58, i8 %p_28, i8 %p_29, i8 %p_27, i8 %empty_57, i8 %p_25, i8 %p_26, i8 %p_24, i8 %empty_56, i8 %p_22, i8 %p_23, i8 %p_21, i8 %empty_55, i8 %p_19, i8 %p_20, i8 %p_18, i8 %empty_54, i8 %p_16, i8 %p_17, i8 %p_15, i8 %empty_53, i8 %p_13, i8 %p_14, i8 %p_12, i8 %empty_52, i8 %p_10, i8 %p_11, i8 %p_s, i8 %empty_51, i8 %p_8, i8 %p_9, i8 %p_7, i8 %empty_50, i8 %p_5, i8 %p_6, i8 %p_4, i8 %empty, i8 %p_1, i8 %p_2, i8 %p_3" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:119]   --->   Operation 116 'bitconcatenate' 'or_ln119_s' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 117 [1/1] ( I:3.72ns O:3.72ns )   --->   "%write_ln119 = write void @_ssdm_op_Write.ap_fifo.volatile.i512P0A, i512 %blk_strm, i512 %or_ln119_s" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:119]   --->   Operation 117 'write' 'write_ln119' <Predicate = true> <Delay = 3.72> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.72> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 512> <Depth = 32> <FIFO>
+ST_18 : Operation 118 [1/1] (0.00ns)   --->   "%br_ln101 = br void %LOOP_SHA256_GEN_ONE_FULL_BLK" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:101]   --->   Operation 118 'br' 'br_ln101' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
 + Verbose Summary: Timing violations
 ============================================================
-Target clock period: 3.330ns, clock uncertainty: 1.050ns.
+Target clock period: 15.000ns, clock uncertainty: 1.500ns.
 
  <State 1>: 1.588ns
 The critical path consists of the following:
+	'alloca' operation 58 bit ('j', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:101) [4]  (0.000 ns)
 	'store' operation 0 bit ('store_ln101', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:101) of constant 0 on local variable 'j', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:101 [10]  (1.588 ns)
 
- <State 2>: 2.465ns
+ <State 2>: 4.954ns
 The critical path consists of the following:
 	'load' operation 58 bit ('j', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:101) on local variable 'j', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:101 [13]  (0.000 ns)
-	'icmp' operation 1 bit ('icmp_ln101', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:101) [14]  (2.465 ns)
-
- <State 3>: 2.465ns
-The critical path consists of the following:
-	'icmp' operation 1 bit ('icmp_ln101', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:101) [14]  (2.465 ns)
-
- <State 4>: 1.588ns
-The critical path consists of the following:
+	'add' operation 58 bit ('j', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:101) [15]  (3.365 ns)
 	'store' operation 0 bit ('store_ln101', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:101) of variable 'j', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:101 on local variable 'j', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:101 [103]  (1.588 ns)
 
- <State 5>: 1.140ns
+ <State 3>: 3.634ns
 The critical path consists of the following:
-	fifo read operation ('l', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) on port 'mergeKipadStrm' (D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) [26]  (1.140 ns)
+	fifo read operation ('l', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) on port 'mergeKipadStrm' (D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) [21]  (3.634 ns)
 
- <State 6>: 1.140ns
+ <State 4>: 3.634ns
 The critical path consists of the following:
-	fifo read operation ('l', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) on port 'mergeKipadStrm' (D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) [31]  (1.140 ns)
+	fifo read operation ('l', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) on port 'mergeKipadStrm' (D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) [26]  (3.634 ns)
 
- <State 7>: 1.140ns
+ <State 5>: 3.634ns
 The critical path consists of the following:
-	fifo read operation ('l', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) on port 'mergeKipadStrm' (D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) [36]  (1.140 ns)
+	fifo read operation ('l', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) on port 'mergeKipadStrm' (D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) [31]  (3.634 ns)
 
- <State 8>: 1.140ns
+ <State 6>: 3.634ns
 The critical path consists of the following:
-	fifo read operation ('l', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) on port 'mergeKipadStrm' (D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) [41]  (1.140 ns)
+	fifo read operation ('l', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) on port 'mergeKipadStrm' (D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) [36]  (3.634 ns)
 
- <State 9>: 1.140ns
+ <State 7>: 3.634ns
 The critical path consists of the following:
-	fifo read operation ('l', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) on port 'mergeKipadStrm' (D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) [46]  (1.140 ns)
+	fifo read operation ('l', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) on port 'mergeKipadStrm' (D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) [41]  (3.634 ns)
 
- <State 10>: 1.140ns
+ <State 8>: 3.634ns
 The critical path consists of the following:
-	fifo read operation ('l', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) on port 'mergeKipadStrm' (D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) [51]  (1.140 ns)
+	fifo read operation ('l', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) on port 'mergeKipadStrm' (D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) [46]  (3.634 ns)
 
- <State 11>: 1.140ns
+ <State 9>: 3.634ns
 The critical path consists of the following:
-	fifo read operation ('l', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) on port 'mergeKipadStrm' (D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) [56]  (1.140 ns)
+	fifo read operation ('l', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) on port 'mergeKipadStrm' (D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) [51]  (3.634 ns)
 
- <State 12>: 1.140ns
+ <State 10>: 3.634ns
 The critical path consists of the following:
-	fifo read operation ('l', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) on port 'mergeKipadStrm' (D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) [61]  (1.140 ns)
+	fifo read operation ('l', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) on port 'mergeKipadStrm' (D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) [56]  (3.634 ns)
 
- <State 13>: 1.140ns
+ <State 11>: 3.634ns
 The critical path consists of the following:
-	fifo read operation ('l', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) on port 'mergeKipadStrm' (D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) [66]  (1.140 ns)
+	fifo read operation ('l', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) on port 'mergeKipadStrm' (D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) [61]  (3.634 ns)
 
- <State 14>: 1.140ns
+ <State 12>: 3.634ns
 The critical path consists of the following:
-	fifo read operation ('l', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) on port 'mergeKipadStrm' (D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) [71]  (1.140 ns)
+	fifo read operation ('l', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) on port 'mergeKipadStrm' (D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) [66]  (3.634 ns)
 
- <State 15>: 1.140ns
+ <State 13>: 3.634ns
 The critical path consists of the following:
-	fifo read operation ('l', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) on port 'mergeKipadStrm' (D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) [76]  (1.140 ns)
+	fifo read operation ('l', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) on port 'mergeKipadStrm' (D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) [71]  (3.634 ns)
 
- <State 16>: 1.140ns
+ <State 14>: 3.634ns
 The critical path consists of the following:
-	fifo read operation ('l', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) on port 'mergeKipadStrm' (D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) [81]  (1.140 ns)
+	fifo read operation ('l', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) on port 'mergeKipadStrm' (D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) [76]  (3.634 ns)
 
- <State 17>: 1.140ns
+ <State 15>: 3.634ns
 The critical path consists of the following:
-	fifo read operation ('l', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) on port 'mergeKipadStrm' (D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) [86]  (1.140 ns)
+	fifo read operation ('l', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) on port 'mergeKipadStrm' (D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) [81]  (3.634 ns)
 
- <State 18>: 1.140ns
+ <State 16>: 3.634ns
 The critical path consists of the following:
-	fifo read operation ('l', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) on port 'mergeKipadStrm' (D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) [91]  (1.140 ns)
+	fifo read operation ('l', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) on port 'mergeKipadStrm' (D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) [86]  (3.634 ns)
 
- <State 19>: 2.280ns
+ <State 17>: 3.634ns
 The critical path consists of the following:
-	fifo read operation ('l', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) on port 'mergeKipadStrm' (D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) [96]  (1.140 ns)
-	fifo write operation ('write_ln119', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:119) on port 'blk_strm' (D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:119) [102]  (1.140 ns)
+	fifo read operation ('l', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) on port 'mergeKipadStrm' (D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) [91]  (3.634 ns)
+
+ <State 18>: 7.360ns
+The critical path consists of the following:
+	fifo read operation ('l', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) on port 'mergeKipadStrm' (D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:111) [96]  (3.634 ns)
+	fifo write operation ('write_ln119', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:119) on port 'blk_strm' (D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:119) [102]  (3.726 ns)
 
 
 ============================================================
@@ -352,7 +345,6 @@ N/A
 	State 16
 	State 17
 	State 18
-	State 19
 
 
 ============================================================

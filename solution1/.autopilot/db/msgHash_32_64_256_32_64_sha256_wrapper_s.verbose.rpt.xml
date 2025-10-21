@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'msgHash_32_64_256_32_64_sha256_wrapper_s'" level="0">
-<item name = "Date">Sat Oct 18 18:24:33 2025
+<item name = "Date">Tue Oct 21 20:19:08 2025
 </item>
 <item name = "Version">2024.2 (Build 5238294 on Nov  8 2024)</item>
 <item name = "Project">hmac_sha256_test.prj</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">3.33 ns, 12.519 ns, 1.05 ns</column>
+<column name="ap_clk">15.00 ns, 12.882 ns, 1.50 ns</column>
 </table>
 </item>
 </section>
@@ -51,20 +51,20 @@
 <column name="DSP">-, -, -, -, -</column>
 <column name="Expression">-, -, 0, 6, -</column>
 <column name="FIFO">2, -, 355, 210, -</column>
-<column name="Instance">-, 5, 12707, 5723, -</column>
+<column name="Instance">-, -, 6624, 5534, -</column>
 <column name="Memory">-, -, -, -, -</column>
 <column name="Multiplexer">-, -, 0, 9, -</column>
 <column name="Register">-, -, 1, -, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
-<specialColumn name="Utilization (%)">~0, 2, 12, 11, 0</specialColumn>
+<specialColumn name="Utilization (%)">~0, 0, 6, 10, 0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="hash_U0">hash, 0, 5, 10030, 5095, 0</column>
-<column name="mergeKipad_32_64_256_64_U0">mergeKipad_32_64_256_64_s, 0, 0, 2677, 628, 0</column>
+<column name="hash_U0">hash, 0, 0, 5451, 4937, 0</column>
+<column name="mergeKipad_32_64_256_64_U0">mergeKipad_32_64_256_64_s, 0, 0, 1173, 597, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">

@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'mergeKopad_32_64_256_32_64_Pipeline_VITIS_LOOP_226_3'
 ================================================================
-* Date:           Sat Oct 18 18:24:25 2025
+* Date:           Tue Oct 21 20:18:59 2025
 
 * Version:        2024.2 (Build 5238294 on Nov  8 2024)
 * Project:        hmac_sha256_test.prj
@@ -17,20 +17,20 @@
 ================================================================
 + Timing: 
     * Summary: 
-    +--------+---------+----------+------------+
-    |  Clock |  Target | Estimated| Uncertainty|
-    +--------+---------+----------+------------+
-    |ap_clk  |  3.33 ns|  4.911 ns|     1.05 ns|
-    +--------+---------+----------+------------+
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  15.00 ns|  4.911 ns|     1.50 ns|
+    +--------+----------+----------+------------+
 
 + Latency: 
     * Summary: 
-    +---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
-    |  Latency (cycles) |   Latency (absolute)  |  Interval |                    Pipeline                    |
-    |   min   |   max   |    min    |    max    | min | max |                      Type                      |
-    +---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
-    |       10|       10|  49.110 ns|  49.110 ns|    9|    9|  loop auto-rewind stp (delay=0 clock cycles(s))|
-    +---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                    |
+    |   min   |   max   |    min   |    max   | min | max |                      Type                      |
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |       10|       10|  0.150 us|  0.150 us|    9|    9|  loop auto-rewind stp (delay=0 clock cycles(s))|
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
 
     + Detail: 
         * Instance: 
@@ -100,13 +100,13 @@ ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%br_ln226 = br i1 %icmp_ln226, void
 ST_1 : Operation 17 [1/1] (1.58ns)   --->   "%store_ln226 = store i4 %i_3, i4 %i" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:226]   --->   Operation 17 'store' 'store_ln226' <Predicate = (!icmp_ln226)> <Delay = 1.58>
 ST_1 : Operation 28 [1/1] (1.58ns)   --->   "%ret_ln0 = ret"   --->   Operation 28 'ret' 'ret_ln0' <Predicate = (icmp_ln226)> <Delay = 1.58>
 
-State 2 <SV = 1> <Delay = 1.58>
+State 2 <SV = 1> <Delay = 3.63>
 ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%msgHash_1_load = load i256 %msgHash_1" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:228]   --->   Operation 18 'load' 'msgHash_1_load' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%specpipeline_ln227 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_1" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:227]   --->   Operation 19 'specpipeline' 'specpipeline_ln227' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%speclooptripcount_ln218 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 8, i64 8, i64 8" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:218]   --->   Operation 20 'speclooptripcount' 'speclooptripcount_ln218' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%specloopname_ln226 = specloopname void @_ssdm_op_SpecLoopName, void @empty_8" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:226]   --->   Operation 21 'specloopname' 'specloopname_ln226' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%trunc_ln228 = trunc i256 %msgHash_1_load" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:228]   --->   Operation 22 'trunc' 'trunc_ln228' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 23 [1/1] ( I:1.14ns O:1.14ns )   --->   "%write_ln228 = write void @_ssdm_op_Write.ap_fifo.volatile.i32P0A, i32 %mergeKopadStrm, i32 %trunc_ln228" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:228]   --->   Operation 23 'write' 'write_ln228' <Predicate = true> <Delay = 1.14> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 4> <FIFO>
+ST_2 : Operation 23 [1/1] ( I:3.63ns O:3.63ns )   --->   "%write_ln228 = write void @_ssdm_op_Write.ap_fifo.volatile.i32P0A, i32 %mergeKopadStrm, i32 %trunc_ln228" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:228]   --->   Operation 23 'write' 'write_ln228' <Predicate = true> <Delay = 3.63> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 4> <FIFO>
 ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%msgHash_2 = partselect i224 @_ssdm_op_PartSelect.i224.i256.i32.i32, i256 %msgHash_1_load, i32 32, i32 255" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:229]   --->   Operation 24 'partselect' 'msgHash_2' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%zext_ln229 = zext i224 %msgHash_2" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:229]   --->   Operation 25 'zext' 'zext_ln229' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 26 [1/1] (1.58ns)   --->   "%store_ln218 = store i256 %zext_ln229, i256 %msgHash_1" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:218]   --->   Operation 26 'store' 'store_ln218' <Predicate = true> <Delay = 1.58>
@@ -116,19 +116,19 @@ ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%br_ln226 = br void %for.inc13" [D:
 ============================================================
 + Verbose Summary: Timing violations
 ============================================================
-Target clock period: 3.330ns, clock uncertainty: 1.050ns.
+Target clock period: 15.000ns, clock uncertainty: 1.500ns.
 
  <State 1>: 4.911ns
 The critical path consists of the following:
 	'store' operation 0 bit ('store_ln226', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:226) of constant 0 on local variable 'i', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:226 [8]  (1.588 ns)
 	'load' operation 4 bit ('i', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:226) on local variable 'i', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:226 [12]  (0.000 ns)
-	'icmp' operation 1 bit ('icmp_ln226', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:226) [13]  (1.735 ns)
+	'add' operation 4 bit ('i', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:226) [14]  (1.735 ns)
 	'store' operation 0 bit ('store_ln226', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:226) of variable 'i', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:226 on local variable 'i', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:226 [25]  (1.588 ns)
 
- <State 2>: 1.588ns
+ <State 2>: 3.634ns
 The critical path consists of the following:
 	'load' operation 256 bit ('msgHash_1_load', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:228) on local variable 'msgHash', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:218 [17]  (0.000 ns)
-	'store' operation 0 bit ('store_ln218', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:218) of variable 'zext_ln229', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:229 on local variable 'msgHash', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:218 [26]  (1.588 ns)
+	fifo write operation ('write_ln228', D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:228) on port 'mergeKopadStrm' (D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:228) [22]  (3.634 ns)
 
 
 ============================================================

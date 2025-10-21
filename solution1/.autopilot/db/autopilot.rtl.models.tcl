@@ -6,32 +6,11 @@ set SynModuleInfo {
   }
   {SRCNAME {kpad<32, 64, 256, 32, 64, sha256_wrapper>} MODELNAME kpad_32_64_256_32_64_sha256_wrapper_s RTLNAME test_hmac_sha256_kpad_32_64_256_32_64_sha256_wrapper_s}
   {SRCNAME {mergeKipad<32, 64, 256, 64>_Pipeline_VITIS_LOOP_162_2} MODELNAME mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_162_2 RTLNAME test_hmac_sha256_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_162_2}
-  {SRCNAME {mergeKipad<32, 64, 256, 64>_Pipeline_VITIS_LOOP_171_3} MODELNAME mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3 RTLNAME test_hmac_sha256_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3
-    SUBMODULES {
-      {MODELNAME test_hmac_sha256_icmp_63ns_63ns_1_2_1 RTLNAME test_hmac_sha256_icmp_63ns_63ns_1_2_1 BINDTYPE op TYPE seteq IMPL auto}
-      {MODELNAME test_hmac_sha256_icmp_63ns_63ns_1_2_1_sub RTLNAME test_hmac_sha256_icmp_63ns_63ns_1_2_1_sub BINDTYPE op TYPE seteq IMPL auto LATENCY 1}
-      {MODELNAME test_hmac_sha256_add_63ns_63ns_63_2_1 RTLNAME test_hmac_sha256_add_63ns_63ns_63_2_1 BINDTYPE op TYPE add IMPL fabric LATENCY 1}
-    }
-  }
-  {SRCNAME {mergeKipad<32, 64, 256, 64>} MODELNAME mergeKipad_32_64_256_64_s RTLNAME test_hmac_sha256_mergeKipad_32_64_256_64_s
-    SUBMODULES {
-      {MODELNAME test_hmac_sha256_add_64ns_64ns_64_3_1 RTLNAME test_hmac_sha256_add_64ns_64ns_64_3_1 BINDTYPE op TYPE add IMPL fabric LATENCY 2}
-      {MODELNAME test_hmac_sha256_add_68ns_68ns_68_3_1 RTLNAME test_hmac_sha256_add_68ns_68ns_68_3_1 BINDTYPE op TYPE add IMPL fabric LATENCY 2}
-    }
-  }
-  {SRCNAME preProcessing_Pipeline_LOOP_SHA256_GEN_FULL_BLKS MODELNAME preProcessing_Pipeline_LOOP_SHA256_GEN_FULL_BLKS RTLNAME test_hmac_sha256_preProcessing_Pipeline_LOOP_SHA256_GEN_FULL_BLKS
-    SUBMODULES {
-      {MODELNAME test_hmac_sha256_icmp_58ns_58ns_1_2_1 RTLNAME test_hmac_sha256_icmp_58ns_58ns_1_2_1 BINDTYPE op TYPE seteq IMPL auto}
-      {MODELNAME test_hmac_sha256_icmp_58ns_58ns_1_2_1_sub RTLNAME test_hmac_sha256_icmp_58ns_58ns_1_2_1_sub BINDTYPE op TYPE seteq IMPL auto LATENCY 1}
-      {MODELNAME test_hmac_sha256_add_58ns_58ns_58_2_1 RTLNAME test_hmac_sha256_add_58ns_58ns_58_2_1 BINDTYPE op TYPE add IMPL fabric LATENCY 1}
-    }
-  }
+  {SRCNAME {mergeKipad<32, 64, 256, 64>_Pipeline_VITIS_LOOP_171_3} MODELNAME mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3 RTLNAME test_hmac_sha256_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3}
+  {SRCNAME {mergeKipad<32, 64, 256, 64>} MODELNAME mergeKipad_32_64_256_64_s RTLNAME test_hmac_sha256_mergeKipad_32_64_256_64_s}
+  {SRCNAME preProcessing_Pipeline_LOOP_SHA256_GEN_FULL_BLKS MODELNAME preProcessing_Pipeline_LOOP_SHA256_GEN_FULL_BLKS RTLNAME test_hmac_sha256_preProcessing_Pipeline_LOOP_SHA256_GEN_FULL_BLKS}
   {SRCNAME preProcessing_Pipeline_LOOP_SHA256_GEN_COPY_TAIL_AND_ONE MODELNAME preProcessing_Pipeline_LOOP_SHA256_GEN_COPY_TAIL_AND_ONE RTLNAME test_hmac_sha256_preProcessing_Pipeline_LOOP_SHA256_GEN_COPY_TAIL_AND_ONE}
-  {SRCNAME preProcessing MODELNAME preProcessing RTLNAME test_hmac_sha256_preProcessing
-    SUBMODULES {
-      {MODELNAME test_hmac_sha256_add_59ns_59ns_59_2_1 RTLNAME test_hmac_sha256_add_59ns_59ns_59_2_1 BINDTYPE op TYPE add IMPL fabric LATENCY 1}
-    }
-  }
+  {SRCNAME preProcessing MODELNAME preProcessing RTLNAME test_hmac_sha256_preProcessing}
   {SRCNAME dup_strm_Pipeline_VITIS_LOOP_506_1 MODELNAME dup_strm_Pipeline_VITIS_LOOP_506_1 RTLNAME test_hmac_sha256_dup_strm_Pipeline_VITIS_LOOP_506_1}
   {SRCNAME dup_strm MODELNAME dup_strm RTLNAME test_hmac_sha256_dup_strm}
   {SRCNAME generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16 MODELNAME generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16 RTLNAME test_hmac_sha256_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16
@@ -39,18 +18,8 @@ set SynModuleInfo {
       {MODELNAME test_hmac_sha256_sparsemux_33_4_32_1_1 RTLNAME test_hmac_sha256_sparsemux_33_4_32_1_1 BINDTYPE op TYPE sparsemux IMPL compactencoding_dontcare}
     }
   }
-  {SRCNAME generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64 MODELNAME generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64 RTLNAME test_hmac_sha256_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64
-    SUBMODULES {
-      {MODELNAME test_hmac_sha256_add_32ns_32ns_32_2_1 RTLNAME test_hmac_sha256_add_32ns_32ns_32_2_1 BINDTYPE op TYPE add IMPL fabric LATENCY 1}
-      {MODELNAME test_hmac_sha256_add_32ns_32ns_32_1_1 RTLNAME test_hmac_sha256_add_32ns_32ns_32_1_1 BINDTYPE op TYPE add IMPL dsp LATENCY 0}
-    }
-  }
-  {SRCNAME generateMsgSchedule MODELNAME generateMsgSchedule RTLNAME test_hmac_sha256_generateMsgSchedule
-    SUBMODULES {
-      {MODELNAME test_hmac_sha256_icmp_64ns_64ns_1_3_1 RTLNAME test_hmac_sha256_icmp_64ns_64ns_1_3_1 BINDTYPE op TYPE seteq IMPL auto}
-      {MODELNAME test_hmac_sha256_icmp_64ns_64ns_1_3_1_sub RTLNAME test_hmac_sha256_icmp_64ns_64ns_1_3_1_sub BINDTYPE op TYPE seteq IMPL auto LATENCY 2}
-    }
-  }
+  {SRCNAME generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64 MODELNAME generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64 RTLNAME test_hmac_sha256_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64}
+  {SRCNAME generateMsgSchedule MODELNAME generateMsgSchedule RTLNAME test_hmac_sha256_generateMsgSchedule}
   {SRCNAME sha256Digest<256>_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS MODELNAME sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS RTLNAME test_hmac_sha256_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS
     SUBMODULES {
       {MODELNAME test_hmac_sha256_sparsemux_129_6_32_1_1 RTLNAME test_hmac_sha256_sparsemux_129_6_32_1_1 BINDTYPE op TYPE sparsemux IMPL compactencoding_dontcare}

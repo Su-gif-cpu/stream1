@@ -36,18 +36,13 @@ module test_hmac_sha256_generateMsgSchedule (
         w_strm_fifo_cap
 );
 
-parameter    ap_ST_fsm_state1 = 12'd1;
-parameter    ap_ST_fsm_state2 = 12'd2;
-parameter    ap_ST_fsm_state3 = 12'd4;
-parameter    ap_ST_fsm_state4 = 12'd8;
-parameter    ap_ST_fsm_state5 = 12'd16;
-parameter    ap_ST_fsm_state6 = 12'd32;
-parameter    ap_ST_fsm_state7 = 12'd64;
-parameter    ap_ST_fsm_state8 = 12'd128;
-parameter    ap_ST_fsm_state9 = 12'd256;
-parameter    ap_ST_fsm_state10 = 12'd512;
-parameter    ap_ST_fsm_state11 = 12'd1024;
-parameter    ap_ST_fsm_state12 = 12'd2048;
+parameter    ap_ST_fsm_state1 = 7'd1;
+parameter    ap_ST_fsm_state2 = 7'd2;
+parameter    ap_ST_fsm_state3 = 7'd4;
+parameter    ap_ST_fsm_state4 = 7'd8;
+parameter    ap_ST_fsm_state5 = 7'd16;
+parameter    ap_ST_fsm_state6 = 7'd32;
+parameter    ap_ST_fsm_state7 = 7'd64;
 
 input   ap_clk;
 input   ap_rst;
@@ -87,238 +82,198 @@ reg[31:0] w_strm_din;
 reg w_strm_write;
 
 reg    ap_done_reg;
-(* fsm_encoding = "none" *) reg   [11:0] ap_CS_fsm;
+(* fsm_encoding = "none" *) reg   [6:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
 reg    blk_strm_blk_n;
-wire    ap_CS_fsm_state7;
-reg    nblk_strm1_blk_n;
 wire    ap_CS_fsm_state3;
+wire   [0:0] icmp_ln530_fu_282_p2;
+reg    nblk_strm1_blk_n;
+wire    ap_CS_fsm_state2;
 wire   [0:0] ap_phi_mux_e_4_phi_fu_205_p4;
 reg    end_nblk_strm1_blk_n;
-wire    ap_CS_fsm_state12;
-reg   [0:0] e_reg_630;
 reg    ap_block_state1;
-reg   [63:0] n_reg_635;
+reg   [63:0] n_reg_634;
+reg    ap_block_state2;
+wire   [63:0] i_fu_287_p2;
+reg   [63:0] i_reg_642;
 reg    ap_block_state3;
-wire   [63:0] grp_fu_288_p2;
-reg   [63:0] i_reg_643;
-wire    ap_CS_fsm_state6;
-wire   [31:0] blk_fu_294_p1;
-reg   [31:0] blk_reg_648;
-reg   [31:0] blk_1_reg_653;
-reg   [31:0] blk_2_reg_658;
-reg   [31:0] blk_3_reg_663;
-reg   [31:0] blk_4_reg_668;
-reg   [31:0] blk_5_reg_673;
-reg   [31:0] blk_6_reg_678;
-reg   [31:0] blk_7_reg_683;
-reg   [31:0] blk_8_reg_688;
-reg   [31:0] blk_9_reg_693;
-reg   [31:0] blk_15_reg_698;
-reg   [31:0] blk_10_reg_703;
-reg   [31:0] blk_11_reg_708;
-reg   [31:0] blk_12_reg_713;
-reg   [31:0] blk_13_reg_718;
-reg   [31:0] blk_14_reg_723;
-wire    grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_ap_start;
-wire    grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_ap_done;
-wire    grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_ap_idle;
-wire    grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_ap_ready;
-wire   [31:0] grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_w_strm_din;
-wire    grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_w_strm_write;
-wire   [31:0] grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_15_out;
-wire    grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_15_out_ap_vld;
-wire   [31:0] grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_14_out;
-wire    grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_14_out_ap_vld;
-wire   [31:0] grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_13_out;
-wire    grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_13_out_ap_vld;
-wire   [31:0] grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_12_out;
-wire    grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_12_out_ap_vld;
-wire   [31:0] grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_11_out;
-wire    grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_11_out_ap_vld;
-wire   [31:0] grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_10_out;
-wire    grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_10_out_ap_vld;
-wire   [31:0] grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_9_out;
-wire    grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_9_out_ap_vld;
-wire   [31:0] grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_8_out;
-wire    grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_8_out_ap_vld;
-wire   [31:0] grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_7_out;
-wire    grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_7_out_ap_vld;
-wire   [31:0] grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_6_out;
-wire    grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_6_out_ap_vld;
-wire   [31:0] grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_5_out;
-wire    grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_5_out_ap_vld;
-wire   [31:0] grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_4_out;
-wire    grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_4_out_ap_vld;
-wire   [31:0] grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_3_out;
-wire    grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_3_out_ap_vld;
-wire   [31:0] grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_2_out;
-wire    grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_2_out_ap_vld;
-wire   [31:0] grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_1_out;
-wire    grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_1_out_ap_vld;
-wire   [31:0] grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_out;
-wire    grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_out_ap_vld;
-wire    grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_261_ap_start;
-wire    grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_261_ap_done;
-wire    grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_261_ap_idle;
-wire    grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_261_ap_ready;
-wire   [31:0] grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_261_w_strm_din;
-wire    grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_261_w_strm_write;
+wire   [31:0] blk_fu_293_p1;
+reg   [31:0] blk_reg_647;
+reg   [31:0] blk_1_reg_652;
+reg   [31:0] blk_2_reg_657;
+reg   [31:0] blk_3_reg_662;
+reg   [31:0] blk_4_reg_667;
+reg   [31:0] blk_5_reg_672;
+reg   [31:0] blk_6_reg_677;
+reg   [31:0] blk_7_reg_682;
+reg   [31:0] blk_8_reg_687;
+reg   [31:0] blk_9_reg_692;
+reg   [31:0] blk_15_reg_697;
+reg   [31:0] blk_10_reg_702;
+reg   [31:0] blk_11_reg_707;
+reg   [31:0] blk_12_reg_712;
+reg   [31:0] blk_13_reg_717;
+reg   [31:0] blk_14_reg_722;
+wire    grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_ap_start;
+wire    grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_ap_done;
+wire    grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_ap_idle;
+wire    grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_ap_ready;
+wire   [31:0] grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_w_strm_din;
+wire    grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_w_strm_write;
+wire   [31:0] grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_15_out;
+wire    grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_15_out_ap_vld;
+wire   [31:0] grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_14_out;
+wire    grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_14_out_ap_vld;
+wire   [31:0] grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_13_out;
+wire    grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_13_out_ap_vld;
+wire   [31:0] grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_12_out;
+wire    grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_12_out_ap_vld;
+wire   [31:0] grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_11_out;
+wire    grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_11_out_ap_vld;
+wire   [31:0] grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_10_out;
+wire    grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_10_out_ap_vld;
+wire   [31:0] grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_9_out;
+wire    grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_9_out_ap_vld;
+wire   [31:0] grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_8_out;
+wire    grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_8_out_ap_vld;
+wire   [31:0] grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_7_out;
+wire    grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_7_out_ap_vld;
+wire   [31:0] grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_6_out;
+wire    grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_6_out_ap_vld;
+wire   [31:0] grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_5_out;
+wire    grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_5_out_ap_vld;
+wire   [31:0] grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_4_out;
+wire    grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_4_out_ap_vld;
+wire   [31:0] grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_3_out;
+wire    grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_3_out_ap_vld;
+wire   [31:0] grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_2_out;
+wire    grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_2_out_ap_vld;
+wire   [31:0] grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_1_out;
+wire    grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_1_out_ap_vld;
+wire   [31:0] grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_out;
+wire    grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_out_ap_vld;
+wire    grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_260_ap_start;
+wire    grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_260_ap_done;
+wire    grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_260_ap_idle;
+wire    grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_260_ap_ready;
+wire   [31:0] grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_260_w_strm_din;
+wire    grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_260_w_strm_write;
 reg   [0:0] e_4_reg_202;
-wire    ap_CS_fsm_state2;
 reg   [63:0] i_5_reg_211;
-wire    ap_CS_fsm_state11;
-reg    grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_ap_start_reg;
-wire    ap_CS_fsm_state8;
-wire    ap_CS_fsm_state9;
-reg    grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_261_ap_start_reg;
-wire    ap_CS_fsm_state10;
+wire    ap_CS_fsm_state7;
+reg    grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_ap_start_reg;
 wire    ap_CS_fsm_state4;
-wire   [0:0] grp_fu_283_p2;
-reg   [11:0] ap_NS_fsm;
+wire    ap_CS_fsm_state5;
+reg    grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_260_ap_start_reg;
+wire    ap_CS_fsm_state6;
+reg   [6:0] ap_NS_fsm;
 reg    ap_ST_fsm_state1_blk;
-wire    ap_ST_fsm_state2_blk;
+reg    ap_ST_fsm_state2_blk;
 reg    ap_ST_fsm_state3_blk;
 wire    ap_ST_fsm_state4_blk;
-wire    ap_ST_fsm_state5_blk;
+reg    ap_ST_fsm_state5_blk;
 wire    ap_ST_fsm_state6_blk;
 reg    ap_ST_fsm_state7_blk;
-wire    ap_ST_fsm_state8_blk;
-reg    ap_ST_fsm_state9_blk;
-wire    ap_ST_fsm_state10_blk;
-reg    ap_ST_fsm_state11_blk;
-reg    ap_ST_fsm_state12_blk;
 wire    ap_ce_reg;
 
 // power-on initialization
 initial begin
 #0 ap_done_reg = 1'b0;
-#0 ap_CS_fsm = 12'd1;
-#0 grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_ap_start_reg = 1'b0;
-#0 grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_261_ap_start_reg = 1'b0;
+#0 ap_CS_fsm = 7'd1;
+#0 grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_ap_start_reg = 1'b0;
+#0 grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_260_ap_start_reg = 1'b0;
 end
 
-test_hmac_sha256_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16 grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223(
+test_hmac_sha256_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16 grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst),
-    .ap_start(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_ap_start),
-    .ap_done(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_ap_done),
-    .ap_idle(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_ap_idle),
-    .ap_ready(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_ap_ready),
-    .w_strm_din(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_w_strm_din),
+    .ap_start(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_ap_start),
+    .ap_done(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_ap_done),
+    .ap_idle(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_ap_idle),
+    .ap_ready(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_ap_ready),
+    .w_strm_din(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_w_strm_din),
     .w_strm_full_n(w_strm_full_n),
-    .w_strm_write(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_w_strm_write),
+    .w_strm_write(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_w_strm_write),
     .w_strm_num_data_valid(w_strm_num_data_valid),
     .w_strm_fifo_cap(w_strm_fifo_cap),
-    .empty(blk_reg_648),
-    .blk_1(blk_1_reg_653),
-    .blk_2(blk_2_reg_658),
-    .blk_3(blk_3_reg_663),
-    .blk_4(blk_4_reg_668),
-    .blk_5(blk_5_reg_673),
-    .blk_6(blk_6_reg_678),
-    .blk_7(blk_7_reg_683),
-    .blk_8(blk_8_reg_688),
-    .blk_9(blk_9_reg_693),
-    .blk_15(blk_15_reg_698),
-    .blk_10(blk_10_reg_703),
-    .blk_11(blk_11_reg_708),
-    .blk_12(blk_12_reg_713),
-    .blk_13(blk_13_reg_718),
-    .blk_14(blk_14_reg_723),
-    .W_15_out(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_15_out),
-    .W_15_out_ap_vld(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_15_out_ap_vld),
-    .W_14_out(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_14_out),
-    .W_14_out_ap_vld(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_14_out_ap_vld),
-    .W_13_out(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_13_out),
-    .W_13_out_ap_vld(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_13_out_ap_vld),
-    .W_12_out(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_12_out),
-    .W_12_out_ap_vld(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_12_out_ap_vld),
-    .W_11_out(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_11_out),
-    .W_11_out_ap_vld(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_11_out_ap_vld),
-    .W_10_out(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_10_out),
-    .W_10_out_ap_vld(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_10_out_ap_vld),
-    .W_9_out(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_9_out),
-    .W_9_out_ap_vld(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_9_out_ap_vld),
-    .W_8_out(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_8_out),
-    .W_8_out_ap_vld(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_8_out_ap_vld),
-    .W_7_out(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_7_out),
-    .W_7_out_ap_vld(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_7_out_ap_vld),
-    .W_6_out(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_6_out),
-    .W_6_out_ap_vld(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_6_out_ap_vld),
-    .W_5_out(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_5_out),
-    .W_5_out_ap_vld(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_5_out_ap_vld),
-    .W_4_out(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_4_out),
-    .W_4_out_ap_vld(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_4_out_ap_vld),
-    .W_3_out(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_3_out),
-    .W_3_out_ap_vld(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_3_out_ap_vld),
-    .W_2_out(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_2_out),
-    .W_2_out_ap_vld(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_2_out_ap_vld),
-    .W_1_out(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_1_out),
-    .W_1_out_ap_vld(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_1_out_ap_vld),
-    .W_out(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_out),
-    .W_out_ap_vld(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_out_ap_vld)
+    .empty(blk_reg_647),
+    .blk_1(blk_1_reg_652),
+    .blk_2(blk_2_reg_657),
+    .blk_3(blk_3_reg_662),
+    .blk_4(blk_4_reg_667),
+    .blk_5(blk_5_reg_672),
+    .blk_6(blk_6_reg_677),
+    .blk_7(blk_7_reg_682),
+    .blk_8(blk_8_reg_687),
+    .blk_9(blk_9_reg_692),
+    .blk_15(blk_15_reg_697),
+    .blk_10(blk_10_reg_702),
+    .blk_11(blk_11_reg_707),
+    .blk_12(blk_12_reg_712),
+    .blk_13(blk_13_reg_717),
+    .blk_14(blk_14_reg_722),
+    .W_15_out(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_15_out),
+    .W_15_out_ap_vld(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_15_out_ap_vld),
+    .W_14_out(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_14_out),
+    .W_14_out_ap_vld(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_14_out_ap_vld),
+    .W_13_out(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_13_out),
+    .W_13_out_ap_vld(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_13_out_ap_vld),
+    .W_12_out(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_12_out),
+    .W_12_out_ap_vld(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_12_out_ap_vld),
+    .W_11_out(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_11_out),
+    .W_11_out_ap_vld(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_11_out_ap_vld),
+    .W_10_out(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_10_out),
+    .W_10_out_ap_vld(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_10_out_ap_vld),
+    .W_9_out(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_9_out),
+    .W_9_out_ap_vld(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_9_out_ap_vld),
+    .W_8_out(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_8_out),
+    .W_8_out_ap_vld(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_8_out_ap_vld),
+    .W_7_out(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_7_out),
+    .W_7_out_ap_vld(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_7_out_ap_vld),
+    .W_6_out(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_6_out),
+    .W_6_out_ap_vld(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_6_out_ap_vld),
+    .W_5_out(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_5_out),
+    .W_5_out_ap_vld(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_5_out_ap_vld),
+    .W_4_out(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_4_out),
+    .W_4_out_ap_vld(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_4_out_ap_vld),
+    .W_3_out(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_3_out),
+    .W_3_out_ap_vld(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_3_out_ap_vld),
+    .W_2_out(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_2_out),
+    .W_2_out_ap_vld(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_2_out_ap_vld),
+    .W_1_out(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_1_out),
+    .W_1_out_ap_vld(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_1_out_ap_vld),
+    .W_out(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_out),
+    .W_out_ap_vld(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_out_ap_vld)
 );
 
-test_hmac_sha256_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64 grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_261(
+test_hmac_sha256_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64 grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_260(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst),
-    .ap_start(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_261_ap_start),
-    .ap_done(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_261_ap_done),
-    .ap_idle(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_261_ap_idle),
-    .ap_ready(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_261_ap_ready),
-    .w_strm_din(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_261_w_strm_din),
+    .ap_start(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_260_ap_start),
+    .ap_done(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_260_ap_done),
+    .ap_idle(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_260_ap_idle),
+    .ap_ready(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_260_ap_ready),
+    .w_strm_din(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_260_w_strm_din),
     .w_strm_full_n(w_strm_full_n),
-    .w_strm_write(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_261_w_strm_write),
+    .w_strm_write(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_260_w_strm_write),
     .w_strm_num_data_valid(w_strm_num_data_valid),
     .w_strm_fifo_cap(w_strm_fifo_cap),
-    .W_reload(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_out),
-    .W_2_reload(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_2_out),
-    .W_3_reload(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_3_out),
-    .W_4_reload(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_4_out),
-    .W_5_reload(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_5_out),
-    .W_7_reload(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_7_out),
-    .W_8_reload(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_8_out),
-    .W_9_reload(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_9_out),
-    .W_10_reload(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_10_out),
-    .W_11_reload(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_11_out),
-    .W_12_reload(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_12_out),
-    .W_13_reload(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_13_out),
-    .W_15_reload(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_15_out),
-    .W_14_reload(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_14_out),
-    .W_6_reload(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_6_out),
-    .W_1_reload(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_W_1_out)
-);
-
-test_hmac_sha256_icmp_64ns_64ns_1_3_1 #(
-    .ID( 1 ),
-    .NUM_STAGE( 3 ),
-    .din0_WIDTH( 64 ),
-    .din1_WIDTH( 64 ),
-    .OP_CODE( 0 ),
-    .dout_WIDTH( 1 ))
-icmp_64ns_64ns_1_3_1_U132(
-    .clk(ap_clk),
-    .reset(ap_rst),
-    .din0(i_5_reg_211),
-    .din1(n_reg_635),
-    .ce(1'b1),
-    .dout(grp_fu_283_p2)
-);
-
-test_hmac_sha256_add_64ns_64ns_64_3_1 #(
-    .ID( 1 ),
-    .NUM_STAGE( 3 ),
-    .din0_WIDTH( 64 ),
-    .din1_WIDTH( 64 ),
-    .dout_WIDTH( 64 ))
-add_64ns_64ns_64_3_1_U133(
-    .clk(ap_clk),
-    .reset(ap_rst),
-    .din0(i_5_reg_211),
-    .din1(64'd1),
-    .ce(1'b1),
-    .dout(grp_fu_288_p2)
+    .W_reload(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_out),
+    .W_2_reload(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_2_out),
+    .W_3_reload(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_3_out),
+    .W_4_reload(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_4_out),
+    .W_5_reload(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_5_out),
+    .W_7_reload(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_7_out),
+    .W_8_reload(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_8_out),
+    .W_9_reload(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_9_out),
+    .W_10_reload(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_10_out),
+    .W_11_reload(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_11_out),
+    .W_12_reload(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_12_out),
+    .W_13_reload(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_13_out),
+    .W_15_reload(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_15_out),
+    .W_14_reload(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_14_out),
+    .W_6_reload(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_6_out),
+    .W_1_reload(grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_W_1_out)
 );
 
 always @ (posedge ap_clk) begin
@@ -335,7 +290,7 @@ always @ (posedge ap_clk) begin
     end else begin
         if ((ap_continue == 1'b1)) begin
             ap_done_reg <= 1'b0;
-        end else if (((1'b0 == ap_block_state3) & (ap_phi_mux_e_4_phi_fu_205_p4 == 1'd1) & (1'b1 == ap_CS_fsm_state3))) begin
+        end else if (((1'b0 == ap_block_state2) & (ap_phi_mux_e_4_phi_fu_205_p4 == 1'd1) & (1'b1 == ap_CS_fsm_state2))) begin
             ap_done_reg <= 1'b1;
         end
     end
@@ -343,98 +298,67 @@ end
 
 always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
-        grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_ap_start_reg <= 1'b0;
+        grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_ap_start_reg <= 1'b0;
     end else begin
-        if ((1'b1 == ap_CS_fsm_state8)) begin
-            grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_ap_start_reg <= 1'b1;
-        end else if ((grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_ap_ready == 1'b1)) begin
-            grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_ap_start_reg <= 1'b0;
+        if ((1'b1 == ap_CS_fsm_state4)) begin
+            grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_ap_start_reg <= 1'b1;
+        end else if ((grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_ap_ready == 1'b1)) begin
+            grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_ap_start_reg <= 1'b0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
-        grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_261_ap_start_reg <= 1'b0;
+        grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_260_ap_start_reg <= 1'b0;
     end else begin
-        if ((1'b1 == ap_CS_fsm_state10)) begin
-            grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_261_ap_start_reg <= 1'b1;
-        end else if ((grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_261_ap_ready == 1'b1)) begin
-            grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_261_ap_start_reg <= 1'b0;
+        if ((1'b1 == ap_CS_fsm_state6)) begin
+            grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_260_ap_start_reg <= 1'b1;
+        end else if ((grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_260_ap_ready == 1'b1)) begin
+            grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_260_ap_start_reg <= 1'b0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((end_nblk_strm1_empty_n == 1'b1) & (1'b1 == ap_CS_fsm_state12))) begin
-        e_4_reg_202 <= end_nblk_strm1_dout;
-    end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        e_4_reg_202 <= e_reg_630;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (((grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_261_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state11))) begin
-        i_5_reg_211 <= i_reg_643;
-    end else if (((1'b0 == ap_block_state3) & (e_4_reg_202 == 1'd0) & (1'b1 == ap_CS_fsm_state3))) begin
+    if (((grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_260_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state7))) begin
+        i_5_reg_211 <= i_reg_642;
+    end else if (((1'b0 == ap_block_state2) & (e_4_reg_202 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
         i_5_reg_211 <= 64'd0;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((blk_strm_empty_n == 1'b1) & (1'b1 == ap_CS_fsm_state7))) begin
-        blk_10_reg_703 <= {{blk_strm_dout[383:352]}};
-        blk_11_reg_708 <= {{blk_strm_dout[415:384]}};
-        blk_12_reg_713 <= {{blk_strm_dout[447:416]}};
-        blk_13_reg_718 <= {{blk_strm_dout[479:448]}};
-        blk_14_reg_723 <= {{blk_strm_dout[511:480]}};
-        blk_15_reg_698 <= {{blk_strm_dout[351:320]}};
-        blk_1_reg_653 <= {{blk_strm_dout[63:32]}};
-        blk_2_reg_658 <= {{blk_strm_dout[95:64]}};
-        blk_3_reg_663 <= {{blk_strm_dout[127:96]}};
-        blk_4_reg_668 <= {{blk_strm_dout[159:128]}};
-        blk_5_reg_673 <= {{blk_strm_dout[191:160]}};
-        blk_6_reg_678 <= {{blk_strm_dout[223:192]}};
-        blk_7_reg_683 <= {{blk_strm_dout[255:224]}};
-        blk_8_reg_688 <= {{blk_strm_dout[287:256]}};
-        blk_9_reg_693 <= {{blk_strm_dout[319:288]}};
-        blk_reg_648 <= blk_fu_294_p1;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_state1) & (1'b1 == ap_CS_fsm_state1))) begin
-        e_reg_630 <= end_nblk_strm1_dout;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state6)) begin
-        i_reg_643 <= grp_fu_288_p2;
-    end
-end
-
-always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_state3) & (1'b1 == ap_CS_fsm_state3))) begin
-        n_reg_635 <= nblk_strm1_dout;
+        blk_10_reg_702 <= {{blk_strm_dout[383:352]}};
+        blk_11_reg_707 <= {{blk_strm_dout[415:384]}};
+        blk_12_reg_712 <= {{blk_strm_dout[447:416]}};
+        blk_13_reg_717 <= {{blk_strm_dout[479:448]}};
+        blk_14_reg_722 <= {{blk_strm_dout[511:480]}};
+        blk_15_reg_697 <= {{blk_strm_dout[351:320]}};
+        blk_1_reg_652 <= {{blk_strm_dout[63:32]}};
+        blk_2_reg_657 <= {{blk_strm_dout[95:64]}};
+        blk_3_reg_662 <= {{blk_strm_dout[127:96]}};
+        blk_4_reg_667 <= {{blk_strm_dout[159:128]}};
+        blk_5_reg_672 <= {{blk_strm_dout[191:160]}};
+        blk_6_reg_677 <= {{blk_strm_dout[223:192]}};
+        blk_7_reg_682 <= {{blk_strm_dout[255:224]}};
+        blk_8_reg_687 <= {{blk_strm_dout[287:256]}};
+        blk_9_reg_692 <= {{blk_strm_dout[319:288]}};
+        blk_reg_647 <= blk_fu_293_p1;
+        i_reg_642 <= i_fu_287_p2;
     end
 end
 
-assign ap_ST_fsm_state10_blk = 1'b0;
-
-always @ (*) begin
-    if ((grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_261_ap_done == 1'b0)) begin
-        ap_ST_fsm_state11_blk = 1'b1;
-    end else begin
-        ap_ST_fsm_state11_blk = 1'b0;
+always @ (posedge ap_clk) begin
+    if ((((1'b0 == ap_block_state1) & (1'b1 == ap_CS_fsm_state1)) | ((1'b0 == ap_block_state3) & (icmp_ln530_fu_282_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state3)))) begin
+        e_4_reg_202 <= end_nblk_strm1_dout;
     end
 end
 
-always @ (*) begin
-    if ((end_nblk_strm1_empty_n == 1'b0)) begin
-        ap_ST_fsm_state12_blk = 1'b1;
-    end else begin
-        ap_ST_fsm_state12_blk = 1'b0;
+always @ (posedge ap_clk) begin
+    if (((1'b0 == ap_block_state2) & (1'b1 == ap_CS_fsm_state2))) begin
+        n_reg_634 <= nblk_strm1_dout;
     end
 end
 
@@ -446,7 +370,13 @@ always @ (*) begin
     end
 end
 
-assign ap_ST_fsm_state2_blk = 1'b0;
+always @ (*) begin
+    if ((1'b1 == ap_block_state2)) begin
+        ap_ST_fsm_state2_blk = 1'b1;
+    end else begin
+        ap_ST_fsm_state2_blk = 1'b0;
+    end
+end
 
 always @ (*) begin
     if ((1'b1 == ap_block_state3)) begin
@@ -458,30 +388,26 @@ end
 
 assign ap_ST_fsm_state4_blk = 1'b0;
 
-assign ap_ST_fsm_state5_blk = 1'b0;
+always @ (*) begin
+    if ((grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_ap_done == 1'b0)) begin
+        ap_ST_fsm_state5_blk = 1'b1;
+    end else begin
+        ap_ST_fsm_state5_blk = 1'b0;
+    end
+end
 
 assign ap_ST_fsm_state6_blk = 1'b0;
 
 always @ (*) begin
-    if ((blk_strm_empty_n == 1'b0)) begin
+    if ((grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_260_ap_done == 1'b0)) begin
         ap_ST_fsm_state7_blk = 1'b1;
     end else begin
         ap_ST_fsm_state7_blk = 1'b0;
     end
 end
 
-assign ap_ST_fsm_state8_blk = 1'b0;
-
 always @ (*) begin
-    if ((grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_ap_done == 1'b0)) begin
-        ap_ST_fsm_state9_blk = 1'b1;
-    end else begin
-        ap_ST_fsm_state9_blk = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if (((1'b0 == ap_block_state3) & (ap_phi_mux_e_4_phi_fu_205_p4 == 1'd1) & (1'b1 == ap_CS_fsm_state3))) begin
+    if (((1'b0 == ap_block_state2) & (ap_phi_mux_e_4_phi_fu_205_p4 == 1'd1) & (1'b1 == ap_CS_fsm_state2))) begin
         ap_done = 1'b1;
     end else begin
         ap_done = ap_done_reg;
@@ -497,7 +423,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_state3) & (ap_phi_mux_e_4_phi_fu_205_p4 == 1'd1) & (1'b1 == ap_CS_fsm_state3))) begin
+    if (((1'b0 == ap_block_state2) & (ap_phi_mux_e_4_phi_fu_205_p4 == 1'd1) & (1'b1 == ap_CS_fsm_state2))) begin
         ap_ready = 1'b1;
     end else begin
         ap_ready = 1'b0;
@@ -505,7 +431,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state7)) begin
+    if (((icmp_ln530_fu_282_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state3))) begin
         blk_strm_blk_n = blk_strm_empty_n;
     end else begin
         blk_strm_blk_n = 1'b1;
@@ -513,7 +439,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((blk_strm_empty_n == 1'b1) & (1'b1 == ap_CS_fsm_state7))) begin
+    if (((1'b0 == ap_block_state3) & (icmp_ln530_fu_282_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state3))) begin
         blk_strm_read = 1'b1;
     end else begin
         blk_strm_read = 1'b0;
@@ -521,7 +447,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state12) | (~((ap_done_reg == 1'b1) | (ap_start == 1'b0)) & (1'b1 == ap_CS_fsm_state1)))) begin
+    if ((((icmp_ln530_fu_282_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state3)) | (~((ap_done_reg == 1'b1) | (ap_start == 1'b0)) & (1'b1 == ap_CS_fsm_state1)))) begin
         end_nblk_strm1_blk_n = end_nblk_strm1_empty_n;
     end else begin
         end_nblk_strm1_blk_n = 1'b1;
@@ -529,7 +455,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((((1'b0 == ap_block_state1) & (1'b1 == ap_CS_fsm_state1)) | ((end_nblk_strm1_empty_n == 1'b1) & (1'b1 == ap_CS_fsm_state12)))) begin
+    if ((((1'b0 == ap_block_state1) & (1'b1 == ap_CS_fsm_state1)) | ((1'b0 == ap_block_state3) & (icmp_ln530_fu_282_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state3)))) begin
         end_nblk_strm1_read = 1'b1;
     end else begin
         end_nblk_strm1_read = 1'b0;
@@ -537,7 +463,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((e_4_reg_202 == 1'd0) & (1'b1 == ap_CS_fsm_state3))) begin
+    if (((e_4_reg_202 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
         nblk_strm1_blk_n = nblk_strm1_empty_n;
     end else begin
         nblk_strm1_blk_n = 1'b1;
@@ -545,7 +471,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_state3) & (e_4_reg_202 == 1'd0) & (1'b1 == ap_CS_fsm_state3))) begin
+    if (((1'b0 == ap_block_state2) & (e_4_reg_202 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
         nblk_strm1_read = 1'b1;
     end else begin
         nblk_strm1_read = 1'b0;
@@ -553,20 +479,20 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state11)) begin
-        w_strm_din = grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_261_w_strm_din;
-    end else if ((1'b1 == ap_CS_fsm_state9)) begin
-        w_strm_din = grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_w_strm_din;
+    if ((1'b1 == ap_CS_fsm_state7)) begin
+        w_strm_din = grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_260_w_strm_din;
+    end else if ((1'b1 == ap_CS_fsm_state5)) begin
+        w_strm_din = grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_w_strm_din;
     end else begin
-        w_strm_din = grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_261_w_strm_din;
+        w_strm_din = grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_260_w_strm_din;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state11)) begin
-        w_strm_write = grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_261_w_strm_write;
-    end else if ((1'b1 == ap_CS_fsm_state9)) begin
-        w_strm_write = grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_w_strm_write;
+    if ((1'b1 == ap_CS_fsm_state7)) begin
+        w_strm_write = grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_260_w_strm_write;
+    end else if ((1'b1 == ap_CS_fsm_state5)) begin
+        w_strm_write = grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_w_strm_write;
     end else begin
         w_strm_write = 1'b0;
     end
@@ -582,12 +508,18 @@ always @ (*) begin
             end
         end
         ap_ST_fsm_state2 : begin
-            ap_NS_fsm = ap_ST_fsm_state3;
+            if (((1'b0 == ap_block_state2) & (ap_phi_mux_e_4_phi_fu_205_p4 == 1'd1) & (1'b1 == ap_CS_fsm_state2))) begin
+                ap_NS_fsm = ap_ST_fsm_state1;
+            end else if (((1'b0 == ap_block_state2) & (e_4_reg_202 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
+                ap_NS_fsm = ap_ST_fsm_state3;
+            end else begin
+                ap_NS_fsm = ap_ST_fsm_state2;
+            end
         end
         ap_ST_fsm_state3 : begin
-            if (((1'b0 == ap_block_state3) & (ap_phi_mux_e_4_phi_fu_205_p4 == 1'd1) & (1'b1 == ap_CS_fsm_state3))) begin
-                ap_NS_fsm = ap_ST_fsm_state1;
-            end else if (((1'b0 == ap_block_state3) & (e_4_reg_202 == 1'd0) & (1'b1 == ap_CS_fsm_state3))) begin
+            if (((1'b0 == ap_block_state3) & (icmp_ln530_fu_282_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state3))) begin
+                ap_NS_fsm = ap_ST_fsm_state2;
+            end else if (((1'b0 == ap_block_state3) & (icmp_ln530_fu_282_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state3))) begin
                 ap_NS_fsm = ap_ST_fsm_state4;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state3;
@@ -597,47 +529,20 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state5;
         end
         ap_ST_fsm_state5 : begin
-            ap_NS_fsm = ap_ST_fsm_state6;
+            if (((1'b1 == ap_CS_fsm_state5) & (grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_ap_done == 1'b1))) begin
+                ap_NS_fsm = ap_ST_fsm_state6;
+            end else begin
+                ap_NS_fsm = ap_ST_fsm_state5;
+            end
         end
         ap_ST_fsm_state6 : begin
-            if (((grp_fu_283_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state6))) begin
-                ap_NS_fsm = ap_ST_fsm_state12;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_state7;
-            end
+            ap_NS_fsm = ap_ST_fsm_state7;
         end
         ap_ST_fsm_state7 : begin
-            if (((blk_strm_empty_n == 1'b1) & (1'b1 == ap_CS_fsm_state7))) begin
-                ap_NS_fsm = ap_ST_fsm_state8;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_state7;
-            end
-        end
-        ap_ST_fsm_state8 : begin
-            ap_NS_fsm = ap_ST_fsm_state9;
-        end
-        ap_ST_fsm_state9 : begin
-            if (((1'b1 == ap_CS_fsm_state9) & (grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_ap_done == 1'b1))) begin
-                ap_NS_fsm = ap_ST_fsm_state10;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_state9;
-            end
-        end
-        ap_ST_fsm_state10 : begin
-            ap_NS_fsm = ap_ST_fsm_state11;
-        end
-        ap_ST_fsm_state11 : begin
-            if (((grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_261_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state11))) begin
-                ap_NS_fsm = ap_ST_fsm_state4;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_state11;
-            end
-        end
-        ap_ST_fsm_state12 : begin
-            if (((end_nblk_strm1_empty_n == 1'b1) & (1'b1 == ap_CS_fsm_state12))) begin
+            if (((grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_260_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state7))) begin
                 ap_NS_fsm = ap_ST_fsm_state3;
             end else begin
-                ap_NS_fsm = ap_ST_fsm_state12;
+                ap_NS_fsm = ap_ST_fsm_state7;
             end
         end
         default : begin
@@ -648,40 +553,40 @@ end
 
 assign ap_CS_fsm_state1 = ap_CS_fsm[32'd0];
 
-assign ap_CS_fsm_state10 = ap_CS_fsm[32'd9];
-
-assign ap_CS_fsm_state11 = ap_CS_fsm[32'd10];
-
-assign ap_CS_fsm_state12 = ap_CS_fsm[32'd11];
-
 assign ap_CS_fsm_state2 = ap_CS_fsm[32'd1];
 
 assign ap_CS_fsm_state3 = ap_CS_fsm[32'd2];
 
 assign ap_CS_fsm_state4 = ap_CS_fsm[32'd3];
 
+assign ap_CS_fsm_state5 = ap_CS_fsm[32'd4];
+
 assign ap_CS_fsm_state6 = ap_CS_fsm[32'd5];
 
 assign ap_CS_fsm_state7 = ap_CS_fsm[32'd6];
-
-assign ap_CS_fsm_state8 = ap_CS_fsm[32'd7];
-
-assign ap_CS_fsm_state9 = ap_CS_fsm[32'd8];
 
 always @ (*) begin
     ap_block_state1 = ((end_nblk_strm1_empty_n == 1'b0) | (ap_done_reg == 1'b1) | (ap_start == 1'b0));
 end
 
 always @ (*) begin
-    ap_block_state3 = ((e_4_reg_202 == 1'd0) & (nblk_strm1_empty_n == 1'b0));
+    ap_block_state2 = ((e_4_reg_202 == 1'd0) & (nblk_strm1_empty_n == 1'b0));
+end
+
+always @ (*) begin
+    ap_block_state3 = (((icmp_ln530_fu_282_p2 == 1'd1) & (end_nblk_strm1_empty_n == 1'b0)) | ((icmp_ln530_fu_282_p2 == 1'd0) & (blk_strm_empty_n == 1'b0)));
 end
 
 assign ap_phi_mux_e_4_phi_fu_205_p4 = e_4_reg_202;
 
-assign blk_fu_294_p1 = blk_strm_dout[31:0];
+assign blk_fu_293_p1 = blk_strm_dout[31:0];
 
-assign grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_ap_start = grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223_ap_start_reg;
+assign grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_ap_start = grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222_ap_start_reg;
 
-assign grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_261_ap_start = grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_261_ap_start_reg;
+assign grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_260_ap_start = grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_260_ap_start_reg;
+
+assign i_fu_287_p2 = (i_5_reg_211 + 64'd1);
+
+assign icmp_ln530_fu_282_p2 = ((i_5_reg_211 == n_reg_634) ? 1'b1 : 1'b0);
 
 endmodule //test_hmac_sha256_generateMsgSchedule

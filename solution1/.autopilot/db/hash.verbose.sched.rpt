@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'hash'
 ================================================================
-* Date:           Sat Oct 18 18:24:24 2025
+* Date:           Tue Oct 21 20:18:59 2025
 
 * Version:        2024.2 (Build 5238294 on Nov  8 2024)
 * Project:        hmac_sha256_test.prj
@@ -17,11 +17,11 @@
 ================================================================
 + Timing: 
     * Summary: 
-    +--------+---------+-----------+------------+
-    |  Clock |  Target | Estimated | Uncertainty|
-    +--------+---------+-----------+------------+
-    |ap_clk  |  3.33 ns|  12.519 ns|     1.05 ns|
-    +--------+---------+-----------+------------+
+    +--------+----------+-----------+------------+
+    |  Clock |  Target  | Estimated | Uncertainty|
+    +--------+----------+-----------+------------+
+    |ap_clk  |  15.00 ns|  12.882 ns|     1.50 ns|
+    +--------+----------+-----------+------------+
 
 + Latency: 
     * Summary: 
@@ -96,7 +96,7 @@ ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%ret_ln62 = ret" [test.cpp:62]   --
 ============================================================
 + Verbose Summary: Timing violations
 ============================================================
-Target clock period: 3.330ns, clock uncertainty: 1.050ns.
+Target clock period: 15.000ns, clock uncertainty: 1.500ns.
 
  <State 1>: 0.000ns
 The critical path consists of the following:

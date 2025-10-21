@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'resHash_32_64_256_32_64_sha256_wrapper_s'
 ================================================================
-* Date:           Sat Oct 18 18:24:25 2025
+* Date:           Tue Oct 21 20:19:00 2025
 
 * Version:        2024.2 (Build 5238294 on Nov  8 2024)
 * Project:        hmac_sha256_test.prj
@@ -17,11 +17,11 @@
 ================================================================
 + Timing: 
     * Summary: 
-    +--------+---------+-----------+------------+
-    |  Clock |  Target | Estimated | Uncertainty|
-    +--------+---------+-----------+------------+
-    |ap_clk  |  3.33 ns|  12.519 ns|     1.05 ns|
-    +--------+---------+-----------+------------+
+    +--------+----------+-----------+------------+
+    |  Clock |  Target  | Estimated | Uncertainty|
+    +--------+----------+-----------+------------+
+    |ap_clk  |  15.00 ns|  12.882 ns|     1.50 ns|
+    +--------+----------+-----------+------------+
 
 + Latency: 
     * Summary: 
@@ -90,8 +90,8 @@ ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%mergeKopadLenStrm = alloca i64 1" [
 ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%eMergeKopadLenStrm = alloca i64 1" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:249]   --->   Operation 7 'alloca' 'eMergeKopadLenStrm' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 4> <FIFO>
 ST_1 : Operation 8 [2/2] (0.00ns)   --->   "%call_ln253 = call void @mergeKopad<32, 64, 256, 32, 64>, i512 %kopad2Strm, i256 %msgHashStrm, i1 %eMsgHashStrm, i32 %mergeKopadStrm, i64 %mergeKopadLenStrm, i1 %eMergeKopadLenStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:253]   --->   Operation 8 'call' 'call_ln253' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
 
-State 2 <SV = 1> <Delay = 1.14>
-ST_2 : Operation 9 [1/2] (1.14ns)   --->   "%call_ln253 = call void @mergeKopad<32, 64, 256, 32, 64>, i512 %kopad2Strm, i256 %msgHashStrm, i1 %eMsgHashStrm, i32 %mergeKopadStrm, i64 %mergeKopadLenStrm, i1 %eMergeKopadLenStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:253]   --->   Operation 9 'call' 'call_ln253' <Predicate = true> <Delay = 1.14> <CoreType = "Generic">   --->   Generic Core
+State 2 <SV = 1> <Delay = 3.63>
+ST_2 : Operation 9 [1/2] (3.63ns)   --->   "%call_ln253 = call void @mergeKopad<32, 64, 256, 32, 64>, i512 %kopad2Strm, i256 %msgHashStrm, i1 %eMsgHashStrm, i32 %mergeKopadStrm, i64 %mergeKopadLenStrm, i1 %eMergeKopadLenStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:253]   --->   Operation 9 'call' 'call_ln253' <Predicate = true> <Delay = 3.63> <CoreType = "Generic">   --->   Generic Core
 
 State 3 <SV = 2> <Delay = 0.00>
 ST_3 : Operation 10 [2/2] (0.00ns)   --->   "%call_ln256 = call void @hash.1, i32 %mergeKopadStrm, i64 %mergeKopadLenStrm, i1 %eMergeKopadLenStrm, i256 %hshStrm, i1 %eHshStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:256]   --->   Operation 10 'call' 'call_ln256' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
@@ -562,14 +562,14 @@ ret_ln257                  (ret                 ) [ 00000]
 ============================================================
 
 * Functional unit list:
-|----------|----------------------------------------|---------|---------|---------|---------|
-| Operation|             Functional Unit            |   DSP   |  Delay  |    FF   |   LUT   |
-|----------|----------------------------------------|---------|---------|---------|---------|
-|   call   | grp_mergeKopad_32_64_256_32_64_s_fu_62 |    0    |  1.588  |   1545  |    52   |
-|          |            grp_hash_1_fu_75            |    5    | 57.4066 |  12798  |   2354  |
-|----------|----------------------------------------|---------|---------|---------|---------|
-|   Total  |                                        |    5    | 58.9946 |  14343  |   2406  |
-|----------|----------------------------------------|---------|---------|---------|---------|
+|----------|----------------------------------------|---------|---------|---------|
+| Operation|             Functional Unit            |  Delay  |    FF   |   LUT   |
+|----------|----------------------------------------|---------|---------|---------|
+|   call   | grp_mergeKopad_32_64_256_32_64_s_fu_62 |  1.588  |   1545  |    52   |
+|          |            grp_hash_1_fu_75            | 19.2946 |   6995  |   2359  |
+|----------|----------------------------------------|---------|---------|---------|
+|   Total  |                                        | 20.8826 |   8540  |   2411  |
+|----------|----------------------------------------|---------|---------|---------|
 
 Memories:
 N/A
@@ -595,13 +595,13 @@ N/A
 
 
 * Summary:
-+-----------+--------+--------+--------+--------+
-|           |   DSP  |  Delay |   FF   |   LUT  |
-+-----------+--------+--------+--------+--------+
-|  Function |    5   |   58   |  14343 |  2406  |
-|   Memory  |    -   |    -   |    -   |    -   |
-|Multiplexer|    -   |    -   |    -   |    -   |
-|  Register |    -   |    -   |   97   |    -   |
-+-----------+--------+--------+--------+--------+
-|   Total   |    5   |   58   |  14440 |  2406  |
-+-----------+--------+--------+--------+--------+
++-----------+--------+--------+--------+
+|           |  Delay |   FF   |   LUT  |
++-----------+--------+--------+--------+
+|  Function |   20   |  8540  |  2411  |
+|   Memory  |    -   |    -   |    -   |
+|Multiplexer|    -   |    -   |    -   |
+|  Register |    -   |   97   |    -   |
++-----------+--------+--------+--------+
+|   Total   |   20   |  8637  |  2411  |
++-----------+--------+--------+--------+

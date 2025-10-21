@@ -2020,42 +2020,34 @@
         <item>
           <first>msgHash_32_64_256_32_64_sha256_wrapper_U0 (msgHash_32_64_256_32_64_sha256_wrapper_s)</first>
           <second>
-            <count>4</count>
+            <count>3</count>
             <item_version>0</item_version>
             <item>
               <first>BRAM</first>
               <second>2</second>
             </item>
             <item>
-              <first>DSP</first>
-              <second>5</second>
-            </item>
-            <item>
               <first>FF</first>
-              <second>13063</second>
+              <second>6980</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>5948</second>
+              <second>5759</second>
             </item>
           </second>
         </item>
         <item>
           <first>resHash_32_64_256_32_64_sha256_wrapper_U0 (resHash_32_64_256_32_64_sha256_wrapper_s)</first>
           <second>
-            <count>3</count>
+            <count>2</count>
             <item_version>0</item_version>
             <item>
-              <first>DSP</first>
-              <second>5</second>
-            </item>
-            <item>
               <first>FF</first>
-              <second>11888</second>
+              <second>7309</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>5611</second>
+              <second>5453</second>
             </item>
           </second>
         </item>

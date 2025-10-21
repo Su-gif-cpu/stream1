@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'dup_strm_Pipeline_VITIS_LOOP_506_1'
 ================================================================
-* Date:           Sat Oct 18 18:24:30 2025
+* Date:           Tue Oct 21 20:19:04 2025
 
 * Version:        2024.2 (Build 5238294 on Nov  8 2024)
 * Project:        hmac_sha256_test.prj
@@ -17,20 +17,20 @@
 ================================================================
 + Timing: 
     * Summary: 
-    +--------+---------+----------+------------+
-    |  Clock |  Target | Estimated| Uncertainty|
-    +--------+---------+----------+------------+
-    |ap_clk  |  3.33 ns|  2.728 ns|     1.05 ns|
-    +--------+---------+----------+------------+
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  15.00 ns|  7.452 ns|     1.50 ns|
+    +--------+----------+----------+------------+
 
 + Latency: 
     * Summary: 
-    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
-    |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                    |
-    |   min   |   max   |    min   |    max   | min | max |                      Type                      |
-    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
-    |        3|        3|  9.990 ns|  9.990 ns|    2|    2|  loop auto-rewind stp (delay=0 clock cycles(s))|
-    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    +---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval |                    Pipeline                    |
+    |   min   |   max   |    min    |    max    | min | max |                      Type                      |
+    +---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
+    |        3|        3|  45.000 ns|  45.000 ns|    2|    2|  loop auto-rewind stp (delay=0 clock cycles(s))|
+    +---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
 
     + Detail: 
         * Instance: 
@@ -54,14 +54,14 @@
 |       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
 +-----------------+---------+-----+--------+-------+-----+
 |DSP              |        -|    -|       -|      -|    -|
-|Expression       |        -|    -|       0|     20|    -|
+|Expression       |        -|    -|       0|     22|    -|
 |FIFO             |        -|    -|       -|      -|    -|
 |Instance         |        -|    -|       -|      -|    -|
 |Memory           |        -|    -|       -|      -|    -|
 |Multiplexer      |        -|    -|       0|     95|    -|
-|Register         |        -|    -|       7|      -|    -|
+|Register         |        -|    -|       8|      -|    -|
 +-----------------+---------+-----+--------+-------+-----+
-|Total            |        0|    0|       7|    115|    0|
+|Total            |        0|    0|       8|    117|    0|
 +-----------------+---------+-----+--------+-------+-----+
 |Available        |      280|  220|  106400|  53200|    0|
 +-----------------+---------+-----+--------+-------+-----+
@@ -88,15 +88,16 @@
     |ap_block_pp0_stage0_01001_grp1         |       and|   0|  0|   2|           1|           1|
     |ap_block_pp0_stage0_01001_grp2         |       and|   0|  0|   2|           1|           1|
     |ap_block_pp0_stage0_01001_grp3         |       and|   0|  0|   2|           1|           1|
-    |ap_block_pp0_stage0_11001              |       and|   0|  0|   2|           1|           1|
+    |ap_block_state1_pp0_stage0_iter0       |       and|   0|  0|   2|           1|           1|
     |ap_block_state2_pp0_stage0_iter1_grp2  |       and|   0|  0|   2|           1|           1|
     |ap_block_state2_pp0_stage0_iter1_grp3  |       and|   0|  0|   2|           1|           1|
-    |ap_condition_255                       |       and|   0|  0|   2|           1|           1|
-    |ap_condition_260                       |       and|   0|  0|   2|           1|           1|
+    |ap_condition_262                       |       and|   0|  0|   2|           1|           1|
+    |ap_condition_267                       |       and|   0|  0|   2|           1|           1|
+    |ap_block_pp0_stage0_11001              |        or|   0|  0|   2|           1|           1|
     |ap_block_state2_pp0_stage0_iter1_grp1  |        or|   0|  0|   2|           1|           1|
     |ap_enable_pp0                          |       xor|   0|  0|   2|           1|           2|
     +---------------------------------------+----------+----+---+----+------------+------------+
-    |Total                                  |          |   0|  0|  20|          10|          11|
+    |Total                                  |          |   0|  0|  22|          11|          12|
     +---------------------------------------+----------+----+---+----+------------+------------+
 
     * Multiplexer: 
@@ -128,8 +129,9 @@
     |ap_done_reg                                |  1|   0|    1|          0|
     |ap_enable_reg_pp0_iter1                    |  1|   0|    1|          0|
     |e_6_reg_106                                |  1|   0|    1|          0|
+    |e_7_reg_117                                |  1|   0|    1|          0|
     +-------------------------------------------+---+----+-----+-----------+
-    |Total                                      |  7|   0|    7|          0|
+    |Total                                      |  8|   0|    8|          0|
     +-------------------------------------------+---+----+-----+-----------+
 
 
@@ -147,6 +149,11 @@
 |ap_done                        |  out|    1|  ap_ctrl_hs|  dup_strm_Pipeline_VITIS_LOOP_506_1|  return value|
 |ap_idle                        |  out|    1|  ap_ctrl_hs|  dup_strm_Pipeline_VITIS_LOOP_506_1|  return value|
 |ap_ready                       |  out|    1|  ap_ctrl_hs|  dup_strm_Pipeline_VITIS_LOOP_506_1|  return value|
+|end_nblk_strm_dout             |   in|    1|     ap_fifo|                       end_nblk_strm|       pointer|
+|end_nblk_strm_empty_n          |   in|    1|     ap_fifo|                       end_nblk_strm|       pointer|
+|end_nblk_strm_read             |  out|    1|     ap_fifo|                       end_nblk_strm|       pointer|
+|end_nblk_strm_num_data_valid   |   in|    6|     ap_fifo|                       end_nblk_strm|       pointer|
+|end_nblk_strm_fifo_cap         |   in|    6|     ap_fifo|                       end_nblk_strm|       pointer|
 |nblk_strm_dout                 |   in|   64|     ap_fifo|                           nblk_strm|       pointer|
 |nblk_strm_empty_n              |   in|    1|     ap_fifo|                           nblk_strm|       pointer|
 |nblk_strm_read                 |  out|    1|     ap_fifo|                           nblk_strm|       pointer|
@@ -172,11 +179,6 @@
 |end_nblk_strm2_write           |  out|    1|     ap_fifo|                      end_nblk_strm2|       pointer|
 |end_nblk_strm2_num_data_valid  |   in|   32|     ap_fifo|                      end_nblk_strm2|       pointer|
 |end_nblk_strm2_fifo_cap        |   in|   32|     ap_fifo|                      end_nblk_strm2|       pointer|
-|end_nblk_strm_dout             |   in|    1|     ap_fifo|                       end_nblk_strm|       pointer|
-|end_nblk_strm_empty_n          |   in|    1|     ap_fifo|                       end_nblk_strm|       pointer|
-|end_nblk_strm_read             |  out|    1|     ap_fifo|                       end_nblk_strm|       pointer|
-|end_nblk_strm_num_data_valid   |   in|    6|     ap_fifo|                       end_nblk_strm|       pointer|
-|end_nblk_strm_fifo_cap         |   in|    6|     ap_fifo|                       end_nblk_strm|       pointer|
 |e                              |   in|    1|     ap_none|                                   e|        scalar|
 +-------------------------------+-----+-----+------------+------------------------------------+--------------+
 

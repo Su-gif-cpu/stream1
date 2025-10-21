@@ -92,7 +92,7 @@ set NewPortList {[
  	{ "name": "w_strm_fifo_cap", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "w_strm", "role": "fifo_cap" }}  ]}
 
 set RtlHierarchyInfo {[
-	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "4", "9", "10"],
+	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "4"],
 		"CDFG" : "generateMsgSchedule",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1", "real_start" : "0",
@@ -118,14 +118,14 @@ set RtlHierarchyInfo {[
 					{"Name" : "end_nblk_strm1_blk_n", "Type" : "RtlSignal"}]},
 			{"Name" : "w_strm", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "32", "DependentChanType" : "0",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223", "Port" : "w_strm", "Inst_start_state" : "8", "Inst_end_state" : "9"},
-					{"ID" : "4", "SubInstance" : "grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_261", "Port" : "w_strm", "Inst_start_state" : "10", "Inst_end_state" : "11"}]}],
+					{"ID" : "1", "SubInstance" : "grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222", "Port" : "w_strm", "Inst_start_state" : "4", "Inst_end_state" : "5"},
+					{"ID" : "4", "SubInstance" : "grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_260", "Port" : "w_strm", "Inst_start_state" : "6", "Inst_end_state" : "7"}]}],
 		"Loop" : [
 			{"Name" : "VITIS_LOOP_530_2", "PipelineType" : "no",
-				"LoopDec" : {"FSMBitwidth" : "12", "FirstState" : "ap_ST_fsm_state4", "LastState" : ["ap_ST_fsm_state11"], "QuitState" : ["ap_ST_fsm_state6"], "PreState" : ["ap_ST_fsm_state3"], "PostState" : ["ap_ST_fsm_state12"], "OneDepthLoop" : "0", "OneStateBlock": ""}},
+				"LoopDec" : {"FSMBitwidth" : "7", "FirstState" : "ap_ST_fsm_state3", "LastState" : ["ap_ST_fsm_state7"], "QuitState" : ["ap_ST_fsm_state3"], "PreState" : ["ap_ST_fsm_state2"], "PostState" : ["ap_ST_fsm_state2"], "OneDepthLoop" : "0", "OneStateBlock": ""}},
 			{"Name" : "VITIS_LOOP_528_1", "PipelineType" : "no",
-				"LoopDec" : {"FSMBitwidth" : "12", "FirstState" : "ap_ST_fsm_state3", "LastState" : ["ap_ST_fsm_state12"], "QuitState" : ["ap_ST_fsm_state3"], "PreState" : ["ap_ST_fsm_state2"], "PostState" : ["ap_ST_fsm_state1"], "OneDepthLoop" : "0", "OneStateBlock": ""}}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223", "Parent" : "0", "Child" : ["2", "3"],
+				"LoopDec" : {"FSMBitwidth" : "7", "FirstState" : "ap_ST_fsm_state2", "LastState" : ["ap_ST_fsm_state3"], "QuitState" : ["ap_ST_fsm_state2"], "PreState" : ["ap_ST_fsm_state1"], "PostState" : ["ap_ST_fsm_state1"], "OneDepthLoop" : "0", "OneStateBlock": ""}}]},
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222", "Parent" : "0", "Child" : ["2", "3"],
 		"CDFG" : "generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
@@ -178,15 +178,15 @@ set RtlHierarchyInfo {[
 		"Loop" : [
 			{"Name" : "LOOP_SHA256_PREPARE_WT16", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter1", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "2", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223.sparsemux_33_4_32_1_1_U75", "Parent" : "1"},
-	{"ID" : "3", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223.flow_control_loop_pipe_sequential_init_U", "Parent" : "1"},
-	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_261", "Parent" : "0", "Child" : ["5", "6", "7", "8"],
+	{"ID" : "2", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222.sparsemux_33_4_32_1_1_U61", "Parent" : "1"},
+	{"ID" : "3", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222.flow_control_loop_pipe_sequential_init_U", "Parent" : "1"},
+	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_260", "Parent" : "0", "Child" : ["5"],
 		"CDFG" : "generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "51", "EstimateLatencyMax" : "51",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "50", "EstimateLatencyMax" : "50",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -217,19 +217,14 @@ set RtlHierarchyInfo {[
 		"Loop" : [
 			{"Name" : "LOOP_SHA256_PREPARE_WT64", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter2", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter2", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "5", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_261.add_32ns_32ns_32_2_1_U110", "Parent" : "4"},
-	{"ID" : "6", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_261.add_32ns_32ns_32_2_1_U111", "Parent" : "4"},
-	{"ID" : "7", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_261.add_32ns_32ns_32_1_1_U112", "Parent" : "4"},
-	{"ID" : "8", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_261.flow_control_loop_pipe_sequential_init_U", "Parent" : "4"},
-	{"ID" : "9", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.icmp_64ns_64ns_1_3_1_U132", "Parent" : "0"},
-	{"ID" : "10", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.add_64ns_64ns_64_3_1_U133", "Parent" : "0"}]}
+	{"ID" : "5", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_260.flow_control_loop_pipe_sequential_init_U", "Parent" : "4"}]}
 
 
 set ArgLastReadFirstWriteLatency {
 	generateMsgSchedule {
-		blk_strm {Type I LastRead 6 FirstWrite -1}
-		nblk_strm1 {Type I LastRead 2 FirstWrite -1}
-		end_nblk_strm1 {Type I LastRead 6 FirstWrite -1}
+		blk_strm {Type I LastRead 2 FirstWrite -1}
+		nblk_strm1 {Type I LastRead 1 FirstWrite -1}
+		end_nblk_strm1 {Type I LastRead 2 FirstWrite -1}
 		w_strm {Type O LastRead -1 FirstWrite 1}}
 	generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16 {
 		w_strm {Type O LastRead -1 FirstWrite 1}

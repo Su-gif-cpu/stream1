@@ -1,0 +1,591 @@
+<profile>
+  <RunData>
+    <RUN_TYPE>synth</RUN_TYPE>
+    <VIVADO_VERSION>v.2024.2</VIVADO_VERSION>
+    <ROOT_MODULE_CELL>bd_0_i/hls_inst</ROOT_MODULE_CELL>
+  </RunData>
+  <TimingReport>
+    <TargetClockPeriod>15.000</TargetClockPeriod>
+    <AchievedClockPeriod>9.011</AchievedClockPeriod>
+    <CLOCK_NAME>ap_clk</CLOCK_NAME>
+    <CP_FINAL>9.011</CP_FINAL>
+    <CP_ROUTE>NA</CP_ROUTE>
+    <CP_SYNTH>9.011</CP_SYNTH>
+    <CP_TARGET>15.000</CP_TARGET>
+    <SLACK_FINAL>5.989</SLACK_FINAL>
+    <SLACK_ROUTE/>
+    <SLACK_SYNTH>5.989</SLACK_SYNTH>
+    <TIMING_MET>TRUE</TIMING_MET>
+    <TNS_FINAL>0.000</TNS_FINAL>
+    <TNS_ROUTE>NA</TNS_ROUTE>
+    <TNS_SYNTH>0.000</TNS_SYNTH>
+    <WNS_FINAL>5.989</WNS_FINAL>
+    <WNS_ROUTE>NA</WNS_ROUTE>
+    <WNS_SYNTH>5.989</WNS_SYNTH>
+  </TimingReport>
+  <AreaReport>
+    <Resources>
+      <BRAM>1</BRAM>
+      <CLB>0</CLB>
+      <DSP>0</DSP>
+      <FF>13792</FF>
+      <LATCH>0</LATCH>
+      <LUT>7952</LUT>
+      <SRL>0</SRL>
+      <URAM>0</URAM>
+    </Resources>
+    <AvailableResources>
+      <BRAM>280</BRAM>
+      <CLB>0</CLB>
+      <DSP>220</DSP>
+      <FF>106400</FF>
+      <LUT>53200</LUT>
+      <URAM>0</URAM>
+    </AvailableResources>
+  </AreaReport>
+  <RtlModules>
+    <RtlModule CELL="inst" DEPTH="0" IS_TOP="1" TYPE="function" MODULENAME="test_hmac_sha256" DISPNAME="inst" RTLNAME="test_hmac_sha256">
+      <SubModules count="1">grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38</SubModules>
+      <Resources BRAM="1" FF="13792" LUT="7952"/>
+      <LocalResources FF="5" LUT="3"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38" DEPTH="1" TYPE="function" MODULENAME="hmacDataflow_32_64_256_32_64_sha256_wrapper_s" DISPNAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38" RTLNAME="test_hmac_sha256_hmacDataflow_32_64_256_32_64_sha256_wrapper_s">
+      <SubModules count="11">eKipadStrm_U eMsgHashStrm_U kipadStrm_U kopad2Strm_U kopadStrm_U kpad_32_64_256_32_64_sha256_wrapper_U0 msgHashStrm_U msgHash_32_64_256_32_64_sha256_wrapper_U0 resHash_32_64_256_32_64_sha256_wrapper_U0 start_for_msgHash_32_64_256_32_64_sha256_wrapper_U0_U start_for_resHash_32_64_256_32_64_sha256_wrapper_U0_U</SubModules>
+      <Resources BRAM="1" FF="13787" LUT="7949"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/eKipadStrm_U" DEPTH="2" TYPE="resource" MODULENAME="fifo_w1_d4_D_x0" DISPNAME="eKipadStrm_U" RTLNAME="test_hmac_sha256_fifo_w1_d4_D_x0">
+      <Resources FF="14" LUT="23"/>
+      <LocalResources FF="13" LUT="18"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="lutram" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="eKipadStrm_U" SOURCE="D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:267" STORAGESIZE="1 4 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="eKipadStrm" VISIBLE="true"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/eMsgHashStrm_U" DEPTH="2" TYPE="resource" MODULENAME="fifo_w1_d4_D_x0" DISPNAME="eMsgHashStrm_U" RTLNAME="test_hmac_sha256_fifo_w1_d4_D_x0">
+      <Resources FF="14" LUT="15"/>
+      <LocalResources FF="13" LUT="11"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="lutram" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="eMsgHashStrm_U" SOURCE="D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:284" STORAGESIZE="1 4 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="eMsgHashStrm" VISIBLE="true"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/kipadStrm_U" DEPTH="2" TYPE="resource" MODULENAME="fifo_w512_d4_D" DISPNAME="kipadStrm_U" RTLNAME="test_hmac_sha256_fifo_w512_d4_D">
+      <Resources FF="282" LUT="190"/>
+      <LocalResources FF="13" LUT="9"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="lutram" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="kipadStrm_U" SOURCE="D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:271" STORAGESIZE="512 4 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="kipadStrm" VISIBLE="true"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/kopad2Strm_U" DEPTH="2" TYPE="resource" MODULENAME="fifo_w512_d4_D" DISPNAME="kopad2Strm_U" RTLNAME="test_hmac_sha256_fifo_w512_d4_D">
+      <Resources FF="291" LUT="199"/>
+      <LocalResources FF="13" LUT="10"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="lutram" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="kopad2Strm_U" SOURCE="D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:277" STORAGESIZE="512 4 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="kopad2Strm" VISIBLE="true"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/kopadStrm_U" DEPTH="2" TYPE="resource" MODULENAME="fifo_w512_d4_D" DISPNAME="kopadStrm_U" RTLNAME="test_hmac_sha256_fifo_w512_d4_D">
+      <Resources FF="286" LUT="195"/>
+      <LocalResources FF="13" LUT="10"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="lutram" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="kopadStrm_U" SOURCE="D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:274" STORAGESIZE="512 4 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="kopadStrm" VISIBLE="true"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/kpad_32_64_256_32_64_sha256_wrapper_U0" DEPTH="2" TYPE="function" MODULENAME="kpad_32_64_256_32_64_sha256_wrapper_s" DISPNAME="kpad_32_64_256_32_64_sha256_wrapper_U0" RTLNAME="test_hmac_sha256_kpad_32_64_256_32_64_sha256_wrapper_s">
+      <SubModules count="1">grp_kpad_32_64_256_32_64_sha256_wrapper_Pipeline_VITIS_LOOP_120_2_fu_215</SubModules>
+      <Resources FF="270" LUT="210"/>
+      <LocalResources FF="7" LUT="198"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/kpad_32_64_256_32_64_sha256_wrapper_U0/grp_kpad_32_64_256_32_64_sha256_wrapper_Pipeline_VITIS_LOOP_120_2_fu_215" DEPTH="3" TYPE="function" MODULENAME="kpad_32_64_256_32_64_sha256_wrapper_Pipeline_VITIS_LOOP_120_2" DISPNAME="grp_kpad_32_64_256_32_64_sha256_wrapper_Pipeline_VITIS_LOOP_120_2_fu_215" RTLNAME="test_hmac_sha256_kpad_32_64_256_32_64_sha256_wrapper_Pipeline_VITIS_LOOP_120_2">
+      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+      <Resources FF="263" LUT="12"/>
+      <LocalResources FF="261" LUT="2"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/kpad_32_64_256_32_64_sha256_wrapper_U0/grp_kpad_32_64_256_32_64_sha256_wrapper_Pipeline_VITIS_LOOP_120_2_fu_215/flow_control_loop_pipe_sequential_init_U" DEPTH="4" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="10"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHashStrm_U" DEPTH="2" TYPE="resource" MODULENAME="fifo_w256_d4_D" DISPNAME="msgHashStrm_U" RTLNAME="test_hmac_sha256_fifo_w256_d4_D">
+      <Resources FF="269" LUT="183"/>
+      <LocalResources FF="13" LUT="10"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="lutram" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="msgHashStrm_U" SOURCE="D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:281" STORAGESIZE="256 4 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="msgHashStrm" VISIBLE="true"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0" DEPTH="2" TYPE="function" MODULENAME="msgHash_32_64_256_32_64_sha256_wrapper_s" DISPNAME="msgHash_32_64_256_32_64_sha256_wrapper_U0" RTLNAME="test_hmac_sha256_msgHash_32_64_256_32_64_sha256_wrapper_s">
+      <SubModules count="6">eMergeKipadLenStrm_U hash_U0 mergeKipadLenStrm_U mergeKipadStrm_U mergeKipad_32_64_256_64_U0 start_for_hash_U0_U</SubModules>
+      <Resources BRAM="1" FF="6419" LUT="3541"/>
+      <LocalResources FF="1"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/eMergeKipadLenStrm_U" DEPTH="3" TYPE="resource" MODULENAME="fifo_w1_d4_D" DISPNAME="eMergeKipadLenStrm_U" RTLNAME="test_hmac_sha256_fifo_w1_d4_D">
+      <Resources FF="14" LUT="14"/>
+      <LocalResources FF="13" LUT="11"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="lutram" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="eMergeKipadLenStrm_U" SOURCE="D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:196" STORAGESIZE="1 4 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="eMergeKipadLenStrm" VISIBLE="true"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0" DEPTH="3" TYPE="function" MODULENAME="hash" DISPNAME="hash_U0" RTLNAME="test_hmac_sha256_hash">
+      <SubModules count="1">grp_sha256_top_32_256_s_fu_32</SubModules>
+      <Resources FF="5512" LUT="3162"/>
+      <LocalResources FF="6" LUT="4"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32" DEPTH="4" TYPE="function" MODULENAME="sha256_top_32_256_s" DISPNAME="grp_sha256_top_32_256_s_fu_32" RTLNAME="test_hmac_sha256_sha256_top_32_256_s">
+      <SubModules count="15">blk_strm_U dup_strm_U0 end_nblk_strm1_U end_nblk_strm2_U end_nblk_strm_U generateMsgSchedule_U0 nblk_strm1_U nblk_strm2_U nblk_strm_U preProcessing_U0 sha256Digest_256_U0 start_for_dup_strm_U0_U start_for_generateMsgSchedule_U0_U start_for_sha256Digest_256_U0_U w_strm_U</SubModules>
+      <Resources FF="5506" LUT="3158"/>
+      <LocalResources LUT="145"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/blk_strm_U" DEPTH="5" TYPE="resource" MODULENAME="fifo_w512_d32_D" DISPNAME="blk_strm_U" RTLNAME="test_hmac_sha256_fifo_w512_d32_D">
+      <Resources FF="547" LUT="373"/>
+      <LocalResources FF="35" LUT="28"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="lutram" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="blk_strm_U" SOURCE=":0" STORAGESIZE="512 32 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="blk_strm" VISIBLE="true"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="lutram" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="blk_strm_U" SOURCE=":0" STORAGESIZE="512 32 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="blk_strm" VISIBLE="true"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/dup_strm_U0" DEPTH="5" TYPE="function" MODULENAME="dup_strm" DISPNAME="dup_strm_U0" RTLNAME="test_hmac_sha256_dup_strm">
+      <SubModules count="1">grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62</SubModules>
+      <Resources FF="15" LUT="26"/>
+      <LocalResources FF="7" LUT="4"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/dup_strm_U0/grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62" DEPTH="6" TYPE="function" MODULENAME="dup_strm_Pipeline_VITIS_LOOP_506_1" DISPNAME="grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62" RTLNAME="test_hmac_sha256_dup_strm_Pipeline_VITIS_LOOP_506_1">
+      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+      <Resources FF="8" LUT="22"/>
+      <LocalResources FF="6" LUT="11"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/dup_strm_U0/grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62/flow_control_loop_pipe_sequential_init_U" DEPTH="7" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="11"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/end_nblk_strm1_U" DEPTH="5" TYPE="resource" MODULENAME="fifo_w1_d32_D" DISPNAME="end_nblk_strm1_U" RTLNAME="test_hmac_sha256_fifo_w1_d32_D">
+      <Resources FF="26" LUT="22"/>
+      <LocalResources FF="25" LUT="17"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="lutram" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="end_nblk_strm1_U" SOURCE="D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:773" STORAGESIZE="1 32 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="end_nblk_strm1" VISIBLE="true"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="lutram" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="end_nblk_strm1_U" SOURCE="D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:773" STORAGESIZE="1 32 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="end_nblk_strm1" VISIBLE="true"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/end_nblk_strm2_U" DEPTH="5" TYPE="resource" MODULENAME="fifo_w1_d32_D" DISPNAME="end_nblk_strm2_U" RTLNAME="test_hmac_sha256_fifo_w1_d32_D">
+      <Resources FF="26" LUT="22"/>
+      <LocalResources FF="25" LUT="17"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="lutram" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="end_nblk_strm2_U" SOURCE="D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:776" STORAGESIZE="1 32 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="end_nblk_strm2" VISIBLE="true"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="lutram" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="end_nblk_strm2_U" SOURCE="D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:776" STORAGESIZE="1 32 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="end_nblk_strm2" VISIBLE="true"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/end_nblk_strm_U" DEPTH="5" TYPE="resource" MODULENAME="fifo_w1_d32_D" DISPNAME="end_nblk_strm_U" RTLNAME="test_hmac_sha256_fifo_w1_d32_D">
+      <Resources FF="26" LUT="24"/>
+      <LocalResources FF="25" LUT="18"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="lutram" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="end_nblk_strm_U" SOURCE="D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:770" STORAGESIZE="1 32 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="end_nblk_strm" VISIBLE="true"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="lutram" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="end_nblk_strm_U" SOURCE="D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:770" STORAGESIZE="1 32 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="end_nblk_strm" VISIBLE="true"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/generateMsgSchedule_U0" DEPTH="5" TYPE="function" MODULENAME="generateMsgSchedule" DISPNAME="generateMsgSchedule_U0" RTLNAME="test_hmac_sha256_generateMsgSchedule">
+      <SubModules count="2">grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222 grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_260</SubModules>
+      <Resources FF="1824" LUT="834"/>
+      <LocalResources FF="714" LUT="33"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/generateMsgSchedule_U0/grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222" DEPTH="6" TYPE="function" MODULENAME="generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16" DISPNAME="grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222" RTLNAME="test_hmac_sha256_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16">
+      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+      <Resources FF="552" LUT="184"/>
+      <LocalResources FF="550" LUT="34"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/generateMsgSchedule_U0/grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222/flow_control_loop_pipe_sequential_init_U" DEPTH="7" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="150"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/generateMsgSchedule_U0/grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_260" DEPTH="6" TYPE="function" MODULENAME="generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64" DISPNAME="grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_260" RTLNAME="test_hmac_sha256_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64">
+      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+      <Resources FF="558" LUT="617"/>
+      <LocalResources FF="553" LUT="101"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/generateMsgSchedule_U0/grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_260/flow_control_loop_pipe_sequential_init_U" DEPTH="7" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init">
+      <Resources FF="5" LUT="516"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/nblk_strm1_U" DEPTH="5" TYPE="resource" MODULENAME="fifo_w64_d32_D" DISPNAME="nblk_strm1_U" RTLNAME="test_hmac_sha256_fifo_w64_d32_D">
+      <Resources FF="85" LUT="61"/>
+      <LocalResources FF="25" LUT="20"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="lutram" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="nblk_strm1_U" SOURCE="D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:762" STORAGESIZE="64 32 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="nblk_strm1" VISIBLE="true"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="lutram" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="nblk_strm1_U" SOURCE="D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:762" STORAGESIZE="64 32 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="nblk_strm1" VISIBLE="true"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/nblk_strm2_U" DEPTH="5" TYPE="resource" MODULENAME="fifo_w64_d32_D" DISPNAME="nblk_strm2_U" RTLNAME="test_hmac_sha256_fifo_w64_d32_D">
+      <Resources FF="85" LUT="61"/>
+      <LocalResources FF="25" LUT="20"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="lutram" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="nblk_strm2_U" SOURCE="D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:765" STORAGESIZE="64 32 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="nblk_strm2" VISIBLE="true"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="lutram" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="nblk_strm2_U" SOURCE="D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:765" STORAGESIZE="64 32 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="nblk_strm2" VISIBLE="true"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/nblk_strm_U" DEPTH="5" TYPE="resource" MODULENAME="fifo_w64_d32_D" DISPNAME="nblk_strm_U" RTLNAME="test_hmac_sha256_fifo_w64_d32_D">
+      <Resources FF="85" LUT="60"/>
+      <LocalResources FF="25" LUT="19"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="lutram" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="nblk_strm_U" SOURCE="D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:759" STORAGESIZE="64 32 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="nblk_strm" VISIBLE="true"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="lutram" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="nblk_strm_U" SOURCE="D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:759" STORAGESIZE="64 32 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="nblk_strm" VISIBLE="true"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/preProcessing_U0" DEPTH="5" TYPE="function" MODULENAME="preProcessing" DISPNAME="preProcessing_U0" RTLNAME="test_hmac_sha256_preProcessing">
+      <SubModules count="2">grp_preProcessing_Pipeline_LOOP_SHA256_GEN_COPY_TAIL_AND_ONE_fu_279 grp_preProcessing_Pipeline_LOOP_SHA256_GEN_FULL_BLKS_fu_270</SubModules>
+      <Resources FF="1627" LUT="764"/>
+      <LocalResources FF="613" LUT="124"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/preProcessing_U0/grp_preProcessing_Pipeline_LOOP_SHA256_GEN_COPY_TAIL_AND_ONE_fu_279" DEPTH="6" TYPE="function" MODULENAME="preProcessing_Pipeline_LOOP_SHA256_GEN_COPY_TAIL_AND_ONE" DISPNAME="grp_preProcessing_Pipeline_LOOP_SHA256_GEN_COPY_TAIL_AND_ONE_fu_279" RTLNAME="test_hmac_sha256_preProcessing_Pipeline_LOOP_SHA256_GEN_COPY_TAIL_AND_ONE">
+      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+      <Resources FF="454" LUT="54"/>
+      <LocalResources FF="452" LUT="37"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/preProcessing_U0/grp_preProcessing_Pipeline_LOOP_SHA256_GEN_COPY_TAIL_AND_ONE_fu_279/flow_control_loop_pipe_sequential_init_U" DEPTH="7" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="17"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/preProcessing_U0/grp_preProcessing_Pipeline_LOOP_SHA256_GEN_FULL_BLKS_fu_270" DEPTH="6" TYPE="function" MODULENAME="preProcessing_Pipeline_LOOP_SHA256_GEN_FULL_BLKS" DISPNAME="grp_preProcessing_Pipeline_LOOP_SHA256_GEN_FULL_BLKS_fu_270" RTLNAME="test_hmac_sha256_preProcessing_Pipeline_LOOP_SHA256_GEN_FULL_BLKS">
+      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+      <Resources FF="560" LUT="586"/>
+      <LocalResources FF="558" LUT="561"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/preProcessing_U0/grp_preProcessing_Pipeline_LOOP_SHA256_GEN_FULL_BLKS_fu_270/flow_control_loop_pipe_sequential_init_U" DEPTH="7" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="25"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/sha256Digest_256_U0" DEPTH="5" TYPE="function" MODULENAME="sha256Digest_256_s" DISPNAME="sha256Digest_256_U0" RTLNAME="test_hmac_sha256_sha256Digest_256_s">
+      <SubModules count="1">grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272</SubModules>
+      <Resources FF="1089" LUT="745"/>
+      <LocalResources FF="452" LUT="44"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" DEPTH="6" TYPE="function" MODULENAME="sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS" DISPNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" RTLNAME="test_hmac_sha256_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS">
+      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+      <Resources FF="637" LUT="701"/>
+      <LocalResources FF="635" LUT="542"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/flow_control_loop_pipe_sequential_init_U" DEPTH="7" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="159"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/start_for_dup_strm_U0_U" DEPTH="5" TYPE="rtl" MODULENAME="start_for_dup_strm_U0" DISPNAME="start_for_dup_strm_U0_U" RTLNAME="test_hmac_sha256_start_for_dup_strm_U0">
+      <Resources FF="4" LUT="2"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/start_for_generateMsgSchedule_U0_U" DEPTH="5" TYPE="rtl" MODULENAME="start_for_generateMsgSchedule_U0" DISPNAME="start_for_generateMsgSchedule_U0_U" RTLNAME="test_hmac_sha256_start_for_generateMsgSchedule_U0">
+      <Resources FF="5" LUT="3"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/start_for_sha256Digest_256_U0_U" DEPTH="5" TYPE="rtl" MODULENAME="start_for_sha256Digest_256_U0" DISPNAME="start_for_sha256Digest_256_U0_U" RTLNAME="test_hmac_sha256_start_for_sha256Digest_256_U0">
+      <Resources FF="5" LUT="2"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/w_strm_U" DEPTH="5" TYPE="resource" MODULENAME="fifo_w32_d32_D" DISPNAME="w_strm_U" RTLNAME="test_hmac_sha256_fifo_w32_d32_D">
+      <Resources FF="57" LUT="45"/>
+      <LocalResources FF="25" LUT="20"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="lutram" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="w_strm_U" SOURCE="D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:781" STORAGESIZE="32 32 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="w_strm" VISIBLE="true"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="lutram" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="w_strm_U" SOURCE="D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:781" STORAGESIZE="32 32 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="w_strm" VISIBLE="true"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/mergeKipadLenStrm_U" DEPTH="3" TYPE="resource" MODULENAME="fifo_w64_d4_D" DISPNAME="mergeKipadLenStrm_U" RTLNAME="test_hmac_sha256_fifo_w64_d4_D">
+      <Resources FF="77" LUT="57"/>
+      <LocalResources FF="13" LUT="10"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="lutram" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="mergeKipadLenStrm_U" SOURCE="D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:193" STORAGESIZE="64 4 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="mergeKipadLenStrm" VISIBLE="true"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/mergeKipadStrm_U" DEPTH="3" TYPE="resource" MODULENAME="fifo_w32_d128_B" DISPNAME="mergeKipadStrm_U" RTLNAME="test_hmac_sha256_fifo_w32_d128_B">
+      <Resources BRAM="1" FF="33" LUT="41"/>
+      <LocalResources FF="33" LUT="39"/>
+      <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="bram" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="mergeKipadStrm_U" SOURCE="D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:190" STORAGESIZE="32 128 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="mergeKipadStrm" VISIBLE="true"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/mergeKipad_32_64_256_64_U0" DEPTH="3" TYPE="function" MODULENAME="mergeKipad_32_64_256_64_s" DISPNAME="mergeKipad_32_64_256_64_U0" RTLNAME="test_hmac_sha256_mergeKipad_32_64_256_64_s">
+      <SubModules count="2">grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_162_2_fu_126 grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133</SubModules>
+      <Resources FF="778" LUT="261"/>
+      <LocalResources FF="343" LUT="9"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/mergeKipad_32_64_256_64_U0/grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_162_2_fu_126" DEPTH="4" TYPE="function" MODULENAME="mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_162_2" DISPNAME="grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_162_2_fu_126" RTLNAME="test_hmac_sha256_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_162_2">
+      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+      <Resources FF="368" LUT="217"/>
+      <LocalResources FF="366" LUT="32"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/mergeKipad_32_64_256_64_U0/grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_162_2_fu_126/flow_control_loop_pipe_sequential_init_U" DEPTH="5" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="185"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/mergeKipad_32_64_256_64_U0/grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133" DEPTH="4" TYPE="function" MODULENAME="mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3" DISPNAME="grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133" RTLNAME="test_hmac_sha256_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3">
+      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+      <Resources FF="67" LUT="35"/>
+      <LocalResources FF="65" LUT="28"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/mergeKipad_32_64_256_64_U0/grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133/flow_control_loop_pipe_sequential_init_U" DEPTH="5" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="7"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/start_for_hash_U0_U" DEPTH="3" TYPE="rtl" MODULENAME="start_for_hash_U0" DISPNAME="start_for_hash_U0_U" RTLNAME="test_hmac_sha256_start_for_hash_U0">
+      <Resources FF="4" LUT="6"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0" DEPTH="2" TYPE="function" MODULENAME="resHash_32_64_256_32_64_sha256_wrapper_s" DISPNAME="resHash_32_64_256_32_64_sha256_wrapper_U0" RTLNAME="test_hmac_sha256_resHash_32_64_256_32_64_sha256_wrapper_s">
+      <SubModules count="6">eMergeKopadLenStrm_U hash_1_U0 mergeKopadLenStrm_U mergeKopadStrm_U mergeKopad_32_64_256_32_64_U0 start_for_hash_1_U0_U</SubModules>
+      <Resources FF="5934" LUT="3383"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/eMergeKopadLenStrm_U" DEPTH="3" TYPE="resource" MODULENAME="fifo_w1_d4_D_x" DISPNAME="eMergeKopadLenStrm_U" RTLNAME="test_hmac_sha256_fifo_w1_d4_D_x">
+      <Resources FF="14" LUT="14"/>
+      <LocalResources FF="13" LUT="11"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="lutram" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="eMergeKopadLenStrm_U" SOURCE="D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:249" STORAGESIZE="1 4 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="eMergeKopadLenStrm" VISIBLE="true"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0" DEPTH="3" TYPE="function" MODULENAME="hash_1" DISPNAME="hash_1_U0" RTLNAME="test_hmac_sha256_hash_1">
+      <SubModules count="1">grp_sha256_top_32_256_s_fu_30</SubModules>
+      <Resources FF="4636" LUT="2936"/>
+      <LocalResources FF="6" LUT="5"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30" DEPTH="4" TYPE="function" MODULENAME="sha256_top_32_256_s" DISPNAME="grp_sha256_top_32_256_s_fu_30" RTLNAME="test_hmac_sha256_sha256_top_32_256_s">
+      <SubModules count="15">blk_strm_U dup_strm_U0 end_nblk_strm1_U end_nblk_strm2_U end_nblk_strm_U generateMsgSchedule_U0 nblk_strm1_U nblk_strm2_U nblk_strm_U preProcessing_U0 sha256Digest_256_U0 start_for_dup_strm_U0_U start_for_generateMsgSchedule_U0_U start_for_sha256Digest_256_U0_U w_strm_U</SubModules>
+      <Resources FF="4630" LUT="2931"/>
+      <LocalResources LUT="156"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/blk_strm_U" DEPTH="5" TYPE="resource" MODULENAME="fifo_w512_d32_D" DISPNAME="blk_strm_U" RTLNAME="test_hmac_sha256_fifo_w512_d32_D">
+      <Resources FF="551" LUT="377"/>
+      <LocalResources FF="39" LUT="32"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="lutram" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="blk_strm_U" SOURCE=":0" STORAGESIZE="512 32 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="blk_strm" VISIBLE="true"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="lutram" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="blk_strm_U" SOURCE=":0" STORAGESIZE="512 32 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="blk_strm" VISIBLE="true"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/dup_strm_U0" DEPTH="5" TYPE="function" MODULENAME="dup_strm" DISPNAME="dup_strm_U0" RTLNAME="test_hmac_sha256_dup_strm">
+      <SubModules count="1">grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62</SubModules>
+      <Resources FF="15" LUT="26"/>
+      <LocalResources FF="7" LUT="4"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/dup_strm_U0/grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62" DEPTH="6" TYPE="function" MODULENAME="dup_strm_Pipeline_VITIS_LOOP_506_1" DISPNAME="grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62" RTLNAME="test_hmac_sha256_dup_strm_Pipeline_VITIS_LOOP_506_1">
+      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+      <Resources FF="8" LUT="22"/>
+      <LocalResources FF="6" LUT="11"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/dup_strm_U0/grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62/flow_control_loop_pipe_sequential_init_U" DEPTH="7" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="11"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/end_nblk_strm1_U" DEPTH="5" TYPE="resource" MODULENAME="fifo_w1_d32_D" DISPNAME="end_nblk_strm1_U" RTLNAME="test_hmac_sha256_fifo_w1_d32_D">
+      <Resources FF="26" LUT="22"/>
+      <LocalResources FF="25" LUT="17"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="lutram" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="end_nblk_strm1_U" SOURCE="D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:773" STORAGESIZE="1 32 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="end_nblk_strm1" VISIBLE="true"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="lutram" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="end_nblk_strm1_U" SOURCE="D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:773" STORAGESIZE="1 32 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="end_nblk_strm1" VISIBLE="true"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/end_nblk_strm2_U" DEPTH="5" TYPE="resource" MODULENAME="fifo_w1_d32_D" DISPNAME="end_nblk_strm2_U" RTLNAME="test_hmac_sha256_fifo_w1_d32_D">
+      <Resources FF="26" LUT="22"/>
+      <LocalResources FF="25" LUT="17"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="lutram" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="end_nblk_strm2_U" SOURCE="D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:776" STORAGESIZE="1 32 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="end_nblk_strm2" VISIBLE="true"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="lutram" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="end_nblk_strm2_U" SOURCE="D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:776" STORAGESIZE="1 32 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="end_nblk_strm2" VISIBLE="true"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/end_nblk_strm_U" DEPTH="5" TYPE="resource" MODULENAME="fifo_w1_d32_D" DISPNAME="end_nblk_strm_U" RTLNAME="test_hmac_sha256_fifo_w1_d32_D">
+      <Resources FF="26" LUT="26"/>
+      <LocalResources FF="25" LUT="19"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="lutram" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="end_nblk_strm_U" SOURCE="D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:770" STORAGESIZE="1 32 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="end_nblk_strm" VISIBLE="true"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="lutram" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="end_nblk_strm_U" SOURCE="D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:770" STORAGESIZE="1 32 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="end_nblk_strm" VISIBLE="true"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/generateMsgSchedule_U0" DEPTH="5" TYPE="function" MODULENAME="generateMsgSchedule" DISPNAME="generateMsgSchedule_U0" RTLNAME="test_hmac_sha256_generateMsgSchedule">
+      <SubModules count="2">grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222 grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_260</SubModules>
+      <Resources FF="1768" LUT="816"/>
+      <LocalResources FF="658" LUT="15"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/generateMsgSchedule_U0/grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222" DEPTH="6" TYPE="function" MODULENAME="generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16" DISPNAME="grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222" RTLNAME="test_hmac_sha256_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16">
+      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+      <Resources FF="552" LUT="184"/>
+      <LocalResources FF="550" LUT="34"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/generateMsgSchedule_U0/grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222/flow_control_loop_pipe_sequential_init_U" DEPTH="7" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="150"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/generateMsgSchedule_U0/grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_260" DEPTH="6" TYPE="function" MODULENAME="generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64" DISPNAME="grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_260" RTLNAME="test_hmac_sha256_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64">
+      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+      <Resources FF="558" LUT="617"/>
+      <LocalResources FF="553" LUT="101"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/generateMsgSchedule_U0/grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_260/flow_control_loop_pipe_sequential_init_U" DEPTH="7" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init">
+      <Resources FF="5" LUT="516"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/nblk_strm1_U" DEPTH="5" TYPE="resource" MODULENAME="fifo_w64_d32_D" DISPNAME="nblk_strm1_U" RTLNAME="test_hmac_sha256_fifo_w64_d32_D">
+      <Resources FF="29" LUT="25"/>
+      <LocalResources FF="25" LUT="20"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="lutram" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="nblk_strm1_U" SOURCE="D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:762" STORAGESIZE="64 32 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="nblk_strm1" VISIBLE="true"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="lutram" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="nblk_strm1_U" SOURCE="D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:762" STORAGESIZE="64 32 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="nblk_strm1" VISIBLE="true"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/nblk_strm2_U" DEPTH="5" TYPE="resource" MODULENAME="fifo_w64_d32_D" DISPNAME="nblk_strm2_U" RTLNAME="test_hmac_sha256_fifo_w64_d32_D">
+      <Resources FF="29" LUT="25"/>
+      <LocalResources FF="25" LUT="20"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="lutram" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="nblk_strm2_U" SOURCE="D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:765" STORAGESIZE="64 32 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="nblk_strm2" VISIBLE="true"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="lutram" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="nblk_strm2_U" SOURCE="D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:765" STORAGESIZE="64 32 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="nblk_strm2" VISIBLE="true"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/nblk_strm_U" DEPTH="5" TYPE="resource" MODULENAME="fifo_w64_d32_D" DISPNAME="nblk_strm_U" RTLNAME="test_hmac_sha256_fifo_w64_d32_D">
+      <Resources FF="29" LUT="23"/>
+      <LocalResources FF="25" LUT="18"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="lutram" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="nblk_strm_U" SOURCE="D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:759" STORAGESIZE="64 32 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="nblk_strm" VISIBLE="true"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="lutram" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="nblk_strm_U" SOURCE="D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:759" STORAGESIZE="64 32 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="nblk_strm" VISIBLE="true"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/preProcessing_U0" DEPTH="5" TYPE="function" MODULENAME="preProcessing" DISPNAME="preProcessing_U0" RTLNAME="test_hmac_sha256_preProcessing">
+      <SubModules count="2">grp_preProcessing_Pipeline_LOOP_SHA256_GEN_COPY_TAIL_AND_ONE_fu_279 grp_preProcessing_Pipeline_LOOP_SHA256_GEN_FULL_BLKS_fu_270</SubModules>
+      <Resources FF="1027" LUT="663"/>
+      <LocalResources FF="21" LUT="53"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/preProcessing_U0/grp_preProcessing_Pipeline_LOOP_SHA256_GEN_COPY_TAIL_AND_ONE_fu_279" DEPTH="6" TYPE="function" MODULENAME="preProcessing_Pipeline_LOOP_SHA256_GEN_COPY_TAIL_AND_ONE" DISPNAME="grp_preProcessing_Pipeline_LOOP_SHA256_GEN_COPY_TAIL_AND_ONE_fu_279" RTLNAME="test_hmac_sha256_preProcessing_Pipeline_LOOP_SHA256_GEN_COPY_TAIL_AND_ONE">
+      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+      <Resources FF="446" LUT="487"/>
+      <LocalResources FF="444" LUT="469"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/preProcessing_U0/grp_preProcessing_Pipeline_LOOP_SHA256_GEN_COPY_TAIL_AND_ONE_fu_279/flow_control_loop_pipe_sequential_init_U" DEPTH="7" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="18"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/preProcessing_U0/grp_preProcessing_Pipeline_LOOP_SHA256_GEN_FULL_BLKS_fu_270" DEPTH="6" TYPE="function" MODULENAME="preProcessing_Pipeline_LOOP_SHA256_GEN_FULL_BLKS" DISPNAME="grp_preProcessing_Pipeline_LOOP_SHA256_GEN_FULL_BLKS_fu_270" RTLNAME="test_hmac_sha256_preProcessing_Pipeline_LOOP_SHA256_GEN_FULL_BLKS">
+      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+      <Resources FF="560" LUT="123"/>
+      <LocalResources FF="558" LUT="96"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/preProcessing_U0/grp_preProcessing_Pipeline_LOOP_SHA256_GEN_FULL_BLKS_fu_270/flow_control_loop_pipe_sequential_init_U" DEPTH="7" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="27"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/sha256Digest_256_U0" DEPTH="5" TYPE="function" MODULENAME="sha256Digest_256_s" DISPNAME="sha256Digest_256_U0" RTLNAME="test_hmac_sha256_sha256Digest_256_s">
+      <SubModules count="1">grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272</SubModules>
+      <Resources FF="1033" LUT="729"/>
+      <LocalResources FF="396" LUT="24"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" DEPTH="6" TYPE="function" MODULENAME="sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS" DISPNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" RTLNAME="test_hmac_sha256_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS">
+      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+      <Resources FF="637" LUT="705"/>
+      <LocalResources FF="635" LUT="542"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/flow_control_loop_pipe_sequential_init_U" DEPTH="7" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="163"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/start_for_dup_strm_U0_U" DEPTH="5" TYPE="rtl" MODULENAME="start_for_dup_strm_U0" DISPNAME="start_for_dup_strm_U0_U" RTLNAME="test_hmac_sha256_start_for_dup_strm_U0">
+      <Resources FF="4" LUT="2"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/start_for_generateMsgSchedule_U0_U" DEPTH="5" TYPE="rtl" MODULENAME="start_for_generateMsgSchedule_U0" DISPNAME="start_for_generateMsgSchedule_U0_U" RTLNAME="test_hmac_sha256_start_for_generateMsgSchedule_U0">
+      <Resources FF="5" LUT="3"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/start_for_sha256Digest_256_U0_U" DEPTH="5" TYPE="rtl" MODULENAME="start_for_sha256Digest_256_U0" DISPNAME="start_for_sha256Digest_256_U0_U" RTLNAME="test_hmac_sha256_start_for_sha256Digest_256_U0">
+      <Resources FF="5" LUT="2"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/w_strm_U" DEPTH="5" TYPE="resource" MODULENAME="fifo_w32_d32_D" DISPNAME="w_strm_U" RTLNAME="test_hmac_sha256_fifo_w32_d32_D">
+      <Resources FF="57" LUT="45"/>
+      <LocalResources FF="25" LUT="20"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="lutram" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="w_strm_U" SOURCE="D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:781" STORAGESIZE="32 32 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="w_strm" VISIBLE="true"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="lutram" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="w_strm_U" SOURCE="D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:781" STORAGESIZE="32 32 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="w_strm" VISIBLE="true"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/mergeKopadLenStrm_U" DEPTH="3" TYPE="resource" MODULENAME="fifo_w64_d4_D_x" DISPNAME="mergeKopadLenStrm_U" RTLNAME="test_hmac_sha256_fifo_w64_d4_D_x">
+      <Resources FF="17" LUT="19"/>
+      <LocalResources FF="13" LUT="12"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="lutram" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="mergeKopadLenStrm_U" SOURCE="D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:246" STORAGESIZE="64 4 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="mergeKopadLenStrm" VISIBLE="true"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/mergeKopadStrm_U" DEPTH="3" TYPE="resource" MODULENAME="fifo_w32_d4_D" DISPNAME="mergeKopadStrm_U" RTLNAME="test_hmac_sha256_fifo_w32_d4_D">
+      <Resources FF="45" LUT="43"/>
+      <LocalResources FF="13" LUT="10"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="lutram" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="mergeKopadStrm_U" SOURCE="D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:243" STORAGESIZE="32 4 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="mergeKopadStrm" VISIBLE="true"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/mergeKopad_32_64_256_32_64_U0" DEPTH="3" TYPE="function" MODULENAME="mergeKopad_32_64_256_32_64_s" DISPNAME="mergeKopad_32_64_256_32_64_U0" RTLNAME="test_hmac_sha256_mergeKopad_32_64_256_32_64_s">
+      <SubModules count="2">grp_mergeKopad_32_64_256_32_64_Pipeline_VITIS_LOOP_220_2_fu_91 grp_mergeKopad_32_64_256_32_64_Pipeline_VITIS_LOOP_226_3_fu_98</SubModules>
+      <Resources FF="1218" LUT="366"/>
+      <LocalResources FF="543" LUT="3"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/mergeKopad_32_64_256_32_64_U0/grp_mergeKopad_32_64_256_32_64_Pipeline_VITIS_LOOP_220_2_fu_91" DEPTH="4" TYPE="function" MODULENAME="mergeKopad_32_64_256_32_64_Pipeline_VITIS_LOOP_220_2" DISPNAME="grp_mergeKopad_32_64_256_32_64_Pipeline_VITIS_LOOP_220_2_fu_91" RTLNAME="test_hmac_sha256_mergeKopad_32_64_256_32_64_Pipeline_VITIS_LOOP_220_2">
+      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+      <Resources FF="412" LUT="205"/>
+      <LocalResources FF="410" LUT="3"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/mergeKopad_32_64_256_32_64_U0/grp_mergeKopad_32_64_256_32_64_Pipeline_VITIS_LOOP_220_2_fu_91/flow_control_loop_pipe_sequential_init_U" DEPTH="5" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="202"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/mergeKopad_32_64_256_32_64_U0/grp_mergeKopad_32_64_256_32_64_Pipeline_VITIS_LOOP_226_3_fu_98" DEPTH="4" TYPE="function" MODULENAME="mergeKopad_32_64_256_32_64_Pipeline_VITIS_LOOP_226_3" DISPNAME="grp_mergeKopad_32_64_256_32_64_Pipeline_VITIS_LOOP_226_3_fu_98" RTLNAME="test_hmac_sha256_mergeKopad_32_64_256_32_64_Pipeline_VITIS_LOOP_226_3">
+      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+      <Resources FF="263" LUT="158"/>
+      <LocalResources FF="261" LUT="32"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/mergeKopad_32_64_256_32_64_U0/grp_mergeKopad_32_64_256_32_64_Pipeline_VITIS_LOOP_226_3_fu_98/flow_control_loop_pipe_sequential_init_U" DEPTH="5" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="126"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/start_for_hash_1_U0_U" DEPTH="3" TYPE="rtl" MODULENAME="start_for_hash_1_U0" DISPNAME="start_for_hash_1_U0_U" RTLNAME="test_hmac_sha256_start_for_hash_1_U0">
+      <Resources FF="4" LUT="5"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/start_for_msgHash_32_64_256_32_64_sha256_wrapper_U0_U" DEPTH="2" TYPE="rtl" MODULENAME="start_for_msgHash_32_64_256_32_64_sha256_wrapper_U0" DISPNAME="start_for_msgHash_32_64_256_32_64_sha256_wrapper_U0_U" RTLNAME="test_hmac_sha256_start_for_msgHash_32_64_256_32_64_sha256_wrapper_U0">
+      <Resources FF="4" LUT="6"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/start_for_resHash_32_64_256_32_64_sha256_wrapper_U0_U" DEPTH="2" TYPE="rtl" MODULENAME="start_for_resHash_32_64_256_32_64_sha256_wrapper_U0" DISPNAME="start_for_resHash_32_64_256_32_64_sha256_wrapper_U0_U" RTLNAME="test_hmac_sha256_start_for_resHash_32_64_256_32_64_sha256_wrapper_U0">
+      <Resources FF="4" LUT="4"/>
+    </RtlModule>
+  </RtlModules>
+  <TimingPaths>
+    <TPATH DATAPATH_DELAY="9.004" DATAPATH_LOGIC_DELAY="4.747" DATAPATH_NET_DELAY="4.257" ENDPOINT_PIN="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/b_1_fu_430_reg[31]/D" LOGIC_LEVELS="14" MAX_FANOUT="5" SLACK="5.989" STARTPOINT_PIN="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/g_1_fu_386_reg[0]/C">
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/g_1_fu_386_reg[0]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="test_hmac_sha256_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS.v" LINE_NUMBER="645" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/T1_fu_776_p2__0_carry_i_3" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="test_hmac_sha256_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS.v" LINE_NUMBER="872" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/T1_fu_776_p2__0_carry" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="69" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/T1_fu_776_p2__0_carry__0" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="69" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/T1_fu_776_p2__0_carry__1" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="69" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/T1_fu_776_p2__0_carry__2" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="69" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/T1_fu_776_p2__94_carry__3_i_4" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="69" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/T1_fu_776_p2__94_carry__3_i_8" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="test_hmac_sha256_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS.v" LINE_NUMBER="872" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/T1_fu_776_p2__94_carry__3" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="69" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/T1_fu_776_p2__94_carry__4" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="69" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/a_2_fu_896_p2__0_carry__5_i_4" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="69" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/a_2_fu_896_p2__0_carry__5_i_8" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="test_hmac_sha256_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS.v" LINE_NUMBER="874" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/a_2_fu_896_p2__0_carry__5" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="69" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/a_2_fu_896_p2__0_carry__6" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="69" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/flow_control_loop_pipe_sequential_init_U/b_1_fu_430[31]_i_1" PRIMITIVE_TYPE="LUT.others.LUT3" FILE_NAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="69" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/b_1_fu_430_reg[31]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="test_hmac_sha256_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS.v" LINE_NUMBER="595" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <MODULE_INSTANCES>grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272</MODULE_INSTANCES>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="8.987" DATAPATH_LOGIC_DELAY="4.747" DATAPATH_NET_DELAY="4.240" ENDPOINT_PIN="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/b_1_fu_430_reg[31]/D" LOGIC_LEVELS="14" MAX_FANOUT="5" SLACK="6.006" STARTPOINT_PIN="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/Kt_fu_394_reg[0]/C">
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/Kt_fu_394_reg[0]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="test_hmac_sha256_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS.v" LINE_NUMBER="585" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/T1_fu_776_p2__0_carry_i_3__0" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="test_hmac_sha256_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS.v" LINE_NUMBER="872" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/T1_fu_776_p2__0_carry" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="69" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/T1_fu_776_p2__0_carry__0" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="69" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/T1_fu_776_p2__0_carry__1" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="69" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/T1_fu_776_p2__0_carry__2" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="69" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/T1_fu_776_p2__94_carry__3_i_4__0" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="69" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/T1_fu_776_p2__94_carry__3_i_8__0" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="test_hmac_sha256_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS.v" LINE_NUMBER="872" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/T1_fu_776_p2__94_carry__3" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="69" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/T1_fu_776_p2__94_carry__4" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="69" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/a_2_fu_896_p2__0_carry__5_i_4__0" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="69" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/a_2_fu_896_p2__0_carry__5_i_8__0" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="test_hmac_sha256_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS.v" LINE_NUMBER="874" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/a_2_fu_896_p2__0_carry__5" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="69" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/a_2_fu_896_p2__0_carry__6" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="69" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/flow_control_loop_pipe_sequential_init_U/b_1_fu_430[31]_i_1__0" PRIMITIVE_TYPE="LUT.others.LUT3" FILE_NAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="69" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/b_1_fu_430_reg[31]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="test_hmac_sha256_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS.v" LINE_NUMBER="595" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <MODULE_INSTANCES>grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272</MODULE_INSTANCES>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="8.887" DATAPATH_LOGIC_DELAY="4.630" DATAPATH_NET_DELAY="4.257" ENDPOINT_PIN="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/b_1_fu_430_reg[27]/D" LOGIC_LEVELS="13" MAX_FANOUT="5" SLACK="6.106" STARTPOINT_PIN="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/g_1_fu_386_reg[0]/C">
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/g_1_fu_386_reg[0]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="test_hmac_sha256_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS.v" LINE_NUMBER="645" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/T1_fu_776_p2__0_carry_i_3" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="test_hmac_sha256_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS.v" LINE_NUMBER="872" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/T1_fu_776_p2__0_carry" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="69" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/T1_fu_776_p2__0_carry__0" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="69" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/T1_fu_776_p2__0_carry__1" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="69" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/T1_fu_776_p2__94_carry__2_i_4" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="69" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/T1_fu_776_p2__94_carry__2_i_8" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="test_hmac_sha256_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS.v" LINE_NUMBER="872" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/T1_fu_776_p2__94_carry__2" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="69" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/T1_fu_776_p2__94_carry__3" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="69" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/a_2_fu_896_p2__0_carry__4_i_4" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="69" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/a_2_fu_896_p2__0_carry__4_i_8" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="test_hmac_sha256_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS.v" LINE_NUMBER="874" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/a_2_fu_896_p2__0_carry__4" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="69" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/a_2_fu_896_p2__0_carry__5" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="69" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/flow_control_loop_pipe_sequential_init_U/b_1_fu_430[27]_i_1" PRIMITIVE_TYPE="LUT.others.LUT3" FILE_NAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="69" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/b_1_fu_430_reg[27]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="test_hmac_sha256_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS.v" LINE_NUMBER="595" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <MODULE_INSTANCES>grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272</MODULE_INSTANCES>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="8.870" DATAPATH_LOGIC_DELAY="4.630" DATAPATH_NET_DELAY="4.240" ENDPOINT_PIN="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/b_1_fu_430_reg[27]/D" LOGIC_LEVELS="13" MAX_FANOUT="5" SLACK="6.123" STARTPOINT_PIN="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/Kt_fu_394_reg[0]/C">
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/Kt_fu_394_reg[0]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="test_hmac_sha256_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS.v" LINE_NUMBER="585" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/T1_fu_776_p2__0_carry_i_3__0" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="test_hmac_sha256_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS.v" LINE_NUMBER="872" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/T1_fu_776_p2__0_carry" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="69" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/T1_fu_776_p2__0_carry__0" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="69" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/T1_fu_776_p2__0_carry__1" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="69" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/T1_fu_776_p2__94_carry__2_i_4__0" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="69" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/T1_fu_776_p2__94_carry__2_i_8__0" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="test_hmac_sha256_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS.v" LINE_NUMBER="872" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/T1_fu_776_p2__94_carry__2" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="69" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/T1_fu_776_p2__94_carry__3" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="69" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/a_2_fu_896_p2__0_carry__4_i_4__0" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="69" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/a_2_fu_896_p2__0_carry__4_i_8__0" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="test_hmac_sha256_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS.v" LINE_NUMBER="874" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/a_2_fu_896_p2__0_carry__4" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="69" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/a_2_fu_896_p2__0_carry__5" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="69" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/flow_control_loop_pipe_sequential_init_U/b_1_fu_430[27]_i_1__0" PRIMITIVE_TYPE="LUT.others.LUT3" FILE_NAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="69" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/resHash_32_64_256_32_64_sha256_wrapper_U0/hash_1_U0/grp_sha256_top_32_256_s_fu_30/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/b_1_fu_430_reg[27]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="test_hmac_sha256_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS.v" LINE_NUMBER="595" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <MODULE_INSTANCES>grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272</MODULE_INSTANCES>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="8.770" DATAPATH_LOGIC_DELAY="4.513" DATAPATH_NET_DELAY="4.257" ENDPOINT_PIN="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/b_1_fu_430_reg[23]/D" LOGIC_LEVELS="12" MAX_FANOUT="5" SLACK="6.223" STARTPOINT_PIN="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/g_1_fu_386_reg[0]/C">
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/g_1_fu_386_reg[0]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="test_hmac_sha256_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS.v" LINE_NUMBER="645" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/T1_fu_776_p2__0_carry_i_3" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="test_hmac_sha256_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS.v" LINE_NUMBER="872" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/T1_fu_776_p2__0_carry" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="69" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/T1_fu_776_p2__0_carry__0" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="69" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/T1_fu_776_p2__94_carry__1_i_4" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="69" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/T1_fu_776_p2__94_carry__1_i_8" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="test_hmac_sha256_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS.v" LINE_NUMBER="872" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/T1_fu_776_p2__94_carry__1" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="69" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/T1_fu_776_p2__94_carry__2" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="69" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/a_2_fu_896_p2__0_carry__3_i_4" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="69" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/a_2_fu_896_p2__0_carry__3_i_8" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="test_hmac_sha256_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS.v" LINE_NUMBER="874" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/a_2_fu_896_p2__0_carry__3" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="69" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/a_2_fu_896_p2__0_carry__4" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="69" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/flow_control_loop_pipe_sequential_init_U/b_1_fu_430[23]_i_1" PRIMITIVE_TYPE="LUT.others.LUT3" FILE_NAME="test_hmac_sha256_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="69" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <CELL NAME="grp_hmacDataflow_32_64_256_32_64_sha256_wrapper_s_fu_38/msgHash_32_64_256_32_64_sha256_wrapper_U0/hash_U0/grp_sha256_top_32_256_s_fu_32/sha256Digest_256_U0/grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272/b_1_fu_430_reg[23]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="test_hmac_sha256_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS.v" LINE_NUMBER="595" MODULE_INSTNAME="grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272" IS_FUNCINST="0"/>
+      <MODULE_INSTANCES>grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272</MODULE_INSTANCES>
+    </TPATH>
+  </TimingPaths>
+  <VivadoReportFiles>
+    <ReportFile TYPE="design_analysis" PATH="verilog/report/test_hmac_sha256_design_analysis_synth.rpt"/>
+    <ReportFile TYPE="failfast" PATH="verilog/report/test_hmac_sha256_failfast_synth.rpt"/>
+    <ReportFile TYPE="power" PATH="verilog/report/test_hmac_sha256_power_synth.rpt"/>
+    <ReportFile TYPE="timing" PATH="verilog/report/test_hmac_sha256_timing_synth.rpt"/>
+    <ReportFile TYPE="timing_paths" PATH="verilog/report/test_hmac_sha256_timing_paths_synth.rpt"/>
+    <ReportFile TYPE="utilization" PATH="verilog/report/test_hmac_sha256_utilization_synth.rpt"/>
+    <ReportFile TYPE="utilization_hierarchical" PATH="verilog/report/test_hmac_sha256_utilization_hierarchical_synth.rpt"/>
+  </VivadoReportFiles>
+  <GeneralInfo NAME="General Information">
+    <item NAME="Date" VALUE="Tue Oct 21 20:26:18 +0800 2025"/>
+    <item NAME="Version" VALUE="2024.2 (Build 5238294 on Nov  8 2024)"/>
+    <item NAME="Project" VALUE="hmac_sha256_test.prj"/>
+    <item NAME="Solution" VALUE="solution1 (Vivado IP Flow Target)"/>
+    <item NAME="Product family" VALUE="zynq"/>
+    <item NAME="Target device" VALUE="xc7z020-clg484-1"/>
+  </GeneralInfo>
+  <RunOptions NAME="Run Constraints &amp; Options">
+    <General NAME="Design Constraints &amp; Options">
+      <item NAME="RTL Synthesis target clock" VALUE="15 ns"/>
+      <item NAME="C-Synthesis target clock" VALUE="15 ns"/>
+      <item NAME="C-Synthesis uncertainty" VALUE="10%"/>
+      <item NAME="config_export -ip_xdc_file" VALUE=""/>
+      <item NAME="config_export -ip_xdc_ooc_file" VALUE=""/>
+    </General>
+    <Syn NAME="RTL Synthesis Options">
+      <item NAME="config_export -vivado_synth_strategy" VALUE="default"/>
+      <item NAME="config_export -vivado_synth_design_args" VALUE="-directive sdx_optimization_effort_high"/>
+    </Syn>
+    <Reporting NAME="Reporting Options">
+      <item NAME="config_export -vivado_report_level" VALUE="2"/>
+      <item NAME="config_export -vivado_max_timing_paths" VALUE="10"/>
+    </Reporting>
+  </RunOptions>
+</profile>
+

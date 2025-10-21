@@ -9,8 +9,8 @@
 <ProductFamily>zynq</ProductFamily>
 <Part>xc7z020-clg484-1</Part>
 <TopModelName>generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64</TopModelName>
-<TargetClockPeriod>3.33</TargetClockPeriod>
-<ClockUncertainty>1.05</ClockUncertainty>
+<TargetClockPeriod>15.00</TargetClockPeriod>
+<ClockUncertainty>1.50</ClockUncertainty>
 <FlowTarget>vivado</FlowTarget>
 </UserAssignments>
 
@@ -18,25 +18,25 @@
 <PipelineType>loop auto-rewind stp (delay=0 cycles)</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>7.847</EstimatedClockPeriod>
+<EstimatedClockPeriod>8.511</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>51</Best-caseLatency>
-<Average-caseLatency>51</Average-caseLatency>
-<Worst-caseLatency>51</Worst-caseLatency>
-<Best-caseRealTimeLatency>0.400 us</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>0.400 us</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>0.400 us</Worst-caseRealTimeLatency>
+<Best-caseLatency>50</Best-caseLatency>
+<Average-caseLatency>50</Average-caseLatency>
+<Worst-caseLatency>50</Worst-caseLatency>
+<Best-caseRealTimeLatency>0.750 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>0.750 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>0.750 us</Worst-caseRealTimeLatency>
 <Interval-min>49</Interval-min>
 <Interval-max>49</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <LOOP_SHA256_PREPARE_WT64>
-<Slack>2.28</Slack>
+<Slack>13.50</Slack>
 <TripCount>48</TripCount>
-<Latency>49</Latency>
-<AbsoluteTimeLatency>384</AbsoluteTimeLatency>
+<Latency>48</Latency>
+<AbsoluteTimeLatency>720</AbsoluteTimeLatency>
 <PipelineII>1</PipelineII>
 <PipelineDepth>2</PipelineDepth>
 <InstanceList>
@@ -44,7 +44,7 @@
 </LOOP_SHA256_PREPARE_WT64>
 </SummaryOfLoopLatency>
 <SummaryOfViolations>
-<IssueType>Timing Violation</IssueType>
+<IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
 <SourceLocation>D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/sha224_256.hpp:549</SourceLocation>
 <SummaryOfLoopViolations>
@@ -60,10 +60,10 @@
 
 <AreaEstimates>
 <Resources>
-<DSP>1</DSP>
-<FF>821</FF>
-<LUT>433</LUT>
+<FF>555</FF>
+<LUT>453</LUT>
 <BRAM_18K>0</BRAM_18K>
+<DSP>0</DSP>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>

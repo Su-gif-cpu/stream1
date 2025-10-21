@@ -114,7 +114,7 @@ set NewPortList {[
  	{ "name": "ap_continue", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "continue", "bundle":{"name": "ap_continue", "role": "default" }}  ]}
 
 set RtlHierarchyInfo {[
-	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "10", "66", "67", "68", "69"],
+	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "6", "37", "38", "39", "40"],
 		"CDFG" : "msgHash_32_64_256_32_64_sha256_wrapper_s",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1", "real_start" : "1",
@@ -132,7 +132,7 @@ set RtlHierarchyInfo {[
 			{"ID" : "1", "Name" : "mergeKipad_32_64_256_64_U0"}],
 		"OutputProcess" : [
 			{"ID" : "1", "Name" : "mergeKipad_32_64_256_64_U0"},
-			{"ID" : "10", "Name" : "hash_U0"}],
+			{"ID" : "6", "Name" : "hash_U0"}],
 		"Port" : [
 			{"Name" : "kipadStrm", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "4", "DependentChanType" : "0",
 				"SubConnect" : [
@@ -154,11 +154,11 @@ set RtlHierarchyInfo {[
 					{"ID" : "1", "SubInstance" : "mergeKipad_32_64_256_64_U0", "Port" : "kopad2Strm"}]},
 			{"Name" : "msgHashStrm", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["0","0"], "DependentChan" : "0", "DependentChanDepth" : "4", "DependentChanType" : "0",
 				"SubConnect" : [
-					{"ID" : "10", "SubInstance" : "hash_U0", "Port" : "msgHashStrm"}]},
+					{"ID" : "6", "SubInstance" : "hash_U0", "Port" : "msgHashStrm"}]},
 			{"Name" : "eMsgHashStrm", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["0","0"], "DependentChan" : "0", "DependentChanDepth" : "4", "DependentChanType" : "0",
 				"SubConnect" : [
-					{"ID" : "10", "SubInstance" : "hash_U0", "Port" : "eMsgHashStrm"}]}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mergeKipad_32_64_256_64_U0", "Parent" : "0", "Child" : ["2", "4", "8", "9"],
+					{"ID" : "6", "SubInstance" : "hash_U0", "Port" : "eMsgHashStrm"}]}]},
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mergeKipad_32_64_256_64_U0", "Parent" : "0", "Child" : ["2", "4"],
 		"CDFG" : "mergeKipad_32_64_256_64_s",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1", "real_start" : "1",
@@ -181,21 +181,21 @@ set RtlHierarchyInfo {[
 					{"Name" : "kopadStrm_blk_n", "Type" : "RtlSignal"}]},
 			{"Name" : "msgStrm", "Type" : "Fifo", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133", "Port" : "msgStrm", "Inst_start_state" : "10", "Inst_end_state" : "11"}]},
+					{"ID" : "4", "SubInstance" : "grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133", "Port" : "msgStrm", "Inst_start_state" : "6", "Inst_end_state" : "7"}]},
 			{"Name" : "lenStrm", "Type" : "Fifo", "Direction" : "I",
 				"BlockSignal" : [
 					{"Name" : "lenStrm_blk_n", "Type" : "RtlSignal"}]},
 			{"Name" : "eKipadStrm", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "4", "DependentChanType" : "0",
 				"BlockSignal" : [
 					{"Name" : "eKipadStrm_blk_n", "Type" : "RtlSignal"}]},
-			{"Name" : "mergeKipadStrm", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["10"], "DependentChan" : "66", "DependentChanDepth" : "128", "DependentChanType" : "0",
+			{"Name" : "mergeKipadStrm", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["6"], "DependentChan" : "37", "DependentChanDepth" : "128", "DependentChanType" : "0",
 				"SubConnect" : [
-					{"ID" : "2", "SubInstance" : "grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_162_2_fu_126", "Port" : "mergeKipadStrm", "Inst_start_state" : "7", "Inst_end_state" : "8"},
-					{"ID" : "4", "SubInstance" : "grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133", "Port" : "mergeKipadStrm", "Inst_start_state" : "10", "Inst_end_state" : "11"}]},
-			{"Name" : "mergeKipadLenStrm", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["10"], "DependentChan" : "67", "DependentChanDepth" : "4", "DependentChanType" : "0",
+					{"ID" : "2", "SubInstance" : "grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_162_2_fu_126", "Port" : "mergeKipadStrm", "Inst_start_state" : "3", "Inst_end_state" : "4"},
+					{"ID" : "4", "SubInstance" : "grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133", "Port" : "mergeKipadStrm", "Inst_start_state" : "6", "Inst_end_state" : "7"}]},
+			{"Name" : "mergeKipadLenStrm", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["6"], "DependentChan" : "38", "DependentChanDepth" : "4", "DependentChanType" : "0",
 				"BlockSignal" : [
 					{"Name" : "mergeKipadLenStrm_blk_n", "Type" : "RtlSignal"}]},
-			{"Name" : "eMergeKipadLenStrm", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["10"], "DependentChan" : "68", "DependentChanDepth" : "4", "DependentChanType" : "0",
+			{"Name" : "eMergeKipadLenStrm", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["6"], "DependentChan" : "39", "DependentChanDepth" : "4", "DependentChanType" : "0",
 				"BlockSignal" : [
 					{"Name" : "eMergeKipadLenStrm_blk_n", "Type" : "RtlSignal"}]},
 			{"Name" : "kopad2Strm", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["0","0"], "DependentChan" : "0", "DependentChanDepth" : "4", "DependentChanType" : "0",
@@ -203,7 +203,7 @@ set RtlHierarchyInfo {[
 					{"Name" : "kopad2Strm_blk_n", "Type" : "RtlSignal"}]}],
 		"Loop" : [
 			{"Name" : "VITIS_LOOP_152_1", "PipelineType" : "no",
-				"LoopDec" : {"FSMBitwidth" : "11", "FirstState" : "ap_ST_fsm_state2", "LastState" : ["ap_ST_fsm_state11"], "QuitState" : ["ap_ST_fsm_state2"], "PreState" : ["ap_ST_fsm_state1"], "PostState" : ["ap_ST_fsm_state1"], "OneDepthLoop" : "0", "OneStateBlock": ""}}]},
+				"LoopDec" : {"FSMBitwidth" : "7", "FirstState" : "ap_ST_fsm_state2", "LastState" : ["ap_ST_fsm_state7"], "QuitState" : ["ap_ST_fsm_state2"], "PreState" : ["ap_ST_fsm_state1"], "PostState" : ["ap_ST_fsm_state1"], "OneDepthLoop" : "0", "OneStateBlock": ""}}]},
 	{"ID" : "2", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.mergeKipad_32_64_256_64_U0.grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_162_2_fu_126", "Parent" : "1", "Child" : ["3"],
 		"CDFG" : "mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_162_2",
 		"Protocol" : "ap_ctrl_hs",
@@ -227,7 +227,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "VITIS_LOOP_162_2", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter1", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
 	{"ID" : "3", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.mergeKipad_32_64_256_64_U0.grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_162_2_fu_126.flow_control_loop_pipe_sequential_init_U", "Parent" : "2"},
-	{"ID" : "4", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.mergeKipad_32_64_256_64_U0.grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133", "Parent" : "1", "Child" : ["5", "6", "7"],
+	{"ID" : "4", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.mergeKipad_32_64_256_64_U0.grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133", "Parent" : "1", "Child" : ["5"],
 		"CDFG" : "mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
@@ -251,13 +251,9 @@ set RtlHierarchyInfo {[
 					{"Name" : "mergeKipadStrm_blk_n", "Type" : "RtlSignal"}]}],
 		"Loop" : [
 			{"Name" : "VITIS_LOOP_171_3", "PipelineType" : "UPC",
-				"LoopDec" : {"FSMBitwidth" : "2", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage1", "QuitStateIter" : "ap_enable_reg_pp0_iter0", "QuitStateBlock" : "ap_block_pp0_stage1_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "5", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.mergeKipad_32_64_256_64_U0.grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133.icmp_63ns_63ns_1_2_1_U10", "Parent" : "4"},
-	{"ID" : "6", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.mergeKipad_32_64_256_64_U0.grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133.add_63ns_63ns_63_2_1_U11", "Parent" : "4"},
-	{"ID" : "7", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.mergeKipad_32_64_256_64_U0.grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133.flow_control_loop_pipe_sequential_init_U", "Parent" : "4"},
-	{"ID" : "8", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.mergeKipad_32_64_256_64_U0.add_64ns_64ns_64_3_1_U17", "Parent" : "1"},
-	{"ID" : "9", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.mergeKipad_32_64_256_64_U0.add_68ns_68ns_68_3_1_U18", "Parent" : "1"},
-	{"ID" : "10", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.hash_U0", "Parent" : "0", "Child" : ["11"],
+				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter2", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter2", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
+	{"ID" : "5", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.mergeKipad_32_64_256_64_U0.grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133.flow_control_loop_pipe_sequential_init_U", "Parent" : "4"},
+	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.hash_U0", "Parent" : "0", "Child" : ["7"],
 		"CDFG" : "hash",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1", "real_start" : "0",
@@ -274,22 +270,22 @@ set RtlHierarchyInfo {[
 		"StartSource" : "1",
 		"StartFifo" : "start_for_hash_U0_U",
 		"Port" : [
-			{"Name" : "mergeKipadStrm", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["1"], "DependentChan" : "66", "DependentChanDepth" : "128", "DependentChanType" : "0",
+			{"Name" : "mergeKipadStrm", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["1"], "DependentChan" : "37", "DependentChanDepth" : "128", "DependentChanType" : "0",
 				"SubConnect" : [
-					{"ID" : "11", "SubInstance" : "grp_sha256_top_32_256_s_fu_32", "Port" : "mergeKopadStrm", "Inst_start_state" : "1", "Inst_end_state" : "2"}]},
-			{"Name" : "mergeKipadLenStrm", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["1"], "DependentChan" : "67", "DependentChanDepth" : "4", "DependentChanType" : "0",
+					{"ID" : "7", "SubInstance" : "grp_sha256_top_32_256_s_fu_32", "Port" : "mergeKopadStrm", "Inst_start_state" : "1", "Inst_end_state" : "2"}]},
+			{"Name" : "mergeKipadLenStrm", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["1"], "DependentChan" : "38", "DependentChanDepth" : "4", "DependentChanType" : "0",
 				"SubConnect" : [
-					{"ID" : "11", "SubInstance" : "grp_sha256_top_32_256_s_fu_32", "Port" : "mergeKopadLenStrm", "Inst_start_state" : "1", "Inst_end_state" : "2"}]},
-			{"Name" : "eMergeKipadLenStrm", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["1"], "DependentChan" : "68", "DependentChanDepth" : "4", "DependentChanType" : "0",
+					{"ID" : "7", "SubInstance" : "grp_sha256_top_32_256_s_fu_32", "Port" : "mergeKopadLenStrm", "Inst_start_state" : "1", "Inst_end_state" : "2"}]},
+			{"Name" : "eMergeKipadLenStrm", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["1"], "DependentChan" : "39", "DependentChanDepth" : "4", "DependentChanType" : "0",
 				"SubConnect" : [
-					{"ID" : "11", "SubInstance" : "grp_sha256_top_32_256_s_fu_32", "Port" : "eMergeKopadLenStrm", "Inst_start_state" : "1", "Inst_end_state" : "2"}]},
+					{"ID" : "7", "SubInstance" : "grp_sha256_top_32_256_s_fu_32", "Port" : "eMergeKopadLenStrm", "Inst_start_state" : "1", "Inst_end_state" : "2"}]},
 			{"Name" : "msgHashStrm", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["0","0"], "DependentChan" : "0", "DependentChanDepth" : "4", "DependentChanType" : "0",
 				"SubConnect" : [
-					{"ID" : "11", "SubInstance" : "grp_sha256_top_32_256_s_fu_32", "Port" : "hshStrm", "Inst_start_state" : "1", "Inst_end_state" : "2"}]},
+					{"ID" : "7", "SubInstance" : "grp_sha256_top_32_256_s_fu_32", "Port" : "hshStrm", "Inst_start_state" : "1", "Inst_end_state" : "2"}]},
 			{"Name" : "eMsgHashStrm", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["0","0"], "DependentChan" : "0", "DependentChanDepth" : "4", "DependentChanType" : "0",
 				"SubConnect" : [
-					{"ID" : "11", "SubInstance" : "grp_sha256_top_32_256_s_fu_32", "Port" : "eHshStrm", "Inst_start_state" : "1", "Inst_end_state" : "2"}]}]},
-	{"ID" : "11", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32", "Parent" : "10", "Child" : ["12", "20", "23", "34", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65"],
+					{"ID" : "7", "SubInstance" : "grp_sha256_top_32_256_s_fu_32", "Port" : "eHshStrm", "Inst_start_state" : "1", "Inst_end_state" : "2"}]}]},
+	{"ID" : "7", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32", "Parent" : "6", "Child" : ["8", "13", "16", "22", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36"],
 		"CDFG" : "sha256_top_32_256_s",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1", "real_start" : "0",
@@ -304,26 +300,26 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"InputProcess" : [
-			{"ID" : "12", "Name" : "preProcessing_U0"}],
+			{"ID" : "8", "Name" : "preProcessing_U0"}],
 		"OutputProcess" : [
-			{"ID" : "34", "Name" : "sha256Digest_256_U0"}],
+			{"ID" : "22", "Name" : "sha256Digest_256_U0"}],
 		"Port" : [
 			{"Name" : "mergeKopadStrm", "Type" : "Fifo", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "12", "SubInstance" : "preProcessing_U0", "Port" : "mergeKipadStrm"}]},
+					{"ID" : "8", "SubInstance" : "preProcessing_U0", "Port" : "mergeKipadStrm"}]},
 			{"Name" : "mergeKopadLenStrm", "Type" : "Fifo", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "12", "SubInstance" : "preProcessing_U0", "Port" : "mergeKipadLenStrm"}]},
+					{"ID" : "8", "SubInstance" : "preProcessing_U0", "Port" : "mergeKipadLenStrm"}]},
 			{"Name" : "eMergeKopadLenStrm", "Type" : "Fifo", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "12", "SubInstance" : "preProcessing_U0", "Port" : "eMergeKipadLenStrm"}]},
+					{"ID" : "8", "SubInstance" : "preProcessing_U0", "Port" : "eMergeKipadLenStrm"}]},
 			{"Name" : "hshStrm", "Type" : "Fifo", "Direction" : "O",
 				"SubConnect" : [
-					{"ID" : "34", "SubInstance" : "sha256Digest_256_U0", "Port" : "msgHashStrm"}]},
+					{"ID" : "22", "SubInstance" : "sha256Digest_256_U0", "Port" : "msgHashStrm"}]},
 			{"Name" : "eHshStrm", "Type" : "Fifo", "Direction" : "O",
 				"SubConnect" : [
-					{"ID" : "34", "SubInstance" : "sha256Digest_256_U0", "Port" : "eMsgHashStrm"}]}]},
-	{"ID" : "12", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.preProcessing_U0", "Parent" : "11", "Child" : ["13", "17", "19"],
+					{"ID" : "22", "SubInstance" : "sha256Digest_256_U0", "Port" : "eMsgHashStrm"}]}]},
+	{"ID" : "8", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.preProcessing_U0", "Parent" : "7", "Child" : ["9", "11"],
 		"CDFG" : "preProcessing",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1", "real_start" : "1",
@@ -342,35 +338,35 @@ set RtlHierarchyInfo {[
 				"BlockSignal" : [
 					{"Name" : "mergeKipadStrm_blk_n", "Type" : "RtlSignal"}],
 				"SubConnect" : [
-					{"ID" : "13", "SubInstance" : "grp_preProcessing_Pipeline_LOOP_SHA256_GEN_FULL_BLKS_fu_271", "Port" : "mergeKipadStrm", "Inst_start_state" : "9", "Inst_end_state" : "10"},
-					{"ID" : "17", "SubInstance" : "grp_preProcessing_Pipeline_LOOP_SHA256_GEN_COPY_TAIL_AND_ONE_fu_280", "Port" : "mergeKipadStrm", "Inst_start_state" : "12", "Inst_end_state" : "34"}]},
+					{"ID" : "9", "SubInstance" : "grp_preProcessing_Pipeline_LOOP_SHA256_GEN_FULL_BLKS_fu_270", "Port" : "mergeKipadStrm", "Inst_start_state" : "3", "Inst_end_state" : "4"},
+					{"ID" : "11", "SubInstance" : "grp_preProcessing_Pipeline_LOOP_SHA256_GEN_COPY_TAIL_AND_ONE_fu_279", "Port" : "mergeKipadStrm", "Inst_start_state" : "5", "Inst_end_state" : "22"}]},
 			{"Name" : "mergeKipadLenStrm", "Type" : "Fifo", "Direction" : "I",
 				"BlockSignal" : [
 					{"Name" : "mergeKipadLenStrm_blk_n", "Type" : "RtlSignal"}]},
 			{"Name" : "eMergeKipadLenStrm", "Type" : "Fifo", "Direction" : "I",
 				"BlockSignal" : [
 					{"Name" : "eMergeKipadLenStrm_blk_n", "Type" : "RtlSignal"}]},
-			{"Name" : "blk_strm", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["23"], "DependentChan" : "55", "DependentChanDepth" : "32", "DependentChanType" : "0",
+			{"Name" : "blk_strm", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["16"], "DependentChan" : "26", "DependentChanDepth" : "32", "DependentChanType" : "0",
 				"BlockSignal" : [
 					{"Name" : "blk_strm_blk_n", "Type" : "RtlSignal"}],
 				"SubConnect" : [
-					{"ID" : "13", "SubInstance" : "grp_preProcessing_Pipeline_LOOP_SHA256_GEN_FULL_BLKS_fu_271", "Port" : "blk_strm", "Inst_start_state" : "9", "Inst_end_state" : "10"}]},
-			{"Name" : "nblk_strm", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["20"], "DependentChan" : "56", "DependentChanDepth" : "32", "DependentChanType" : "0",
+					{"ID" : "9", "SubInstance" : "grp_preProcessing_Pipeline_LOOP_SHA256_GEN_FULL_BLKS_fu_270", "Port" : "blk_strm", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "nblk_strm", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["13"], "DependentChan" : "27", "DependentChanDepth" : "32", "DependentChanType" : "0",
 				"BlockSignal" : [
 					{"Name" : "nblk_strm_blk_n", "Type" : "RtlSignal"}]},
-			{"Name" : "end_nblk_strm", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["20"], "DependentChan" : "57", "DependentChanDepth" : "32", "DependentChanType" : "0",
+			{"Name" : "end_nblk_strm", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["13"], "DependentChan" : "28", "DependentChanDepth" : "32", "DependentChanType" : "0",
 				"BlockSignal" : [
 					{"Name" : "end_nblk_strm_blk_n", "Type" : "RtlSignal"}]}],
 		"Loop" : [
 			{"Name" : "LOOP_SHA256_GENENERATE_MAIN", "PipelineType" : "no",
-				"LoopDec" : {"FSMBitwidth" : "36", "FirstState" : "ap_ST_fsm_state3", "LastState" : ["ap_ST_fsm_state33"], "QuitState" : ["ap_ST_fsm_state3"], "PreState" : ["ap_ST_fsm_state2"], "PostState" : ["ap_ST_fsm_state1"], "OneDepthLoop" : "0", "OneStateBlock": ""}}]},
-	{"ID" : "13", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.preProcessing_U0.grp_preProcessing_Pipeline_LOOP_SHA256_GEN_FULL_BLKS_fu_271", "Parent" : "12", "Child" : ["14", "15", "16"],
+				"LoopDec" : {"FSMBitwidth" : "23", "FirstState" : "ap_ST_fsm_state2", "LastState" : ["ap_ST_fsm_state21"], "QuitState" : ["ap_ST_fsm_state2"], "PreState" : ["ap_ST_fsm_state1"], "PostState" : ["ap_ST_fsm_state1"], "OneDepthLoop" : "0", "OneStateBlock": ""}}]},
+	{"ID" : "9", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.preProcessing_U0.grp_preProcessing_Pipeline_LOOP_SHA256_GEN_FULL_BLKS_fu_270", "Parent" : "8", "Child" : ["10"],
 		"CDFG" : "preProcessing_Pipeline_LOOP_SHA256_GEN_FULL_BLKS",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "4", "EstimateLatencyMax" : "20",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "2", "EstimateLatencyMax" : "18",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -388,17 +384,15 @@ set RtlHierarchyInfo {[
 					{"Name" : "blk_strm_blk_n", "Type" : "RtlSignal"}]}],
 		"Loop" : [
 			{"Name" : "LOOP_SHA256_GEN_FULL_BLKS", "PipelineType" : "UPC",
-				"LoopDec" : {"FSMBitwidth" : "16", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage2", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage2_subdone", "QuitState" : "ap_ST_fsm_pp0_stage2", "QuitStateIter" : "ap_enable_reg_pp0_iter1", "QuitStateBlock" : "ap_block_pp0_stage2_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "14", "Level" : "5", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.preProcessing_U0.grp_preProcessing_Pipeline_LOOP_SHA256_GEN_FULL_BLKS_fu_271.icmp_58ns_58ns_1_2_1_U30", "Parent" : "13"},
-	{"ID" : "15", "Level" : "5", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.preProcessing_U0.grp_preProcessing_Pipeline_LOOP_SHA256_GEN_FULL_BLKS_fu_271.add_58ns_58ns_58_2_1_U31", "Parent" : "13"},
-	{"ID" : "16", "Level" : "5", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.preProcessing_U0.grp_preProcessing_Pipeline_LOOP_SHA256_GEN_FULL_BLKS_fu_271.flow_control_loop_pipe_sequential_init_U", "Parent" : "13"},
-	{"ID" : "17", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.preProcessing_U0.grp_preProcessing_Pipeline_LOOP_SHA256_GEN_COPY_TAIL_AND_ONE_fu_280", "Parent" : "12", "Child" : ["18"],
+				"LoopDec" : {"FSMBitwidth" : "16", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage1", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage1_subdone", "QuitState" : "ap_ST_fsm_pp0_stage1", "QuitStateIter" : "ap_enable_reg_pp0_iter1", "QuitStateBlock" : "ap_block_pp0_stage1_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
+	{"ID" : "10", "Level" : "5", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.preProcessing_U0.grp_preProcessing_Pipeline_LOOP_SHA256_GEN_FULL_BLKS_fu_270.flow_control_loop_pipe_sequential_init_U", "Parent" : "9"},
+	{"ID" : "11", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.preProcessing_U0.grp_preProcessing_Pipeline_LOOP_SHA256_GEN_COPY_TAIL_AND_ONE_fu_279", "Parent" : "8", "Child" : ["12"],
 		"CDFG" : "preProcessing_Pipeline_LOOP_SHA256_GEN_COPY_TAIL_AND_ONE",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "31", "EstimateLatencyMax" : "31",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "16", "EstimateLatencyMax" : "16",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -428,10 +422,9 @@ set RtlHierarchyInfo {[
 			{"Name" : "b_out", "Type" : "Vld", "Direction" : "O"}],
 		"Loop" : [
 			{"Name" : "LOOP_SHA256_GEN_COPY_TAIL_AND_ONE", "PipelineType" : "UPC",
-				"LoopDec" : {"FSMBitwidth" : "2", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage1", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage1_subdone", "QuitState" : "ap_ST_fsm_pp0_stage1", "QuitStateIter" : "ap_enable_reg_pp0_iter1", "QuitStateBlock" : "ap_block_pp0_stage1_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "18", "Level" : "5", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.preProcessing_U0.grp_preProcessing_Pipeline_LOOP_SHA256_GEN_COPY_TAIL_AND_ONE_fu_280.flow_control_loop_pipe_sequential_init_U", "Parent" : "17"},
-	{"ID" : "19", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.preProcessing_U0.add_59ns_59ns_59_2_1_U54", "Parent" : "12"},
-	{"ID" : "20", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.dup_strm_U0", "Parent" : "11", "Child" : ["21"],
+				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter1", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
+	{"ID" : "12", "Level" : "5", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.preProcessing_U0.grp_preProcessing_Pipeline_LOOP_SHA256_GEN_COPY_TAIL_AND_ONE_fu_279.flow_control_loop_pipe_sequential_init_U", "Parent" : "11"},
+	{"ID" : "13", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.dup_strm_U0", "Parent" : "7", "Child" : ["14"],
 		"CDFG" : "dup_strm",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1", "real_start" : "1",
@@ -445,34 +438,34 @@ set RtlHierarchyInfo {[
 		"InDataflowNetwork" : "1",
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
-		"StartSource" : "12",
+		"StartSource" : "8",
 		"StartFifo" : "start_for_dup_strm_U0_U",
 		"Port" : [
-			{"Name" : "nblk_strm", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["12"], "DependentChan" : "56", "DependentChanDepth" : "32", "DependentChanType" : "0",
+			{"Name" : "nblk_strm", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["8"], "DependentChan" : "27", "DependentChanDepth" : "32", "DependentChanType" : "0",
 				"SubConnect" : [
-					{"ID" : "21", "SubInstance" : "grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62", "Port" : "nblk_strm", "Inst_start_state" : "2", "Inst_end_state" : "3"}]},
-			{"Name" : "end_nblk_strm", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["12"], "DependentChan" : "57", "DependentChanDepth" : "32", "DependentChanType" : "0",
+					{"ID" : "14", "SubInstance" : "grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62", "Port" : "nblk_strm", "Inst_start_state" : "2", "Inst_end_state" : "3"}]},
+			{"Name" : "end_nblk_strm", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["8"], "DependentChan" : "28", "DependentChanDepth" : "32", "DependentChanType" : "0",
 				"BlockSignal" : [
 					{"Name" : "end_nblk_strm_blk_n", "Type" : "RtlSignal"}],
 				"SubConnect" : [
-					{"ID" : "21", "SubInstance" : "grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62", "Port" : "end_nblk_strm", "Inst_start_state" : "2", "Inst_end_state" : "3"}]},
-			{"Name" : "nblk_strm1", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["23"], "DependentChan" : "58", "DependentChanDepth" : "32", "DependentChanType" : "0",
+					{"ID" : "14", "SubInstance" : "grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62", "Port" : "end_nblk_strm", "Inst_start_state" : "2", "Inst_end_state" : "3"}]},
+			{"Name" : "nblk_strm1", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["16"], "DependentChan" : "29", "DependentChanDepth" : "32", "DependentChanType" : "0",
 				"SubConnect" : [
-					{"ID" : "21", "SubInstance" : "grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62", "Port" : "nblk_strm1", "Inst_start_state" : "2", "Inst_end_state" : "3"}]},
-			{"Name" : "end_nblk_strm1", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["23"], "DependentChan" : "59", "DependentChanDepth" : "32", "DependentChanType" : "0",
+					{"ID" : "14", "SubInstance" : "grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62", "Port" : "nblk_strm1", "Inst_start_state" : "2", "Inst_end_state" : "3"}]},
+			{"Name" : "end_nblk_strm1", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["16"], "DependentChan" : "30", "DependentChanDepth" : "32", "DependentChanType" : "0",
 				"BlockSignal" : [
 					{"Name" : "end_nblk_strm1_blk_n", "Type" : "RtlSignal"}],
 				"SubConnect" : [
-					{"ID" : "21", "SubInstance" : "grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62", "Port" : "end_nblk_strm1", "Inst_start_state" : "2", "Inst_end_state" : "3"}]},
-			{"Name" : "nblk_strm2", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["34"], "DependentChan" : "60", "DependentChanDepth" : "32", "DependentChanType" : "0",
+					{"ID" : "14", "SubInstance" : "grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62", "Port" : "end_nblk_strm1", "Inst_start_state" : "2", "Inst_end_state" : "3"}]},
+			{"Name" : "nblk_strm2", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["22"], "DependentChan" : "31", "DependentChanDepth" : "32", "DependentChanType" : "0",
 				"SubConnect" : [
-					{"ID" : "21", "SubInstance" : "grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62", "Port" : "nblk_strm2", "Inst_start_state" : "2", "Inst_end_state" : "3"}]},
-			{"Name" : "end_nblk_strm2", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["34"], "DependentChan" : "61", "DependentChanDepth" : "32", "DependentChanType" : "0",
+					{"ID" : "14", "SubInstance" : "grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62", "Port" : "nblk_strm2", "Inst_start_state" : "2", "Inst_end_state" : "3"}]},
+			{"Name" : "end_nblk_strm2", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["22"], "DependentChan" : "32", "DependentChanDepth" : "32", "DependentChanType" : "0",
 				"BlockSignal" : [
 					{"Name" : "end_nblk_strm2_blk_n", "Type" : "RtlSignal"}],
 				"SubConnect" : [
-					{"ID" : "21", "SubInstance" : "grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62", "Port" : "end_nblk_strm2", "Inst_start_state" : "2", "Inst_end_state" : "3"}]}]},
-	{"ID" : "21", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.dup_strm_U0.grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62", "Parent" : "20", "Child" : ["22"],
+					{"ID" : "14", "SubInstance" : "grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62", "Port" : "end_nblk_strm2", "Inst_start_state" : "2", "Inst_end_state" : "3"}]}]},
+	{"ID" : "14", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.dup_strm_U0.grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62", "Parent" : "13", "Child" : ["15"],
 		"CDFG" : "dup_strm_Pipeline_VITIS_LOOP_506_1",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
@@ -509,8 +502,8 @@ set RtlHierarchyInfo {[
 		"Loop" : [
 			{"Name" : "VITIS_LOOP_506_1", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter1", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "22", "Level" : "5", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.dup_strm_U0.grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62.flow_control_loop_pipe_sequential_init_U", "Parent" : "21"},
-	{"ID" : "23", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.generateMsgSchedule_U0", "Parent" : "11", "Child" : ["24", "27", "32", "33"],
+	{"ID" : "15", "Level" : "5", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.dup_strm_U0.grp_dup_strm_Pipeline_VITIS_LOOP_506_1_fu_62.flow_control_loop_pipe_sequential_init_U", "Parent" : "14"},
+	{"ID" : "16", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.generateMsgSchedule_U0", "Parent" : "7", "Child" : ["17", "20"],
 		"CDFG" : "generateMsgSchedule",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1", "real_start" : "0",
@@ -524,28 +517,28 @@ set RtlHierarchyInfo {[
 		"InDataflowNetwork" : "1",
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
-		"StartSource" : "12",
+		"StartSource" : "8",
 		"StartFifo" : "start_for_generateMsgSchedule_U0_U",
 		"Port" : [
-			{"Name" : "blk_strm", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["12"], "DependentChan" : "55", "DependentChanDepth" : "32", "DependentChanType" : "0",
+			{"Name" : "blk_strm", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["8"], "DependentChan" : "26", "DependentChanDepth" : "32", "DependentChanType" : "0",
 				"BlockSignal" : [
 					{"Name" : "blk_strm_blk_n", "Type" : "RtlSignal"}]},
-			{"Name" : "nblk_strm1", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["20"], "DependentChan" : "58", "DependentChanDepth" : "32", "DependentChanType" : "0",
+			{"Name" : "nblk_strm1", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["13"], "DependentChan" : "29", "DependentChanDepth" : "32", "DependentChanType" : "0",
 				"BlockSignal" : [
 					{"Name" : "nblk_strm1_blk_n", "Type" : "RtlSignal"}]},
-			{"Name" : "end_nblk_strm1", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["20"], "DependentChan" : "59", "DependentChanDepth" : "32", "DependentChanType" : "0",
+			{"Name" : "end_nblk_strm1", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["13"], "DependentChan" : "30", "DependentChanDepth" : "32", "DependentChanType" : "0",
 				"BlockSignal" : [
 					{"Name" : "end_nblk_strm1_blk_n", "Type" : "RtlSignal"}]},
-			{"Name" : "w_strm", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["34"], "DependentChan" : "62", "DependentChanDepth" : "32", "DependentChanType" : "0",
+			{"Name" : "w_strm", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["22"], "DependentChan" : "33", "DependentChanDepth" : "32", "DependentChanType" : "0",
 				"SubConnect" : [
-					{"ID" : "24", "SubInstance" : "grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223", "Port" : "w_strm", "Inst_start_state" : "8", "Inst_end_state" : "9"},
-					{"ID" : "27", "SubInstance" : "grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_261", "Port" : "w_strm", "Inst_start_state" : "10", "Inst_end_state" : "11"}]}],
+					{"ID" : "17", "SubInstance" : "grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222", "Port" : "w_strm", "Inst_start_state" : "4", "Inst_end_state" : "5"},
+					{"ID" : "20", "SubInstance" : "grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_260", "Port" : "w_strm", "Inst_start_state" : "6", "Inst_end_state" : "7"}]}],
 		"Loop" : [
 			{"Name" : "VITIS_LOOP_530_2", "PipelineType" : "no",
-				"LoopDec" : {"FSMBitwidth" : "12", "FirstState" : "ap_ST_fsm_state4", "LastState" : ["ap_ST_fsm_state11"], "QuitState" : ["ap_ST_fsm_state6"], "PreState" : ["ap_ST_fsm_state3"], "PostState" : ["ap_ST_fsm_state12"], "OneDepthLoop" : "0", "OneStateBlock": ""}},
+				"LoopDec" : {"FSMBitwidth" : "7", "FirstState" : "ap_ST_fsm_state3", "LastState" : ["ap_ST_fsm_state7"], "QuitState" : ["ap_ST_fsm_state3"], "PreState" : ["ap_ST_fsm_state2"], "PostState" : ["ap_ST_fsm_state2"], "OneDepthLoop" : "0", "OneStateBlock": ""}},
 			{"Name" : "VITIS_LOOP_528_1", "PipelineType" : "no",
-				"LoopDec" : {"FSMBitwidth" : "12", "FirstState" : "ap_ST_fsm_state3", "LastState" : ["ap_ST_fsm_state12"], "QuitState" : ["ap_ST_fsm_state3"], "PreState" : ["ap_ST_fsm_state2"], "PostState" : ["ap_ST_fsm_state1"], "OneDepthLoop" : "0", "OneStateBlock": ""}}]},
-	{"ID" : "24", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.generateMsgSchedule_U0.grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223", "Parent" : "23", "Child" : ["25", "26"],
+				"LoopDec" : {"FSMBitwidth" : "7", "FirstState" : "ap_ST_fsm_state2", "LastState" : ["ap_ST_fsm_state3"], "QuitState" : ["ap_ST_fsm_state2"], "PreState" : ["ap_ST_fsm_state1"], "PostState" : ["ap_ST_fsm_state1"], "OneDepthLoop" : "0", "OneStateBlock": ""}}]},
+	{"ID" : "17", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.generateMsgSchedule_U0.grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222", "Parent" : "16", "Child" : ["18", "19"],
 		"CDFG" : "generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
@@ -598,15 +591,15 @@ set RtlHierarchyInfo {[
 		"Loop" : [
 			{"Name" : "LOOP_SHA256_PREPARE_WT16", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter1", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "25", "Level" : "5", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.generateMsgSchedule_U0.grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223.sparsemux_33_4_32_1_1_U75", "Parent" : "24"},
-	{"ID" : "26", "Level" : "5", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.generateMsgSchedule_U0.grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_223.flow_control_loop_pipe_sequential_init_U", "Parent" : "24"},
-	{"ID" : "27", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.generateMsgSchedule_U0.grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_261", "Parent" : "23", "Child" : ["28", "29", "30", "31"],
+	{"ID" : "18", "Level" : "5", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.generateMsgSchedule_U0.grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222.sparsemux_33_4_32_1_1_U61", "Parent" : "17"},
+	{"ID" : "19", "Level" : "5", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.generateMsgSchedule_U0.grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16_fu_222.flow_control_loop_pipe_sequential_init_U", "Parent" : "17"},
+	{"ID" : "20", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.generateMsgSchedule_U0.grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_260", "Parent" : "16", "Child" : ["21"],
 		"CDFG" : "generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "51", "EstimateLatencyMax" : "51",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "50", "EstimateLatencyMax" : "50",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -637,13 +630,8 @@ set RtlHierarchyInfo {[
 		"Loop" : [
 			{"Name" : "LOOP_SHA256_PREPARE_WT64", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter2", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter2", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "28", "Level" : "5", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.generateMsgSchedule_U0.grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_261.add_32ns_32ns_32_2_1_U110", "Parent" : "27"},
-	{"ID" : "29", "Level" : "5", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.generateMsgSchedule_U0.grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_261.add_32ns_32ns_32_2_1_U111", "Parent" : "27"},
-	{"ID" : "30", "Level" : "5", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.generateMsgSchedule_U0.grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_261.add_32ns_32ns_32_1_1_U112", "Parent" : "27"},
-	{"ID" : "31", "Level" : "5", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.generateMsgSchedule_U0.grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_261.flow_control_loop_pipe_sequential_init_U", "Parent" : "27"},
-	{"ID" : "32", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.generateMsgSchedule_U0.icmp_64ns_64ns_1_3_1_U132", "Parent" : "23"},
-	{"ID" : "33", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.generateMsgSchedule_U0.add_64ns_64ns_64_3_1_U133", "Parent" : "23"},
-	{"ID" : "34", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.sha256Digest_256_U0", "Parent" : "11", "Child" : ["35", "53", "54"],
+	{"ID" : "21", "Level" : "5", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.generateMsgSchedule_U0.grp_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64_fu_260.flow_control_loop_pipe_sequential_init_U", "Parent" : "20"},
+	{"ID" : "22", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.sha256Digest_256_U0", "Parent" : "7", "Child" : ["23"],
 		"CDFG" : "sha256Digest_256_s",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1", "real_start" : "0",
@@ -657,18 +645,18 @@ set RtlHierarchyInfo {[
 		"InDataflowNetwork" : "1",
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
-		"StartSource" : "20",
+		"StartSource" : "13",
 		"StartFifo" : "start_for_sha256Digest_256_U0_U",
 		"Port" : [
-			{"Name" : "nblk_strm2", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["20"], "DependentChan" : "60", "DependentChanDepth" : "32", "DependentChanType" : "0",
+			{"Name" : "nblk_strm2", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["13"], "DependentChan" : "31", "DependentChanDepth" : "32", "DependentChanType" : "0",
 				"BlockSignal" : [
 					{"Name" : "nblk_strm2_blk_n", "Type" : "RtlSignal"}]},
-			{"Name" : "end_nblk_strm2", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["20"], "DependentChan" : "61", "DependentChanDepth" : "32", "DependentChanType" : "0",
+			{"Name" : "end_nblk_strm2", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["13"], "DependentChan" : "32", "DependentChanDepth" : "32", "DependentChanType" : "0",
 				"BlockSignal" : [
 					{"Name" : "end_nblk_strm2_blk_n", "Type" : "RtlSignal"}]},
-			{"Name" : "w_strm", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["23"], "DependentChan" : "62", "DependentChanDepth" : "32", "DependentChanType" : "0",
+			{"Name" : "w_strm", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["16"], "DependentChan" : "33", "DependentChanDepth" : "32", "DependentChanType" : "0",
 				"SubConnect" : [
-					{"ID" : "35", "SubInstance" : "grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273", "Port" : "w_strm", "Inst_start_state" : "7", "Inst_end_state" : "8"}]},
+					{"ID" : "23", "SubInstance" : "grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272", "Port" : "w_strm", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "msgHashStrm", "Type" : "Fifo", "Direction" : "O",
 				"BlockSignal" : [
 					{"Name" : "msgHashStrm_blk_n", "Type" : "RtlSignal"}]},
@@ -677,10 +665,10 @@ set RtlHierarchyInfo {[
 					{"Name" : "eMsgHashStrm_blk_n", "Type" : "RtlSignal"}]}],
 		"Loop" : [
 			{"Name" : "LOOP_SHA256_DIGEST_NBLK", "PipelineType" : "no",
-				"LoopDec" : {"FSMBitwidth" : "9", "FirstState" : "ap_ST_fsm_state4", "LastState" : ["ap_ST_fsm_state9"], "QuitState" : ["ap_ST_fsm_state7"], "PreState" : ["ap_ST_fsm_state3"], "PostState" : ["ap_ST_fsm_state3"], "OneDepthLoop" : "0", "OneStateBlock": ""}},
+				"LoopDec" : {"FSMBitwidth" : "5", "FirstState" : "ap_ST_fsm_state3", "LastState" : ["ap_ST_fsm_state5"], "QuitState" : ["ap_ST_fsm_state3"], "PreState" : ["ap_ST_fsm_state2"], "PostState" : ["ap_ST_fsm_state2"], "OneDepthLoop" : "0", "OneStateBlock": ""}},
 			{"Name" : "LOOP_SHA256_DIGEST_MAIN", "PipelineType" : "no",
-				"LoopDec" : {"FSMBitwidth" : "9", "FirstState" : "ap_ST_fsm_state3", "LastState" : ["ap_ST_fsm_state7"], "QuitState" : ["ap_ST_fsm_state3"], "PreState" : ["ap_ST_fsm_state2"], "PostState" : ["ap_ST_fsm_state1"], "OneDepthLoop" : "0", "OneStateBlock": ""}}]},
-	{"ID" : "35", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.sha256Digest_256_U0.grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273", "Parent" : "34", "Child" : ["36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52"],
+				"LoopDec" : {"FSMBitwidth" : "5", "FirstState" : "ap_ST_fsm_state2", "LastState" : ["ap_ST_fsm_state3"], "QuitState" : ["ap_ST_fsm_state2"], "PreState" : ["ap_ST_fsm_state1"], "PostState" : ["ap_ST_fsm_state1"], "OneDepthLoop" : "0", "OneStateBlock": ""}}]},
+	{"ID" : "23", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.sha256Digest_256_U0.grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272", "Parent" : "22", "Child" : ["24", "25"],
 		"CDFG" : "sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
@@ -716,63 +704,46 @@ set RtlHierarchyInfo {[
 			{"Name" : "add_ln6951_out", "Type" : "Vld", "Direction" : "O"}],
 		"Loop" : [
 			{"Name" : "LOOP_SHA256_UPDATE_64_ROUNDS", "PipelineType" : "UPC",
-				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter4", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter4", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "36", "Level" : "5", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.sha256Digest_256_U0.grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273.add_32ns_32ns_32_2_1_U139", "Parent" : "35"},
-	{"ID" : "37", "Level" : "5", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.sha256Digest_256_U0.grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273.sparsemux_129_6_32_1_1_U140", "Parent" : "35"},
-	{"ID" : "38", "Level" : "5", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.sha256Digest_256_U0.grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273.add_32ns_32ns_32_1_1_U141", "Parent" : "35"},
-	{"ID" : "39", "Level" : "5", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.sha256Digest_256_U0.grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273.add_32ns_32ns_32_1_1_U142", "Parent" : "35"},
-	{"ID" : "40", "Level" : "5", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.sha256Digest_256_U0.grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273.add_32ns_32ns_32_1_1_U143", "Parent" : "35"},
-	{"ID" : "41", "Level" : "5", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.sha256Digest_256_U0.grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273.add_32ns_32ns_32_2_1_U144", "Parent" : "35"},
-	{"ID" : "42", "Level" : "5", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.sha256Digest_256_U0.grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273.add_32ns_32ns_32_2_1_U145", "Parent" : "35"},
-	{"ID" : "43", "Level" : "5", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.sha256Digest_256_U0.grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273.add_32ns_32ns_32_2_1_U146", "Parent" : "35"},
-	{"ID" : "44", "Level" : "5", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.sha256Digest_256_U0.grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273.add_32ns_32ns_32_2_1_U147", "Parent" : "35"},
-	{"ID" : "45", "Level" : "5", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.sha256Digest_256_U0.grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273.add_32ns_32ns_32_2_1_U148", "Parent" : "35"},
-	{"ID" : "46", "Level" : "5", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.sha256Digest_256_U0.grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273.add_32ns_32ns_32_2_1_U149", "Parent" : "35"},
-	{"ID" : "47", "Level" : "5", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.sha256Digest_256_U0.grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273.add_32ns_32ns_32_2_1_U150", "Parent" : "35"},
-	{"ID" : "48", "Level" : "5", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.sha256Digest_256_U0.grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273.add_32ns_32ns_32_2_1_U151", "Parent" : "35"},
-	{"ID" : "49", "Level" : "5", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.sha256Digest_256_U0.grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273.add_32ns_32ns_32_1_1_U152", "Parent" : "35"},
-	{"ID" : "50", "Level" : "5", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.sha256Digest_256_U0.grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273.add_32ns_32ns_32_2_1_U153", "Parent" : "35"},
-	{"ID" : "51", "Level" : "5", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.sha256Digest_256_U0.grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273.add_32ns_32ns_32_2_1_U154", "Parent" : "35"},
-	{"ID" : "52", "Level" : "5", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.sha256Digest_256_U0.grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_273.flow_control_loop_pipe_sequential_init_U", "Parent" : "35"},
-	{"ID" : "53", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.sha256Digest_256_U0.icmp_64ns_64ns_1_3_1_U173", "Parent" : "34"},
-	{"ID" : "54", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.sha256Digest_256_U0.add_64ns_64ns_64_3_1_U174", "Parent" : "34"},
-	{"ID" : "55", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.blk_strm_U", "Parent" : "11"},
-	{"ID" : "56", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.nblk_strm_U", "Parent" : "11"},
-	{"ID" : "57", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.end_nblk_strm_U", "Parent" : "11"},
-	{"ID" : "58", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.nblk_strm1_U", "Parent" : "11"},
-	{"ID" : "59", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.end_nblk_strm1_U", "Parent" : "11"},
-	{"ID" : "60", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.nblk_strm2_U", "Parent" : "11"},
-	{"ID" : "61", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.end_nblk_strm2_U", "Parent" : "11"},
-	{"ID" : "62", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.w_strm_U", "Parent" : "11"},
-	{"ID" : "63", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.start_for_dup_strm_U0_U", "Parent" : "11"},
-	{"ID" : "64", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.start_for_generateMsgSchedule_U0_U", "Parent" : "11"},
-	{"ID" : "65", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.start_for_sha256Digest_256_U0_U", "Parent" : "11"},
-	{"ID" : "66", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mergeKipadStrm_U", "Parent" : "0"},
-	{"ID" : "67", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mergeKipadLenStrm_U", "Parent" : "0"},
-	{"ID" : "68", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.eMergeKipadLenStrm_U", "Parent" : "0"},
-	{"ID" : "69", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.start_for_hash_U0_U", "Parent" : "0"}]}
+				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter3", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter3", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
+	{"ID" : "24", "Level" : "5", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.sha256Digest_256_U0.grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272.sparsemux_129_6_32_1_1_U117", "Parent" : "23"},
+	{"ID" : "25", "Level" : "5", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.sha256Digest_256_U0.grp_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS_fu_272.flow_control_loop_pipe_sequential_init_U", "Parent" : "23"},
+	{"ID" : "26", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.blk_strm_U", "Parent" : "7"},
+	{"ID" : "27", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.nblk_strm_U", "Parent" : "7"},
+	{"ID" : "28", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.end_nblk_strm_U", "Parent" : "7"},
+	{"ID" : "29", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.nblk_strm1_U", "Parent" : "7"},
+	{"ID" : "30", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.end_nblk_strm1_U", "Parent" : "7"},
+	{"ID" : "31", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.nblk_strm2_U", "Parent" : "7"},
+	{"ID" : "32", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.end_nblk_strm2_U", "Parent" : "7"},
+	{"ID" : "33", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.w_strm_U", "Parent" : "7"},
+	{"ID" : "34", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.start_for_dup_strm_U0_U", "Parent" : "7"},
+	{"ID" : "35", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.start_for_generateMsgSchedule_U0_U", "Parent" : "7"},
+	{"ID" : "36", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.hash_U0.grp_sha256_top_32_256_s_fu_32.start_for_sha256Digest_256_U0_U", "Parent" : "7"},
+	{"ID" : "37", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mergeKipadStrm_U", "Parent" : "0"},
+	{"ID" : "38", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mergeKipadLenStrm_U", "Parent" : "0"},
+	{"ID" : "39", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.eMergeKipadLenStrm_U", "Parent" : "0"},
+	{"ID" : "40", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.start_for_hash_U0_U", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {
 	msgHash_32_64_256_32_64_sha256_wrapper_s {
 		kipadStrm {Type I LastRead 1 FirstWrite -1}
-		kopadStrm {Type I LastRead 8 FirstWrite -1}
+		kopadStrm {Type I LastRead 4 FirstWrite -1}
 		msgStrm {Type I LastRead 2 FirstWrite -1}
 		lenStrm {Type I LastRead 1 FirstWrite -1}
 		eKipadStrm {Type I LastRead 1 FirstWrite -1}
-		kopad2Strm {Type O LastRead -1 FirstWrite 8}
-		msgHashStrm {Type O LastRead -1 FirstWrite 6}
-		eMsgHashStrm {Type O LastRead -1 FirstWrite 2}}
+		kopad2Strm {Type O LastRead -1 FirstWrite 4}
+		msgHashStrm {Type O LastRead -1 FirstWrite 2}
+		eMsgHashStrm {Type O LastRead -1 FirstWrite 1}}
 	mergeKipad_32_64_256_64_s {
 		kipadStrm {Type I LastRead 1 FirstWrite -1}
-		kopadStrm {Type I LastRead 8 FirstWrite -1}
+		kopadStrm {Type I LastRead 4 FirstWrite -1}
 		msgStrm {Type I LastRead 2 FirstWrite -1}
 		lenStrm {Type I LastRead 1 FirstWrite -1}
 		eKipadStrm {Type I LastRead 1 FirstWrite -1}
 		mergeKipadStrm {Type O LastRead -1 FirstWrite 1}
-		mergeKipadLenStrm {Type O LastRead -1 FirstWrite 5}
+		mergeKipadLenStrm {Type O LastRead -1 FirstWrite 1}
 		eMergeKipadLenStrm {Type O LastRead -1 FirstWrite 1}
-		kopad2Strm {Type O LastRead -1 FirstWrite 8}}
+		kopad2Strm {Type O LastRead -1 FirstWrite 4}}
 	mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_162_2 {
 		kipad {Type I LastRead 0 FirstWrite -1}
 		mergeKipadStrm {Type O LastRead -1 FirstWrite 1}}
@@ -781,49 +752,49 @@ set ArgLastReadFirstWriteLatency {
 		msgStrm {Type I LastRead 2 FirstWrite -1}
 		mergeKipadStrm {Type O LastRead -1 FirstWrite 2}}
 	hash {
-		mergeKipadStrm {Type I LastRead 28 FirstWrite -1}
-		mergeKipadLenStrm {Type I LastRead 2 FirstWrite -1}
-		eMergeKipadLenStrm {Type I LastRead 31 FirstWrite -1}
-		msgHashStrm {Type O LastRead -1 FirstWrite 6}
-		eMsgHashStrm {Type O LastRead -1 FirstWrite 2}}
+		mergeKipadStrm {Type I LastRead 19 FirstWrite -1}
+		mergeKipadLenStrm {Type I LastRead 1 FirstWrite -1}
+		eMergeKipadLenStrm {Type I LastRead 20 FirstWrite -1}
+		msgHashStrm {Type O LastRead -1 FirstWrite 2}
+		eMsgHashStrm {Type O LastRead -1 FirstWrite 1}}
 	sha256_top_32_256_s {
-		mergeKopadStrm {Type I LastRead 28 FirstWrite -1}
-		mergeKopadLenStrm {Type I LastRead 2 FirstWrite -1}
-		eMergeKopadLenStrm {Type I LastRead 31 FirstWrite -1}
-		hshStrm {Type O LastRead -1 FirstWrite 6}
-		eHshStrm {Type O LastRead -1 FirstWrite 2}}
+		mergeKopadStrm {Type I LastRead 19 FirstWrite -1}
+		mergeKopadLenStrm {Type I LastRead 1 FirstWrite -1}
+		eMergeKopadLenStrm {Type I LastRead 20 FirstWrite -1}
+		hshStrm {Type O LastRead -1 FirstWrite 2}
+		eHshStrm {Type O LastRead -1 FirstWrite 1}}
 	preProcessing {
-		mergeKipadStrm {Type I LastRead 28 FirstWrite -1}
-		mergeKipadLenStrm {Type I LastRead 2 FirstWrite -1}
-		eMergeKipadLenStrm {Type I LastRead 31 FirstWrite -1}
-		blk_strm {Type O LastRead -1 FirstWrite 11}
-		nblk_strm {Type O LastRead -1 FirstWrite 7}
-		end_nblk_strm {Type O LastRead -1 FirstWrite 2}}
+		mergeKipadStrm {Type I LastRead 19 FirstWrite -1}
+		mergeKipadLenStrm {Type I LastRead 1 FirstWrite -1}
+		eMergeKipadLenStrm {Type I LastRead 20 FirstWrite -1}
+		blk_strm {Type O LastRead -1 FirstWrite 4}
+		nblk_strm {Type O LastRead -1 FirstWrite 1}
+		end_nblk_strm {Type O LastRead -1 FirstWrite 1}}
 	preProcessing_Pipeline_LOOP_SHA256_GEN_FULL_BLKS {
 		trunc_ln {Type I LastRead 0 FirstWrite -1}
-		mergeKipadStrm {Type I LastRead 18 FirstWrite -1}
-		blk_strm {Type O LastRead -1 FirstWrite 18}}
+		mergeKipadStrm {Type I LastRead 17 FirstWrite -1}
+		blk_strm {Type O LastRead -1 FirstWrite 17}}
 	preProcessing_Pipeline_LOOP_SHA256_GEN_COPY_TAIL_AND_ONE {
-		mergeKipadStrm {Type I LastRead 2 FirstWrite -1}
+		mergeKipadStrm {Type I LastRead 1 FirstWrite -1}
 		p_cast {Type I LastRead 0 FirstWrite -1}
 		len {Type I LastRead 0 FirstWrite -1}
-		b_16_out {Type O LastRead -1 FirstWrite 1}
-		b_15_out {Type O LastRead -1 FirstWrite 1}
-		b_14_out {Type O LastRead -1 FirstWrite 1}
-		b_13_out {Type O LastRead -1 FirstWrite 1}
-		b_12_out {Type O LastRead -1 FirstWrite 1}
-		b_11_out {Type O LastRead -1 FirstWrite 1}
-		b_10_out {Type O LastRead -1 FirstWrite 1}
-		b_9_out {Type O LastRead -1 FirstWrite 1}
-		b_8_out {Type O LastRead -1 FirstWrite 1}
-		b_7_out {Type O LastRead -1 FirstWrite 1}
-		b_6_out {Type O LastRead -1 FirstWrite 1}
-		b_5_out {Type O LastRead -1 FirstWrite 1}
-		b_4_out {Type O LastRead -1 FirstWrite 1}
-		b_out {Type O LastRead -1 FirstWrite 1}}
+		b_16_out {Type O LastRead -1 FirstWrite 0}
+		b_15_out {Type O LastRead -1 FirstWrite 0}
+		b_14_out {Type O LastRead -1 FirstWrite 0}
+		b_13_out {Type O LastRead -1 FirstWrite 0}
+		b_12_out {Type O LastRead -1 FirstWrite 0}
+		b_11_out {Type O LastRead -1 FirstWrite 0}
+		b_10_out {Type O LastRead -1 FirstWrite 0}
+		b_9_out {Type O LastRead -1 FirstWrite 0}
+		b_8_out {Type O LastRead -1 FirstWrite 0}
+		b_7_out {Type O LastRead -1 FirstWrite 0}
+		b_6_out {Type O LastRead -1 FirstWrite 0}
+		b_5_out {Type O LastRead -1 FirstWrite 0}
+		b_4_out {Type O LastRead -1 FirstWrite 0}
+		b_out {Type O LastRead -1 FirstWrite 0}}
 	dup_strm {
 		nblk_strm {Type I LastRead 1 FirstWrite -1}
-		end_nblk_strm {Type I LastRead 1 FirstWrite -1}
+		end_nblk_strm {Type I LastRead 0 FirstWrite -1}
 		nblk_strm1 {Type O LastRead -1 FirstWrite 1}
 		end_nblk_strm1 {Type O LastRead -1 FirstWrite 1}
 		nblk_strm2 {Type O LastRead -1 FirstWrite 1}
@@ -835,11 +806,11 @@ set ArgLastReadFirstWriteLatency {
 		end_nblk_strm1 {Type O LastRead -1 FirstWrite 1}
 		nblk_strm2 {Type O LastRead -1 FirstWrite 1}
 		end_nblk_strm2 {Type O LastRead -1 FirstWrite 1}
-		end_nblk_strm {Type I LastRead 1 FirstWrite -1}}
+		end_nblk_strm {Type I LastRead 0 FirstWrite -1}}
 	generateMsgSchedule {
-		blk_strm {Type I LastRead 6 FirstWrite -1}
-		nblk_strm1 {Type I LastRead 2 FirstWrite -1}
-		end_nblk_strm1 {Type I LastRead 6 FirstWrite -1}
+		blk_strm {Type I LastRead 2 FirstWrite -1}
+		nblk_strm1 {Type I LastRead 1 FirstWrite -1}
+		end_nblk_strm1 {Type I LastRead 2 FirstWrite -1}
 		w_strm {Type O LastRead -1 FirstWrite 1}}
 	generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16 {
 		w_strm {Type O LastRead -1 FirstWrite 1}
@@ -894,11 +865,11 @@ set ArgLastReadFirstWriteLatency {
 		W_1_reload {Type I LastRead 0 FirstWrite -1}
 		w_strm {Type O LastRead -1 FirstWrite 2}}
 	sha256Digest_256_s {
-		nblk_strm2 {Type I LastRead 2 FirstWrite -1}
-		end_nblk_strm2 {Type I LastRead 6 FirstWrite -1}
-		w_strm {Type I LastRead 2 FirstWrite -1}
-		msgHashStrm {Type O LastRead -1 FirstWrite 6}
-		eMsgHashStrm {Type O LastRead -1 FirstWrite 2}}
+		nblk_strm2 {Type I LastRead 1 FirstWrite -1}
+		end_nblk_strm2 {Type I LastRead 2 FirstWrite -1}
+		w_strm {Type I LastRead 1 FirstWrite -1}
+		msgHashStrm {Type O LastRead -1 FirstWrite 2}
+		eMsgHashStrm {Type O LastRead -1 FirstWrite 1}}
 	sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS {
 		h {Type I LastRead 0 FirstWrite -1}
 		g {Type I LastRead 0 FirstWrite -1}
@@ -908,15 +879,15 @@ set ArgLastReadFirstWriteLatency {
 		c {Type I LastRead 0 FirstWrite -1}
 		b {Type I LastRead 0 FirstWrite -1}
 		a {Type I LastRead 0 FirstWrite -1}
-		w_strm {Type I LastRead 2 FirstWrite -1}
-		add_ln6888_out {Type O LastRead -1 FirstWrite 3}
-		add_ln6897_out {Type O LastRead -1 FirstWrite 3}
-		add_ln6906_out {Type O LastRead -1 FirstWrite 3}
-		add_ln6915_out {Type O LastRead -1 FirstWrite 3}
-		add_ln6924_out {Type O LastRead -1 FirstWrite 3}
-		add_ln6933_out {Type O LastRead -1 FirstWrite 3}
-		add_ln6942_out {Type O LastRead -1 FirstWrite 3}
-		add_ln6951_out {Type O LastRead -1 FirstWrite 3}}}
+		w_strm {Type I LastRead 1 FirstWrite -1}
+		add_ln6888_out {Type O LastRead -1 FirstWrite 2}
+		add_ln6897_out {Type O LastRead -1 FirstWrite 2}
+		add_ln6906_out {Type O LastRead -1 FirstWrite 2}
+		add_ln6915_out {Type O LastRead -1 FirstWrite 2}
+		add_ln6924_out {Type O LastRead -1 FirstWrite 2}
+		add_ln6933_out {Type O LastRead -1 FirstWrite 2}
+		add_ln6942_out {Type O LastRead -1 FirstWrite 2}
+		add_ln6951_out {Type O LastRead -1 FirstWrite 2}}}
 
 set hasDtUnsupportedChannel 0
 

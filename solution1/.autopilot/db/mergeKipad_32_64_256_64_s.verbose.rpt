@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'mergeKipad_32_64_256_64_s'
 ================================================================
-* Date:           Sat Oct 18 18:24:28 2025
+* Date:           Tue Oct 21 20:19:02 2025
 
 * Version:        2024.2 (Build 5238294 on Nov  8 2024)
 * Project:        hmac_sha256_test.prj
@@ -17,11 +17,11 @@
 ================================================================
 + Timing: 
     * Summary: 
-    +--------+---------+----------+------------+
-    |  Clock |  Target | Estimated| Uncertainty|
-    +--------+---------+----------+------------+
-    |ap_clk  |  3.33 ns|  4.956 ns|     1.05 ns|
-    +--------+---------+----------+------------+
+    +--------+----------+-----------+------------+
+    |  Clock |  Target  | Estimated | Uncertainty|
+    +--------+----------+-----------+------------+
+    |ap_clk  |  15.00 ns|  10.631 ns|     1.50 ns|
+    +--------+----------+-----------+------------+
 
 + Latency: 
     * Summary: 
@@ -34,13 +34,13 @@
 
     + Detail: 
         * Instance: 
-        +--------------------------------------------------------------+---------------------------------------------------+---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
-        |                                                              |                                                   |  Latency (cycles) |   Latency (absolute)  |  Interval |                    Pipeline                    |
-        |                           Instance                           |                       Module                      |   min   |   max   |    min    |    max    | min | max |                      Type                      |
-        +--------------------------------------------------------------+---------------------------------------------------+---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
-        |grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_162_2_fu_126  |mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_162_2  |       18|       18|  89.208 ns|  89.208 ns|   17|   17|  loop auto-rewind stp (delay=0 clock cycles(s))|
-        |grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133  |mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3  |        ?|        ?|          ?|          ?|    0|    0|  loop auto-rewind stp (delay=0 clock cycles(s))|
-        +--------------------------------------------------------------+---------------------------------------------------+---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
+        +--------------------------------------------------------------+---------------------------------------------------+---------+---------+----------+----------+-----+-----+------------------------------------------------+
+        |                                                              |                                                   |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                    |
+        |                           Instance                           |                       Module                      |   min   |   max   |    min   |    max   | min | max |                      Type                      |
+        +--------------------------------------------------------------+---------------------------------------------------+---------+---------+----------+----------+-----+-----+------------------------------------------------+
+        |grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_162_2_fu_126  |mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_162_2  |       18|       18|  0.270 us|  0.270 us|   17|   17|  loop auto-rewind stp (delay=0 clock cycles(s))|
+        |grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133  |mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3  |        ?|        ?|         ?|         ?|    0|    0|  loop auto-rewind stp (delay=0 clock cycles(s))|
+        +--------------------------------------------------------------+---------------------------------------------------+---------+---------+----------+----------+-----+-----+------------------------------------------------+
 
         * Loop: 
         +--------------------+---------+---------+----------+-----------+-----------+------+----------+
@@ -60,18 +60,18 @@
 |       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
 +-----------------+---------+-----+--------+-------+-----+
 |DSP              |        -|    -|       -|      -|    -|
-|Expression       |        -|    -|       0|      8|    -|
+|Expression       |        -|    -|       0|    152|    -|
 |FIFO             |        -|    -|       -|      -|    -|
-|Instance         |        -|    -|    1959|    437|    -|
+|Instance         |        -|    -|     587|    285|    -|
 |Memory           |        -|    -|       -|      -|    -|
-|Multiplexer      |        -|    -|       0|    183|    -|
-|Register         |        -|    -|     718|      -|    -|
+|Multiplexer      |        -|    -|       0|    160|    -|
+|Register         |        -|    -|     586|      -|    -|
 +-----------------+---------+-----+--------+-------+-----+
-|Total            |        0|    0|    2677|    628|    0|
+|Total            |        0|    0|    1173|    597|    0|
 +-----------------+---------+-----+--------+-------+-----+
 |Available        |      280|  220|  106400|  53200|    0|
 +-----------------+---------+-----+--------+-------+-----+
-|Utilization (%)  |        0|    0|       2|      1|    0|
+|Utilization (%)  |        0|    0|       1|      1|    0|
 +-----------------+---------+-----+--------+-------+-----+
 
 + Detail: 
@@ -79,12 +79,10 @@
     +--------------------------------------------------------------+---------------------------------------------------+---------+----+-----+-----+-----+
     |                           Instance                           |                       Module                      | BRAM_18K| DSP|  FF | LUT | URAM|
     +--------------------------------------------------------------+---------------------------------------------------+---------+----+-----+-----+-----+
-    |add_64ns_64ns_64_3_1_U17                                      |add_64ns_64ns_64_3_1                               |        0|   0|  389|   66|    0|
-    |add_68ns_68ns_68_3_1_U18                                      |add_68ns_68ns_68_3_1                               |        0|   0|  407|   69|    0|
     |grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_162_2_fu_126  |mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_162_2  |        0|   0|  520|   85|    0|
-    |grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133  |mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3  |        0|   0|  643|  217|    0|
+    |grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133  |mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3  |        0|   0|   67|  200|    0|
     +--------------------------------------------------------------+---------------------------------------------------+---------+----+-----+-----+-----+
-    |Total                                                         |                                                   |        0|   0| 1959|  437|    0|
+    |Total                                                         |                                                   |        0|   0|  587|  285|    0|
     +--------------------------------------------------------------+---------------------------------------------------+---------+----+-----+-----+-----+
 
     * DSP: 
@@ -97,22 +95,23 @@
     N/A
 
     * Expression: 
-    +-----------------+----------+----+---+----+------------+------------+
-    |  Variable Name  | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
-    +-----------------+----------+----+---+----+------------+------------+
-    |ap_block_state1  |        or|   0|  0|   2|           1|           1|
-    |ap_block_state2  |        or|   0|  0|   2|           1|           1|
-    |ap_block_state6  |        or|   0|  0|   2|           1|           1|
-    |ap_block_state9  |        or|   0|  0|   2|           1|           1|
-    +-----------------+----------+----+---+----+------------+------------+
-    |Total            |          |   0|  0|   8|           4|           4|
-    +-----------------+----------+----+---+----+------------+------------+
+    +-----------------------+----------+----+---+----+------------+------------+
+    |     Variable Name     | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------+----------+----+---+----+------------+------------+
+    |add_ln171_fu_161_p2    |         +|   0|  0|  75|          68|           5|
+    |mergeKipadLenStrm_din  |         +|   0|  0|  71|          64|           7|
+    |ap_block_state1        |        or|   0|  0|   2|           1|           1|
+    |ap_block_state2        |        or|   0|  0|   2|           1|           1|
+    |ap_block_state5        |        or|   0|  0|   2|           1|           1|
+    +-----------------------+----------+----+---+----+------------+------------+
+    |Total                  |          |   0|  0| 152|         135|          15|
+    +-----------------------+----------+----+---+----+------------+------------+
 
     * Multiplexer: 
     +--------------------------+----+-----------+-----+-----------+
     |           Name           | LUT| Input Size| Bits| Total Bits|
     +--------------------------+----+-----------+-----+-----------+
-    |ap_NS_fsm                 |  65|         12|    1|         12|
+    |ap_NS_fsm                 |  42|          8|    1|          8|
     |ap_done                   |   9|          2|    1|          2|
     |eKipadStrm_blk_n          |   9|          2|    1|          2|
     |eMergeKipadLenStrm_blk_n  |   9|          2|    1|          2|
@@ -126,24 +125,22 @@
     |mergeKipadStrm_write      |  14|          3|    1|          3|
     |real_start                |   9|          2|    1|          2|
     +--------------------------+----+-----------+-----+-----------+
-    |Total                     | 183|         38|   44|        100|
+    |Total                     | 160|         34|   44|         96|
     +--------------------------+----+-----------+-----+-----------+
 
     * Register: 
     +---------------------------------------------------------------------------+-----+----+-----+-----------+
     |                                    Name                                   |  FF | LUT| Bits| Const Bits|
     +---------------------------------------------------------------------------+-----+----+-----+-----------+
-    |ap_CS_fsm                                                                  |   11|   0|   11|          0|
+    |ap_CS_fsm                                                                  |    7|   0|    7|          0|
     |ap_done_reg                                                                |    1|   0|    1|          0|
     |grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_162_2_fu_126_ap_start_reg  |    1|   0|    1|          0|
     |grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133_ap_start_reg  |    1|   0|    1|          0|
-    |kipad_reg_243                                                              |  512|   0|  512|          0|
-    |mergeKipadLen_reg_253                                                      |   64|   0|   64|          0|
-    |ml_reg_237                                                                 |   64|   0|   64|          0|
+    |kipad_reg_240                                                              |  512|   0|  512|          0|
     |start_once_reg                                                             |    1|   0|    1|          0|
-    |tmp_1_reg_258                                                              |   63|   0|   63|          0|
+    |tmp_1_reg_245                                                              |   63|   0|   63|          0|
     +---------------------------------------------------------------------------+-----+----+-----+-----------+
-    |Total                                                                      |  718|   0|  718|          0|
+    |Total                                                                      |  586|   0|  586|          0|
     +---------------------------------------------------------------------------+-----+----+-----+-----------+
 
 
@@ -234,7 +231,7 @@ IsGatedGlobalClock: 0
 ============================================================
 + Verbose Summary: Schedule
 ============================================================
-* Number of FSM states : 11
+* Number of FSM states : 7
 * Pipeline : 0
 * Dataflow Pipeline: 0
 
@@ -245,80 +242,64 @@ IsGatedGlobalClock: 0
 4 --> 5 
 5 --> 6 
 6 --> 7 
-7 --> 8 
-8 --> 9 
-9 --> 10 
-10 --> 11 
-11 --> 2 
+7 --> 2 
 
 * FSM state operations: 
 
 State 1 <SV = 0> <Delay = 0.00>
-ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i1 %eMergeKipadLenStrm, i64 666, i64 9, i64 18446744073709551615"   --->   Operation 12 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i64 %mergeKipadLenStrm, i64 666, i64 9, i64 18446744073709551615"   --->   Operation 13 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %mergeKipadStrm, i64 666, i64 8, i64 18446744073709551615"   --->   Operation 14 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i1 %eKipadStrm, i64 666, i64 9, i64 18446744073709551615"   --->   Operation 15 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i512 %kipadStrm, i64 666, i64 9, i64 18446744073709551615"   --->   Operation 16 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i512 %kopadStrm, i64 666, i64 9, i64 18446744073709551615"   --->   Operation 17 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i512 %kopad2Strm, i64 666, i64 9, i64 18446744073709551615"   --->   Operation 18 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %eMergeKipadLenStrm, void @empty_3, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 19 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %mergeKipadLenStrm, void @empty_3, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 20 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %mergeKipadStrm, void @empty_3, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 21 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %lenStrm, void @empty_3, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 22 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %msgStrm, void @empty_3, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 23 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %eKipadStrm, void @empty_3, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 24 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %kipadStrm, void @empty_3, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 25 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %kopadStrm, void @empty_3, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 26 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %kopad2Strm, void @empty_3, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 27 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%br_ln152 = br void %while.cond" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:152]   --->   Operation 28 'br' 'br_ln152' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i1 %eMergeKipadLenStrm, i64 666, i64 9, i64 18446744073709551615"   --->   Operation 8 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i64 %mergeKipadLenStrm, i64 666, i64 9, i64 18446744073709551615"   --->   Operation 9 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %mergeKipadStrm, i64 666, i64 8, i64 18446744073709551615"   --->   Operation 10 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i1 %eKipadStrm, i64 666, i64 9, i64 18446744073709551615"   --->   Operation 11 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i512 %kipadStrm, i64 666, i64 9, i64 18446744073709551615"   --->   Operation 12 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i512 %kopadStrm, i64 666, i64 9, i64 18446744073709551615"   --->   Operation 13 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i512 %kopad2Strm, i64 666, i64 9, i64 18446744073709551615"   --->   Operation 14 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %eMergeKipadLenStrm, void @empty_3, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %mergeKipadLenStrm, void @empty_3, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 16 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %mergeKipadStrm, void @empty_3, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 17 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %lenStrm, void @empty_3, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 18 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %msgStrm, void @empty_3, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 19 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %eKipadStrm, void @empty_3, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 20 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %kipadStrm, void @empty_3, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 21 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %kopadStrm, void @empty_3, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 22 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %kopad2Strm, void @empty_3, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 23 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%br_ln152 = br void %while.cond" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:152]   --->   Operation 24 'br' 'br_ln152' <Predicate = true> <Delay = 0.00>
 
-State 2 <SV = 1> <Delay = 2.28>
-ST_2 : Operation 29 [1/1] ( I:1.14ns O:1.14ns )   --->   "%eKipadStrm_read = read i1 @_ssdm_op_Read.ap_fifo.volatile.i1P0A, i1 %eKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:152]   --->   Operation 29 'read' 'eKipadStrm_read' <Predicate = true> <Delay = 1.14> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 4> <FIFO>
-ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%br_ln152 = br i1 %eKipadStrm_read, void %VITIS_LOOP_162_2, void %while.end" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:152]   --->   Operation 30 'br' 'br_ln152' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 31 [1/1] ( I:1.14ns O:1.14ns )   --->   "%ml = read i64 @_ssdm_op_Read.ap_fifo.volatile.i64P0A, i64 %lenStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:155]   --->   Operation 31 'read' 'ml' <Predicate = (!eKipadStrm_read)> <Delay = 1.14> <CoreInst = "FIFO">   --->   Core 77 'FIFO' <Latency = 0> <II = 1> <Delay = 3.47> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
-ST_2 : Operation 32 [1/1] ( I:1.14ns O:1.14ns )   --->   "%kipad = read i512 @_ssdm_op_Read.ap_fifo.volatile.i512P0A, i512 %kipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:160]   --->   Operation 32 'read' 'kipad' <Predicate = (!eKipadStrm_read)> <Delay = 1.14> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 512> <Depth = 4> <FIFO>
-ST_2 : Operation 33 [1/1] ( I:1.14ns O:1.14ns )   --->   "%write_ln176 = write void @_ssdm_op_Write.ap_fifo.volatile.i1P0A, i1 %eMergeKipadLenStrm, i1 1" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:176]   --->   Operation 33 'write' 'write_ln176' <Predicate = (eKipadStrm_read)> <Delay = 1.14> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 4> <FIFO>
-ST_2 : Operation 34 [1/1] (0.00ns)   --->   "%ret_ln177 = ret" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:177]   --->   Operation 34 'ret' 'ret_ln177' <Predicate = (eKipadStrm_read)> <Delay = 0.00>
+State 2 <SV = 1> <Delay = 10.6>
+ST_2 : Operation 25 [1/1] ( I:3.63ns O:3.63ns )   --->   "%eKipadStrm_read = read i1 @_ssdm_op_Read.ap_fifo.volatile.i1P0A, i1 %eKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:152]   --->   Operation 25 'read' 'eKipadStrm_read' <Predicate = true> <Delay = 3.63> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 4> <FIFO>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%br_ln152 = br i1 %eKipadStrm_read, void %VITIS_LOOP_162_2, void %while.end" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:152]   --->   Operation 26 'br' 'br_ln152' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] ( I:3.63ns O:3.63ns )   --->   "%write_ln153 = write void @_ssdm_op_Write.ap_fifo.volatile.i1P0A, i1 %eMergeKipadLenStrm, i1 0" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:153]   --->   Operation 27 'write' 'write_ln153' <Predicate = (!eKipadStrm_read)> <Delay = 3.63> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 4> <FIFO>
+ST_2 : Operation 28 [1/1] ( I:3.47ns O:3.47ns )   --->   "%ml = read i64 @_ssdm_op_Read.ap_fifo.volatile.i64P0A, i64 %lenStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:155]   --->   Operation 28 'read' 'ml' <Predicate = (!eKipadStrm_read)> <Delay = 3.47> <CoreInst = "FIFO">   --->   Core 77 'FIFO' <Latency = 0> <II = 1> <Delay = 3.47> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_2 : Operation 29 [1/1] (3.52ns)   --->   "%mergeKipadLen = add i64 %ml, i64 64" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:156]   --->   Operation 29 'add' 'mergeKipadLen' <Predicate = (!eKipadStrm_read)> <Delay = 3.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 30 [1/1] ( I:3.63ns O:3.63ns )   --->   "%write_ln158 = write void @_ssdm_op_Write.ap_fifo.volatile.i64P0A, i64 %mergeKipadLenStrm, i64 %mergeKipadLen" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:158]   --->   Operation 30 'write' 'write_ln158' <Predicate = (!eKipadStrm_read)> <Delay = 3.63> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 4> <FIFO>
+ST_2 : Operation 31 [1/1] ( I:3.63ns O:3.63ns )   --->   "%kipad = read i512 @_ssdm_op_Read.ap_fifo.volatile.i512P0A, i512 %kipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:160]   --->   Operation 31 'read' 'kipad' <Predicate = (!eKipadStrm_read)> <Delay = 3.63> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 512> <Depth = 4> <FIFO>
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%tmp = bitconcatenate i67 @_ssdm_op_BitConcatenate.i67.i64.i3, i64 %ml, i3 0" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:171]   --->   Operation 32 'bitconcatenate' 'tmp' <Predicate = (!eKipadStrm_read)> <Delay = 0.00>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "%p_cast = zext i67 %tmp" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:171]   --->   Operation 33 'zext' 'p_cast' <Predicate = (!eKipadStrm_read)> <Delay = 0.00>
+ST_2 : Operation 34 [1/1] (3.60ns)   --->   "%add_ln171 = add i68 %p_cast, i68 31" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:171]   --->   Operation 34 'add' 'add_ln171' <Predicate = (!eKipadStrm_read)> <Delay = 3.60> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.63> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%tmp_1 = partselect i63 @_ssdm_op_PartSelect.i63.i68.i32.i32, i68 %add_ln171, i32 5, i32 67" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:171]   --->   Operation 35 'partselect' 'tmp_1' <Predicate = (!eKipadStrm_read)> <Delay = 0.00>
+ST_2 : Operation 36 [1/1] ( I:3.63ns O:3.63ns )   --->   "%write_ln176 = write void @_ssdm_op_Write.ap_fifo.volatile.i1P0A, i1 %eMergeKipadLenStrm, i1 1" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:176]   --->   Operation 36 'write' 'write_ln176' <Predicate = (eKipadStrm_read)> <Delay = 3.63> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 4> <FIFO>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "%ret_ln177 = ret" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:177]   --->   Operation 37 'ret' 'ret_ln177' <Predicate = (eKipadStrm_read)> <Delay = 0.00>
 
-State 3 <SV = 2> <Delay = 2.53>
-ST_3 : Operation 35 [3/3] (2.45ns)   --->   "%mergeKipadLen = add i64 %ml, i64 64" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:156]   --->   Operation 35 'add' 'mergeKipadLen' <Predicate = true> <Delay = 2.45> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 2> <II = 1> <Delay = 2.45> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 36 [1/1] (0.00ns)   --->   "%tmp = bitconcatenate i67 @_ssdm_op_BitConcatenate.i67.i64.i3, i64 %ml, i3 0" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:171]   --->   Operation 36 'bitconcatenate' 'tmp' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 37 [1/1] (0.00ns)   --->   "%p_cast = zext i67 %tmp" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:171]   --->   Operation 37 'zext' 'p_cast' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 38 [3/3] (2.53ns)   --->   "%add_ln171 = add i68 %p_cast, i68 31" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:171]   --->   Operation 38 'add' 'add_ln171' <Predicate = true> <Delay = 2.53> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 2> <II = 1> <Delay = 2.53> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+State 3 <SV = 2> <Delay = 1.58>
+ST_3 : Operation 38 [1/1] (0.00ns)   --->   "%fence_ln162 = fence void @_ssdm_op_Fence, i1 %eKipadStrm, i1 %eMergeKipadLenStrm, i64 %lenStrm, i64 %mergeKipadLenStrm, i512 %kipadStrm, i32 4294967295, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:162]   --->   Operation 38 'fence' 'fence_ln162' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 39 [2/2] (1.58ns)   --->   "%call_ln160 = call void @mergeKipad<32, 64, 256, 64>_Pipeline_VITIS_LOOP_162_2, i512 %kipad, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:160]   --->   Operation 39 'call' 'call_ln160' <Predicate = true> <Delay = 1.58> <CoreType = "Generic">   --->   Generic Core
 
-State 4 <SV = 3> <Delay = 2.53>
-ST_4 : Operation 39 [2/3] (2.45ns)   --->   "%mergeKipadLen = add i64 %ml, i64 64" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:156]   --->   Operation 39 'add' 'mergeKipadLen' <Predicate = true> <Delay = 2.45> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 2> <II = 1> <Delay = 2.45> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_4 : Operation 40 [2/3] (2.53ns)   --->   "%add_ln171 = add i68 %p_cast, i68 31" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:171]   --->   Operation 40 'add' 'add_ln171' <Predicate = true> <Delay = 2.53> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 2> <II = 1> <Delay = 2.53> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+State 4 <SV = 3> <Delay = 4.95>
+ST_4 : Operation 40 [1/2] (4.95ns)   --->   "%call_ln160 = call void @mergeKipad<32, 64, 256, 64>_Pipeline_VITIS_LOOP_162_2, i512 %kipad, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:160]   --->   Operation 40 'call' 'call_ln160' <Predicate = true> <Delay = 4.95> <CoreType = "Generic">   --->   Generic Core
 
-State 5 <SV = 4> <Delay = 2.53>
-ST_5 : Operation 41 [1/3] (2.45ns)   --->   "%mergeKipadLen = add i64 %ml, i64 64" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:156]   --->   Operation 41 'add' 'mergeKipadLen' <Predicate = true> <Delay = 2.45> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 2> <II = 1> <Delay = 2.45> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_5 : Operation 42 [1/3] (2.53ns)   --->   "%add_ln171 = add i68 %p_cast, i68 31" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:171]   --->   Operation 42 'add' 'add_ln171' <Predicate = true> <Delay = 2.53> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 2> <II = 1> <Delay = 2.53> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_5 : Operation 43 [1/1] (0.00ns)   --->   "%tmp_1 = partselect i63 @_ssdm_op_PartSelect.i63.i68.i32.i32, i68 %add_ln171, i32 5, i32 67" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:171]   --->   Operation 43 'partselect' 'tmp_1' <Predicate = true> <Delay = 0.00>
+State 5 <SV = 4> <Delay = 7.26>
+ST_5 : Operation 41 [1/1] (0.00ns)   --->   "%fence_ln169 = fence void @_ssdm_op_Fence, i32 %mergeKipadStrm, i32 4294967295, i512 %kopadStrm, i512 %kopad2Strm, i32 %msgStrm, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:169]   --->   Operation 41 'fence' 'fence_ln169' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 42 [1/1] ( I:3.63ns O:3.63ns )   --->   "%kopadStrm_read = read i512 @_ssdm_op_Read.ap_fifo.volatile.i512P0A, i512 %kopadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:169]   --->   Operation 42 'read' 'kopadStrm_read' <Predicate = true> <Delay = 3.63> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 512> <Depth = 4> <FIFO>
+ST_5 : Operation 43 [1/1] ( I:3.63ns O:3.63ns )   --->   "%write_ln169 = write void @_ssdm_op_Write.ap_fifo.volatile.i512P0A, i512 %kopad2Strm, i512 %kopadStrm_read" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:169]   --->   Operation 43 'write' 'write_ln169' <Predicate = true> <Delay = 3.63> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 512> <Depth = 4> <FIFO>
 
-State 6 <SV = 5> <Delay = 1.14>
-ST_6 : Operation 44 [1/1] ( I:1.14ns O:1.14ns )   --->   "%write_ln153 = write void @_ssdm_op_Write.ap_fifo.volatile.i1P0A, i1 %eMergeKipadLenStrm, i1 0" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:153]   --->   Operation 44 'write' 'write_ln153' <Predicate = true> <Delay = 1.14> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 4> <FIFO>
-ST_6 : Operation 45 [1/1] ( I:1.14ns O:1.14ns )   --->   "%write_ln158 = write void @_ssdm_op_Write.ap_fifo.volatile.i64P0A, i64 %mergeKipadLenStrm, i64 %mergeKipadLen" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:158]   --->   Operation 45 'write' 'write_ln158' <Predicate = true> <Delay = 1.14> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 4> <FIFO>
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 44 [1/1] (0.00ns)   --->   "%fence_ln171 = fence void @_ssdm_op_Fence, i1 %eKipadStrm, i1 %eMergeKipadLenStrm, i64 %lenStrm, i64 %mergeKipadLenStrm, i512 %kipadStrm, i32 %mergeKipadStrm, i512 %kopadStrm, i512 %kopad2Strm, i32 4294967295, i32 %msgStrm, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:171]   --->   Operation 44 'fence' 'fence_ln171' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 45 [2/2] (0.00ns)   --->   "%call_ln171 = call void @mergeKipad<32, 64, 256, 64>_Pipeline_VITIS_LOOP_171_3, i63 %tmp_1, i32 %msgStrm, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:171]   --->   Operation 45 'call' 'call_ln171' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
 
-State 7 <SV = 6> <Delay = 1.58>
-ST_7 : Operation 46 [1/1] (0.00ns)   --->   "%fence_ln162 = fence void @_ssdm_op_Fence, i1 %eKipadStrm, i1 %eMergeKipadLenStrm, i64 %lenStrm, i64 %mergeKipadLenStrm, i512 %kipadStrm, i32 4294967295, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:162]   --->   Operation 46 'fence' 'fence_ln162' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 47 [2/2] (1.58ns)   --->   "%call_ln160 = call void @mergeKipad<32, 64, 256, 64>_Pipeline_VITIS_LOOP_162_2, i512 %kipad, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:160]   --->   Operation 47 'call' 'call_ln160' <Predicate = true> <Delay = 1.58> <CoreType = "Generic">   --->   Generic Core
-
-State 8 <SV = 7> <Delay = 4.95>
-ST_8 : Operation 48 [1/2] (4.95ns)   --->   "%call_ln160 = call void @mergeKipad<32, 64, 256, 64>_Pipeline_VITIS_LOOP_162_2, i512 %kipad, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:160]   --->   Operation 48 'call' 'call_ln160' <Predicate = true> <Delay = 4.95> <CoreType = "Generic">   --->   Generic Core
-
-State 9 <SV = 8> <Delay = 2.28>
-ST_9 : Operation 49 [1/1] (0.00ns)   --->   "%fence_ln169 = fence void @_ssdm_op_Fence, i32 %mergeKipadStrm, i32 4294967295, i512 %kopadStrm, i512 %kopad2Strm, i32 %msgStrm, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:169]   --->   Operation 49 'fence' 'fence_ln169' <Predicate = true> <Delay = 0.00>
-ST_9 : Operation 50 [1/1] ( I:1.14ns O:1.14ns )   --->   "%kopadStrm_read = read i512 @_ssdm_op_Read.ap_fifo.volatile.i512P0A, i512 %kopadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:169]   --->   Operation 50 'read' 'kopadStrm_read' <Predicate = true> <Delay = 1.14> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 512> <Depth = 4> <FIFO>
-ST_9 : Operation 51 [1/1] ( I:1.14ns O:1.14ns )   --->   "%write_ln169 = write void @_ssdm_op_Write.ap_fifo.volatile.i512P0A, i512 %kopad2Strm, i512 %kopadStrm_read" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:169]   --->   Operation 51 'write' 'write_ln169' <Predicate = true> <Delay = 1.14> <CoreInst = "FIFO_LUTRAM">   --->   Core 79 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 512> <Depth = 4> <FIFO>
-
-State 10 <SV = 9> <Delay = 2.60>
-ST_10 : Operation 52 [1/1] (0.00ns)   --->   "%fence_ln171 = fence void @_ssdm_op_Fence, i1 %eKipadStrm, i1 %eMergeKipadLenStrm, i64 %lenStrm, i64 %mergeKipadLenStrm, i512 %kipadStrm, i32 %mergeKipadStrm, i512 %kopadStrm, i512 %kopad2Strm, i32 4294967295, i32 %msgStrm, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:171]   --->   Operation 52 'fence' 'fence_ln171' <Predicate = true> <Delay = 0.00>
-ST_10 : Operation 53 [2/2] (2.60ns)   --->   "%call_ln171 = call void @mergeKipad<32, 64, 256, 64>_Pipeline_VITIS_LOOP_171_3, i63 %tmp_1, i32 %msgStrm, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:171]   --->   Operation 53 'call' 'call_ln171' <Predicate = true> <Delay = 2.60> <CoreType = "Generic">   --->   Generic Core
-
-State 11 <SV = 10> <Delay = 4.19>
-ST_11 : Operation 54 [1/1] (0.00ns)   --->   "%specloopname_ln152 = specloopname void @_ssdm_op_SpecLoopName, void @empty_18" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:152]   --->   Operation 54 'specloopname' 'specloopname_ln152' <Predicate = true> <Delay = 0.00>
-ST_11 : Operation 55 [1/2] (4.19ns)   --->   "%call_ln171 = call void @mergeKipad<32, 64, 256, 64>_Pipeline_VITIS_LOOP_171_3, i63 %tmp_1, i32 %msgStrm, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:171]   --->   Operation 55 'call' 'call_ln171' <Predicate = true> <Delay = 4.19> <CoreType = "Generic">   --->   Generic Core
-ST_11 : Operation 56 [1/1] (0.00ns)   --->   "%br_ln152 = br void %while.cond" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:152]   --->   Operation 56 'br' 'br_ln152' <Predicate = true> <Delay = 0.00>
+State 7 <SV = 6> <Delay = 5.08>
+ST_7 : Operation 46 [1/1] (0.00ns)   --->   "%specloopname_ln152 = specloopname void @_ssdm_op_SpecLoopName, void @empty_18" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:152]   --->   Operation 46 'specloopname' 'specloopname_ln152' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 47 [1/2] (5.08ns)   --->   "%call_ln171 = call void @mergeKipad<32, 64, 256, 64>_Pipeline_VITIS_LOOP_171_3, i63 %tmp_1, i32 %msgStrm, i32 %mergeKipadStrm" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:171]   --->   Operation 47 'call' 'call_ln171' <Predicate = true> <Delay = 5.08> <CoreType = "Generic">   --->   Generic Core
+ST_7 : Operation 48 [1/1] (0.00ns)   --->   "%br_ln152 = br void %while.cond" [D:/hlstrack/hlstrack2025-master/security/L1/tests/hmac/sha256/../../../../L1/include\xf_security/hmac.hpp:152]   --->   Operation 48 'br' 'br_ln152' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
@@ -347,45 +328,45 @@ Port [ kopad2Strm]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0;
 
 <LifeTime>
 <method=bitvector/>
-specmemcore_ln0    (specmemcore   ) [ 000000000000]
-specmemcore_ln0    (specmemcore   ) [ 000000000000]
-specmemcore_ln0    (specmemcore   ) [ 000000000000]
-specmemcore_ln0    (specmemcore   ) [ 000000000000]
-specmemcore_ln0    (specmemcore   ) [ 000000000000]
-specmemcore_ln0    (specmemcore   ) [ 000000000000]
-specmemcore_ln0    (specmemcore   ) [ 000000000000]
-specinterface_ln0  (specinterface ) [ 000000000000]
-specinterface_ln0  (specinterface ) [ 000000000000]
-specinterface_ln0  (specinterface ) [ 000000000000]
-specinterface_ln0  (specinterface ) [ 000000000000]
-specinterface_ln0  (specinterface ) [ 000000000000]
-specinterface_ln0  (specinterface ) [ 000000000000]
-specinterface_ln0  (specinterface ) [ 000000000000]
-specinterface_ln0  (specinterface ) [ 000000000000]
-specinterface_ln0  (specinterface ) [ 000000000000]
-br_ln152           (br            ) [ 000000000000]
-eKipadStrm_read    (read          ) [ 001111111111]
-br_ln152           (br            ) [ 000000000000]
-ml                 (read          ) [ 000111000000]
-kipad              (read          ) [ 000111111000]
-write_ln176        (write         ) [ 000000000000]
-ret_ln177          (ret           ) [ 000000000000]
-tmp                (bitconcatenate) [ 000000000000]
-p_cast             (zext          ) [ 000011000000]
-mergeKipadLen      (add           ) [ 000000100000]
-add_ln171          (add           ) [ 000000000000]
-tmp_1              (partselect    ) [ 000000111111]
-write_ln153        (write         ) [ 000000000000]
-write_ln158        (write         ) [ 000000000000]
-fence_ln162        (fence         ) [ 000000000000]
-call_ln160         (call          ) [ 000000000000]
-fence_ln169        (fence         ) [ 000000000000]
-kopadStrm_read     (read          ) [ 000000000000]
-write_ln169        (write         ) [ 000000000000]
-fence_ln171        (fence         ) [ 000000000000]
-specloopname_ln152 (specloopname  ) [ 000000000000]
-call_ln171         (call          ) [ 000000000000]
-br_ln152           (br            ) [ 000000000000]
+specmemcore_ln0    (specmemcore   ) [ 00000000]
+specmemcore_ln0    (specmemcore   ) [ 00000000]
+specmemcore_ln0    (specmemcore   ) [ 00000000]
+specmemcore_ln0    (specmemcore   ) [ 00000000]
+specmemcore_ln0    (specmemcore   ) [ 00000000]
+specmemcore_ln0    (specmemcore   ) [ 00000000]
+specmemcore_ln0    (specmemcore   ) [ 00000000]
+specinterface_ln0  (specinterface ) [ 00000000]
+specinterface_ln0  (specinterface ) [ 00000000]
+specinterface_ln0  (specinterface ) [ 00000000]
+specinterface_ln0  (specinterface ) [ 00000000]
+specinterface_ln0  (specinterface ) [ 00000000]
+specinterface_ln0  (specinterface ) [ 00000000]
+specinterface_ln0  (specinterface ) [ 00000000]
+specinterface_ln0  (specinterface ) [ 00000000]
+specinterface_ln0  (specinterface ) [ 00000000]
+br_ln152           (br            ) [ 00000000]
+eKipadStrm_read    (read          ) [ 00111111]
+br_ln152           (br            ) [ 00000000]
+write_ln153        (write         ) [ 00000000]
+ml                 (read          ) [ 00000000]
+mergeKipadLen      (add           ) [ 00000000]
+write_ln158        (write         ) [ 00000000]
+kipad              (read          ) [ 00011000]
+tmp                (bitconcatenate) [ 00000000]
+p_cast             (zext          ) [ 00000000]
+add_ln171          (add           ) [ 00000000]
+tmp_1              (partselect    ) [ 00011111]
+write_ln176        (write         ) [ 00000000]
+ret_ln177          (ret           ) [ 00000000]
+fence_ln162        (fence         ) [ 00000000]
+call_ln160         (call          ) [ 00000000]
+fence_ln169        (fence         ) [ 00000000]
+kopadStrm_read     (read          ) [ 00000000]
+write_ln169        (write         ) [ 00000000]
+fence_ln171        (fence         ) [ 00000000]
+specloopname_ln152 (specloopname  ) [ 00000000]
+call_ln171         (call          ) [ 00000000]
+br_ln152           (br            ) [ 00000000]
 </LifeTime>
 
 <model>
@@ -576,7 +557,7 @@ br_ln152           (br            ) [ 000000000000]
 <pin id="41" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="_ssdm_op_Read.ap_fifo.volatile.i64P0A"/></StgValue>
+<StgValue><ssdm name="_ssdm_op_Write.ap_fifo.volatile.i1P0A"/></StgValue>
 </bind>
 </comp>
 
@@ -585,7 +566,7 @@ br_ln152           (br            ) [ 000000000000]
 <pin id="43" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="_ssdm_op_Read.ap_fifo.volatile.i512P0A"/></StgValue>
+<StgValue><ssdm name=""/></StgValue>
 </bind>
 </comp>
 
@@ -594,7 +575,7 @@ br_ln152           (br            ) [ 000000000000]
 <pin id="45" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="_ssdm_op_Write.ap_fifo.volatile.i1P0A"/></StgValue>
+<StgValue><ssdm name="_ssdm_op_Read.ap_fifo.volatile.i64P0A"/></StgValue>
 </bind>
 </comp>
 
@@ -612,7 +593,7 @@ br_ln152           (br            ) [ 000000000000]
 <pin id="49" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name=""/></StgValue>
+<StgValue><ssdm name="_ssdm_op_Write.ap_fifo.volatile.i64P0A"/></StgValue>
 </bind>
 </comp>
 
@@ -621,7 +602,7 @@ br_ln152           (br            ) [ 000000000000]
 <pin id="51" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="_ssdm_op_BitConcatenate.i67.i64.i3"/></StgValue>
+<StgValue><ssdm name="_ssdm_op_Read.ap_fifo.volatile.i512P0A"/></StgValue>
 </bind>
 </comp>
 
@@ -630,7 +611,7 @@ br_ln152           (br            ) [ 000000000000]
 <pin id="53" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name=""/></StgValue>
+<StgValue><ssdm name="_ssdm_op_BitConcatenate.i67.i64.i3"/></StgValue>
 </bind>
 </comp>
 
@@ -648,7 +629,7 @@ br_ln152           (br            ) [ 000000000000]
 <pin id="57" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="_ssdm_op_PartSelect.i63.i68.i32.i32"/></StgValue>
+<StgValue><ssdm name=""/></StgValue>
 </bind>
 </comp>
 
@@ -657,7 +638,7 @@ br_ln152           (br            ) [ 000000000000]
 <pin id="59" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name=""/></StgValue>
+<StgValue><ssdm name="_ssdm_op_PartSelect.i63.i68.i32.i32"/></StgValue>
 </bind>
 </comp>
 
@@ -684,7 +665,7 @@ br_ln152           (br            ) [ 000000000000]
 <pin id="65" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="_ssdm_op_Write.ap_fifo.volatile.i64P0A"/></StgValue>
+<StgValue><ssdm name=""/></StgValue>
 </bind>
 </comp>
 
@@ -754,11 +735,24 @@ br_ln152           (br            ) [ 000000000000]
 </bind>
 </comp>
 
-<comp id="84" class="1004" name="ml_read_fu_84">
+<comp id="84" class="1004" name="grp_write_fu_84">
 <pin_list>
-<pin id="85" dir="0" index="0" bw="64" slack="0"/>
-<pin id="86" dir="0" index="1" bw="64" slack="0"/>
-<pin id="87" dir="1" index="2" bw="64" slack="1"/>
+<pin id="85" dir="0" index="0" bw="0" slack="0"/>
+<pin id="86" dir="0" index="1" bw="1" slack="0"/>
+<pin id="87" dir="0" index="2" bw="1" slack="0"/>
+<pin id="88" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="write(1151) " fcode="write"/>
+<opset="write_ln153/2 write_ln176/2 "/>
+</bind>
+</comp>
+
+<comp id="92" class="1004" name="ml_read_fu_92">
+<pin_list>
+<pin id="93" dir="0" index="0" bw="64" slack="0"/>
+<pin id="94" dir="0" index="1" bw="64" slack="0"/>
+<pin id="95" dir="1" index="2" bw="64" slack="0"/>
 </pin_list>
 <bind>
 <opcode="read(1150) " fcode="read"/>
@@ -766,41 +760,28 @@ br_ln152           (br            ) [ 000000000000]
 </bind>
 </comp>
 
-<comp id="90" class="1004" name="kipad_read_fu_90">
+<comp id="98" class="1004" name="write_ln158_write_fu_98">
 <pin_list>
-<pin id="91" dir="0" index="0" bw="512" slack="0"/>
-<pin id="92" dir="0" index="1" bw="512" slack="0"/>
-<pin id="93" dir="1" index="2" bw="512" slack="5"/>
+<pin id="99" dir="0" index="0" bw="0" slack="0"/>
+<pin id="100" dir="0" index="1" bw="64" slack="0"/>
+<pin id="101" dir="0" index="2" bw="64" slack="0"/>
+<pin id="102" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="write(1151) " fcode="write"/>
+<opset="write_ln158/2 "/>
+</bind>
+</comp>
+
+<comp id="105" class="1004" name="kipad_read_fu_105">
+<pin_list>
+<pin id="106" dir="0" index="0" bw="512" slack="0"/>
+<pin id="107" dir="0" index="1" bw="512" slack="0"/>
+<pin id="108" dir="1" index="2" bw="512" slack="1"/>
 </pin_list>
 <bind>
 <opcode="read(1150) " fcode="read"/>
 <opset="kipad/2 "/>
-</bind>
-</comp>
-
-<comp id="96" class="1004" name="grp_write_fu_96">
-<pin_list>
-<pin id="97" dir="0" index="0" bw="0" slack="0"/>
-<pin id="98" dir="0" index="1" bw="1" slack="0"/>
-<pin id="99" dir="0" index="2" bw="1" slack="0"/>
-<pin id="100" dir="1" index="3" bw="0" slack="2147483647"/>
-</pin_list>
-<bind>
-<opcode="write(1151) " fcode="write"/>
-<opset="write_ln176/2 write_ln153/6 "/>
-</bind>
-</comp>
-
-<comp id="105" class="1004" name="write_ln158_write_fu_105">
-<pin_list>
-<pin id="106" dir="0" index="0" bw="0" slack="0"/>
-<pin id="107" dir="0" index="1" bw="64" slack="0"/>
-<pin id="108" dir="0" index="2" bw="64" slack="1"/>
-<pin id="109" dir="1" index="3" bw="0" slack="2147483647"/>
-</pin_list>
-<bind>
-<opcode="write(1151) " fcode="write"/>
-<opset="write_ln158/6 "/>
 </bind>
 </comp>
 
@@ -812,7 +793,7 @@ br_ln152           (br            ) [ 000000000000]
 </pin_list>
 <bind>
 <opcode="read(1150) " fcode="read"/>
-<opset="kopadStrm_read/9 "/>
+<opset="kopadStrm_read/5 "/>
 </bind>
 </comp>
 
@@ -825,200 +806,170 @@ br_ln152           (br            ) [ 000000000000]
 </pin_list>
 <bind>
 <opcode="write(1151) " fcode="write"/>
-<opset="write_ln169/9 "/>
+<opset="write_ln169/5 "/>
 </bind>
 </comp>
 
 <comp id="126" class="1004" name="grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_162_2_fu_126">
 <pin_list>
 <pin id="127" dir="0" index="0" bw="0" slack="0"/>
-<pin id="128" dir="0" index="1" bw="512" slack="5"/>
+<pin id="128" dir="0" index="1" bw="512" slack="1"/>
 <pin id="129" dir="0" index="2" bw="32" slack="0"/>
 <pin id="130" dir="1" index="3" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="call(48) " fcode="call"/>
-<opset="call_ln160/7 "/>
+<opset="call_ln160/3 "/>
 </bind>
 </comp>
 
 <comp id="133" class="1004" name="grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133">
 <pin_list>
 <pin id="134" dir="0" index="0" bw="0" slack="0"/>
-<pin id="135" dir="0" index="1" bw="63" slack="5"/>
+<pin id="135" dir="0" index="1" bw="63" slack="4"/>
 <pin id="136" dir="0" index="2" bw="32" slack="0"/>
 <pin id="137" dir="0" index="3" bw="32" slack="0"/>
 <pin id="138" dir="1" index="4" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="call(48) " fcode="call"/>
-<opset="call_ln171/10 "/>
+<opset="call_ln171/6 "/>
 </bind>
 </comp>
 
-<comp id="142" class="1004" name="grp_fu_142">
+<comp id="142" class="1004" name="mergeKipadLen_fu_142">
 <pin_list>
-<pin id="143" dir="0" index="0" bw="64" slack="1"/>
+<pin id="143" dir="0" index="0" bw="64" slack="0"/>
 <pin id="144" dir="0" index="1" bw="8" slack="0"/>
-<pin id="145" dir="1" index="2" bw="64" slack="1"/>
+<pin id="145" dir="1" index="2" bw="64" slack="0"/>
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="mergeKipadLen/3 "/>
+<opset="mergeKipadLen/2 "/>
 </bind>
 </comp>
 
-<comp id="147" class="1004" name="tmp_fu_147">
+<comp id="149" class="1004" name="tmp_fu_149">
 <pin_list>
-<pin id="148" dir="0" index="0" bw="67" slack="0"/>
-<pin id="149" dir="0" index="1" bw="64" slack="1"/>
-<pin id="150" dir="0" index="2" bw="1" slack="0"/>
-<pin id="151" dir="1" index="3" bw="67" slack="0"/>
+<pin id="150" dir="0" index="0" bw="67" slack="0"/>
+<pin id="151" dir="0" index="1" bw="64" slack="0"/>
+<pin id="152" dir="0" index="2" bw="1" slack="0"/>
+<pin id="153" dir="1" index="3" bw="67" slack="0"/>
 </pin_list>
 <bind>
 <opcode="bitconcatenate(1004) " fcode="bitconcatenate"/>
-<opset="tmp/3 "/>
+<opset="tmp/2 "/>
 </bind>
 </comp>
 
-<comp id="154" class="1004" name="p_cast_fu_154">
+<comp id="157" class="1004" name="p_cast_fu_157">
 <pin_list>
-<pin id="155" dir="0" index="0" bw="67" slack="0"/>
-<pin id="156" dir="1" index="1" bw="68" slack="0"/>
+<pin id="158" dir="0" index="0" bw="67" slack="0"/>
+<pin id="159" dir="1" index="1" bw="68" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="p_cast/3 "/>
+<opset="p_cast/2 "/>
 </bind>
 </comp>
 
-<comp id="158" class="1004" name="grp_fu_158">
+<comp id="161" class="1004" name="add_ln171_fu_161">
 <pin_list>
-<pin id="159" dir="0" index="0" bw="67" slack="0"/>
-<pin id="160" dir="0" index="1" bw="6" slack="0"/>
-<pin id="161" dir="1" index="2" bw="68" slack="0"/>
+<pin id="162" dir="0" index="0" bw="67" slack="0"/>
+<pin id="163" dir="0" index="1" bw="6" slack="0"/>
+<pin id="164" dir="1" index="2" bw="68" slack="0"/>
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="add_ln171/3 "/>
+<opset="add_ln171/2 "/>
 </bind>
 </comp>
 
-<comp id="164" class="1004" name="tmp_1_fu_164">
+<comp id="167" class="1004" name="tmp_1_fu_167">
 <pin_list>
-<pin id="165" dir="0" index="0" bw="63" slack="0"/>
-<pin id="166" dir="0" index="1" bw="68" slack="0"/>
-<pin id="167" dir="0" index="2" bw="4" slack="0"/>
-<pin id="168" dir="0" index="3" bw="8" slack="0"/>
-<pin id="169" dir="1" index="4" bw="63" slack="5"/>
+<pin id="168" dir="0" index="0" bw="63" slack="0"/>
+<pin id="169" dir="0" index="1" bw="68" slack="0"/>
+<pin id="170" dir="0" index="2" bw="4" slack="0"/>
+<pin id="171" dir="0" index="3" bw="8" slack="0"/>
+<pin id="172" dir="1" index="4" bw="63" slack="4"/>
 </pin_list>
 <bind>
 <opcode="partselect(1002) " fcode="partselect"/>
-<opset="tmp_1/5 "/>
+<opset="tmp_1/2 "/>
 </bind>
 </comp>
 
-<comp id="174" class="1004" name="fence_ln162_fu_174">
+<comp id="177" class="1004" name="fence_ln162_fu_177">
 <pin_list>
-<pin id="175" dir="0" index="0" bw="0" slack="0"/>
-<pin id="176" dir="0" index="1" bw="1" slack="0"/>
-<pin id="177" dir="0" index="2" bw="1" slack="0"/>
-<pin id="178" dir="0" index="3" bw="64" slack="0"/>
-<pin id="179" dir="0" index="4" bw="64" slack="0"/>
-<pin id="180" dir="0" index="5" bw="512" slack="0"/>
-<pin id="181" dir="0" index="6" bw="1" slack="0"/>
-<pin id="182" dir="0" index="7" bw="32" slack="0"/>
-<pin id="183" dir="1" index="8" bw="0" slack="2147483647"/>
+<pin id="178" dir="0" index="0" bw="0" slack="0"/>
+<pin id="179" dir="0" index="1" bw="1" slack="0"/>
+<pin id="180" dir="0" index="2" bw="1" slack="0"/>
+<pin id="181" dir="0" index="3" bw="64" slack="0"/>
+<pin id="182" dir="0" index="4" bw="64" slack="0"/>
+<pin id="183" dir="0" index="5" bw="512" slack="0"/>
+<pin id="184" dir="0" index="6" bw="1" slack="0"/>
+<pin id="185" dir="0" index="7" bw="32" slack="0"/>
+<pin id="186" dir="1" index="8" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="fence(30) " fcode="fence"/>
-<opset="fence_ln162/7 "/>
+<opset="fence_ln162/3 "/>
 </bind>
 </comp>
 
-<comp id="192" class="1004" name="fence_ln169_fu_192">
+<comp id="195" class="1004" name="fence_ln169_fu_195">
 <pin_list>
-<pin id="193" dir="0" index="0" bw="0" slack="0"/>
-<pin id="194" dir="0" index="1" bw="32" slack="0"/>
-<pin id="195" dir="0" index="2" bw="1" slack="0"/>
-<pin id="196" dir="0" index="3" bw="512" slack="0"/>
-<pin id="197" dir="0" index="4" bw="512" slack="0"/>
-<pin id="198" dir="0" index="5" bw="32" slack="0"/>
-<pin id="199" dir="0" index="6" bw="32" slack="0"/>
-<pin id="200" dir="1" index="7" bw="0" slack="2147483647"/>
+<pin id="196" dir="0" index="0" bw="0" slack="0"/>
+<pin id="197" dir="0" index="1" bw="32" slack="0"/>
+<pin id="198" dir="0" index="2" bw="1" slack="0"/>
+<pin id="199" dir="0" index="3" bw="512" slack="0"/>
+<pin id="200" dir="0" index="4" bw="512" slack="0"/>
+<pin id="201" dir="0" index="5" bw="32" slack="0"/>
+<pin id="202" dir="0" index="6" bw="32" slack="0"/>
+<pin id="203" dir="1" index="7" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="fence(30) " fcode="fence"/>
-<opset="fence_ln169/9 "/>
+<opset="fence_ln169/5 "/>
 </bind>
 </comp>
 
-<comp id="208" class="1004" name="fence_ln171_fu_208">
+<comp id="211" class="1004" name="fence_ln171_fu_211">
 <pin_list>
-<pin id="209" dir="0" index="0" bw="0" slack="0"/>
-<pin id="210" dir="0" index="1" bw="1" slack="0"/>
-<pin id="211" dir="0" index="2" bw="1" slack="0"/>
-<pin id="212" dir="0" index="3" bw="64" slack="0"/>
-<pin id="213" dir="0" index="4" bw="64" slack="0"/>
-<pin id="214" dir="0" index="5" bw="512" slack="0"/>
-<pin id="215" dir="0" index="6" bw="32" slack="0"/>
-<pin id="216" dir="0" index="7" bw="512" slack="0"/>
-<pin id="217" dir="0" index="8" bw="512" slack="0"/>
-<pin id="218" dir="0" index="9" bw="1" slack="0"/>
-<pin id="219" dir="0" index="10" bw="32" slack="0"/>
-<pin id="220" dir="0" index="11" bw="32" slack="0"/>
-<pin id="221" dir="1" index="12" bw="0" slack="2147483647"/>
+<pin id="212" dir="0" index="0" bw="0" slack="0"/>
+<pin id="213" dir="0" index="1" bw="1" slack="0"/>
+<pin id="214" dir="0" index="2" bw="1" slack="0"/>
+<pin id="215" dir="0" index="3" bw="64" slack="0"/>
+<pin id="216" dir="0" index="4" bw="64" slack="0"/>
+<pin id="217" dir="0" index="5" bw="512" slack="0"/>
+<pin id="218" dir="0" index="6" bw="32" slack="0"/>
+<pin id="219" dir="0" index="7" bw="512" slack="0"/>
+<pin id="220" dir="0" index="8" bw="512" slack="0"/>
+<pin id="221" dir="0" index="9" bw="1" slack="0"/>
+<pin id="222" dir="0" index="10" bw="32" slack="0"/>
+<pin id="223" dir="0" index="11" bw="32" slack="0"/>
+<pin id="224" dir="1" index="12" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="fence(30) " fcode="fence"/>
-<opset="fence_ln171/10 "/>
+<opset="fence_ln171/6 "/>
 </bind>
 </comp>
 
-<comp id="237" class="1005" name="ml_reg_237">
+<comp id="240" class="1005" name="kipad_reg_240">
 <pin_list>
-<pin id="238" dir="0" index="0" bw="64" slack="1"/>
-<pin id="239" dir="1" index="1" bw="64" slack="1"/>
-</pin_list>
-<bind>
-<opset="ml "/>
-</bind>
-</comp>
-
-<comp id="243" class="1005" name="kipad_reg_243">
-<pin_list>
-<pin id="244" dir="0" index="0" bw="512" slack="5"/>
-<pin id="245" dir="1" index="1" bw="512" slack="5"/>
+<pin id="241" dir="0" index="0" bw="512" slack="1"/>
+<pin id="242" dir="1" index="1" bw="512" slack="1"/>
 </pin_list>
 <bind>
 <opset="kipad "/>
 </bind>
 </comp>
 
-<comp id="248" class="1005" name="p_cast_reg_248">
+<comp id="245" class="1005" name="tmp_1_reg_245">
 <pin_list>
-<pin id="249" dir="0" index="0" bw="68" slack="1"/>
-<pin id="250" dir="1" index="1" bw="68" slack="1"/>
-</pin_list>
-<bind>
-<opset="p_cast "/>
-</bind>
-</comp>
-
-<comp id="253" class="1005" name="mergeKipadLen_reg_253">
-<pin_list>
-<pin id="254" dir="0" index="0" bw="64" slack="1"/>
-<pin id="255" dir="1" index="1" bw="64" slack="1"/>
-</pin_list>
-<bind>
-<opset="mergeKipadLen "/>
-</bind>
-</comp>
-
-<comp id="258" class="1005" name="tmp_1_reg_258">
-<pin_list>
-<pin id="259" dir="0" index="0" bw="63" slack="5"/>
-<pin id="260" dir="1" index="1" bw="63" slack="5"/>
+<pin id="246" dir="0" index="0" bw="63" slack="4"/>
+<pin id="247" dir="1" index="1" bw="63" slack="4"/>
 </pin_list>
 <bind>
 <opset="tmp_1 "/>
@@ -1032,27 +983,27 @@ br_ln152           (br            ) [ 000000000000]
 
 <net id="83"><net_src comp="8" pin="0"/><net_sink comp="78" pin=1"/></net>
 
-<net id="88"><net_src comp="40" pin="0"/><net_sink comp="84" pin=0"/></net>
+<net id="89"><net_src comp="40" pin="0"/><net_sink comp="84" pin=0"/></net>
 
-<net id="89"><net_src comp="6" pin="0"/><net_sink comp="84" pin=1"/></net>
+<net id="90"><net_src comp="14" pin="0"/><net_sink comp="84" pin=1"/></net>
 
-<net id="94"><net_src comp="42" pin="0"/><net_sink comp="90" pin=0"/></net>
+<net id="91"><net_src comp="42" pin="0"/><net_sink comp="84" pin=2"/></net>
 
-<net id="95"><net_src comp="0" pin="0"/><net_sink comp="90" pin=1"/></net>
+<net id="96"><net_src comp="44" pin="0"/><net_sink comp="92" pin=0"/></net>
 
-<net id="101"><net_src comp="44" pin="0"/><net_sink comp="96" pin=0"/></net>
+<net id="97"><net_src comp="6" pin="0"/><net_sink comp="92" pin=1"/></net>
 
-<net id="102"><net_src comp="14" pin="0"/><net_sink comp="96" pin=1"/></net>
+<net id="103"><net_src comp="48" pin="0"/><net_sink comp="98" pin=0"/></net>
 
-<net id="103"><net_src comp="46" pin="0"/><net_sink comp="96" pin=2"/></net>
+<net id="104"><net_src comp="12" pin="0"/><net_sink comp="98" pin=1"/></net>
 
-<net id="104"><net_src comp="62" pin="0"/><net_sink comp="96" pin=2"/></net>
+<net id="109"><net_src comp="50" pin="0"/><net_sink comp="105" pin=0"/></net>
 
-<net id="110"><net_src comp="64" pin="0"/><net_sink comp="105" pin=0"/></net>
+<net id="110"><net_src comp="0" pin="0"/><net_sink comp="105" pin=1"/></net>
 
-<net id="111"><net_src comp="12" pin="0"/><net_sink comp="105" pin=1"/></net>
+<net id="111"><net_src comp="64" pin="0"/><net_sink comp="84" pin=2"/></net>
 
-<net id="116"><net_src comp="42" pin="0"/><net_sink comp="112" pin=0"/></net>
+<net id="116"><net_src comp="50" pin="0"/><net_sink comp="112" pin=0"/></net>
 
 <net id="117"><net_src comp="2" pin="0"/><net_sink comp="112" pin=1"/></net>
 
@@ -1072,101 +1023,93 @@ br_ln152           (br            ) [ 000000000000]
 
 <net id="141"><net_src comp="10" pin="0"/><net_sink comp="133" pin=3"/></net>
 
-<net id="146"><net_src comp="48" pin="0"/><net_sink comp="142" pin=1"/></net>
+<net id="146"><net_src comp="92" pin="2"/><net_sink comp="142" pin=0"/></net>
 
-<net id="152"><net_src comp="50" pin="0"/><net_sink comp="147" pin=0"/></net>
+<net id="147"><net_src comp="46" pin="0"/><net_sink comp="142" pin=1"/></net>
 
-<net id="153"><net_src comp="52" pin="0"/><net_sink comp="147" pin=2"/></net>
+<net id="148"><net_src comp="142" pin="2"/><net_sink comp="98" pin=2"/></net>
 
-<net id="157"><net_src comp="147" pin="3"/><net_sink comp="154" pin=0"/></net>
+<net id="154"><net_src comp="52" pin="0"/><net_sink comp="149" pin=0"/></net>
 
-<net id="162"><net_src comp="154" pin="1"/><net_sink comp="158" pin=0"/></net>
+<net id="155"><net_src comp="92" pin="2"/><net_sink comp="149" pin=1"/></net>
 
-<net id="163"><net_src comp="54" pin="0"/><net_sink comp="158" pin=1"/></net>
+<net id="156"><net_src comp="54" pin="0"/><net_sink comp="149" pin=2"/></net>
 
-<net id="170"><net_src comp="56" pin="0"/><net_sink comp="164" pin=0"/></net>
+<net id="160"><net_src comp="149" pin="3"/><net_sink comp="157" pin=0"/></net>
 
-<net id="171"><net_src comp="158" pin="2"/><net_sink comp="164" pin=1"/></net>
+<net id="165"><net_src comp="157" pin="1"/><net_sink comp="161" pin=0"/></net>
 
-<net id="172"><net_src comp="58" pin="0"/><net_sink comp="164" pin=2"/></net>
+<net id="166"><net_src comp="56" pin="0"/><net_sink comp="161" pin=1"/></net>
 
-<net id="173"><net_src comp="60" pin="0"/><net_sink comp="164" pin=3"/></net>
+<net id="173"><net_src comp="58" pin="0"/><net_sink comp="167" pin=0"/></net>
 
-<net id="184"><net_src comp="66" pin="0"/><net_sink comp="174" pin=0"/></net>
+<net id="174"><net_src comp="161" pin="2"/><net_sink comp="167" pin=1"/></net>
 
-<net id="185"><net_src comp="8" pin="0"/><net_sink comp="174" pin=1"/></net>
+<net id="175"><net_src comp="60" pin="0"/><net_sink comp="167" pin=2"/></net>
 
-<net id="186"><net_src comp="14" pin="0"/><net_sink comp="174" pin=2"/></net>
+<net id="176"><net_src comp="62" pin="0"/><net_sink comp="167" pin=3"/></net>
 
-<net id="187"><net_src comp="6" pin="0"/><net_sink comp="174" pin=3"/></net>
+<net id="187"><net_src comp="66" pin="0"/><net_sink comp="177" pin=0"/></net>
 
-<net id="188"><net_src comp="12" pin="0"/><net_sink comp="174" pin=4"/></net>
+<net id="188"><net_src comp="8" pin="0"/><net_sink comp="177" pin=1"/></net>
 
-<net id="189"><net_src comp="0" pin="0"/><net_sink comp="174" pin=5"/></net>
+<net id="189"><net_src comp="14" pin="0"/><net_sink comp="177" pin=2"/></net>
 
-<net id="190"><net_src comp="36" pin="0"/><net_sink comp="174" pin=6"/></net>
+<net id="190"><net_src comp="6" pin="0"/><net_sink comp="177" pin=3"/></net>
 
-<net id="191"><net_src comp="10" pin="0"/><net_sink comp="174" pin=7"/></net>
+<net id="191"><net_src comp="12" pin="0"/><net_sink comp="177" pin=4"/></net>
 
-<net id="201"><net_src comp="66" pin="0"/><net_sink comp="192" pin=0"/></net>
+<net id="192"><net_src comp="0" pin="0"/><net_sink comp="177" pin=5"/></net>
 
-<net id="202"><net_src comp="10" pin="0"/><net_sink comp="192" pin=1"/></net>
+<net id="193"><net_src comp="36" pin="0"/><net_sink comp="177" pin=6"/></net>
 
-<net id="203"><net_src comp="36" pin="0"/><net_sink comp="192" pin=2"/></net>
+<net id="194"><net_src comp="10" pin="0"/><net_sink comp="177" pin=7"/></net>
 
-<net id="204"><net_src comp="2" pin="0"/><net_sink comp="192" pin=3"/></net>
+<net id="204"><net_src comp="66" pin="0"/><net_sink comp="195" pin=0"/></net>
 
-<net id="205"><net_src comp="16" pin="0"/><net_sink comp="192" pin=4"/></net>
+<net id="205"><net_src comp="10" pin="0"/><net_sink comp="195" pin=1"/></net>
 
-<net id="206"><net_src comp="4" pin="0"/><net_sink comp="192" pin=5"/></net>
+<net id="206"><net_src comp="36" pin="0"/><net_sink comp="195" pin=2"/></net>
 
-<net id="207"><net_src comp="10" pin="0"/><net_sink comp="192" pin=6"/></net>
+<net id="207"><net_src comp="2" pin="0"/><net_sink comp="195" pin=3"/></net>
 
-<net id="222"><net_src comp="66" pin="0"/><net_sink comp="208" pin=0"/></net>
+<net id="208"><net_src comp="16" pin="0"/><net_sink comp="195" pin=4"/></net>
 
-<net id="223"><net_src comp="8" pin="0"/><net_sink comp="208" pin=1"/></net>
+<net id="209"><net_src comp="4" pin="0"/><net_sink comp="195" pin=5"/></net>
 
-<net id="224"><net_src comp="14" pin="0"/><net_sink comp="208" pin=2"/></net>
+<net id="210"><net_src comp="10" pin="0"/><net_sink comp="195" pin=6"/></net>
 
-<net id="225"><net_src comp="6" pin="0"/><net_sink comp="208" pin=3"/></net>
+<net id="225"><net_src comp="66" pin="0"/><net_sink comp="211" pin=0"/></net>
 
-<net id="226"><net_src comp="12" pin="0"/><net_sink comp="208" pin=4"/></net>
+<net id="226"><net_src comp="8" pin="0"/><net_sink comp="211" pin=1"/></net>
 
-<net id="227"><net_src comp="0" pin="0"/><net_sink comp="208" pin=5"/></net>
+<net id="227"><net_src comp="14" pin="0"/><net_sink comp="211" pin=2"/></net>
 
-<net id="228"><net_src comp="10" pin="0"/><net_sink comp="208" pin=6"/></net>
+<net id="228"><net_src comp="6" pin="0"/><net_sink comp="211" pin=3"/></net>
 
-<net id="229"><net_src comp="2" pin="0"/><net_sink comp="208" pin=7"/></net>
+<net id="229"><net_src comp="12" pin="0"/><net_sink comp="211" pin=4"/></net>
 
-<net id="230"><net_src comp="16" pin="0"/><net_sink comp="208" pin=8"/></net>
+<net id="230"><net_src comp="0" pin="0"/><net_sink comp="211" pin=5"/></net>
 
-<net id="231"><net_src comp="36" pin="0"/><net_sink comp="208" pin=9"/></net>
+<net id="231"><net_src comp="10" pin="0"/><net_sink comp="211" pin=6"/></net>
 
-<net id="232"><net_src comp="4" pin="0"/><net_sink comp="208" pin=10"/></net>
+<net id="232"><net_src comp="2" pin="0"/><net_sink comp="211" pin=7"/></net>
 
-<net id="233"><net_src comp="10" pin="0"/><net_sink comp="208" pin=11"/></net>
+<net id="233"><net_src comp="16" pin="0"/><net_sink comp="211" pin=8"/></net>
 
-<net id="240"><net_src comp="84" pin="2"/><net_sink comp="237" pin=0"/></net>
+<net id="234"><net_src comp="36" pin="0"/><net_sink comp="211" pin=9"/></net>
 
-<net id="241"><net_src comp="237" pin="1"/><net_sink comp="142" pin=0"/></net>
+<net id="235"><net_src comp="4" pin="0"/><net_sink comp="211" pin=10"/></net>
 
-<net id="242"><net_src comp="237" pin="1"/><net_sink comp="147" pin=1"/></net>
+<net id="236"><net_src comp="10" pin="0"/><net_sink comp="211" pin=11"/></net>
 
-<net id="246"><net_src comp="90" pin="2"/><net_sink comp="243" pin=0"/></net>
+<net id="243"><net_src comp="105" pin="2"/><net_sink comp="240" pin=0"/></net>
 
-<net id="247"><net_src comp="243" pin="1"/><net_sink comp="126" pin=1"/></net>
+<net id="244"><net_src comp="240" pin="1"/><net_sink comp="126" pin=1"/></net>
 
-<net id="251"><net_src comp="154" pin="1"/><net_sink comp="248" pin=0"/></net>
+<net id="248"><net_src comp="167" pin="4"/><net_sink comp="245" pin=0"/></net>
 
-<net id="252"><net_src comp="248" pin="1"/><net_sink comp="158" pin=0"/></net>
-
-<net id="256"><net_src comp="142" pin="2"/><net_sink comp="253" pin=0"/></net>
-
-<net id="257"><net_src comp="253" pin="1"/><net_sink comp="105" pin=2"/></net>
-
-<net id="261"><net_src comp="164" pin="4"/><net_sink comp="258" pin=0"/></net>
-
-<net id="262"><net_src comp="258" pin="1"/><net_sink comp="133" pin=1"/></net>
+<net id="249"><net_src comp="245" pin="1"/><net_sink comp="133" pin=1"/></net>
 
 </net_list>
 
@@ -1180,32 +1123,29 @@ br_ln152           (br            ) [ 000000000000]
 	Port: msgStrm | {}
 	Port: lenStrm | {}
 	Port: eKipadStrm | {}
-	Port: mergeKipadStrm | {7 8 10 11 }
-	Port: mergeKipadLenStrm | {6 }
-	Port: eMergeKipadLenStrm | {2 6 }
-	Port: kopad2Strm | {9 }
+	Port: mergeKipadStrm | {3 4 6 7 }
+	Port: mergeKipadLenStrm | {2 }
+	Port: eMergeKipadLenStrm | {2 }
+	Port: kopad2Strm | {5 }
  - Input state : 
 	Port: mergeKipad<32, 64, 256, 64> : kipadStrm | {2 }
-	Port: mergeKipad<32, 64, 256, 64> : kopadStrm | {9 }
-	Port: mergeKipad<32, 64, 256, 64> : msgStrm | {10 11 }
+	Port: mergeKipad<32, 64, 256, 64> : kopadStrm | {5 }
+	Port: mergeKipad<32, 64, 256, 64> : msgStrm | {6 7 }
 	Port: mergeKipad<32, 64, 256, 64> : lenStrm | {2 }
 	Port: mergeKipad<32, 64, 256, 64> : eKipadStrm | {2 }
 	Port: mergeKipad<32, 64, 256, 64> : kopad2Strm | {}
   - Chain level:
 	State 1
 	State 2
-	State 3
+		write_ln158 : 1
 		p_cast : 1
 		add_ln171 : 2
+		tmp_1 : 3
+	State 3
 	State 4
 	State 5
-		tmp_1 : 1
 	State 6
 	State 7
-	State 8
-	State 9
-	State 10
-	State 11
 
 
 ============================================================
@@ -1213,62 +1153,58 @@ br_ln152           (br            ) [ 000000000000]
 ============================================================
 
 * Functional unit list:
-|----------|--------------------------------------------------------------|---------|---------|---------|
-| Operation|                        Functional Unit                       |  Delay  |    FF   |   LUT   |
-|----------|--------------------------------------------------------------|---------|---------|---------|
-|   call   | grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_162_2_fu_126 |    0    |   517   |    26   |
-|          | grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133 |  4.764  |   763   |   161   |
-|----------|--------------------------------------------------------------|---------|---------|---------|
-|    add   |                          grp_fu_142                          |    0    |   389   |    66   |
-|          |                          grp_fu_158                          |    0    |   407   |    69   |
-|----------|--------------------------------------------------------------|---------|---------|---------|
-|          |                  eKipadStrm_read_read_fu_78                  |    0    |    0    |    0    |
-|   read   |                         ml_read_fu_84                        |    0    |    0    |    0    |
-|          |                       kipad_read_fu_90                       |    0    |    0    |    0    |
-|          |                  kopadStrm_read_read_fu_112                  |    0    |    0    |    0    |
-|----------|--------------------------------------------------------------|---------|---------|---------|
-|          |                        grp_write_fu_96                       |    0    |    0    |    0    |
-|   write  |                   write_ln158_write_fu_105                   |    0    |    0    |    0    |
-|          |                   write_ln169_write_fu_118                   |    0    |    0    |    0    |
-|----------|--------------------------------------------------------------|---------|---------|---------|
-|bitconcatenate|                          tmp_fu_147                          |    0    |    0    |    0    |
-|----------|--------------------------------------------------------------|---------|---------|---------|
-|   zext   |                         p_cast_fu_154                        |    0    |    0    |    0    |
-|----------|--------------------------------------------------------------|---------|---------|---------|
-|partselect|                         tmp_1_fu_164                         |    0    |    0    |    0    |
-|----------|--------------------------------------------------------------|---------|---------|---------|
-|          |                      fence_ln162_fu_174                      |    0    |    0    |    0    |
-|   fence  |                      fence_ln169_fu_192                      |    0    |    0    |    0    |
-|          |                      fence_ln171_fu_208                      |    0    |    0    |    0    |
-|----------|--------------------------------------------------------------|---------|---------|---------|
-|   Total  |                                                              |  4.764  |   2076  |   322   |
-|----------|--------------------------------------------------------------|---------|---------|---------|
+|----------|--------------------------------------------------------------|---------|---------|
+| Operation|                        Functional Unit                       |    FF   |   LUT   |
+|----------|--------------------------------------------------------------|---------|---------|
+|   call   | grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_162_2_fu_126 |   517   |    26   |
+|          | grp_mergeKipad_32_64_256_64_Pipeline_VITIS_LOOP_171_3_fu_133 |   126   |   140   |
+|----------|--------------------------------------------------------------|---------|---------|
+|    add   |                     mergeKipadLen_fu_142                     |    0    |    71   |
+|          |                       add_ln171_fu_161                       |    0    |    74   |
+|----------|--------------------------------------------------------------|---------|---------|
+|          |                  eKipadStrm_read_read_fu_78                  |    0    |    0    |
+|   read   |                         ml_read_fu_92                        |    0    |    0    |
+|          |                       kipad_read_fu_105                      |    0    |    0    |
+|          |                  kopadStrm_read_read_fu_112                  |    0    |    0    |
+|----------|--------------------------------------------------------------|---------|---------|
+|          |                        grp_write_fu_84                       |    0    |    0    |
+|   write  |                    write_ln158_write_fu_98                   |    0    |    0    |
+|          |                   write_ln169_write_fu_118                   |    0    |    0    |
+|----------|--------------------------------------------------------------|---------|---------|
+|bitconcatenate|                          tmp_fu_149                          |    0    |    0    |
+|----------|--------------------------------------------------------------|---------|---------|
+|   zext   |                         p_cast_fu_157                        |    0    |    0    |
+|----------|--------------------------------------------------------------|---------|---------|
+|partselect|                         tmp_1_fu_167                         |    0    |    0    |
+|----------|--------------------------------------------------------------|---------|---------|
+|          |                      fence_ln162_fu_177                      |    0    |    0    |
+|   fence  |                      fence_ln169_fu_195                      |    0    |    0    |
+|          |                      fence_ln171_fu_211                      |    0    |    0    |
+|----------|--------------------------------------------------------------|---------|---------|
+|   Total  |                                                              |   643   |   311   |
+|----------|--------------------------------------------------------------|---------|---------|
 
 Memories:
 N/A
 
 * Register list:
-+---------------------+--------+
-|                     |   FF   |
-+---------------------+--------+
-|    kipad_reg_243    |   512  |
-|mergeKipadLen_reg_253|   64   |
-|      ml_reg_237     |   64   |
-|    p_cast_reg_248   |   68   |
-|    tmp_1_reg_258    |   63   |
-+---------------------+--------+
-|        Total        |   771  |
-+---------------------+--------+
++-------------+--------+
+|             |   FF   |
++-------------+--------+
+|kipad_reg_240|   512  |
+|tmp_1_reg_245|   63   |
++-------------+--------+
+|    Total    |   575  |
++-------------+--------+
 
 * Multiplexer (MUX) list: 
-|-----------------|------|------|------|--------||---------||---------||---------|
-|       Comp      |  Pin | Size |  BW  | S x BW ||  Delay  ||    FF   ||   LUT   |
-|-----------------|------|------|------|--------||---------||---------||---------|
-| grp_write_fu_96 |  p2  |   2  |   1  |    2   |
-|    grp_fu_158   |  p0  |   2  |  67  |   134  ||    0    ||    9    |
-|-----------------|------|------|------|--------||---------||---------||---------|
-|      Total      |      |      |      |   136  ||  3.176  ||    0    ||    9    |
-|-----------------|------|------|------|--------||---------||---------||---------|
+|-----------------|------|------|------|--------||---------|
+|       Comp      |  Pin | Size |  BW  | S x BW ||  Delay  |
+|-----------------|------|------|------|--------||---------|
+| grp_write_fu_84 |  p2  |   2  |   1  |    2   |
+|-----------------|------|------|------|--------||---------|
+|      Total      |      |      |      |    2   ||  1.588  |
+|-----------------|------|------|------|--------||---------|
 
 
 
@@ -1276,10 +1212,10 @@ N/A
 +-----------+--------+--------+--------+
 |           |  Delay |   FF   |   LUT  |
 +-----------+--------+--------+--------+
-|  Function |    4   |  2076  |   322  |
+|  Function |    -   |   643  |   311  |
 |   Memory  |    -   |    -   |    -   |
-|Multiplexer|    3   |    0   |    9   |
-|  Register |    -   |   771  |    -   |
+|Multiplexer|    1   |    -   |    -   |
+|  Register |    -   |   575  |    -   |
 +-----------+--------+--------+--------+
-|   Total   |    7   |  2847  |   331  |
+|   Total   |    1   |  1218  |   311  |
 +-----------+--------+--------+--------+

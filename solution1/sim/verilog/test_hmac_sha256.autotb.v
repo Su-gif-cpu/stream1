@@ -15,7 +15,7 @@
 `define AUTOTB_PER_RESULT_TRANS_FILE "test_hmac_sha256.performance.result.transaction.xml"
 `define AUTOTB_TOP_INST AESL_inst_apatb_test_hmac_sha256_top
 `define AUTOTB_MAX_ALLOW_LATENCY  15000000
-`define AUTOTB_CLOCK_PERIOD_DIV2 1.67
+`define AUTOTB_CLOCK_PERIOD_DIV2 7.50
 
 `define AESL_FIFO_keyStrm AESL_autofifo_keyStrm
 `define AESL_FIFO_INST_keyStrm AESL_autofifo_inst_keyStrm
